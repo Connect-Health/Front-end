@@ -6,10 +6,10 @@ export default {
   ],
   theme: {
     colors: {
-      "cor-primaria": "#250025"
+      "cor-primaria": "#2B2A2A"
     },
     fontSize: {
-      "font-header": '8rem',
+      "font-header": '1.5rem',
     },
     extend: {
       
