@@ -9,9 +9,9 @@ const Header = () => {
             Health
         </Link>
 
-        <h2 className='text-white font-bold uppercase text-base ml-28 hover:scale-110 hover:text-[#000] transition duration-300'>Nutrição</h2>
+        <h2 className='text-white font-bold uppercase text-base ml-80 hover:scale-110 hover:text-[#000] transition duration-300'>Nutrição</h2>
 
-        <div className='flex gap-3 z-10 '>
+        <div className='flex gap-5 z-10 '>
             <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Psicologia</h2>
             <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Feed de Noticias</h2>
             <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</h2>

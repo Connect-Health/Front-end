@@ -7,7 +7,6 @@ import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
-import CircularProgress from '@mui/material/CircularProgress';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
@@ -79,7 +78,9 @@ const Filtros = () => {
                     open={backdrop}
                     onClick={handleClose}
                 >
-                    <CircularProgress color="inherit" />
+                    <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
+
+                    </div>
                 </Backdrop>
 
                 <button onClick={(e) => handleClick(e)} className='flex items-center font-semibold border px-3 rounded-3xl gap-1'>

@@ -14,8 +14,8 @@ const theme = createTheme({
 
 const paginacao = () => {
   return (
-    <div>
-         <Stack>
+    <div className='mt-10'>
+         <Stack >
             <ThemeProvider theme={theme}>
                 <Pagination className='m-auto my-10'
                 count={10} variant="outlined" shape="rounded" color="primary"
