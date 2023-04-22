@@ -5,6 +5,7 @@ import Detalhes from './Components/Detalhes'
 import Filtros from './Components/Filtros'
 import Paginacao from './Components/paginacao';
 import Card from './Components/Card';
+import AllCards from './Components/AllCards';
 
 function Nutricao() {
   return (
@@ -12,8 +13,8 @@ function Nutricao() {
       <HomeNutri />
       <Detalhes />
       <Filtros />
+      <AllCards />
       <Paginacao />
-      <Card />
 
 
     </div>

@@ -3,7 +3,7 @@ import Nutri1 from '../../../assets/nutri1.png'
 
 const Card = () => {
   return (
-    <div className='w-[40%]  flex mb-32 rounded-2xl border-2 border-[#94E127] box-content'>
+    <div className='flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-[#94E127] box-content'>
         <div className='w-[25%]'>
             <img src={Nutri1} className='m-auto mt-3' />
 

@@ -45,7 +45,7 @@ const Filtros = () => {
     };
 
   return (
-    <div className='mt-20'>
+    <div className='mt-20 mb-10'>
         <h2 className='text-center text-nutri font-bold text-3xl mb-14'>
             Nossos Profissionais
         </h2>
@@ -82,7 +82,7 @@ const Filtros = () => {
                     <CircularProgress color="inherit" />
                 </Backdrop>
 
-                <button onClick={(e) => handleClick(e)} className='flex items-center font-semibold border py-0.5 px-3 rounded-3xl gap-1'>
+                <button onClick={(e) => handleClick(e)} className='flex items-center font-semibold border px-3 rounded-3xl gap-1'>
                     Relevância
                     <AiOutlineArrowDown />
 
