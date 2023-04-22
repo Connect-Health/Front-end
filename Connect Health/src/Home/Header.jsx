@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center py-3 px-10'>
-        <Link to='/' className='font-semibold text-white text-lg hover:text-nutri w-6 transition duration-300 hover:scale-110'>
+    <div>
+        <div className='flex justify-between items-center py-3 px-10 bg-gradi'>
+        <h1 className='font-semibold text-white text-lg hover:text-nutri w-6 transition duration-300 hover:scale-110'>
             <span className='text-nutri hover:text-white w-6 transition duration-300 hover:scale-110 '>Connect</span>
             Health
-        </Link>
+        </h1>
 
-        <h2 className='text-white font-bold uppercase text-base ml-28 hover:scale-110 hover:text-[#000] transition duration-300'>Nutrição</h2>
+        <Link to="/nutricao" className='text-white font-bold uppercase text-base ml-28 hover:scale-110 hover:text-[#000] transition duration-300'>Nutrição</Link>
 
         <div className='flex gap-3 z-10 '>
             <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Psicologia</h2>
@@ -18,8 +19,7 @@ const Header = () => {
 
         </div>
     </div>
-
-    
+    </div>
   )
 }
 
