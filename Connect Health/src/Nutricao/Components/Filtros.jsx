@@ -8,12 +8,24 @@ import MenuItem from "@mui/material/MenuItem"
 import { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 import { MdTune } from "react-icons/md"
 import { AiOutlineArrowDown } from "react-icons/ai"
 
 
 const Filtros = () => {
+    const theme = createTheme({
+        palette: {
+            primary: {
+                main: '#94E127',
+            },
+            
+        },
+    })
+
+
     const [open, setOpen] = useState(null)
 
     const close = () => {
@@ -45,9 +57,11 @@ const Filtros = () => {
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
-                >
+                >    
+                <ThemeProvider theme={theme}>
                      <FormControlLabel  value="todos" control={<Radio />} label="Todos"  />
-                    <FormControlLabel value="recomendados" control={<Radio />} label="Recomendados" />
+                    <FormControlLabel value="recomendados" color="primary" control={<Radio />} label="Recomendados" />
+                </ThemeProvider>
                 </RadioGroup>
                 </FormControl>
 
