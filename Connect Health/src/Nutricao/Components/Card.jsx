@@ -35,8 +35,8 @@ const Card = () => {
                         <p className=''>Olá! Meu nome é Laysa e sou uma nutricionista apaixonada pelo meu trabalho. Eu me formei em uma universidade renomada e tenho experiência em diferentes áreas de atuação...</p>
                     </div>
 
-                    <button className='self-center px-3 py-0.5 my-2 rounded-3xl bg-nutri bg-opacity-80 font-medium text-white'>Saiba mais</button>
 
+                    <button className='self-center px-3 py-0.5 my-2 rounded-3xl bg-nutri bg-opacity-80 font-medium text-white'>Saiba mais</button>
             </div>
         </div>
     </div>

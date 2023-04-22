@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { MdTune } from "react-icons/md"
 import { AiOutlineArrowDown } from "react-icons/ai"
+import FiltrosDetails from './FiltrosDetails';
 
 
 const Filtros = () => {
@@ -76,10 +77,11 @@ const Filtros = () => {
                 <Backdrop
                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                     open={backdrop}
-                    onClick={handleClose}
+                    
                 >
+                    <p onClick={handleClose}>ok</p>
                     <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
-
+                        <FiltrosDetails />
                     </div>
                 </Backdrop>
 
