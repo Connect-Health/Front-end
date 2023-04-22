@@ -3,7 +3,7 @@ import Vetor from '../../../assets/Vector.svg'
 
 const Detalhes = () => {
   return (
-    <div className='bg-nutri flex justify-between gap-14'>
+    <div className='bg-nutri flex justify-between gap-14 shadow-xl mb-12'>
         <img src={Vetor} alt="" className='border-0 absolute' />
 
         <div className='text-center text-white mt-5 mb-5 w-1/3 ml-5 '>

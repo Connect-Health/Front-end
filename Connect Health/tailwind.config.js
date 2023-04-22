@@ -16,6 +16,9 @@ export default {
     extend: {
       backgroundImage: {
         "nutriImg": "url('assets/nutricao.png')",
+      },
+      boxShadow: {
+        'xl': '0 10px 10px rgba(148, 255, 39, 0.7)',
       }
     },
   },
