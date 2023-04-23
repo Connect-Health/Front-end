@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center py-3 px-10 z-50'>
+    <div className='flex justify-between items-center py-3 px-10 z-50 bg-white/0 backdrop-blur-3xl'>
         <Link to='/' className='font-semibold text-white text-lg hover:text-psi w-6 transition duration-300 hover:scale-110'>
             <span className='text-psi hover:text-white w-6 transition duration-300 hover:scale-110 '>Connect</span>
             Health
