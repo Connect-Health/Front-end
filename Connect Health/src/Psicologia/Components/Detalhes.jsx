@@ -1,5 +1,5 @@
 import React from 'react'
-import Vetor from '../../../assets/Vector.svg'
+import Vetor from '../../../assets/VectorPsi.svg'
 
 const Detalhes = () => {
   return (
