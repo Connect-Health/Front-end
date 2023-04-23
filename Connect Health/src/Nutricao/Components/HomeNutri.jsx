@@ -15,7 +15,7 @@ const HomeNutri = () => {
     }, [])
 
   return (
-    <div className='bg-[url("../../../assets/nutricao.png")] h-[650px] flex flex-col'>
+    <div className='bg-[url("../../../assets/nutri2.png")] h-[650px] flex flex-col'>
         <Header />
         <div className='h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col'>
 
