@@ -17,8 +17,6 @@ function Nutricao() {
       <AllCards />
       <Paginacao />
       <Footer />
-
-
     </div>
   )
 }
