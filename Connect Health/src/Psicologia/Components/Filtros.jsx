@@ -19,7 +19,7 @@ const Filtros = () => {
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#94E127',
+                main: '#9A54E1',
             },
             
         },
@@ -46,8 +46,8 @@ const Filtros = () => {
 
   return (
     <div className='mt-20 mb-10'>
-        <h2 className='text-center text-nutri font-bold text-3xl mb-14'>
-            Nossos Nutricionistas
+        <h2 className='text-center text-psi font-bold text-3xl mb-14'>
+            Nossos Psicólogos
         </h2>
 
         <div  className='flex justify-between mx-14'>
