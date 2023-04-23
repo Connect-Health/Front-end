@@ -48,7 +48,7 @@ const HomeNutri = () => {
               'd', 
               'a',
             ]}
-            idx={21} 
+            idx={20} 
           /> 
           
           <br />

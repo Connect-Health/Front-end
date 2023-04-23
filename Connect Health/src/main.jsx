@@ -7,6 +7,7 @@ import Nutricao from './Nutricao/Nutricao'
 import "@fontsource/montserrat"
 
 import { createBrowserRouter, RouterProvider} from "react-router-dom"
+import Psicologia from './Psicologia/Psicologia'
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,15 @@ const router = createBrowserRouter([
     path: '/nutricao',
     element: <Nutricao />,
   },
+  {
+    path: '/psicologia',
+    element: <Psicologia />,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}
-    fallbackElement='/' />
+    <RouterProvider router={router} />
     
   </React.StrictMode>,
 )

@@ -26,8 +26,8 @@ const FiltrosDetails = () => {
         </div>
 
         <div className='flex flex-col items-center mt-8'>
-            <h2 className='text-center text-[#000] text-lg font-semibold '>Já conhece o profissional que deseja?</h2>
-            <input type="text" placeholder='Nome do profissional' className='w-96 py-2 rounded-3xl pl-5 placeholder:text-[#333] focus:border outline-none focus:border-nutri text-[#000]' />
+            <h2 className='text-center text-black text-lg font-semibold '>Já conhece o profissional que deseja?</h2>
+            <input type="text" placeholder='Nome do profissional' className='w-96 py-2 rounded-3xl pl-5 placeholder:text-[#333] focus:border outline-none focus:border-nutri text-black' />
         </div>
 
         <div className='grid grid-cols-2 mx-[2%] mt-6'>

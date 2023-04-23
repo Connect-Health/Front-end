@@ -9,8 +9,10 @@ export default {
       "cor-primaria": "#2B2A2A",
       "nutri": "#94E127",
       "white": "#FFFFFF",
+      "black": "#000",
       "gradi": "#646464",
-      "gradi2": "#2B2A2A"
+      "gradi2": "#2B2A2A",
+      "psi": "#9A54E1",
 
     },
     extend: {
@@ -18,7 +20,9 @@ export default {
         "nutriImg": "url('assets/nutricao.png')",
       },
       boxShadow: {
-        'xl': '0 10px 10px rgba(148, 255, 39, 0.7)',
+        'nutrici': '0 10px 10px 0 rgba(148, 255, 39, 0.7)',
+        'psico': '0 10px 10px 0 rgba(168, 159, 213, 1)',
+
       }
     },
   },

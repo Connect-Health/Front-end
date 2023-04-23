@@ -1,20 +1,20 @@
 @import "animate.css";
 
-.text-animate {
+.texts-animate {
     display: inline-block;
     opacity: 0;
     animation: bounceIn 1s 1s;
     animation-fill-mode: forwards;
     min-width: 10px;
 }
-.text-animate-hover {
+.texts-animate-hover {
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
 
     &:hover {
         animation: rubberBand .5s;
-        color: #94E127;
+        color: #9A54E1;
     }
 }
 
