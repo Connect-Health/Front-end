@@ -22,11 +22,14 @@ const Card = () => {
             <div className='w-[90%] m-auto flex flex-col'>
                     <h2 className='mt-4 font-semibold text-2xl text-center text-nutri'>Joana Dalva de Menezes</h2>
 
-                    <div className='grid grid-cols-2 bg-[#D7F2E0] py-3 rounded-xl px-2 gap-y-2'>
-                        <p className='border w-fit rounded-lg px-2 bg-white'>ansiedade</p>
-                        <p className='border w-fit rounded-lg px-2 bg-white'>ansiedade</p>
-                        <p className='border w-fit rounded-lg px-2 bg-white'>ansiedade</p>
-                        <p className='border w-fit rounded-lg px-2 bg-white'>ansiedade</p>
+                    <div className='flex flex-wrap bg-[#D7F2E0] py-3 rounded-xl px-2 gap-1 justify-center'>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>Ansiedade</p>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>Conflitos Amorosos</p>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>Medos</p>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>Família</p>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>Borderline</p>
+                        <p className='border w-fit rounded-lg px-2 bg-white'>+6</p>
+
                     </div>  
 
                     <div>

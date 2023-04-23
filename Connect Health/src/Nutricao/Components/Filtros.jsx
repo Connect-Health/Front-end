@@ -79,8 +79,9 @@ const Filtros = () => {
                     open={backdrop}
                     
                 >
-                    <p onClick={handleClose}>ok</p>
+                    
                     <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
+                        <p onClick={handleClose} className='text-[#000] absolute right-0 pr-3 pt-1 cursor-pointer font-bold text-2xl'>X</p>
                         <FiltrosDetails />
                     </div>
                 </Backdrop>
