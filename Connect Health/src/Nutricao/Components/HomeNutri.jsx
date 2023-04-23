@@ -17,7 +17,7 @@ const HomeNutri = () => {
 
   return (
     <div className='h-[650px] flex flex-col'>
-      <img src={BackGround} className='absolute' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px]' alt="" />
         <Header />
         <div className='h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col'>
 
