@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './HeaderNutri'
 import { MdSubdirectoryArrowRight } from "react-icons/md"
+import BackGround from '../../../assets/nutricao.png'
 
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../Components/Letters/AnimatedLetters'
@@ -15,7 +16,8 @@ const HomeNutri = () => {
     }, [])
 
   return (
-    <div className='bg-[url("../../../assets/psi.svg")] h-[650px] flex flex-col'>
+    <div className='h-[650px] flex flex-col'>
+      <img src={BackGround} className='absolute' alt="" />
         <Header />
         <div className='h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col'>
 
