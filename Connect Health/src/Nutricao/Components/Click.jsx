@@ -8,10 +8,13 @@ const Click = (props) => {
     if(e.target.classList.contains('bg-nutri') === false) {
       e.target.classList.add('bg-nutri')
       e.target.classList.add('text-white')
+      e.target.classList.add('font-light')
+
 
     } else {
       e.target.classList.remove('bg-nutri')
-      e.target.classList.remove('text-[#000]')
+      e.target.classList.remove('font-light')
+      e.target.classList.remove('text-white')
 
     }
   }
