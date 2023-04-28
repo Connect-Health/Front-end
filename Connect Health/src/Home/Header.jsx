@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {BsArrowRight} from 'react-icons/bs'
 
 const Header = () => {
   return (
@@ -12,8 +13,16 @@ const Header = () => {
 
             
         </div>
-        <div className='bg-[#0575E6] h-56 w-40 absolute ml-[1200px] items-center flex'>
-            <h2 className='text-[#fff] w-1/12 text-center'>Tenha dicas dos melhores da área</h2>
+        <div className='bg-[#0575E6] h-auto w-40 absolute ml-[1200px] items-center flex-col'>
+          <div>
+            <h2 className='text-[#fff] w-full text-center pt-28 pb-6 '>Tenha dicas dos melhores da área</h2>
+          </div>
+            
+          <div className='flex w-full items-center justify-center gap-4 pb-6'>
+              <h2 className='text-[#fff] text-center font-bold '>Nosso Feed</h2>
+              <BsArrowRight className='text-lg text-[#fff]'/>
+          </div>
+            
         </div>
 
         
