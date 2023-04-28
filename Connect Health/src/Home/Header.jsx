@@ -12,11 +12,11 @@ const Header = () => {
 
             
         </div>
-        <div className='bg-[#0575E6] h-56 w-40 absolute ml-[1200px]'>
-            <h2 className='text-[#fff] w-1/6 '>Tenha dicas dos melhores da área</h2>
+        <div className='bg-[#0575E6] h-56 w-40 absolute ml-[1200px] items-center flex'>
+            <h2 className='text-[#fff] w-1/12 text-center'>Tenha dicas dos melhores da área</h2>
         </div>
 
-        <p>teste</p>
+        
 
        
 
