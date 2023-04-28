@@ -1,10 +1,13 @@
-import Header from "../Home/Header"
-import Nutri from "../Home/nutriM"
+import Header from "./Componentes/Header"
+import Nutrim from './Componentes/Nutrim'
 
 function Home() {
     return(
-        <Header />
-        <Nutri />
+        <>
+            <Header />
+            <Nutrim />
+        </>
+        
     )
 }
 export default Home
