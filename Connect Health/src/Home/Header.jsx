@@ -12,8 +12,8 @@ const Header = () => {
 
             
         </div>
-        <div className='bg-black h-32 w-60 absolute mx-0'>
-          {/* <h2 className='text-[#fff]'>Tenha dicas dos melhores da área</h2> */}
+        <div className='bg-[#0575E6] h-56 w-40 absolute ml-[1200px]'>
+            <h2 className='text-[#fff] w-1/6 '>Tenha dicas dos melhores da área</h2>
         </div>
 
         
