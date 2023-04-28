@@ -16,7 +16,7 @@ const Header = () => {
             <h2 className='text-[#fff] w-1/6 '>Tenha dicas dos melhores da área</h2>
         </div>
 
-        <h3>penis</h3>
+        <p>teste</p>
 
        
 
