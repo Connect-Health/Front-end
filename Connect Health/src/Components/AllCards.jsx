@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './Card'
+import Card from '../Nutricao/Components/Card'
 
 const AllCards = () => {
   return (
