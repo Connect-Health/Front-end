@@ -7,6 +7,7 @@ import Paginacao from './Components/Paginacao';
 import Card from './Components/Card';
 import AllCards from '../Components/AllCards';
 import Footer from './Components/Footer';
+import Services from '../Components/Services';
 
 function Nutricao() {
   return (

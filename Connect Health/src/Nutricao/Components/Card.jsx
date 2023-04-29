@@ -1,20 +1,45 @@
-import React from 'react'
-import Nutri1 from '../../../assets/nutri1.png'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
+import Nutri1 from '../../../assets/nutri1.png'
 const Card = () => {
+    
+    const [data, setData] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
+
+        useEffect(() => {
+             async function cliente() {
+                const response = await axios.get('http://localhost:8080/profissionais');
+                setData(response.data)
+                setIsLoading(false)
+             }
+             cliente()
+             .catch(error => console.log(error));
+            }, [])
+
+            if (isLoading) {
+                return <div>Loading...</div>;
+              }
+
+            console.log(data)
+        
+
+    if (!data) return null
+
   return (
+
     <div className='flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-[#94E127] box-content'>
         <div className='w-[25%]'>
-            <img src={Nutri1} className='m-auto mt-3' />
+            <img src={Nutri1} className='m-auto mt-3 rounded-xl' />
 
             <div className='mt-5'>
                 <h4 className='text-center font-semibold'>Duração:</h4>
-                <p className='text-center font-bold text-lg'>30 Minutos</p>
+                <p className='text-center font-bold text-lg'></p>
             </div>
 
             <div className='mt-7'>
                 <h4 className='text-center font-semibold'>Consulta:</h4>
-                <p className='text-center font-bold text-2xl mt-2'>R$35,00</p>
+                <p className='text-center font-bold text-2xl mt-2'></p>
             </div>
         </div>
 
