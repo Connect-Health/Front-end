@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsArrowRight} from 'react-icons/bs'
+import vetor from '../../../assets/vectorHome.svg'
 
 const Header = () => {
   return (
@@ -10,19 +11,17 @@ const Header = () => {
           <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Psicologia</h2>
           <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Nutrição</h2>
           <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</h2>
-
-            
         </div>
-        <div className='bg-[#0575E6] h-auto w-40 absolute ml-[1200px] items-center flex-col'>
+        <div className='bg-[#0575E6] h-auto w-40 absolute top-0 right-20 items-center flex-col'>
+          <img src={vetor} alt=""  className='absolute'/>
           <div>
-            <h2 className='text-[#fff] w-full text-center pt-28 pb-6 '>Tenha dicas dos melhores da área</h2>
+            <h2 className='text-[#fff] text-center pt-20 pb-6 '>Tenha dicas dos melhores da área</h2>
           </div>
             
-          <div className='flex w-full items-center justify-center gap-4 pb-4 hover:scale-110 hover:font-semibold transition duration-300'>
+          <div className='flex items-center justify-center gap-4 pb-4 hover:scale-110 hover:font-semibold transition duration-300'>
               <h2 className='text-[#fff] text-center font-bold text-sm '>Nosso Feed</h2>
               <BsArrowRight className='text-lg text-[#fff]'/>
-          </div>
-            
+          </div>  
         </div>
 
         
