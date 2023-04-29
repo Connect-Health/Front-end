@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Click from '../Components/Click';
-import Horario from '../../Nutricao/Components/Horario';
+import Horario from '../Components/Horario';
 
 
 const FiltrosDetails = () => {

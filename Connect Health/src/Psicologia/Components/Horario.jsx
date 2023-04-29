@@ -1,4 +1,6 @@
-const Click = (props) => {
+import React from 'react'
+
+const Horario = (props) => {
 
   const handleClick = (e) => {
     if(e.target.classList.contains('bg-psi') === false) {
@@ -6,6 +8,7 @@ const Click = (props) => {
       e.target.classList.add('text-white')
       e.target.classList.add('font-light')
       e.target.classList.add('border-[#fff]')
+
     } else {
       e.target.classList.remove('bg-psi')
       e.target.classList.remove('font-light')
@@ -14,12 +17,11 @@ const Click = (props) => {
     }
   }
 
-
   return (
     <div>
-        <p onClick={handleClick} className='border border-black text-black font-semibold cursor-pointer rounded-3xl px-3 text-sm hover:scale-110 transition-all duration-100 active:scale-90'>{props.text}</p>
+        <p onClick={handleClick} className='border border-black text-black w-16 text-center cursor-pointer rounded-3xl font-semibold text-sm hover:scale-125 duration-200 transition-all active:scale-100'>{props.hora}</p>
     </div>
   )
 }
 
-export default Click;
+export default Horario
