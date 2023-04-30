@@ -1,5 +1,6 @@
 import BGHome from "./Componentes/BGHome"
 import Header from "./Componentes/Header"
+import Blocos from "./Componentes/Blocos"
 import Nutrim from './Componentes/Nutrim'
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
         <>
             <Header />
             <BGHome/>
+            <Blocos/>
                 
         </>
         
