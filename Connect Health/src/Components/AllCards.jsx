@@ -21,7 +21,7 @@ const AllCards = () => {
   }, [])
 
   if (isLoading) {
-    return <div className='flex'>Loading...</div>
+    return <div className='flex justify-center'>Loading...</div>
   }
 
   return (
