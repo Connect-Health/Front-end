@@ -21,7 +21,7 @@ const AllCards = () => {
   }, [])
 
   if (isLoading) {
-    return <div className=''>Loading...</div>
+    return <div className='flex'>Loading...</div>
   }
 
   return (
