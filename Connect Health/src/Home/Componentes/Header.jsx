@@ -5,8 +5,8 @@ import vetor from '../../../assets/vectorHome.svg'
 
 const Header = () => {
   return (
-    <div>
-      <div className='flex justify-between items-center py-3 px-10 bg-gradi bg-opacity-50'>
+    <div className='relative z-50'>
+      <div className='flex justify-between items-center py-3 px-10 bg-gradient-to-t to-gradi/60 from-white/0'>
         <div className='flex gap-10 z-10 '>
           <Link to='/psicologia' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Psicologia</Link>
           <Link to='/nutricao' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Nutrição</Link>
