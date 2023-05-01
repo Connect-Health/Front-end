@@ -4,13 +4,14 @@ import mulher_1 from '../../../assets/mulher_1.png'
 import Logo from '../../../assets/logo_preta.png'
 import Blocos from './Blocos'
 import Header from './Header'
+import Psico from './Psico'
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 
 function BGHome(){
     return(
         <div>
-            <Parallax pages={2} className='block relative z-10 top-0 left-0 bg-white'>
+            <Parallax pages={4} className='block relative z-10 top-0 left-0 bg-white'>
                 <ParallaxLayer offset={0} speed={1} className='relative z-40'>
                     <Header />
                 </ParallaxLayer>
@@ -30,10 +31,11 @@ function BGHome(){
                 <ParallaxLayer offset={0} speed={0.65} className='absolute  w-full'>
                     <img className='absolute w-full z-10' src={mulher_1} alt="" />
                 </ParallaxLayer>
-                <ParallaxLayer offset={1}>
-                    <Blocos />  
-
+                <ParallaxLayer offset={1} speed={0.1}>
+                    <Blocos />
+                    <Psico />
                 </ParallaxLayer>
+                
             </Parallax>
 
         </div>
