@@ -11,7 +11,7 @@ const Card = ({ profissional }) => {
 
         <div className='mt-5'>
           <h4 className='text-center font-semibold'>Duração:</h4>
-          <p className='text-center font-bold text-lg'>{profissional.duracao}</p>
+          <p className='text-center font-bold text-lg'>{profissional.duracao}min</p>
         </div>
 
         <div className='mt-7'>
