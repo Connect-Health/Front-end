@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Card from './../Nutricao/Components/Card'
+import Card from './../Psicologia/Components/Card'
 
 const AllCards = () => {
   const [data, setData] = useState([])
