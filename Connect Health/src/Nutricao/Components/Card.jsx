@@ -23,7 +23,7 @@ const Card = ({ profissional }) => {
           <p className='text-center font-bold text-2xl mt-2'>{profissional.preco}</p>
           
         </div>
-
+    
 
 
       </div>
