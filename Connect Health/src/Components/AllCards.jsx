@@ -9,7 +9,7 @@ const AllCards = () => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get('http://localhost:8080/nutricionistas')
+        const response = await axios.get('http://localhost:8080/profissionais/nutricionistas')
         setData(response.data)
         setIsLoading(false)
       } catch (error) {

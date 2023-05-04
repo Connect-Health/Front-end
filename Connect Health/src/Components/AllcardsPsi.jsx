@@ -9,7 +9,7 @@ const AllCards = () => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get('http://localhost:8080/psicologos')
+        const response = await axios.get('http://localhost:8080/profissionais/psicologos')
         setData(response.data)
         setIsLoading(false)
       } catch (error) {
