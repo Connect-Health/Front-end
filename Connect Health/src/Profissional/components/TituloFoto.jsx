@@ -1,23 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Perfil from '../../../assets/foto-perfil.png'
+import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+
 
 const TituloFoto = () => {
+    const [isFav, setIsfav] = useState(false);
+
+    function handleClick() {
+        setIsfav(!isFav);
+    }
+
   return (
     <div className='flex items-center w-full'>
-        <div className='w-1/4 border-nutri border h-5'>
-            <img src="" alt="" />
-            ok
+        <div className='w-1/4 flex justify-center -mt-20'>
+            <img src={Perfil} className='w-3/4 rounded-full' alt="" />
         </div>
 
-        <div className='w-3/4 border-psi border'>
-            <div className='flex gap-32 items-center mt-3'>
+        <div className='w-3/4'>
+            <div className='flex gap-40 items-center mt-3'>
                 <h1 className='pl-10 text-3xl'>Laysa Lopes da Silva</h1>
-                <p className='font-semibold'>Favoritar</p>
+                <p onClick={handleClick} className='font-semibold flex items-center gap-2 '>
+                    {isFav ? <MdOutlineFavorite className='text-2xl text-nutri' /> : <MdOutlineFavoriteBorder className='text-2xl text-nutri' />}
+                    
+                    Favoritar
+                </p>
             </div>
 
             <div className='flex gap-20 pl-14 items-center mt-2'>
                 <p className='font-semibold text-lg'>Nutricionista</p>
 
-                <p>"estrelas"</p>
+                <div className='flex items-end gap-2'>
+                    <Rating
+                        name="text-feedback"
+                        value={4}
+                        readOnly
+                        precision={0.5}
+                    />
+                    <p className='font-bold'>4,0</p>
+                </div>
             </div>
 
             <div className='flex pl-12 gap-[20%] items-center mt-5'>
