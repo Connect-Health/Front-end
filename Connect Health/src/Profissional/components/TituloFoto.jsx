@@ -9,13 +9,13 @@ const TituloFoto = () => {
         </div>
 
         <div className='w-3/4 border-psi border'>
-            <div className='flex gap-32 items-center'>
+            <div className='flex gap-32 items-center mt-3'>
                 <h1 className='pl-10 text-3xl'>Laysa Lopes da Silva</h1>
                 <p className='font-semibold'>Favoritar</p>
             </div>
 
-            <div>
-                <p>Nutricionista</p>
+            <div className='flex gap-20 pl-12 items-center mt-5'>
+                <p className='font-semibold text-lg'>Nutricionista</p>
 
                 <p>"estrelas"</p>
             </div>
