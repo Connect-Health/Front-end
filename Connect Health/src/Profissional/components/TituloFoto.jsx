@@ -14,10 +14,26 @@ const TituloFoto = () => {
                 <p className='font-semibold'>Favoritar</p>
             </div>
 
-            <div className='flex gap-20 pl-12 items-center mt-5'>
+            <div className='flex gap-20 pl-14 items-center mt-2'>
                 <p className='font-semibold text-lg'>Nutricionista</p>
 
                 <p>"estrelas"</p>
+            </div>
+
+            <div className='flex pl-12 gap-[20%] items-center mt-5'>
+                <div>
+                    <p className='text-center'>Duração:</p>
+                    <p className='font-bold text-lg text-center'>30 minutos</p>
+                </div>
+                <div>
+                    <p className='text-center'>Consulta:</p>
+                    <p className='font-bold text-xl text-center'>R$50,00</p>
+                </div>
+
+                <div>
+                    <p className='text-center'>Atende:</p>
+                    <p className='font-bold text-center'>idosos</p>
+                </div>
             </div>
         </div>
     </div>
