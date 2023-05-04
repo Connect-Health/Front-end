@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from './components/Header'
 
 const Profissional = () => {
   return (
-    <div>Profissional</div>
+    <div>
+        <Header />
+    </div>
   )
 }
 
