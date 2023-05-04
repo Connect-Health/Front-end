@@ -8,8 +8,17 @@ const TituloFoto = () => {
             ok
         </div>
 
-        <div className='w-3/4 border-psi border '>
-            <h1 className='pl-10 text-3xl'>Laysa Lopes da Silva</h1>
+        <div className='w-3/4 border-psi border'>
+            <div className='flex gap-32 items-center'>
+                <h1 className='pl-10 text-3xl'>Laysa Lopes da Silva</h1>
+                <p className='font-semibold'>Favoritar</p>
+            </div>
+
+            <div>
+                <p>Nutricionista</p>
+
+                <p>"estrelas"</p>
+            </div>
         </div>
     </div>
   )
