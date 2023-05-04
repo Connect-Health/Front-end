@@ -1,6 +1,7 @@
 import React from 'react'
 import Fundo from '../../../assets/fundo.png'
 import TituloFoto from './TituloFoto'
+import Informacoes from './Informacoes'
 
 const Perfil = () => {
   return (
@@ -8,6 +9,7 @@ const Perfil = () => {
         <div className='h-1/5 w-full '>
             <img src={Fundo} className='h-full w-full object-cover rounded-tl-3xl rounded-tr-3xl' alt="" />
             <TituloFoto />
+            <Informacoes />
         </div>
     </div>
   )
