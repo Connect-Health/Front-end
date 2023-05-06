@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Click from '../../Components/miniComponents/Click';
-import Horario from './Horario';
+import Horario from '../../Components/miniComponents/Horario';
 
 
 const FiltrosDetails = () => {
@@ -36,147 +36,126 @@ const FiltrosDetails = () => {
 
                 <div className='flex flex-wrap gap-2 justify-center mt-3'>
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Ansiedade" 
                     />
                     <Click
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Bournout" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Borderline" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Conflitos Amorosos" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Família" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
-                        text="Déficit de Atênção" 
+                        text="Déficit de Atenção" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Depressão" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Estresse" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Desenvolvimento Pessoal" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Autoconhececimento" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Compulsões" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Morte e luto" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Fobias" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Drogas" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Medos" 
                     />
                    <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Obesidade" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Sexualidade" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Insônia" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Sindrome do Pânico" 
                     />
                    <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
                         text="Autoestima" 
                     />
                     <Click 
-                        contain="bg-nutri"
                         bg="bg-nutri"
                         textClass="text-white"
 
@@ -211,41 +190,216 @@ const FiltrosDetails = () => {
                 <input type="date" name="" id="" className='text-[#000] rounded-3xl px-5 mt-2'/>
 
                 <div className='grid grid-cols-5 gap-2 mt-6'>
-                    <Horario hora="06:00" />
-                    <Horario hora="06:30" />
-                    <Horario hora="07:00" />
-                    <Horario hora="07:30" />
-                    <Horario hora="08:00" />
-                    <Horario hora="08:30" />
-                    <Horario hora="09:00" />
-                    <Horario hora="09:30" />
-                    <Horario hora="10:00" />
-                    <Horario hora="10:30" />
-                    <Horario hora="11:00" />
-                    <Horario hora="11:30" />
-                    <Horario hora="12:00" />
-                    <Horario hora="12:30" />
-                    <Horario hora="13:00" />
-                    <Horario hora="13:30" />
-                    <Horario hora="14:00" />
-                    <Horario hora="14:30" />
-                    <Horario hora="15:00" />
-                    <Horario hora="15:30" />
-                    <Horario hora="16:00" />
-                    <Horario hora="16:30" />
-                    <Horario hora="17:00" />
-                    <Horario hora="17:30" />
-                    <Horario hora="18:00" />
-                    <Horario hora="18:30" />
-                    <Horario hora="19:00" />
-                    <Horario hora="19:30" />
-                    <Horario hora="20:00" />
-                    <Horario hora="20:30" />
-                    <Horario hora="21:00" />
-                    <Horario hora="21:30" />
-                    <Horario hora="22:00" />
-                    <Horario hora="22:30" />
-                    <Horario hora="23:00" />
+                    <Horario 
+                        hora="06:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="06:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="07:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="07:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                   <Horario 
+                        hora="08:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="08:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="09:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="09:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="10:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="10:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="11:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="11:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                   <Horario 
+                        hora="12:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="12:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />  
+                    <Horario 
+                        hora="13:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="13:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="14:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="14:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                   <Horario 
+                        hora="15:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="15:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="16:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="16:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="17:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="17:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="18:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                   <Horario 
+                        hora="18:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="19:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="19:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="20:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="20:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="21:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="21:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                   <Horario 
+                        hora="22:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="22:30"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
+                    <Horario 
+                        hora="23:00"
+
+                        bg="bg-nutri"
+                        textClass='text-white'
+                    />
                 </div>
             </div>
 

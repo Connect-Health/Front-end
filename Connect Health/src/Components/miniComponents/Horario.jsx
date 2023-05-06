@@ -3,12 +3,12 @@ import React from 'react'
 const Horario = (props) => {
 
   const handleClick = (e) => {
-    if(e.target.classList.contains(`${props.contain}`) === false) {
+    if(e.target.classList.contains(`${props.bg}`) === false) {
       e.target.classList.add(`${props.bg}`)
       e.target.classList.add(`${props.textClass}`)
     } else {
-      e.target.classList.remove(`${props.rBg}`)
-      e.target.classList.remove(`${props.rTextclass}`)
+      e.target.classList.remove(`${props.bg}`)
+      e.target.classList.remove(`${props.textClass}`)
     }
   }
 
