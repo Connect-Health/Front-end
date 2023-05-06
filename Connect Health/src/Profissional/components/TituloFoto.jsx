@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 
 
-const TituloFoto = () => {
+const TituloFoto = (props) => {
     const [isFav, setIsfav] = useState(false);
 
     function handleClick() {
@@ -15,7 +15,7 @@ const TituloFoto = () => {
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={Perfil} className='w-3/4 rounded-full border-2 border-nutri' alt="" />
+            <img src={props.imagem} className='w-3/4 rounded-full border-2 border-nutri' alt="" />
         </div>
 
         <div className='w-3/4'>

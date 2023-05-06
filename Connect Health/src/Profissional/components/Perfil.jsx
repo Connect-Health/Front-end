@@ -1,19 +1,43 @@
 import React from 'react'
 import Fundo from '../../../assets/fundo.png'
 import TituloFoto from './TituloFoto'
+
 import Informacoes from './Informacoes'
 
 import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
-const { id } = useParams();
 
 const Perfil = () => {
+  const { id } = useParams();
+
+  const [profissional, setProfissional] = useState({})
+
+  useEffect(() => {
+    async function fetchProfissionais() {
+      try {
+        const response = await axios.get(`http://localhost:8080/profissionais/nutricionistas`)
+        const profissionalEncontrado = response.data.find(profissional => profissional.id === parseInt(id))
+        setProfissional(profissionalEncontrado)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    fetchProfissionais()
+  }, [id])
+
+  
+
+
   return (
     <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#aaa]/10 '>
         <div className=' w-full'>
             <img src={Fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b' alt="" />
-            <TituloFoto />
+            <TituloFoto imagem={profissional.avatar} />
             <Informacoes />
+            
         </div>
     </div>
   )
