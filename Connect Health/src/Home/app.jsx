@@ -12,7 +12,7 @@ function Home() {
             <BGHome/>
             <Blocos />
             <Psico />
-            
+            <Nutrim/>       
             
             
             
