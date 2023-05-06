@@ -8,7 +8,12 @@ import Nutrim from './Componentes/Nutrim'
 function Home() {
     return(
         <>
+            <Header />
             <BGHome/>
+            <Blocos />
+            <Psico />
+            
+            
             
             
                 

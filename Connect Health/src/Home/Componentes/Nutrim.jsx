@@ -15,7 +15,7 @@ const Nutrim = () => {
         
         <div>
           <div className='flex w-1/5 rounded-full h-[290px] bg-nutri justify-center'> 
-           <img className='rounded-full h-[360px] w-[290px] bottom-[70px] absolute ' src={Mulhern} alt="" />
+           <img className='rounded-full h-[360px] w-[290px] bottom-[70px]  ' src={Mulhern} alt="" />
           </div>
           
           <div>
