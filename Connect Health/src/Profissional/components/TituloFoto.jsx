@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 
 
-const TituloFoto = (props) => {
+const TituloFoto = ( {profissional}) => {
     const [isFav, setIsfav] = useState(false);
 
     function handleClick() {
@@ -15,12 +15,12 @@ const TituloFoto = (props) => {
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={props.imagem} className='w-3/4 rounded-full border-2 border-nutri' alt="" />
+            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri' alt="Imagem de perfil do Profissional" />
         </div>
 
         <div className='w-3/4'>
             <div className='flex gap-40 items-center mt-3'>
-                <h1 className='pl-10 text-3xl'>Laysa Lopes da Silva</h1>
+                <h1 className='pl-10 text-3xl'>{profissional.nome} {profissional.sobrenome}</h1>
                 <p onClick={handleClick} className='font-semibold flex items-center gap-2 '>
                     {isFav ? <MdOutlineFavorite className='text-2xl text-nutri' /> : <MdOutlineFavoriteBorder className='text-2xl text-nutri' />}
                     
@@ -29,27 +29,27 @@ const TituloFoto = (props) => {
             </div>
 
             <div className='flex gap-20 pl-14 items-center mt-2'>
-                <p className='font-semibold text-lg'>Nutricionista</p>
+                <p className='font-semibold text-lg'>{profissional.areaAtuacao}</p>
 
                 <div className='flex items-end gap-2'>
                     <Rating
                         name="text-feedback"
-                        value={4}
+                        value={profissional.avaliacao}
                         readOnly
                         precision={0.5}
                     />
-                    <p className='font-bold'>4,0</p>
+                    <p className='font-bold'>{profissional.avaliacao}</p>
                 </div>
             </div>
 
             <div className='flex pl-12 gap-[20%] items-center mt-5'>
                 <div>
                     <p className='text-center'>Duração:</p>
-                    <p className='font-bold text-lg text-center'>30 minutos</p>
+                    <p className='font-bold text-lg text-center'>{profissional.duracao}min</p>
                 </div>
                 <div>
                     <p className='text-center'>Consulta:</p>
-                    <p className='font-bold text-xl text-center'>R$50,00</p>
+                    <p className='font-bold text-xl text-center'>{profissional.preco}</p>
                 </div>
 
                 <div>
