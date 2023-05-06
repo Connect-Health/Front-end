@@ -4,7 +4,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Click from '../Components/Click';
+import Click from '../../Components/miniComponents/Click';
 import Horario from '../Components/Horario';
 
 
@@ -35,27 +35,195 @@ const FiltrosDetails = () => {
                 <h4 className='text-psi text-center  text-lg '>Especialidades</h4>
 
                 <div className='flex flex-wrap gap-2 justify-center mt-3'>
-                    <Click text="Ansiedade" />
-                    <Click text="Bournout" />
-                    <Click text="Borderline" />
-                    <Click text="Conflitos Amorosos" />
-                    <Click text="Família" />
-                    <Click text="Déficit de Atenção" />
-                    <Click text="Depressão" />
-                    <Click text="Estresse" />
-                    <Click text="Desenvolvimento Pessoal" />
-                    <Click text="Autoconhecimento" />
-                    <Click text="Compulsões" />
-                    <Click text="Morte e luto" />
-                    <Click text="Fobias" />
-                    <Click text="Drogas" />
-                    <Click text="Medos" />
-                    <Click text="Obesidade" />
-                    <Click text="Sexualidade" />
-                    <Click text="Insônia" />
-                    <Click text="Sindrome do Pânico" />
-                    <Click text="Autoestima" />
-                    <Click text="TOC - Transtorno Obsessivo Compulsivo" />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Ansiedade" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Bournout" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Borderline" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Conflitos Amorosos" 
+                    />
+                   <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Família" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Déficit de Atenção" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Depressão" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Estresse" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Desenvolvimento Pessoal" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Autoconhecimento" 
+                    />
+                   <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Compulsões" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Morte e luto" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Fobias" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Drogas" 
+                    />
+                   <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Medos" 
+                    />
+                   <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Obesidade" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Sexualidade" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Insônia" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Sindrome do Pânico" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="Autoestima" 
+                    />
+                    <Click 
+                        contain="bg-psi"
+                        bg="bg-psi"
+                        textClass="text-white"
+
+                        rBG="bg-psi"
+                        rTextClass="text-white"
+                        text="TOC - Transtorno Obssesivo Compulsivo" 
+                    />
                 </div>
 
                 <div className='flex flex-col items-center'>
