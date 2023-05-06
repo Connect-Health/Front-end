@@ -35,7 +35,7 @@ const Nutrim = () => {
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content'>
-                <div className='text-xl border-r-2 border-b-2 p-3'>
+                <div className='text-xl border-r-2 border-b-2 p-3 w-[40%]'>
                     <h3>Prevenção de doenças como:  </h3>
                     <h3>Cancer, depressão, diabetes, hipertensão, entre outras.</h3>
                 </div>
