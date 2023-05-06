@@ -5,7 +5,7 @@ import Informacoes from './components/Informacoes'
 
 const Profissional = () => {
   return (
-    <div>
+    <div className=''>
         <Header />
         <Perfil />
     </div>
