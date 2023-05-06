@@ -1,5 +1,7 @@
 import React from 'react'
 import Fundo from '../../../assets/fundo.png'
+import Icone from '../../../assets/nutricon1.jpg'
+
 import TituloFoto from './TituloFoto'
 
 import Informacoes from './Informacoes'
@@ -32,7 +34,7 @@ const Perfil = () => {
 
 
   return (
-    <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#aaa]/10 '>
+    <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#f0f0f0]/70 backdrop-blur-md '>
         <div className=' w-full'>
             <img src={Fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b' alt="" />
             <TituloFoto profissional={profissional}
