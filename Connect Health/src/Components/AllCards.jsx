@@ -30,7 +30,7 @@ const AllCards = () => {
         },
         
     },
-})
+  })
 
   if (isLoading) {
     return <div className='flex justify-center items-center text-black'>
