@@ -11,7 +11,7 @@ const HomeNutri = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     useEffect(() => {
         setTimeout(() => {
-        return  setLetterClass('text-animate-hover')
+        return setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
 
