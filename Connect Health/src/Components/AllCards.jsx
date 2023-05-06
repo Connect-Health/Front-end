@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Card from './../Nutricao/Components/Card'
+import { Box, CircularProgress } from '@mui/material'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const AllCards = () => {
   const [data, setData] = useState([])
@@ -19,9 +21,26 @@ const AllCards = () => {
 
     fetchProfissionais()
   }, [])
+  
+
+  const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#94E127',
+        },
+        
+    },
+})
 
   if (isLoading) {
-    return <div className='flex justify-center items-center text-black'>Carregando...</div>
+    return <div className='flex justify-center items-center text-black'>
+      <ThemeProvider theme={theme}>
+        <Box sx={{ display: 'flex' }}>
+          <CircularProgress color='primary' />
+        </Box>
+      </ThemeProvider>
+      
+    </div>
   }
 
   return (
