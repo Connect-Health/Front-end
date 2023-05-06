@@ -4,8 +4,8 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Click from '../../Components/miniComponents/Click';
-import Horario from '../Components/Horario';
+import Click from './Click';
+import Horario from './Horario';
 
 const especialidades = 
     [
@@ -71,11 +71,11 @@ const especialidades =
         '23:00',
     ]
 
-const FiltrosDetails = () => {
+const FiltrosDetails = (props) => {
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#9A54E1',
+                main: `${props.theme}`,
             },
             
         },
@@ -85,7 +85,7 @@ const FiltrosDetails = () => {
   return (
     <div className='flex flex-col'>
         <div>
-            <h2 className='text-psi uppercase text-center text-xl font-bold mt-3'>Filtros</h2>
+            <h2 className={`text-${props.color} uppercase text-center text-xl font-bold mt-3`}>Filtros</h2>
         </div>
 
         <div className='flex flex-col items-center mt-8'>
@@ -95,13 +95,13 @@ const FiltrosDetails = () => {
 
         <div className='grid grid-cols-2 mx-[2%] mt-6'>
             <div>
-                <h4 className='text-psi text-center  text-lg '>Especialidades</h4>
+                <h4 className={`text-${props.color} text-center  text-lg`}>Especialidades</h4>
 
                 <div className='flex flex-wrap gap-2 justify-center mt-3'>
                     {especialidades.map((especialidade, idx) => (
                         <Click
                             key={idx}
-                            bg="bg-psi"
+                            bg={`bg-${props.color}`}
                             textClass="text-white"
                             text={especialidade}
                         />
@@ -130,7 +130,7 @@ const FiltrosDetails = () => {
             </div>
 
             <div className='flex flex-col items-center'>
-                <h4 className='text-psi text-center text-lg  '>Horário para agendamento</h4>
+                <h4 className={`text-${props.color} text-center text-lg`}>Horário para agendamento</h4>
                 <p className='text-center text-black text-sm'>Selecione o dia que deseja:</p>
                 <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2'/>
 
@@ -138,7 +138,7 @@ const FiltrosDetails = () => {
                     {horarios.map((horario, idx) => (
                         <Horario
                             key={idx}
-                            bg='bg-psi'
+                            bg={`bg-${props.color}`}
                             textClass='text-white'
                             hora={horario}
                         />
@@ -148,7 +148,7 @@ const FiltrosDetails = () => {
 
         </div>
             
-        <button className='bg-psi text-white px-10 py-2 rounded-3xl m-auto mt-6 hover:border hover:border-[#7912ce] hover:scale-105 box-content transition duration-300 active:scale-90'>Buscar</button>
+        <button className={`bg-${props.color} text-white px-10 py-2 rounded-3xl m-auto mt-6 hover:border hover:border-${props.secColor} hover:scale-105 box-content transition duration-300 active:scale-90`}>Buscar</button>
     </div>
   )
 }

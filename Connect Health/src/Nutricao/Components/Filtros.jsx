@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { MdTune } from "react-icons/md"
 import { AiOutlineArrowDown } from "react-icons/ai"
-import FiltrosDetails from './FiltrosDetails';
+import FiltrosDetails from '../../Components/miniComponents/FIltrosDetails';
 
 
 const Filtros = () => {
@@ -82,7 +82,12 @@ const Filtros = () => {
                     
                     <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
                         <p onClick={handleClose} className='text-black absolute right-0 pr-3 pt-1 cursor-pointer font-bold text-2xl'>X</p>
-                        <FiltrosDetails />
+                        <FiltrosDetails 
+                            theme='#94E127'
+                            color='nutri'
+                            secColor='[#00ff9d]'
+                            
+                        />
                     </div>
                 </Backdrop>
 
