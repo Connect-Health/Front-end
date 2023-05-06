@@ -6,12 +6,11 @@ import Icone2 from '../../assets/nutricon2.jpg'
 import Icone3 from '../../assets/nutricon3.jpg'
 import Icone4 from '../../assets/nutricon4.jpg'
 import Icone5 from '../../assets/nutricon5.jpg'
-import Fru from '../../assets/tracos.svg'
 import Button from './components/minComponents/Button'
 
 const Profissional = () => {
   return (
-    <div className='overflow-hidden '>
+    <div className=''>
         <Header />
         <img className='absolute -z-10 left-0 top-60' src={Icone1} alt="" />
         <img className='absolute -z-10 right-0 top-60' src={Icone2} alt="" />
