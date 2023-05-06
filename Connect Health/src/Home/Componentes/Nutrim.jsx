@@ -4,6 +4,8 @@ import Mulher from '../../../assets/mulher-nutri.svg'
 import Planutri from '../../../assets/planutri.svg'
 import PostNutri from '../../../assets/postnutri.svg'
 import Protein from '../../../assets/protein.svg'
+import Strong from '../../../assets/strong.svg'
+import WaveFeed from '../../../assets/wavefeed.svg'
 
 const Nutrim = () => {
     return (
@@ -26,9 +28,9 @@ const Nutrim = () => {
                 <img className='w-[65px] h-[65px]' src={Planutri} alt="" />
             </div>
 
-
+            <img className='mt-20' src={PostNutri} alt="" />
             <div className='w-full m-auto justify-center flex mt-10'>
-              <img src={PostNutri} alt="" />
+              
                 <h2 className='w-[25%] text-3xl text-nutri font-extrabold text-center'>Por que cuidar da sua alimentação?</h2>
             </div>
 
@@ -42,7 +44,7 @@ const Nutrim = () => {
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content'>
                 
-                <img className='' src={} alt="" />
+                <img className='' src={Strong} alt="" />
 
                 <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]'>
                     <h3>Melhora no desempenho no trabalho </h3>
@@ -57,6 +59,10 @@ const Nutrim = () => {
                     <h3> Aumento na autoestima e confiança</h3>
                 </div>
                 
+            </div>
+
+            <div className=' mt-20 h-2/3'>
+              <img src={WaveFeed} alt="" />
             </div>
       </div>
       
