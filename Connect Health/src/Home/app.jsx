@@ -3,6 +3,7 @@ import Header from "./Componentes/Header"
 import Blocos from "./Componentes/Blocos"
 import Psico from "./Componentes/Psico"
 import Nutrim from './Componentes/Nutrim'
+import Feed from "./Componentes/Feed"
 
 
 function Home() {
@@ -12,8 +13,8 @@ function Home() {
             <BGHome/>
             <Blocos />
             <Psico />
-            
-            
+            <Nutrim/>       
+            <Feed/>
             
             
                 
