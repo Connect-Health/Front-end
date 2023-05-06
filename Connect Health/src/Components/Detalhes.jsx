@@ -1,10 +1,10 @@
 import React from 'react'
-import Vetor from '../../../assets/Vector.svg'
+import Vetor from '../../assets/Vector.svg'
 
-const Detalhes = () => {
+const Detalhes = (props) => {
   return (
-    <div className='bg-nutri flex justify-between gap-14 shadow-nutrici mb-12'>
-        <img src={Vetor} alt="" className='border-0 absolute' />
+    <div className={`flex justify-between gap-14 mb-12 ${props.pai}`}>
+        <img src={props.imagem} alt="ondas de fundo" className='border-0 absolute' />
 
         <div className='text-center text-white mt-5 mb-5 w-1/3 ml-5 '>
             <h2 className='text-2xl font-semibold drop-shadow-xl mb-4'>Nossos Planos</h2>

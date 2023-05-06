@@ -1,19 +1,21 @@
 import React from 'react'
+import Vetor from '../../assets/Vector.svg'
 
 import HomeNutri from './Components/HomeNutri'
-import Detalhes from './Components/Detalhes'
+import Detalhes from '../Components/Detalhes'
 import Filtros from './Components/Filtros'
 import Paginacao from './Components/Paginacao';
-import Card from './Components/Card';
 import AllCards from '../Components/AllCards';
 import Footer from './Components/Footer';
-import Services from '../Components/Services';
 
 function Nutricao() {
   return (
     <div>
       <HomeNutri />
-      <Detalhes />
+      <Detalhes 
+        pai="bg-nutri shadow-nutrici"
+        imagem ={Vetor}
+      />
       <Filtros />
       <AllCards />
       <Paginacao />
