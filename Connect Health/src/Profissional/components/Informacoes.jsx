@@ -11,7 +11,10 @@ const Informacoes = () => {
             <Sobre />
         </div>
 
-        <Avaliacoes />
+        <div className='w-1/2'>
+            <Avaliacoes />
+
+        </div>
     </div>
   )
 }

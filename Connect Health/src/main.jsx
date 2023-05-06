@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <Psicologia />,
   },
   {
-    path: '/profissional',
+    path: '/profissional/:id',
     element: <Profissional />,
   }
 ])

@@ -1,11 +1,20 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
+import { useNavigate } from "react-router-dom";
+import Profissional from '../../Profissional/Profissional';
 
 const Card = ({ profissional }) => {
   const MAX_ESPECIALIDADES = 3;
   const especiaisRestantes = profissional.especialidade.length - MAX_ESPECIALIDADES;
 
   const descricaoProfissional = profissional.descricao
+
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    return navigate(`/profissional/${profissional.id}`)
+  }
+  
 
   return (
     <div key={profissional.id} className='flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-[#94E127] box-content'>
@@ -64,7 +73,7 @@ const Card = ({ profissional }) => {
             </p>
           </div>
 
-          <button className=' px-3 my-3 py-1.5 rounded-2xl bg-nutri bg-opacity-80 font-medium text-white'>Saiba mais</button>
+          <button onClick={handleClick} className=' px-3 my-3 py-1.5 rounded-2xl bg-nutri bg-opacity-80 font-medium text-white'>Saiba mais</button>
         </div>
 
       </div>
