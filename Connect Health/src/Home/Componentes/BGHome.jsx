@@ -38,6 +38,7 @@ function BGHome(){
                     <Nutrim/>
                 </ParallaxLayer>
                 
+                
             </Parallax>
 
         </div>

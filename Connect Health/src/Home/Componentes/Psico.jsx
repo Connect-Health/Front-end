@@ -54,7 +54,7 @@ function Psico(){
                 </div>
                 
             </div>
-            <div className=' mt- h-2/3'>
+            <div className=' mt-20 h-2/3'>
                 <img src={WaveNutri} alt="" />
             </div>
             
