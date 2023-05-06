@@ -7,6 +7,69 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Click from '../../Components/miniComponents/Click';
 import Horario from '../Components/Horario';
 
+const especialidades = 
+    [
+        'Ansiedade',
+        'Bornout',
+        'Borderline', 
+        'Conflitos Amorosos',
+        'Família',
+        'Déficit de Atenção',
+        'Depressão',
+        'Estresse',
+        'Desenvolvimento Pessoal',
+        'Autoconhecimento',
+        'Compulsões',
+        'Morte e Luto',
+        'Fobias',
+        'Drogas',
+        'Medos',
+        'Obesidade',
+        'Sexualidade',
+        'Insônia',
+        'Sindrome do Pânico',
+        'Autoestima',
+        'TOC - Transtorno Obssesivo Compulsivo'
+    ]
+
+    const horarios = 
+    [
+        '6:00',
+        '6:30',
+        '7:00',
+        '7:30',
+        '8:00',
+        '8:30',
+        '9:00',
+        '9:30',
+        '10:00',
+        '10:30',
+        '11:00',
+        '11:30',
+        '12:00',
+        '12:30',
+        '13:00',
+        '13:30',
+        '14:00',
+        '14:30',
+        '15:00',
+        '15:30',
+        '16:00',
+        '16:30',
+        '17:00',
+        '17:30',
+        '18:00',
+        '18:30',
+        '19:00',
+        '19:30',
+        '20:00',
+        '20:30',
+        '21:00',
+        '21:30',
+        '22:00',
+        '22:30',
+        '23:00',
+    ]
 
 const FiltrosDetails = () => {
     const theme = createTheme({
@@ -35,153 +98,14 @@ const FiltrosDetails = () => {
                 <h4 className='text-psi text-center  text-lg '>Especialidades</h4>
 
                 <div className='flex flex-wrap gap-2 justify-center mt-3'>
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Ansiedade" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Bournout" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Borderline" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Conflitos Amorosos" 
-                    />
-                   <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Família" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Déficit de Atenção" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Depressão" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Estresse" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Desenvolvimento Pessoal" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Autoconhecimento" 
-                    />
-                   <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Compulsões" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Morte e luto" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Fobias" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Drogas" 
-                    />
-                   <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Medos" 
-                    />
-                   <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Obesidade" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Sexualidade" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Insônia" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Sindrome do Pânico" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="Autoestima" 
-                    />
-                    <Click 
-                        contain="bg-psi"
-                        bg="bg-psi"
-                        textClass="text-white"
-
-                        text="TOC - Transtorno Obssesivo Compulsivo" 
-                    />
+                    {especialidades.map((especialidade, idx) => (
+                        <Click
+                            key={idx}
+                            bg="bg-psi"
+                            textClass="text-white"
+                            text={especialidade}
+                        />
+                    ))}
                 </div>
 
                 <div className='flex flex-col items-center'>
@@ -211,41 +135,14 @@ const FiltrosDetails = () => {
                 <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2'/>
 
                 <div className='grid grid-cols-5 gap-2 mt-6'>
-                    <Horario hora="06:00" />
-                    <Horario hora="06:30" />
-                    <Horario hora="07:00" />
-                    <Horario hora="07:30" />
-                    <Horario hora="08:00" />
-                    <Horario hora="08:30" />
-                    <Horario hora="09:00" />
-                    <Horario hora="09:30" />
-                    <Horario hora="10:00" />
-                    <Horario hora="10:30" />
-                    <Horario hora="11:00" />
-                    <Horario hora="11:30" />
-                    <Horario hora="12:00" />
-                    <Horario hora="12:30" />
-                    <Horario hora="13:00" />
-                    <Horario hora="13:30" />
-                    <Horario hora="14:00" />
-                    <Horario hora="14:30" />
-                    <Horario hora="15:00" />
-                    <Horario hora="15:30" />
-                    <Horario hora="16:00" />
-                    <Horario hora="16:30" />
-                    <Horario hora="17:00" />
-                    <Horario hora="17:30" />
-                    <Horario hora="18:00" />
-                    <Horario hora="18:30" />
-                    <Horario hora="19:00" />
-                    <Horario hora="19:30" />
-                    <Horario hora="20:00" />
-                    <Horario hora="20:30" />
-                    <Horario hora="21:00" />
-                    <Horario hora="21:30" />
-                    <Horario hora="22:00" />
-                    <Horario hora="22:30" />
-                    <Horario hora="23:00" />
+                    {horarios.map((horario, idx) => (
+                        <Horario
+                            key={idx}
+                            bg='bg-psi'
+                            textClass='text-white'
+                            hora={horario}
+                        />
+                    ))}
                 </div>
             </div>
 
