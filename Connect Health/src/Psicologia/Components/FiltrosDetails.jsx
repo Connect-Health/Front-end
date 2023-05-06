@@ -40,8 +40,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Ansiedade" 
                     />
                     <Click 
@@ -49,8 +47,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Bournout" 
                     />
                     <Click 
@@ -58,8 +54,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Borderline" 
                     />
                     <Click 
@@ -67,8 +61,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Conflitos Amorosos" 
                     />
                    <Click 
@@ -76,8 +68,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Família" 
                     />
                     <Click 
@@ -85,8 +75,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Déficit de Atenção" 
                     />
                     <Click 
@@ -94,8 +82,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Depressão" 
                     />
                     <Click 
@@ -103,8 +89,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Estresse" 
                     />
                     <Click 
@@ -112,8 +96,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Desenvolvimento Pessoal" 
                     />
                     <Click 
@@ -121,8 +103,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Autoconhecimento" 
                     />
                    <Click 
@@ -130,8 +110,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Compulsões" 
                     />
                     <Click 
@@ -139,8 +117,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Morte e luto" 
                     />
                     <Click 
@@ -148,8 +124,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Fobias" 
                     />
                     <Click 
@@ -157,8 +131,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Drogas" 
                     />
                    <Click 
@@ -166,8 +138,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Medos" 
                     />
                    <Click 
@@ -175,8 +145,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Obesidade" 
                     />
                     <Click 
@@ -184,8 +152,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Sexualidade" 
                     />
                     <Click 
@@ -193,8 +159,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Insônia" 
                     />
                     <Click 
@@ -202,8 +166,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Sindrome do Pânico" 
                     />
                     <Click 
@@ -211,8 +173,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="Autoestima" 
                     />
                     <Click 
@@ -220,8 +180,6 @@ const FiltrosDetails = () => {
                         bg="bg-psi"
                         textClass="text-white"
 
-                        rBG="bg-psi"
-                        rTextClass="text-white"
                         text="TOC - Transtorno Obssesivo Compulsivo" 
                     />
                 </div>

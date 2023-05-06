@@ -5,8 +5,8 @@ const Click = (props) => {
       e.target.classList.add(`${props.bg}`)
       e.target.classList.add(`${props.textClass}`)
     } else {
-      e.target.classList.remove(`${props.rBG}`)
-      e.target.classList.remove(`${props.rTextClass}`)
+      e.target.classList.remove(`${props.bg}`)
+      e.target.classList.remove(`${props.textClass}`)
     }
   }
 
