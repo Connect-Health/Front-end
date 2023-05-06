@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './HeaderNutri'
+import Header from '../../Components/Header'
 import { MdSubdirectoryArrowRight } from "react-icons/md"
 import BackGround from '../../../assets/nutricao.png'
 
@@ -18,7 +18,15 @@ const HomeNutri = () => {
   return (
     <div className='h-[650px] flex flex-col'>
       <img src={BackGround} className='absolute -z-10 h-[650px] w-full' alt="" />
-        <Header />
+        <Header
+          health="hover:text-nutri"
+          connect="text-nutri"
+          area="Nutrição"
+          colorArea="hover:text-[#01c929]"
+          link="/psicologia"
+          areaNav="Psicologia" 
+        
+        />
         <div className='h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col'>
 
           <h2 className='w-[85%] font-bold text-3xl text-center mt-10'>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './HeaderPsi'
+import Header from '../../Components/Header'
 import { MdSubdirectoryArrowRight } from "react-icons/md"
 import BackGround from '../../../assets/psi.png'
 
@@ -18,7 +18,17 @@ const HomePsi = () => {
   return (
     <div className='h-[650px] flex flex-col'>
       <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end' alt="" />
-        <Header />
+
+        <Header
+            health="hover:text-psi"
+            connect="text-psi"
+            area="Psicologia"
+            colorArea="hover:text-psi"
+            link="/nutricao"
+            areaNav="nutrição"
+        
+        />
+
         <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30'>
             <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col'>
 
