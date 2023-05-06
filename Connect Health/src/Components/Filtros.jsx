@@ -12,14 +12,14 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { MdTune } from "react-icons/md"
 import { AiOutlineArrowDown } from "react-icons/ai"
-import FiltrosDetails from '../../Components/miniComponents/FIltrosDetails';
+import FiltrosDetails from './miniComponents/FIltrosDetails';
 
 
-const Filtros = () => {
+const Filtros = (props) => {
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#94E127',
+                main: `${props.theme}`,
             },
             
         },
@@ -46,8 +46,8 @@ const Filtros = () => {
 
   return (
     <div className='mt-20 mb-10'>
-        <h2 className='text-center text-nutri font-bold text-3xl mb-14'>
-            Nossos Nutricionistas
+        <h2 className={`text-center text-${props.color} font-bold text-3xl mb-14`}>
+            Nossos {props.profissionais}
         </h2>
 
         <div  className='flex justify-between mx-14'>
@@ -83,10 +83,9 @@ const Filtros = () => {
                     <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
                         <p onClick={handleClose} className='text-black absolute right-0 pr-3 pt-1 cursor-pointer font-bold text-2xl'>X</p>
                         <FiltrosDetails 
-                            theme='#94E127'
-                            color='nutri'
-                            secColor='[#00ff9d]'
-                            
+                            theme={props.theme}
+                            color={props.color}
+                            secColor={props.secColor}
                         />
                     </div>
                 </Backdrop>
