@@ -7,6 +7,7 @@ import Header from './Header'
 import Psico from './Psico'
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
+import Nutrim from './Nutrim'
 
 function BGHome(){
     return(
@@ -34,7 +35,9 @@ function BGHome(){
                 <ParallaxLayer offset={1} speed={0.1}>
                     <Blocos />
                     <Psico />
+                    <Nutrim/>
                 </ParallaxLayer>
+                
                 
             </Parallax>
 

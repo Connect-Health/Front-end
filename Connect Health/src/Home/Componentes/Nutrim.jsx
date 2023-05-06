@@ -10,10 +10,7 @@ const Nutrim = () => {
           <div className='flex w-1/5 justify-center bg-white'>
             < h2 className='text-[#71B80F]  text-[35px]  font-bold'>Nutrição</h2>
           </div>
-          
-         
-
-            
+        
         </div>
         
         <div>
