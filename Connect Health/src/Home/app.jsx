@@ -4,6 +4,7 @@ import Blocos from "./Componentes/Blocos"
 import Psico from "./Componentes/Psico"
 import Nutrim from './Componentes/Nutrim'
 import Feed from "./Componentes/Feed"
+import Sobre from "./Componentes/Sobre"
 
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
             <Psico />
             <Nutrim/>       
             <Feed/>
+            <Sobre/>
             
             
                 
