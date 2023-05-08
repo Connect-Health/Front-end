@@ -4,6 +4,8 @@ import Brain from '../../../assets/brain.png'
 import HeadPsi from '../../../assets/headpsi.svg'
 import PlusPsi from '../../../assets/pluspsi.svg'
 import WaveNutri from '../../../assets/wavenutri.svg'
+import PostPsi from '../../../assets/postpsi.svg'
+
 
 function Psico(){
     return(
@@ -22,6 +24,10 @@ function Psico(){
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
                 <button className='w-[15%] h-10 bg-psi rounded-full text-[#fff]'>Venha conhecer!</button>
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
+            </div>
+
+            <div className='mt-20'>
+                <img src={PostPsi} alt="" />
             </div>
 
             <div className='w-full m-auto justify-center flex mt-10'>
