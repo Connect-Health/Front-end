@@ -1,7 +1,7 @@
 import ModelFeed from '../../../assets/modelofeed.svg'
 import PostFeed from '../../../assets/postfeed.svg'
 import ArcoFeed from '../../../assets/arcofeed.svg'
-import WaveSobre from '../../../assets/wavesobre.svg'
+import WaveFeed from '../../../assets/wavefeed.svg'
 
 
 function Feed(){
@@ -17,7 +17,7 @@ function Feed(){
                     </div>
             </div>
 
-            <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 '>
+            <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16  '>
                 <button className='w-[15%] h-10 bg-[#5D59FF] rounded-full text-[#fff]'>Acompanhe aqui!</button>
             </div>
 
@@ -25,12 +25,12 @@ function Feed(){
                 <img src={PostFeed} alt="" />
             </div>
 
-            <div className='flex justify-center mr-16 mt-16'>
+            <div className='flex justify-center w-full mr-16 mt-16  '>
                 <img className='w-[45%]'  src={ArcoFeed} alt="" />
             </div>
 
-            <div className='flex justify-center'>
-                <img src={WaveSobre} alt="" />
+            <div className=''>
+                <img className='w-[100%] ' src={WaveFeed} alt="" />
             </div>
         </div>
     )
