@@ -5,8 +5,8 @@ import { Box, CircularProgress } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const AllCards = () => {
-  const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [data, setData] = useState([])
 
   useEffect(() => {
     async function fetchProfissionais() {
