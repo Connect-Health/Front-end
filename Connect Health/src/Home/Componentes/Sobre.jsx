@@ -1,6 +1,6 @@
 import ModelSobre from '../../../assets/modelsobre.svg'
 import Logo from '../../../assets/logo_preta.png'
-import GiHealthNormal from 'react-icons/gi'
+
 
 
 function Sobre(){
@@ -30,13 +30,31 @@ function Sobre(){
                     <div className='bg-[#EBF3FF] items-center  flex flex-col rounded-2xl gap-8'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
-                        <ul className=''>
-                            <li> <img src={GiHealthNormal} alt=""/> ° 2 consultas com Psicólogo;</li>
-                            <li>1 consulta com Nutricionista;</li>
-                            <li>Consultas de 30 minutos; </li>
-                            <li>Acesso ao feed de Notícias;</li>
-                            <li>Área de gerenciamento de consultas.</li>
-                        </ul>
+                        <div>
+                            <div>
+                                <img src={} alt="" />
+                                <p>2 consultas com Psicólogo;</p>
+                            </div>
+                            
+                            <div>
+                                <p>1 consulta com Nutricionista;</p>
+                            </div>
+                            
+                            <div>
+                                <p>Consultas de 30 minutos; </p>
+                            </div>
+                            
+                            <div>
+                                <p>Acesso ao feed de Notícias;</p>
+                            </div>
+
+                            <div>
+                                <p>Área de gerenciamento de consultas.</p>
+                            </div>
+                            
+                            
+                        </div>
+                            
                     </div>
 
                     <div className='bg-gradi text-center'>
