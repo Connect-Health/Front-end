@@ -7,8 +7,12 @@ import Icone3 from '../../assets/nutricon3.jpg'
 import Icone4 from '../../assets/nutricon4.jpg'
 import Icone5 from '../../assets/nutricon5.jpg'
 import Button from './components/minComponents/Button'
+import { useEffect } from 'react';
 
 const Profissional = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className=''>
         <Header />

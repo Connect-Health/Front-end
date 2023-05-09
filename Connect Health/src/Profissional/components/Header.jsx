@@ -9,7 +9,6 @@ const Header = () => {
             <span className='text-[#303de9] hover:text-white w-6 transition duration-300 hover:scale-110 '>Connect</span>
             Health
         </Link>
-
     </div>
 
     
