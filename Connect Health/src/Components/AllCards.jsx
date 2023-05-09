@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Card from './../Nutricao/Components/Card'
+import Card from './Card'
 import { Box, CircularProgress } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -46,7 +46,13 @@ const AllCards = () => {
   return (
     <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9'>
       {data.map((profissional) => (
-        <Card key={profissional.id} profissional={profissional} />
+        <Card
+          border='[#94E127]'
+          border2='nutri'
+          border3='[#D7F2E0]'
+          texto='nutri'
+        
+          key={profissional.id} profissional={profissional} />
       ))}
     </div>
   )
