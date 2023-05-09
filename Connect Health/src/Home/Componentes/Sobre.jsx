@@ -32,27 +32,27 @@ function Sobre(){
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
                         <div>
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>2 consultas com Psicólogo;</p>
                             </div>
                             
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>1 consulta com Nutricionista;</p>
                             </div>
                             
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>Consultas de 30 minutos; </p>
                             </div>
                             
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>Acesso ao feed de Notícias;</p>
                             </div>
 
-                            <div className='flex items-center gap-1'>
+                            <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>Área de gerenciamento de consultas.</p>
                             </div>
