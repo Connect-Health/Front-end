@@ -22,6 +22,7 @@ function Sobre(){
             </div>
 
             <div className='w-full mt-6'>
+                
                 <h3 className='text-center font-bold text-3xl text-[#171FDF]'>Nossos Planos:</h3>
             </div>
 
@@ -32,7 +33,6 @@ function Sobre(){
                         <p>Você tem direito a:</p>
                         <div>
                             <div>
-                                <img src={} alt="" />
                                 <p>2 consultas com Psicólogo;</p>
                             </div>
                             
