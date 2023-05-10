@@ -66,7 +66,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8'>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Standart <br/> R$100,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
@@ -102,7 +102,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8'>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Premium <br/> R$150,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
