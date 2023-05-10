@@ -16,7 +16,7 @@ function Home() {
             <Psico />
             <Nutrim/>       
             <Feed/>
-            <Sobre/>
+            {/* <Sobre/> */}
             
             
                 
