@@ -4,22 +4,27 @@ function Contato(){
     return(
         <div>
             <div className='w-[100%]'>
-                <h1 className='text-center text-3xl'>Entre em contato conosco!</h1>
+                <h1 className='text-center text-3xl text-[#5855F2]'>Entre em contato conosco!</h1>
             </div>
 
-            <div className='w-[80%] m-auto bg-gradi mt-20 flex'>
-                <div className=' flex flex-col bg-psi w-[50%] pl-10 pt-10'>
+            <div className='w-[90%] m-auto  mt-10 flex gap-40 items-center'>
+                <div className=' flex flex-col h-auto pb-4 bg-[#5855F2] bg-opacity-80 w-[70%] pl-10 pt-10 rounded-2xl'>
                     <div>
-                        <h2 className='font-bold text-2xl'>Contate-nos</h2>
-                        <p>Mande suas dúvidas, portfólios e ideias.</p>
+                        <h2 className='font-bold text-2xl text-white'>Contate-nos</h2>
+                        <p className='text-white'>Mande suas dúvidas, portfólios e ideias.</p>
                     </div>
 
                     <div className='flex flex-col gap-10 mt-10'>
-                        <input className='w-[70%] h-[10%] bg-gradi bg-opacity-0 border-b-2 border-white' type="text"/>
-                        <input className='w-[70%] h-[10%]' type="email"/>
-                        <input className='w-[70%] h-[10%]' type="tel"/>
-                        <textarea className='bg-[#F3F9FF] w-[70%] h-[40%]' name="" id="" cols="40" rows="10"></textarea>
+                        <input placeholder='Nome' className='w-[70%] h-[10%] bg-gradi bg-opacity-0 border-b-2 border-white placeholder:text-white text-white focus:outline-none' type="text"/>
+                        <input placeholder='Email' className='w-[70%] h-[10%] bg-gradi bg-opacity-0 border-b-2 border-white placeholder:text-white text-white focus:outline-none' type="email" maxLength={11}/>
+                        <input placeholder='Telefone (55)' className='w-[70%] h-[10%] bg-gradi bg-opacity-0 border-b-2 border-white placeholder:text-white text-white placeholder:shadow-none focus:outline-none' type="tel" maxLength={11}/>
+                        <textarea placeholder='Mensagem' maxLength={255} className='bg-[#F3F9FF] py-3 px-4 opacity-80 w-[70%] h-40 rounded-sm placeholder:text-black  text-black text' name="" id="" cols="40" rows="10"></textarea>
+                        <button className='bg-[#5855F2] text-white shadow-xl w-[35%] rounded-sm p-2 hover:bg-white hover:text-[#5855F2] transition-all duration-300'>Enviar</button>
                     </div>
+                </div>
+
+                <div>
+                    <img className='w-[100%]' src={DesenhoContato} alt="" />
                 </div>
             </div>
             
