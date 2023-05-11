@@ -24,7 +24,7 @@ const Nutrim = () => {
 
               <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 '>
                 <img className='w-[65px] h-[65px]' src={Planutri} alt="" />
-                <button className='w-[15%] h-10 bg-nutri rounded-full text-[#fff]'>Conheça mais aqui!</button>
+                <Link to='/nutricao' className='w-[15%] p-2 bg-nutri rounded-full text-[#fff] text-center'>Conheça mais aqui!</Link>
                 <img className='w-[65px] h-[65px]' src={Planutri} alt="" />
             </div>
 
