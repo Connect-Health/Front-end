@@ -7,8 +7,14 @@ import Filtros from '../Components/Filtros'
 import Paginacao from './Components/Paginacao';
 import AllCards from '../Components/AllCards';
 import Footer from './Components/Footer';
+import { useEffect } from 'react'
+
 
 function Nutricao() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <HomeNutri />
