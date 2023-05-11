@@ -2,6 +2,7 @@ import ModelFeed from '../../../assets/modelofeed.svg'
 import PostFeed from '../../../assets/postfeed.svg'
 import ArcoFeed from '../../../assets/arcofeed.svg'
 import WaveFeed from '../../../assets/wavefeed.svg'
+import { Link } from 'react-router-dom'
 
 
 function Feed(){
@@ -18,7 +19,7 @@ function Feed(){
             </div>
 
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16  '>
-                <button className='w-[15%] h-10 bg-[#5D59FF] rounded-full text-[#fff]'>Acompanhe aqui!</button>
+                <Link to='/' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]'>Acompanhe aqui!</Link>
             </div>
 
             <div>
