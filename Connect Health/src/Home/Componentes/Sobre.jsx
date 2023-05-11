@@ -21,17 +21,19 @@ function Sobre(){
                 <img className='w-[5%]' src={Logo} alt="" />
             </div>
 
-            <div className='w-full mt-6'>
+            <div className='w-full mt-16'>
                 
                 <h3 className='text-center font-bold text-3xl text-[#171FDF]'>Nossos Planos:</h3>
             </div>
 
-            <div className='mt-40 mb-40 w-full h-[320px] bg-sobre'>
-                <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]'>
-                    <div className='bg-[#EBF3FF] items-center  flex flex-col rounded-2xl gap-8'>
+            {/* Inicos dos cards*/}
+
+            <div className='mt-44 mb-20 w-full h-[340px] bg-sobre'>
+                <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  '>
+                    <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 '>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
-                        <div>
+                        <div className='pb-10'>
                             <div className='flex items-center gap-1 justify-center'>
                                 <FaHeartbeat className="text-[4px] " />
                                 <p>2 consultas com Psicólogo;</p>
@@ -59,32 +61,81 @@ function Sobre(){
                             
                             
                         </div>
+
+
                             
                     </div>
 
-                    <div className='bg-gradi text-center'>
-                        <h2>Plano mensal Gratuito <br/> R$00,00</h2>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
+                        <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Standart <br/> R$100,00</h2>
                         <p>Você tem direito a:</p>
-                        <ul>
-                            <li>2 consultas com Psicólogo;</li>
-                            <li>1 consulta com Nutricionista;</li>
-                            <li>Consultas de 30 minutos; </li>
-                            <li>Acesso ao feed de Notícias;</li>
-                            <li>Área de gerenciamento de consultas.</li>
-                        </ul>
+                        <div className='pb-10'>
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>4 consultas com Psicólogo;</p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>2 consulta com Nutricionista;</p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Consultas de 45 minutos; </p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Acesso ao feed de Notícias;</p>
+                            </div>
+
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Área de gerenciamento de consultas.</p>
+                            </div>
+                            
+                            
+                        </div>
+
+                        
+                            
                     </div>
 
-                    <div className='bg-gradi text-center'>
-                        <h2>Plano mensal Gratuito <br/> R$00,00</h2>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
+                        <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Premium <br/> R$150,00</h2>
                         <p>Você tem direito a:</p>
-                        <ul>
-                            <li>2 consultas com Psicólogo;</li>
-                            <li>1 consulta com Nutricionista;</li>
-                            <li>Consultas de 30 minutos; </li>
-                            <li>Acesso ao feed de Notícias;</li>
-                            <li>Área de gerenciamento de consultas.</li>
-                        </ul>
+                        <div className='pb-10'>
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>5 consultas com Psicólogo;</p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>2 consulta com Nutricionista;</p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Consultas de 60 minutos;  </p>
+                            </div>
+                            
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Acesso ao feed de Notícias;</p>
+                            </div>
 
+                            <div className='flex items-center gap-1 justify-center'>
+                                <FaHeartbeat className="text-[4px] " />
+                                <p>Área de gerenciamento de consultas.</p>
+                            </div>
+                            
+                            
+                        </div>
+
+                        
+                            
                     </div>
                 </div>
             </div>
