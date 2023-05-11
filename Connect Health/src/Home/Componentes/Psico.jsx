@@ -5,6 +5,7 @@ import HeadPsi from '../../../assets/headpsi.svg'
 import PlusPsi from '../../../assets/pluspsi.svg'
 import WaveNutri from '../../../assets/wavenutri.svg'
 import PostPsi from '../../../assets/postpsi.svg'
+import { Link } from 'react-router-dom'
 
 
 function Psico(){
@@ -22,7 +23,7 @@ function Psico(){
             </div>
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 '>
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
-                <button className='w-[15%] h-10 bg-psi rounded-full text-[#fff]'>Venha conhecer!</button>
+                <Link to='/psicologia' className='w-[15%] h-10 bg-psi rounded-full text-[#fff]'>Venha conhecer!</Link>
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
             </div>
 
