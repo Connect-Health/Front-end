@@ -23,7 +23,7 @@ function Psico(){
             </div>
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 '>
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
-                <Link to='/psicologia' className='w-[15%] h-10 bg-psi rounded-full text-[#fff]'>Venha conhecer!</Link>
+                <Link to='/psicologia' className='w-[15%] p-2 text-center bg-psi rounded-full text-[#fff]'>Venha conhecer!</Link>
                 <img className='w-[65px] h-[65px]' src={Brain} alt="" />
             </div>
 
