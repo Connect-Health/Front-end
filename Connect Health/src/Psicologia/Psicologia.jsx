@@ -9,7 +9,13 @@ import AllCards from '../Components/AllcardsPsi';
 import Paginacao from './Components/Paginacao'
 import Footer from './Components/Footer'
 
+import { useEffect } from 'react'
+
 const Psicologia = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
         <HomePsi />
