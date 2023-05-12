@@ -6,7 +6,7 @@ import Detalhes from '../Components/Detalhes'
 import Filtros from '../Components/Filtros'
 import Paginacao from './Components/Paginacao';
 import AllCards from '../Components/AllCards';
-import Footer from './Components/Footer';
+import Footer from '../Components/Footer';
 import { useEffect } from 'react'
 
 
@@ -31,7 +31,11 @@ function Nutricao() {
       />
       <AllCards />
       <Paginacao />
-      <Footer />
+      <Footer
+        bg="nutri"
+        bgSec="[#95FF00]"
+      />
+      
     </div>
   )
 }

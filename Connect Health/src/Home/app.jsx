@@ -6,6 +6,7 @@ import Nutrim from './Componentes/Nutrim'
 import Feed from "./Componentes/Feed"
 import Sobre from "./Componentes/Sobre"
 import Contato from "./Componentes/Contato"
+import Footer from "../Components/Footer"
 
 
 function Home() {
@@ -19,6 +20,11 @@ function Home() {
             <Feed/>
             <Sobre/>
             <Contato/>
+            <Footer
+                bg="[#1E5BD1]"
+                bgSec="[#457ff4]"
+                invert="invert"
+            />
         </div>
         
     )

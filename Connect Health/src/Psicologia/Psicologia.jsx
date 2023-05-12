@@ -7,7 +7,7 @@ import Detalhes from '../Components/Detalhes'
 import Filtros from '../Components/Filtros'
 import AllCards from '../Components/AllcardsPsi';
 import Paginacao from './Components/Paginacao'
-import Footer from './Components/Footer'
+import Footer from '../Components/Footer'
 
 import { useEffect } from 'react'
 
@@ -31,7 +31,11 @@ const Psicologia = () => {
         />
         <AllCards />
         <Paginacao />
-        <Footer />
+        <Footer 
+           bg="psi"
+           bgSec="[#9e20f1]"
+           invert="invert"
+        />
     </div>
   )
 }
