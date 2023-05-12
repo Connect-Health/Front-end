@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Perfil from '../../../assets/foto-perfil.png'
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
-import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
+import { FaMedal } from 'react-icons/fa';
 
 
 const TituloFoto = ( { profissional }) => {
@@ -15,7 +15,8 @@ const TituloFoto = ( { profissional }) => {
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri' alt="Imagem de perfil do Profissional" />
+            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri ' alt="Imagem de perfil do Profissional" />
+            <FaMedal className='relative self-end ml-[-60px] text-3xl mb-[-10px]'/>
         </div>
 
         <div className='w-3/4'>

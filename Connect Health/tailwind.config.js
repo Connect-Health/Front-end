@@ -11,7 +11,6 @@ export default {
       "white": "#FFFFFF",
       "black": "#000",
       "gradi": "#646464",
-      "gradi2": "#2B2A2A",
       "psi": "#9A54E1",
 
     },

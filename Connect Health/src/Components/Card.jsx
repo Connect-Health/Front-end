@@ -2,7 +2,7 @@ import React from 'react';
 import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ profissional, border, border2, border3, texto, ...props }) => {
+const Card = ({ profissional, border, border2, border3, texto, bg, ...props }) => {
   const MAX_ESPECIALIDADES = 3;
   const especiaisRestantes = Math.max(profissional.especialidade.length - MAX_ESPECIALIDADES, 0);
 
@@ -20,7 +20,7 @@ const Card = ({ profissional, border, border2, border3, texto, ...props }) => {
 
   return (
     <div key={profissional.id} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
-      <div className={`w-[25%] border-r border-${border2} flex flex-col`}>
+      <div className={`w-[25%] border-r border-${border2} ${bg} flex flex-col`}>
         <img src={profissional.avatar} className='m-auto mt-3 rounded-xl w-24 h-auto' />
 
         <div className='mt-5'>

@@ -1,58 +1,102 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import Card from './Card'
-import { Box, CircularProgress, ThemeProvider, createTheme } from '@mui/material'
+import React, { useEffect, useState, useRef } from 'react';
+import axios from 'axios';
+import Card from './Card';
+import { Box, CircularProgress } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#9A54E1',
+    },
+  },
+});
+
+const pageSize = 4;
 
 const AllCards = () => {
-  const [data, setData] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [count, setCount] = useState(0);
+  const componentRef = useRef(null);
 
-  useEffect(() => {
-    async function fetchProfissionais() {
-      try {
-        const response = await axios.get('http://localhost:8080/profissionais/psicologos')
-        setData(response.data)
-        setIsLoading(false)
-      } catch (error) {
-        console.log(error)
-      }
+  async function fetchProfissionais() {
+    try {
+      const response = await axios.get(
+        `http://localhost:8080/profissionais/psicologos?page=${page}`
+      );
+      setData(response.data);
+      const totalCount = response.data.length;
+      setCount(Math.ceil(totalCount / pageSize));
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
     }
-
-    fetchProfissionais()
-  }, [])
-
-  const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#9A54E1',
-        },
-        
-    },
-  })
-
-  if (isLoading) {
-    return <div className='flex justify-center items-center text-black'>
-      <ThemeProvider theme={theme}>
-        <Box sx={{ display: 'flex' }}>
-          <CircularProgress color='primary' />
-        </Box>
-      </ThemeProvider>
-    </div>
   }
 
+  useEffect(() => {
+    setIsLoading(true);
+    fetchProfissionais();
+  }, [page]);
+
+  const handleChangePage = (event, value) => {
+    setPage(value);
+    componentRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9'>
-      {data.map((profissional) => (
-        <Card
-        border='[#8f3bfd]'
-        border2='psi'
-        border3='[#d0ade7]'
-        texto='psi'
+    <>
+      <div ref={componentRef} />
+      {isLoading ? (
+        <div className='flex justify-center items-center text-black'>
+          <ThemeProvider theme={theme}>
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress color='primary' />
+            </Box>
+          </ThemeProvider>
+        </div>
+      ) : (
+        <>
+          {data.length > 0 ? (
+            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9'>
+              {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
+                <Card
+                  border='psi'
+                  border2='psi'
+                  bg="border-psi"
+                  border3='[#D8CAFF]'
+                  texto='psi'
+                  key={profissional.id}
+                  profissional={profissional}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className='flex justify-center items-center text-black'>
+              <p>Não foi possível carregar os dados.</p>
+            </div>
+          )}
+          <Stack>
+            <ThemeProvider theme={theme}>
+              <Pagination
+                className='m-auto my-10'
+                count={count}
+                page={page}
+                variant='outlined'
+                shape='rounded'
+                color='primary'
+                onChange={handleChangePage}
+              />
+            </ThemeProvider>
+          </Stack>
+        </>
+      )}
+    </>
+  );
+};
 
-        key={profissional.id} profissional={profissional} />
-      ))}
-    </div>
-  )
-}
-
-export default AllCards
+export default AllCards;
