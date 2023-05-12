@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Feed(){
     return(
-        <div>
+        <div id="feed">
             <div className='flex justify-evenly'>
                 <div className='w-[45%] mt-10 ml-24'>
                         <h2 className='text-[#5D59FF] font-bold text-4xl'>Feed</h2>

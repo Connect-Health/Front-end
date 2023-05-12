@@ -10,7 +10,7 @@ import WaveFeed from '../../../assets/wavefeed.svg'
 const Nutrim = () => {
     return (
       <div>
-              <div className='flex justify-evenly items-center'>
+              <div id="nutricao" className='flex justify-evenly items-center'>
                 <div className='w-[45%]'>
                   <img className='w-[60%]' src={Mulher} alt="" />
                 </div>

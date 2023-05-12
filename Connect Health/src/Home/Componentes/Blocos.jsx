@@ -15,13 +15,13 @@ function Blocos(){
                 <h3 className='font-bold text-[20px] text-center text-[#fff] w-[65%] ml-[10%] mt-10 '>Feed</h3>
                 <p className='text-center w-[65%] ml-[10%] text-[15px] text-[#fff] pt-5'>Esteja por dentro de todas as novidades.<br/>Notícias, dicas, receitas, entre outras!
 tudo no nosso Feed!</p>
-                <a href='#nutricao' className='text-center bg-[#fff] w-[55%] rounded-full p-1 text-[15px] text-[#284BFD] mt-20 mb-20 mr-16 self-center'>Conheça Mais!</a>
+                <a href='#feed' className='text-center bg-[#fff] w-[55%] rounded-full p-1 text-[15px] text-[#284BFD] mt-20 mb-20 mr-16 self-center'>Conheça Mais!</a>
             </div>
 
             <div className='bg-bloco3 w-[25%] h-80 bg-contain bg-no-repeat flex-col flex'>
                 <h3 className='font-bold text-[20px] text-center text-[#fff] w-[80%] mt-10 '>Nutrição</h3>
                 <p className='text-center w-[65%] m-auto mr-24 text-[15px] text-[#fff] pt-5'>A alimentação é a parte mais importante do nosso dia. <br/>Mantenha uma alimentação saúdavel e desfrute do que seu corpo pode oferecer!</p>
-                <a href='#feed' className='text-center bg-[#62C49B] w-[55%] rounded-full p-1 text-[15px] text-[#fff] mt-16 mb-20 mr-16 self-center'>Conheça Mais!</a>
+                <a href='#nutricao' className='text-center bg-[#62C49B] w-[55%] rounded-full p-1 text-[15px] text-[#fff] mt-16 mb-20 mr-16 self-center'>Conheça Mais!</a>
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 function Psico(){
     return(
-        <div>
+        <div id="psicologia">
            <img src={Wave} alt="" />
            <div className='flex justify-evenly'>
                 <div className='w-[45%] mt-10 ml-24'>
