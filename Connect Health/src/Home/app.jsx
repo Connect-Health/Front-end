@@ -10,7 +10,7 @@ import Contato from "./Componentes/Contato"
 
 function Home() {
     return(
-        <>
+        <div className="">
             <Header />
             <BGHome/>
             <Blocos />
@@ -19,7 +19,7 @@ function Home() {
             <Feed/>
             <Sobre/>
             <Contato/>
-        </>
+        </div>
         
     )
 }

@@ -36,22 +36,22 @@ function Contato(){
 
             
             
-            <div className='h-80 bg-[#1E5BD1] flex flex-col'>
-                <img src={Elipse} alt="" className='absolute w-full' />
+            <div className='h-80 bg-[#1E5BD1] flex flex-col relative z-0'>
+                <img src={Elipse} alt="" className='absolute w-full  z-50' />
 
                 <div className='flex items-center flex-col pt-16'>
-                    <Link to='/' className='w-1/12 invert hover:scale-90 hover:bg-[#457ff4] hover:invert-0 transition duration-200 rounded-full'>
+                    <a href='#home' className='scroll-smooth w-1/12 invert hover:scale-90 hover:bg-[#457ff4] hover:invert-0 transition duration-200 rounded-full'>
                         <img src={Logo} alt="" />
-                    </Link>
+                    </a>
 
                     <div className='flex gap-10 mt-10'>
-                        <Link to="https://youtube.com">
+                        <Link to="https://twitter.com" target='_blank'>
                             <FaTwitter  className='text-white text-4xl border-2 hover:scale-125 transition duration-200 rounded-full p-2'/>
                         </Link>
-                            <Link to="https://instagram.com">
+                            <Link to="https://instagram.com/cnnthealth" target='_blank'>
                         <FaInstagram  className='text-white text-4xl border-2 hover:scale-125 transition duration-200 rounded-full p-2'/>
                         </Link>
-                        <Link to="https://facebook.com">
+                        <Link to="https://facebook.com" target='_blank'>
                             <FaFacebookF className=' text-white text-4xl border-2 hover:scale-125 transition duration-200 rounded-full p-2' />
                         </Link>
                     </div>
