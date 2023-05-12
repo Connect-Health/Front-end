@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Card from './Card';
 import { Box, CircularProgress } from '@mui/material';
@@ -21,6 +21,7 @@ const AllCards = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(0);
+  const componentRef = useRef(null);
 
   async function fetchProfissionais() {
     try {
@@ -44,10 +45,12 @@ const AllCards = () => {
 
   const handleChangePage = (event, value) => {
     setPage(value);
+    componentRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <>
+      <div ref={componentRef} />
       {isLoading ? (
         <div className='flex justify-center items-center text-black'>
           <ThemeProvider theme={theme}>
