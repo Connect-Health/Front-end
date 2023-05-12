@@ -26,7 +26,7 @@ function Nutricao() {
       <Filtros 
         color="nutri"
         secColor="[#00ff9d]"
-        theme='#9A54E1'
+        theme='#94E127'
         profissionais="Nutricionistas"
       />
       <AllCards />
