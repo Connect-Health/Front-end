@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Perfil from '../../../assets/foto-perfil.png'
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import Rating from '@mui/material/Rating';
 import { FaMedal } from 'react-icons/fa';
@@ -12,11 +11,13 @@ const TituloFoto = ( { profissional }) => {
         setIsfav(!isFav);
     }
 
+const nota = profissional.avaliacao || 0
+
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri ' alt="Imagem de perfil do Profissional" />
-            <FaMedal className='relative self-end ml-[-60px] text-3xl mb-[-10px]'/>
+            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri relative z-10' alt="Imagem de perfil do Profissional" />
+            <FaMedal className='relative self-end ml-[-65px] text-5xl mb-[-25px]'/>
         </div>
 
         <div className='w-3/4'>
@@ -35,11 +36,12 @@ const TituloFoto = ( { profissional }) => {
                 <div className='flex items-end gap-2'>
                     <Rating
                         name="text-feedback"
-                        value={profissional.avaliacao}
+                        value={nota}
                         readOnly
                         precision={0.5}
                     />
-                    <p className='font-bold'>{profissional.avaliacao}</p>
+                    <p className='font-bold'>{nota.toFixed(1)}</p>
+                    {console.log(nota)}
                 </div>
             </div>
 

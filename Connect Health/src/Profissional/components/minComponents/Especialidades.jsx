@@ -1,16 +1,16 @@
-import React from 'react'
 
-const Especialidades = () => {
+const Especialidades = ({ profissional }) => {
+  if (!profissional || !profissional.especialidade) {
+    return null; // or you can return a loading indicator
+  }
+
   return (
     <div className='w-full flex flex-wrap bg-nutri/25 py-2 gap-2 px-3 rounded-3xl drop-shadow-md box-border'>
-        <span className=' w-fit rounded-lg px-2 bg-white'>Suplementação</span>
-        <span className=' w-fit rounded-lg px-2 bg-white'>Alimentação</span>
-        <span className=' w-fit rounded-lg px-2 bg-white'>Obesidade</span>
-        <span className=' w-fit rounded-lg px-2 bg-white'>sei la</span>
-        <span className=' w-fit rounded-lg px-2 bg-white'>sei la</span>
-        <span className=' w-fit rounded-lg px-2 bg-white'>sei la</span>
+      {profissional.especialidade.map((especial, index) => (
+        <span key={index} className='w-fit rounded-lg px-2 bg-white'>{especial}</span>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Especialidades
+export default Especialidades;
