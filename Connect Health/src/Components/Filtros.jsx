@@ -45,22 +45,31 @@ const Filtros = (props) => {
     };
 
   return (
-    <div className='mt-20 mb-10'>
-        <h2 className={`text-center text-${props.color} font-bold text-3xl mb-14`}>
+    <div className='mt-20 mb-10 max-md:mt-10'>
+        <h2 className={`text-center text-${props.color} font-bold text-3xl mb-14 max-md:text-lg`}>
             Nossos {props.profissionais}
         </h2>
 
-        <div  className='flex justify-between mx-14'>
-            <div className='flex items-center'>
+        <div  className='flex justify-between mx-14 max-md:mx-2'>
+            <div className='flex items-center max-md:w-32'>
                 <FormControl>
                 <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
+                    
                 >    
                 <ThemeProvider theme={theme}>
-                     <FormControlLabel  value="todos" control={<Radio />} label="Todos"  />
-                    <FormControlLabel value="recomendados" color="primary" control={<Radio />} label="Recomendados" />
+                     <FormControlLabel  value="todos" control={<Radio />} label="Todos" sx={{
+                        '& .MuiSvgIcon-root': {
+                          fontSize: 18,
+                        },
+                      }}  />
+                    <FormControlLabel value="recomendados" color="primary" control={<Radio />} label="Recomendados" sx={{
+                        '& .MuiSvgIcon-root': {
+                          fontSize: 18,
+                        },
+                      }} />
                 </ThemeProvider>
                 </RadioGroup>
                 </FormControl>
@@ -68,8 +77,8 @@ const Filtros = (props) => {
                 
             </div>
 
-            <div className='flex gap-10'>
-                <button onClick={handleOpen} className='flex items-center font-semibold gap-1'>
+            <div className='flex gap-10 max-md:gap-5 items-center'>
+                <button onClick={handleOpen} className='flex items-center font-semibold gap-1 max-md:text-sm'>
                     Filtros
                     <MdTune />
                 </button>
@@ -90,7 +99,7 @@ const Filtros = (props) => {
                     </div>
                 </Backdrop>
 
-                <button onClick={(e) => handleClick(e)} className='flex items-center font-semibold border px-3 rounded-3xl gap-1'>
+                <button onClick={(e) => handleClick(e)} className='flex items-center font-semibold border px-3 rounded-3xl gap-1 max-md:h-fit max-md:py-1 max-md:text-sm'>
                     Relevância
                     <AiOutlineArrowDown />
 
