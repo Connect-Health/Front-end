@@ -18,9 +18,9 @@ const HomeNutri = () => {
   return (
     <div className='
       h-[650px] flex flex-col
-      max-md:h-auto
+      max-md:h-52
     '>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:h-auto max-md:object-cover  max-md:w-full' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:object-cover  max-md:w-full max-md:h-52  ' alt="" />
         <Header
           health="hover:text-nutri"
           connect="text-nutri"
@@ -32,7 +32,7 @@ const HomeNutri = () => {
         />
         <div className='
           h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col
-          max-md:h-auto max-md:w-1/2 max-md:mt-0
+           max-md:w-1/2 max-md:mt-0  max-md:h-52
         '>
 
           <h2 className='w-[85%] font-bold text-3xl text-center mt-10 max-md:hidden '>

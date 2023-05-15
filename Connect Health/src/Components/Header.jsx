@@ -8,7 +8,7 @@ const Header = (props) => {
       flex justify-between items-center py-3 px-10 z-50 bg-white/0 backdrop-blur-3xl ${props.pai}
       max-md:w-full max-md:justify-normal max-md:px-2
     `}>
-        <img src={Menu} alt='icone menu' className='w-5 hidden max-md:block' />
+        <img src={Menu} alt='icone menu' className='w-5 hidden max-md:block ' />
 
         <Link to='/' className={`
           font-semibold text-white text-lg w-6 transition duration-300 hover:scale-110 ${props.health}
