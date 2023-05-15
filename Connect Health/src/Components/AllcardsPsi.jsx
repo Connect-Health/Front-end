@@ -68,6 +68,7 @@ const AllCards = () => {
                   border='psi'
                   border2='psi'
                   bg="border-psi"
+                  bg2='bg-[#D8CAFF]'
                   border3='[#D8CAFF]'
                   texto='psi'
                   key={profissional.id}

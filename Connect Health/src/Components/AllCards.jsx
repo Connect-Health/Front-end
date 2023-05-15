@@ -62,12 +62,13 @@ const AllCards = () => {
       ) : (
         <>
           {data.length > 0 ? (
-            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9'>
+            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1 max-md:gap-y-3'>
               {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
                 <Card
                   border='[#94E127]'
                   border2='nutri'
                   border3='[#D7F2E0]'
+                  bg2='bg-[#D7F2E0]'
                   texto='nutri'
                   key={profissional.id}
                   profissional={profissional}
