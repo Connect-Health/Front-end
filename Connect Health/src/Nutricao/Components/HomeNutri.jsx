@@ -19,7 +19,6 @@ const HomeNutri = () => {
     <div className='
       h-[650px] flex flex-col
       max-md:h-auto
-      max-md:tp-10
     '>
       <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:h-auto max-md:object-cover  max-md:w-full' alt="" />
         <Header
@@ -137,7 +136,7 @@ const HomeNutri = () => {
             Faça aqui uma breve avaliação para sabermos como podemos te ajudar
           </p>
 
-          <button className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3'>
+          <button className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3 max-md:mb-1'>
             avaliação
             <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
           </button>

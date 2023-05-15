@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <div className={`
       flex justify-between items-center py-3 px-10 z-50 bg-white/0 backdrop-blur-3xl ${props.pai}
-      max-md:w-full max-md:justify-normal
+      max-md:w-full max-md:justify-normal max-md:px-2
     `}>
         <img src={Menu} alt='icone menu' className='w-5 hidden max-md:block' />
 
