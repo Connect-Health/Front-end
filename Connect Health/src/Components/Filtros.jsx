@@ -77,7 +77,7 @@ const Filtros = (props) => {
                 
             </div>
 
-            <div className='flex gap-10 max-md:gap-5 items-center'>
+            <div className='flex gap-10 max-md:flex-col max-md:gap-3 items-center '>
                 <button onClick={handleOpen} className='flex items-center font-semibold gap-1 max-md:text-sm'>
                     Filtros
                     <MdTune />
