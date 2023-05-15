@@ -10,7 +10,7 @@ const CardAvaliacao = () => {
             <p className='w-4/5 mt-5 '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, aspernatur iusto incidunt sit error sint ull</p>
         </div>
 
-        <div className='flex justify-around gap-14 mt-5 items-center'>
+        <div className='flex justify-around  mt-5 items-center'>
             <p className='text-[#55DF5A] text-lg font-semibold'>Avaliação</p>
 
             <Rating
@@ -21,7 +21,7 @@ const CardAvaliacao = () => {
                     />
         </div>
 
-        <div className='mt-14 ml-10 '>
+        <div className='mt-6 ml-10 '>
             <p>Rafinha</p>
             <p>07/04/2023 - 17:59</p>
         </div>
