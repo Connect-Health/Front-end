@@ -21,7 +21,7 @@ const HomeNutri = () => {
       max-md:h-96
       max-md:tp-10
     '>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:h-96 max-md:object-cover  max-md:w-full' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:h-48 max-md:object-cover  max-md:w-full' alt="" />
         <Header
           health="hover:text-nutri"
           connect="text-nutri"
@@ -134,7 +134,7 @@ const HomeNutri = () => {
             w-[90%] text-center font-semibold mt-16 mb-6 text-lg 
             max-md:text-xs max-md:mt-7
           '>
-            Faça aqui uma breve avaliação aqui para sabermos como podemos te ajudar
+            Faça aqui uma breve avaliação para sabermos como podemos te ajudar
           </p>
 
           <button className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3'>
