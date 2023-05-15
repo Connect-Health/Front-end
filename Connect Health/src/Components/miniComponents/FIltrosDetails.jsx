@@ -95,7 +95,7 @@ const FiltrosDetails = (props) => {
 
         <div className='grid grid-cols-2 mx-[2%] mt-6 max-md:mt-3 max-md:block'>
             <div>
-                <h4 className={`text-${props.color} text-center text-lg max-md:text-base`}>Especialidades</h4>
+                <h4 className={`text-${props.color} text-center text-lg max-md:text-lg max-md:font-semibold `}>Especialidades</h4>
 
                 <div className='flex flex-wrap gap-2 justify-center mt-3 max-md:gap-1'>
                     {especialidades.map((especialidade, idx) => (
@@ -109,7 +109,7 @@ const FiltrosDetails = (props) => {
                 </div>
 
                 <div className='flex flex-col items-center'>
-                    <h4 className='text-black text-center mt-4 max-md:text-sm max-md:mt-2'> Para quem é a sua consulta?</h4>
+                    <h4 className='text-black text-center mt-4 max-md:text-sm max-md:mt-4'> Para quem é a sua consulta?</h4>
 
                     <FormControl>
                         <RadioGroup
@@ -132,9 +132,9 @@ const FiltrosDetails = (props) => {
             <div className='flex flex-col items-center'>
                 <h4 className={`text-${props.color} text-center text-lg max-md:text-sm`}>Horário para agendamento</h4>
                 <p className='text-center text-black text-sm max-md:text-xs'>Selecione o dia que deseja:</p>
-                <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2 '/>
+                <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2 max-md:bg-white max-md:border '/>
 
-                <div className='grid grid-cols-7 gap-2 mt-6 max-md:mt-3 max-md:gap-0.5'>
+                <div className='grid grid-cols-7 gap-2 mt-6 max-md:mt-3 max-md:gap-0.5 '>
                     {horarios.map((horario, idx) => (
                         <Horario
                             key={idx}
