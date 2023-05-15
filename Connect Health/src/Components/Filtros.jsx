@@ -89,7 +89,7 @@ const Filtros = (props) => {
                     
                 >
                     
-                    <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md max-md:w-full max-sm:h-screen'>
+                    <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md max-md:w-full max-sm:h-[95vh]'>
                         <p onClick={handleClose} className='text-black absolute right-0 pr-3 pt-1 cursor-pointer font-bold text-2xl max-md:right-2 max-md:top-2'>X</p>
                         <FiltrosDetails 
                             theme={props.theme}
