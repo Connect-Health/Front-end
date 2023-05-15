@@ -85,19 +85,19 @@ const FiltrosDetails = (props) => {
   return (
     <div className='flex flex-col'>
         <div>
-            <h2 className={`text-${props.color} uppercase text-center text-xl font-bold mt-3`}>Filtros</h2>
+            <h2 className={`text-${props.color} uppercase text-center text-xl font-bold mt-3 max-md:text-base`}>Filtros</h2>
         </div>
 
-        <div className='flex flex-col items-center mt-8'>
-            <h2 className='text-center text-black text-lg font-semibold '>Já conhece o profissional que deseja?</h2>
-            <input type="text" placeholder='Nome do profissional' className='w-96 py-2 rounded-3xl pl-5 placeholder:text-[#333] focus:border outline-none focus:border-psi text-black' />
+        <div className='flex flex-col items-center mt-8 max-md:mt-4'>
+            <h2 className='text-center text-black text-lg font-semibold max-md:text-sm '>Já conhece o profissional que deseja?</h2>
+            <input type="text" placeholder='Nome do profissional' className='w-96 max-md:w-1/2 max-md:text-sm max-md:py-0.5 mt-1 py-2 rounded-3xl pl-5 placeholder:text-[#333] focus:border outline-none focus:border-psi text-black' />
         </div>
 
-        <div className='grid grid-cols-2 mx-[2%] mt-6'>
+        <div className='grid grid-cols-2 mx-[2%] mt-6 max-md:mt-3 max-md:block'>
             <div>
-                <h4 className={`text-${props.color} text-center  text-lg`}>Especialidades</h4>
+                <h4 className={`text-${props.color} text-center text-lg max-md:text-base`}>Especialidades</h4>
 
-                <div className='flex flex-wrap gap-2 justify-center mt-3'>
+                <div className='flex flex-wrap gap-2 justify-center mt-3 max-md:gap-1'>
                     {especialidades.map((especialidade, idx) => (
                         <Click
                             key={idx}
@@ -109,7 +109,7 @@ const FiltrosDetails = (props) => {
                 </div>
 
                 <div className='flex flex-col items-center'>
-                    <h4 className='text-black text-center mt-4'> Para quem é a sua consulta?</h4>
+                    <h4 className='text-black text-center mt-4 max-md:text-sm max-md:mt-2'> Para quem é a sua consulta?</h4>
 
                     <FormControl>
                         <RadioGroup
@@ -118,10 +118,10 @@ const FiltrosDetails = (props) => {
                             name="row-radio-buttons-group"
                         >    
                             <ThemeProvider theme={theme}>
-                                <FormControlLabel className='text-black' value="adulto" control={<Radio />} label="Adulto"  />
-                                <FormControlLabel className='text-black' value="crianca" color="primary" control={<Radio />} label="Criança" />
-                                <FormControlLabel className='text-black' value="idoso" color="primary" control={<Radio />} label="Idoso" />
-                                <FormControlLabel className='text-black' value="pcd" color="primary" control={<Radio />} label="PCD's" />
+                                <FormControlLabel className='text-black' value="adulto" control={<Radio />} label="Adulto" sx={{'& .MuiSvgIcon-root': {fontSize: 16},}}  />
+                                <FormControlLabel className='text-black' value="crianca" color="primary" control={<Radio />} label="Criança"  sx={{'& .MuiSvgIcon-root': {fontSize: 16},}} />
+                                <FormControlLabel className='text-black' value="idoso" color="primary" control={<Radio />} label="Idoso"  sx={{'& .MuiSvgIcon-root': {fontSize: 16},}} />
+                                <FormControlLabel className='text-black' value="pcd" color="primary" control={<Radio />} label="PCD's"  sx={{'& .MuiSvgIcon-root': {fontSize: 16},}} />
 
                             </ThemeProvider>
                         </RadioGroup>
@@ -130,11 +130,11 @@ const FiltrosDetails = (props) => {
             </div>
 
             <div className='flex flex-col items-center'>
-                <h4 className={`text-${props.color} text-center text-lg`}>Horário para agendamento</h4>
-                <p className='text-center text-black text-sm'>Selecione o dia que deseja:</p>
-                <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2'/>
+                <h4 className={`text-${props.color} text-center text-lg max-md:text-sm`}>Horário para agendamento</h4>
+                <p className='text-center text-black text-sm max-md:text-xs'>Selecione o dia que deseja:</p>
+                <input type="date" name="" id="" className='text-black rounded-3xl px-5 mt-2 '/>
 
-                <div className='grid grid-cols-5 gap-2 mt-6'>
+                <div className='grid grid-cols-7 gap-2 mt-6 max-md:mt-3 max-md:gap-0.5'>
                     {horarios.map((horario, idx) => (
                         <Horario
                             key={idx}
@@ -148,7 +148,7 @@ const FiltrosDetails = (props) => {
 
         </div>
             
-        <button className={`bg-${props.color} text-white px-10 py-2 rounded-3xl m-auto mt-6 hover:border hover:border-${props.secColor} hover:scale-105 box-content transition duration-300 active:scale-90`}>Buscar</button>
+        <button className={`bg-${props.color} text-white max-md:py-0.5 max-md:px-5 max-md:text-sm max-md:mt-2 px-10 py-2 rounded-3xl m-auto mt-6 hover:border hover:border-${props.secColor} hover:scale-105 box-content transition duration-300 active:scale-90`}>Buscar</button>
     </div>
   )
 }

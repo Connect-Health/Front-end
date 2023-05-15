@@ -46,7 +46,7 @@ const Filtros = (props) => {
 
   return (
     <div className='mt-20 mb-10 max-md:mt-10'>
-        <h2 className={`text-center text-${props.color} font-bold text-3xl mb-14 max-md:text-lg`}>
+        <h2 className={`text-center text-${props.color} font-bold text-3xl mb-14 max-md:text-lg max-md:mb-6`}>
             Nossos {props.profissionais}
         </h2>
 
@@ -89,7 +89,7 @@ const Filtros = (props) => {
                     
                 >
                     
-                    <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md'>
+                    <div className='w-2/3 h-[90%] bg-white bg-opacity-90 backdrop-blur-xl rounded-md max-md:w-full max-sm:h-screen'>
                         <p onClick={handleClose} className='text-black absolute right-0 pr-3 pt-1 cursor-pointer font-bold text-2xl'>X</p>
                         <FiltrosDetails 
                             theme={props.theme}

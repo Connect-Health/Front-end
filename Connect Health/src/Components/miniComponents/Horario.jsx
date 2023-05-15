@@ -14,7 +14,10 @@ const Horario = (props) => {
 
   return (
     <div>
-        <p onClick={handleClick} className='border border-black text-black w-16 text-center cursor-pointer rounded-3xl font-semibold text-sm hover:scale-125 duration-200 transition-all active:scale-100'>{props.hora}</p>
+        <p onClick={handleClick} className='
+          border border-black text-black w-16 text-center cursor-pointer rounded-3xl font-semibold text-sm hover:scale-125 duration-200 transition-all active:scale-100
+          max-md:w-12 max-md:text-xs
+        '>{props.hora}</p>
     </div>
   )
 }

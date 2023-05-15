@@ -12,7 +12,7 @@ const Header = (props) => {
 
         <Link to='/' className={`
           font-semibold text-white text-lg w-6 transition duration-300 hover:scale-110 ${props.health}
-          max-md:text-base max-md:absolute max-md:left-1/2 max-md:translate-x-[-50%]
+          max-md:text-base max-md:absolute max-md:left-1/2 max-md:translate-x-[-50%] w-fit
         `}>
             <span className={`hover:text-white w-6 transition duration-300 hover:scale-110 ${props.connect} `}>Connect</span>
             Health

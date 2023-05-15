@@ -12,7 +12,10 @@ const Click = (props) => {
 
   return (
     <div>
-        <p onClick={handleClick} className='border border-black text-black font-semibold cursor-pointer rounded-3xl px-3 text-sm hover:scale-110 transition-all duration-75 active:scale-90 '>{props.text}</p>
+        <p onClick={handleClick} className='
+          border border-black text-black font-semibold cursor-pointer rounded-3xl px-3 text-sm hover:scale-110 transition-all duration-75 active:scale-90
+          max-md:text-xs max-md:px-0.5
+        '>{props.text}</p>
     </div>
   )
 }
