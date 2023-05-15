@@ -19,6 +19,8 @@
 }
 
 
+
+
 @for $i from 1 through 38 {
     .text-animate._#{$i} {
         animation-delay: #{$i/30}s;

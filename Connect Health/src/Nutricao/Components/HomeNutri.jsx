@@ -16,8 +16,12 @@ const HomeNutri = () => {
     }, [])
 
   return (
-    <div className='h-[650px] flex flex-col'>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-full' alt="" />
+    <div className='
+      h-[650px] flex flex-col
+      max-md:h-96
+      max-md:tp-10
+    '>
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-full max-md:h-96 max-md:object-cover  max-md:w-full' alt="" />
         <Header
           health="hover:text-nutri"
           connect="text-nutri"
@@ -27,9 +31,12 @@ const HomeNutri = () => {
           areaNav="Psicologia" 
         
         />
-        <div className='h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col'>
+        <div className='
+          h-[655px] w-[430px] mt-[-55px] bg-white/40 relative self-end flex justify-center items-center flex-col
+          max-md:h-96 max-md:w-1/2 max-md:mt-0
+        '>
 
-          <h2 className='w-[85%] font-bold text-3xl text-center mt-10'>
+          <h2 className='w-[85%] font-bold text-3xl text-center mt-10 max-md:text-lg max-md:mt-0 '>
           <AnimatedLetters
             letterClass={letterClass}
             strArray={[
@@ -123,13 +130,16 @@ const HomeNutri = () => {
           
           </h2>
 
-          <p className='w-[90%] text-center font-semibold mt-16 mb-6 text-lg '>
+          <p className='
+            w-[90%] text-center font-semibold mt-16 mb-6 text-lg 
+            max-md:text-xs max-md:mt-7
+          '>
             Faça aqui uma breve avaliação aqui para sabermos como podemos te ajudar
           </p>
 
-          <button className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2'>
+          <button className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3'>
             avaliação
-            <MdSubdirectoryArrowRight className='text-lg' />
+            <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
           </button>
         </div>
 
