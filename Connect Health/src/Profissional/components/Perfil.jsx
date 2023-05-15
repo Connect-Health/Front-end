@@ -9,7 +9,7 @@ import Informacoes from './Informacoes'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import Especialidades from './minComponents/especialidades'
+import Especialidades from './minComponents/Especialidades'
 import Avaliacoes from './minComponents/Avaliacoes'
 import Sobre from './minComponents/Sobre'
 

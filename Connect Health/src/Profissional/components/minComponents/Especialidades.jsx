@@ -1,3 +1,4 @@
+import React from "react";
 
 const Especialidades = ({ profissional }) => {
   if (!profissional || !profissional.especialidade) {

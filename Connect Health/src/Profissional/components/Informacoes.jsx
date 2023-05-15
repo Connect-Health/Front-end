@@ -1,7 +1,7 @@
 import React from 'react'
 import Sobre from './minComponents/Sobre'
 import Avaliacoes from './minComponents/Avaliacoes'
-import Especialidades from './minComponents/especialidades'
+import Especialidades from './minComponents/Especialidades'
 
 const Informacoes = ({profissional}) => {
   return (
