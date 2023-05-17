@@ -13,7 +13,7 @@ const Header = () => {
           <Link to='/' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</Link>
         </div>
         <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-20 items-center flex-col
-        max-md:h-32 max-md:w-28 max-md:
+        max-md:h-32 max-md:w-28
         '>
           <img src={vetor} alt=""  className='absolute'/>
           <div>
@@ -24,9 +24,11 @@ const Header = () => {
             
           <div className='flex items-center justify-center gap-4 pb-4 hover:scale-110 hover:font-semibold transition duration-300'>
               <Link to='/' className='text-[#fff] text-center font-bold text-sm 
-              max-md: text-[10px]
+              max-md:text-[10px] max-md:mt-4
               '>Nosso Feed</Link>
-              <BsArrowRight className='text-lg text-[#fff]'/>
+              <BsArrowRight className='text-lg text-[#fff]
+              max-md:mt-4 max-md:-ml-3
+              '/>
           </div>  
         </div>
 
