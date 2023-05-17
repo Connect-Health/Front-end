@@ -25,7 +25,7 @@ function Psico(){
                 </div>
                     <div>
                         <img className='w-[70%] bg-psi rounded-full m-auto
-                        max-md:mt-24
+                        max-md:mt-36
                         ' src={Model} alt="" />
                     </div>
             </div>
@@ -49,27 +49,39 @@ function Psico(){
                 '>Por que cuidar da sua saúde mental?</h2>
             </div>
 
-            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content'>
-                <div className='text-xl border-r-2 border-b-2 p-3'>
+            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
+            max-md:gap-44 max-md:w-[90%]
+            '>
+                <div className='text-xl border-r-2 border-b-2 p-3
+                max-md:text-[14px]
+                '>
                     <h3>Prevenção de transtornos mentais como: </h3>
                     <h3>Ansiedade, depressão, estresse...</h3>
                 </div>
-                <img className='' src={HeadPsi} alt="" />
+                <img className='max-md:h-24' src={HeadPsi} alt="" />
             </div>
 
-            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content'>
+            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
+            max-md:gap-56 max-md:w-[90%]
+            '>
                 
-                <img className='' src={PlusPsi} alt="" />
+                <img className='max-md:h-24' src={PlusPsi} alt="" />
 
-                <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]'>
+                <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]
+                max-md:text-[14px] max-md:w-[54%] max-md:text-sm
+                '>
                     <h3>Melhora no desempenho no trabalho </h3>
                     <h3>Fortalecimento de habilidades interpessoais, entre outras.</h3>
                 </div>
                 
             </div>
 
-            <div className='w-[70%] m-auto mt-20 flex  justify-start items-center box-content'>
-                <div className='text-xl border-r-2 border-b-2 p-3 w-[45%]'>
+            <div className='w-[70%] m-auto mt-20 flex  justify-start items-center box-content
+            max-md:w-[90%]
+            '>
+                <div className='text-xl border-r-2 border-b-2 p-3 w-[45%]
+                max-md:w-[54%] max-md:text-sm
+                '>
                     <h3>Melhora na qualidade de vida e relacionamentos; </h3>
                     <h3> Aumento na autoestima e confiança</h3>
                 </div>
