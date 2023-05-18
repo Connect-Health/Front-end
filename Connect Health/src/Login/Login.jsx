@@ -9,7 +9,7 @@ function Login(){
           <div className="flex flex-col justify-center text-left w-3/5 h-screen">
             <div className="ml-24">
             <h1 className="text-white font-extrabold text-5xl ">Connect Health</h1>
-            <h3 className="text-white text-2xl mt-2">Mantenha-se conectado com sua saúde</h3>
+            <h3 className="text-white text-2xl mt-2">Mantenha-se conectado com sua saúde!</h3>
             </div>
           </div>
           </div>
