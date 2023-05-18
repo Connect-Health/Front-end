@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props }) => {
   const MAX_ESPECIALIDADES = 3;
-  const especiaisRestantes = Math.max(profissional.especialidade.length - MAX_ESPECIALIDADES, 0);
+  const especiaisRestantes = Math.max(profissional.especialidade - MAX_ESPECIALIDADES, 0);
 
   const descricaoProfissional = profissional.descricao;
 
@@ -38,27 +38,27 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
           </h2>
 
         <div className={`flex flex-wrap bg-${border3} ${bg2} rounded-xl gap-1 justify-center`}>
-          {profissional.especialidade.length > MAX_ESPECIALIDADES ? (
+          {profissional.especialidade > MAX_ESPECIALIDADES ? (
             <div className={`flex flex-wrap bg-${border3} py-3 rounded-xl px-2 gap-2 justify-evenly max-md:gap-0.5`}>
-              {profissional.especialidade.slice(0, MAX_ESPECIALIDADES).map((especial, index) => (
+              {/* {profissional.especialidade.slice(0, MAX_ESPECIALIDADES).map((especial, index) => (
                 <p key={index} className='border w-fit rounded-lg px-2 max-md:px-1 max-md:text-sm bg-white'>{especial}</p>
-              ))}
+              ))} */}
               <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white'>{`+${especiaisRestantes}`}</span>
             </div>
           ) : (
             <div className={`flex flex-wrap bg-${border3} py-3 rounded-xl px-2 gap-2 max-md:gap-0.5`}>
-              {profissional.especialidade.map((especial, index) => (
+              {/* {profissional.especialidade.map((especial, index) => (
                 <div key={index}>
                   <span className='border w-fit rounded-lg px-2 bg-white py-1 max-md:px-1 max-md:text-sm max-md:py-0.5'>{especial}</span>
                 </div>
-              ))}
+              ))} */}
             </div>
           )}
         </div>
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>
-          <p className='max-md:text-xs'>{descricaoProfissional.length > 175 ? (
+          <p className='max-md:text-xs'>{descricaoProfissional > 175 ? (
             <span>{descricaoProfissional.substring(0, 175) + '...'}</span>
           ) : (
             <span>{descricaoProfissional}</span>

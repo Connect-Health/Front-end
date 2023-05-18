@@ -26,7 +26,7 @@ const AllCards = () => {
   async function fetchProfissionais() {
     try {
       const response = await axios.get(
-        `http://localhost:8080/profissionais/psicologos?page=${page}`
+        `http://localhost:8080/profissional?page=${page}`
       );
       setData(response.data);
       const totalCount = response.data.length;
