@@ -28,7 +28,7 @@ const HomePsi = () => {
             areaNav="nutrição"
         />
 
-        <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30 max-md:h-[201px] max-md:mt-0 max-md:w-[50%]'>
+        <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30 max-md:h-[201px] max-md:mt-0 max-md:w-[45%]'>
             <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col max-md:h-[201px]'>
 
             <h2 className='w-[90%] font-bold text-3xl text-center mt-10 max-md:hidden'>
