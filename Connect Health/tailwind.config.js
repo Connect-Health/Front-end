@@ -21,6 +21,7 @@ export default {
         "bloco1": "url('assets/bloco_1.png')",
         "bloco2": "url('assets/bloco_2.png')",
         "bloco3": "url('assets/bloco_3.png')",
+        "bglogin": "url('assets/bglogin.png')",
       },
       boxShadow: {
         'nutrici': '0 10px 10px 0 rgba(148, 255, 39, 0.7)',

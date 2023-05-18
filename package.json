@@ -2,7 +2,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.12.1"
+    "@mui/material": "^5.12.1",
+    "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
     "webpack": "^5.80.0",
