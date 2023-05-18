@@ -27,7 +27,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
 
         <div className='mt-4 mb-2 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Consulta:</h4>
-          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>{profissional.preco}</p>
+          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>R${profissional.preco}0</p>
         </div>
       </div>
 

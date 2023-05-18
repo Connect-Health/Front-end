@@ -62,7 +62,7 @@ const AllCards = () => {
       ) : (
         <>
           {data.length > 0 ? (
-            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9'>
+            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1'>
               {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
                 <Card
                   border='psi'
