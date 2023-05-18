@@ -17,7 +17,7 @@ const HomePsi = () => {
 
   return (
     <div className='h-[650px] flex flex-col'>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-full max-md:h-52 max-md:mt-10' alt="" />
 
         <Header
             health="hover:text-psi"
@@ -26,11 +26,10 @@ const HomePsi = () => {
             colorArea="hover:text-psi"
             link="/nutricao"
             areaNav="nutrição"
-        
         />
 
-        <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30'>
-            <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col'>
+        <div className='h-[655px] w-[35%]  bg-[#9916FF]/30'>
+            <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col max-md:h-52 max-md:mt-10'>
 
             <h2 className='w-[90%] font-bold text-3xl text-center mt-10'>
             <AnimatedPsi
