@@ -9,6 +9,7 @@ import "@fontsource/montserrat"
 import { createBrowserRouter, RouterProvider} from "react-router-dom"
 import Psicologia from './Psicologia/Psicologia'
 import Profissional from './Profissional/Profissional'
+import Login from './Components/Login/Login'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/profissional/:id',
     element: <Profissional />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   }
 ])
 
