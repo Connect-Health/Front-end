@@ -17,7 +17,7 @@ const HomePsi = () => {
 
   return (
     <div className='h-[650px] flex flex-col'>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-[65%] max-md:h-52 max-md:mt-10' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-full max-md:h-52 max-md:mt-10' alt="" />
 
         <Header
             health="hover:text-psi"
@@ -28,10 +28,10 @@ const HomePsi = () => {
             areaNav="nutrição"
         />
 
-        <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30 max-md:h-52 max-md:mt-0'>
-            <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col max-md:h-52'>
+        <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30 max-md:h-[201px] max-md:mt-0 max-md:w-[50%]'>
+            <div className=' h-full bg-[#C2E6DF]/70 flex justify-center items-center flex-col max-md:h-[201px]'>
 
-            <h2 className='w-[90%] font-bold text-3xl text-center mt-10 max-md:text-base max-md:mt-10'>
+            <h2 className='w-[90%] font-bold text-3xl text-center mt-10 max-md:hidden'>
             <AnimatedPsi
                 letterClass={letterClass}
                 strArray={[
@@ -139,13 +139,13 @@ const HomePsi = () => {
             
             </h2>
 
-            <p className='w-[90%] text-center font-semibold mt-16 mb-6 text-lg max-md:text-base '>
+            <p className='w-[90%] text-center font-semibold mt-16 mb-6 text-lg max-md:text-sm max-md:mt-0 '>
                 Faça aqui uma breve avaliação aqui para sabermos como podemos te ajudar
             </p>
 
-            <button className='bg-psi px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2'>
+            <button className='bg-psi px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:px-2 max-md:text-xs'>
                 avaliação
-                <MdSubdirectoryArrowRight className='text-lg' />
+                <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
             </button>
             </div>
 
