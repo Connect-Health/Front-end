@@ -17,7 +17,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   return (
     <div key={profissional.id} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
       <div className={`w-[25%] border-r border-${border2} ${bg} flex flex-col`}>
-        <img src={profissional.avatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
+        <img src={profissional.urlAvatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
 
         <div className='mt-5 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Duração:</h4>
@@ -56,7 +56,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
           )}
         </div>
 
-        {console.log(profissional.especialidade)}
+        {console.log(profissional)}
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>
