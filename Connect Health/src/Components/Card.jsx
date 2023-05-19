@@ -23,11 +23,11 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
           <h4 className='text-center font-semibold max-md:text-sm'>Duração:</h4>
           <p className='text-center font-bold text-lg max-md:text-base'>{profissional.duracao}min</p>
         </div>
-        <Rating className='mt-2 self-center' name="size-large" value={profissional.avaliacao}  precision={1} readOnly size="small" />
+        <Rating className='mt-2 self-center' name="size-large" value={profissional.avaliacao}  precision={0.1} readOnly size="small" />
 
         <div className='mt-4 mb-2 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Consulta:</h4>
-          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>R${profissional.preco}0</p>
+          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>R${profissional.preco},00</p>
         </div>
       </div>
 
@@ -55,6 +55,8 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
             </div>
           )}
         </div>
+
+        {console.log(profissional.especialidade)}
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>

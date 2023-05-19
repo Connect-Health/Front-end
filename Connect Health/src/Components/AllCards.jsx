@@ -38,6 +38,7 @@ const AllCards = () => {
     }
   }
 
+  console.log(data)
   useEffect(() => {
     setIsLoading(true);
     fetchProfissionais();
