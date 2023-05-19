@@ -18,7 +18,7 @@ const Header = () => {
           <img src={vetor} alt=""  className='absolute'/>
           <div>
             <h2 className='text-[#fff] text-center pt-20 pb-6
-            max-md: text-[10px] max-md:pt-10 max-md:pb-2
+            max-md:text-[10px] max-md:pt-10 max-md:pb-2
             '>Tenha dicas dos melhores da área</h2>
           </div>
             
