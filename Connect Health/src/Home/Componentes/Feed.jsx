@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom'
 function Feed(){
     return(
         <div id="feed">
-            <div className='flex justify-evenly'>
+            <div className='flex justify-evenly
+            max-md:flex-col
+            '>
                 <div className='w-[45%] mt-10 ml-24
-                max-md:mt-10 max-md:ml-8 max-md:w-[75%]'>
+                max-md:mt-10 max-md:m-auto max-md:w-[75%]'>
                         <h2 className='text-[#5D59FF] font-bold text-4xl
-                        max-md:text-2xl
+                        max-md:text-2xl max-md:text-center
                         '>Feed</h2>
                         <p className='pt-10 w-[75%]
                         max-md:w-[100%] max-md:text-[14px]
@@ -20,14 +22,14 @@ function Feed(){
                 </div>
                     <div>
                         <img className='w-[70%] m-auto
-                        max-md:mt-14
+                        max-md:mt-8
                         ' src={ModelFeed} alt="" />
                     </div>
             </div>
 
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16  '>
                 <Link to='/' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]
-                max-md:w-[20%] max-md:mt-3 max-md:mr-2 max-md:text-[12px]
+                max-md:w-[35%] max-md:mr-2 max-md:text-[13px]
                 '>Acompanhe aqui!</Link>
             </div>
 
@@ -36,11 +38,11 @@ function Feed(){
             </div>
 
             <div className='flex justify-center w-full mr-16 mt-16  '>
-                <img className='w-[45%]'  src={ArcoFeed} alt="" />
+                <img className='w-[45%] max-md:hidden'  src={ArcoFeed} alt="" />
             </div>
 
             <div className=''>
-                <img className='w-[100%] ' src={WaveFeed} alt="" />
+                <img className='w-[100%] max-md:mt-20' src={WaveFeed} alt="" />
             </div>
         </div>
     )
