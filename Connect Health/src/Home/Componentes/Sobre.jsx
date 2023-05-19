@@ -43,10 +43,10 @@ function Sobre(){
             {/* Inicos dos cards*/}
 
             <div className='mt-44 mb-20 w-full h-[340px] bg-sobre
-            max-md:mt-64 max-md:h-0
+            max-md:mt-52 max-md:h-0
             '>
                 <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  
-                max-md:grid-cols-1 max-md:gap-[50%] 
+                max-md:grid-cols-1 max-md:gap-[23%] 
                 '>
                     <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 '>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
