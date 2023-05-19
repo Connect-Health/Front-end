@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 function Psico(){
     return(
-        <div id="psicologia" className='max-md:mt-64'>
+        <div id="psicologia" className='max-md:mt-72'>
            <img src={Wave} alt="" className='max-md:hidden'/>
            <div className='flex justify-evenly
            max-md:flex-col'>

@@ -53,7 +53,7 @@ const Nutrim = () => {
             <div className='w-full m-auto justify-center flex mt-10'>
               
                 <h2 className='w-[25%] text-3xl text-nutri font-extrabold text-center
-                max-md:text-2xl max-md:w-[50%]
+                max-md:text-xl max-md:w-[50%]
                 '>Por que cuidar da sua alimentação?</h2>
             </div>
 
