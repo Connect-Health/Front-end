@@ -6,30 +6,48 @@ import { FaHeart, FaHeartbeat } from 'react-icons/fa';
 function Sobre(){
     return(
         <div>
-            <div className='w-full'>
-                <h3 className='text-center font-bold text-3xl'>Quem somos e por que existimos?</h3>
+            <div className='w-full
+            max-md:mt-20
+            '>
+                <h3 className='text-center font-bold text-3xl
+                max-md:text-2xl
+                '>Quem somos e por que existimos?</h3>
             </div>
 
-            <div className='w-[75%] m-auto mt-8 flex items-center gap-20 '>
-                <p className='w-[55%] p-10'>Nós somos a Connect Health - uma plataforma 100% digital que oferece consultas psicologicas e nutricionais para todos que as necessitam. <br/> <br/> Nosso objetivo como instituição é popularizar a alimentação saúdavel e a saúde mental, visto que, muitas pessoas não tem condições para usufruir destes serviços. <br/> <br/> Queremos fazer o bem independente de quem seja. Não visando o lucro, e sim a saúde e bem estar dos nossos clientes. Sinta-se à vontade para explorar a nossa plataforma e explorar a si mesmo com a ajuda de nossos profissionais. 
+            <div className='w-[75%] m-auto mt-8 flex items-center gap-20
+            max-md:w-[100%] max-md:flex-col max-md:gap-2
+            '>
+                <p className='w-[55%] p-10
+                max-md:w-[80%]                
+                '>Nós somos a Connect Health - uma plataforma 100% digital que oferece consultas psicologicas e nutricionais para todos que as necessitam. <br/> <br/> Nosso objetivo como instituição é popularizar a alimentação saúdavel e a saúde mental, visto que, muitas pessoas não tem condições para usufruir destes serviços. <br/> <br/> Queremos fazer o bem independente de quem seja. Não visando o lucro, e sim a saúde e bem estar dos nossos clientes. Sinta-se à vontade para explorar a nossa plataforma e explorar a si mesmo com a ajuda de nossos profissionais. 
                 </p>
 
-                <img className='w-[45%]' src={ModelSobre} alt="" />
+                <img className='w-[45%]
+                max-md:w-[65%]
+                ' src={ModelSobre} alt="" />
             </div>
             
             <div className='w-full justify-center flex'>
-                <img className='w-[5%]' src={Logo} alt="" />
+                <img className='w-[5%]
+                max-md:mt-10
+                ' src={Logo} alt="" />
             </div>
 
-            <div className='w-full mt-16'>
+            <div className='w-full mt-16
+            max-md:mt-24
+            '>
                 
                 <h3 className='text-center font-bold text-3xl text-[#171FDF]'>Nossos Planos:</h3>
             </div>
 
             {/* Inicos dos cards*/}
 
-            <div className='mt-44 mb-20 w-full h-[340px] bg-sobre'>
-                <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  '>
+            <div className='mt-44 mb-20 w-full h-[340px] bg-sobre
+            max-md:mt-52 max-md:h-0
+            '>
+                <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  
+                max-md:grid-cols-1 max-md:gap-[23%] 
+                '>
                     <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 '>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
