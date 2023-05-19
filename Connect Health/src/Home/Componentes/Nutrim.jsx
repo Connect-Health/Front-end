@@ -29,7 +29,7 @@ const Nutrim = () => {
                 </div>
 
                   <div className='max-md:w-[85%]'>
-                    <img className='w-[60%] hidden
+                    <img className='w-[75%] hidden
                     max-md:block m-auto max-md:mt-6
                     ' src={Mulher} alt="" />
                   </div>
@@ -58,7 +58,7 @@ const Nutrim = () => {
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
-            max-md:gap-44 max-md:w-[90%]
+            max-md:gap-20 max-md:w-[90%]
             '>
                 <div className='text-xl border-r-2 border-b-2 p-3 w-[40%]
                 max-md:text-[14px] max-md:w-[45%]
@@ -70,7 +70,7 @@ const Nutrim = () => {
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
-            max-md:gap-48 max-md:w-[90%]
+            max-md:gap-20 max-md:w-[90%]
             '>
                 
                 <img className='max-md:h-24' src={Strong} alt="" />
