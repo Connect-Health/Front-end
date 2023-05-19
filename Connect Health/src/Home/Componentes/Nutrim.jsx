@@ -53,7 +53,7 @@ const Nutrim = () => {
             max-md:gap-44 max-md:w-[90%]
             '>
                 <div className='text-xl border-r-2 border-b-2 p-3 w-[40%]
-                max-md:text-[14px]
+                max-md:text-[14px] max-md:w-[45%]
                 '>
                     <h3>Prevenção de doenças como:  </h3>
                     <h3>Cancer, depressão, diabetes, hipertensão, entre outras.</h3>
@@ -62,7 +62,7 @@ const Nutrim = () => {
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
-            max-md:gap-56 max-md:w-[90%]
+            max-md:gap-48 max-md:w-[90%]
             '>
                 
                 <img className='max-md:h-24' src={Strong} alt="" />
@@ -80,7 +80,7 @@ const Nutrim = () => {
             max-md:w-[90%]
             '>
                 <div className='text-xl border-r-2 border-b-2 p-3 w-[45%]
-                max-md:w-[54%] max-md:text-sm
+                max-md:w-[50%] max-md:text-sm
                 '>
                     <h3>Melhora na qualidade de vida e relacionamentos; </h3>
                     <h3> Aumento na autoestima e confiança</h3>
