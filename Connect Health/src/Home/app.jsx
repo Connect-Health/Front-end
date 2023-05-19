@@ -20,8 +20,8 @@ function Home() {
             <Feed/>
             <Sobre/>
             <Contato/>
-            <Footer
-                bg="[#1E5BD1]"
+            <Footer className='max-md:mt-20'
+                bg="[#5D59FF]"
                 bgSec="[#457ff4]"
                 invert="invert"
             />
