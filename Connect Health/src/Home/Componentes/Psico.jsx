@@ -10,14 +10,15 @@ import { Link } from 'react-router-dom'
 
 function Psico(){
     return(
-        <div id="psicologia" className='max-md:mt-56'>
+        <div id="psicologia" className='max-md:mt-60'>
            <img src={Wave} alt="" className='max-md:hidden'/>
-           <div className='flex justify-evenly'>
+           <div className='flex justify-evenly
+           max-md:flex-col'>
                 <div className='w-[45%] mt-10 ml-24
                 max-md:w-[80%] max-md:ml-12
                 '>
                         <h2 className='text-psi font-bold text-4xl
-                        max-md:text-2xl max-md:mt-10
+                        max-md:text-2xl max-md:mt-10 max-md:text-center
                         '>Psicologia</h2>
                         <p className='pt-10 w-[75%]
                         max-md:w-[100%] max-md:text-[14px]
@@ -25,18 +26,22 @@ function Psico(){
                 </div>
                     <div>
                         <img className='w-[70%] bg-psi rounded-full m-auto
-                        max-md:mt-36
+                        max-md:mt-10
                         ' src={Model} alt="" />
                     </div>
             </div>
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 
             max-md:gap-36 max-md:mt-10
             '>
-                <img className='w-[65px] h-[65px]' src={Brain} alt="" />
+                <img className='w-[65px] h-[65px]
+                max-md:hidden
+                ' src={Brain} alt="" />
                 <Link to='/psicologia' className='w-[15%] p-2 text-center bg-psi rounded-full text-[#fff]
-                max-md:text-sm max-md:w-[25%]
+                max-md:text-sm max-md:w-[35%]
                 '>Venha conhecer!</Link>
-                <img className='w-[65px] h-[65px]' src={Brain} alt="" />
+                <img className='w-[65px] h-[65px]
+                max-md:hidden
+                ' src={Brain} alt="" />
             </div>
 
             <div className='mt-20'>
@@ -45,12 +50,12 @@ function Psico(){
 
             <div className='w-full m-auto justify-center flex mt-10'>
                 <h2 className='w-[25%] text-3xl text-psi font-extrabold text-center
-                max-md:text-2xl max-md:w-[50%]
+                max-md:text-xl max-md:w-[50%]
                 '>Por que cuidar da sua saúde mental?</h2>
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
-            max-md:gap-44 max-md:w-[90%]
+            max-md:gap-16 max-md:w-[80%]
             '>
                 <div className='text-xl border-r-2 border-b-2 p-3
                 max-md:text-[14px]
@@ -62,7 +67,7 @@ function Psico(){
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
-            max-md:gap-56 max-md:w-[90%]
+            max-md:gap-24 max-md:w-[90%]
             '>
                 
                 <img className='max-md:h-24' src={PlusPsi} alt="" />

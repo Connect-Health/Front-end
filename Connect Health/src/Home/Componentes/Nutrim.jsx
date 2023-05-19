@@ -34,11 +34,15 @@ const Nutrim = () => {
               <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 
               max-md:gap-36 max-md:mt-10
               '>
-                <img className='w-[65px] h-[65px]' src={Planutri} alt="" />
+                <img className='w-[65px] h-[65px]
+                max-md:hidden
+                ' src={Planutri} alt="" />
                 <Link to='/nutricao' className='w-[15%] p-2 bg-nutri rounded-full text-[#fff] text-center
                 max-md:text-sm max-md:w-[25%]
                 '>Conheça mais aqui!</Link>
-                <img className='w-[65px] h-[65px]' src={Planutri} alt="" />
+                <img className='w-[65px] h-[65px]
+                max-md:hidden
+                ' src={Planutri} alt="" />
             </div>
 
             <img className='mt-20' src={PostNutri} alt="" />
