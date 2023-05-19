@@ -32,7 +32,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
       </div>
 
       <div className='w-[75%] '>
-        <div className='w-[90%] h-full m-auto flex flex-col justify-between items-center'>
+        <div className='w-[90%] h-full m-auto flex flex-col justify-between items-centee'>
           <h2 className={`mt-4 font-semibold text-2xl text-center max-md:text-base text-${texto}`}>{profissional.nome} <span>
             {profissional.sobrenome}</span>
           </h2>
