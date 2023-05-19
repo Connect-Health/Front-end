@@ -9,17 +9,26 @@ function Feed(){
     return(
         <div id="feed">
             <div className='flex justify-evenly'>
-                <div className='w-[45%] mt-10 ml-24'>
-                        <h2 className='text-[#5D59FF] font-bold text-4xl'>Feed</h2>
-                        <p className='pt-10 w-[75%]'>Fique em forma, cuide da sua mente e melhore sua qualidade de vida com nossas dicas exclusivas de nutrição e psicologia, oferecidas pelos melhores profissionais da área. Aprenda a escolher alimentos saudáveis e descubra técnicas eficazes para cuidar da sua saúde mental. Todo o nosso conteúdo é confiável e fácil de aplicar. Comece hoje mesmo a transformar sua vida!</p>
+                <div className='w-[45%] mt-10 ml-24
+                max-md:mt-10 max-md:ml-8 max-md:w-[75%]'>
+                        <h2 className='text-[#5D59FF] font-bold text-4xl
+                        max-md:text-2xl
+                        '>Feed</h2>
+                        <p className='pt-10 w-[75%]
+                        max-md:w-[100%] max-md:text-[14px]
+                        '>Fique em forma, cuide da sua mente e melhore sua qualidade de vida com nossas dicas exclusivas de nutrição e psicologia, oferecidas pelos melhores profissionais da área. Aprenda a escolher alimentos saudáveis e descubra técnicas eficazes para cuidar da sua saúde mental. Todo o nosso conteúdo é confiável e fácil de aplicar. Comece hoje mesmo a transformar sua vida!</p>
                 </div>
                     <div>
-                        <img className='w-[70%] m-auto' src={ModelFeed} alt="" />
+                        <img className='w-[70%] m-auto
+                        max-md:mt-14
+                        ' src={ModelFeed} alt="" />
                     </div>
             </div>
 
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16  '>
-                <Link to='/' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]'>Acompanhe aqui!</Link>
+                <Link to='/' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]
+                max-md:w-[20%] max-md:mt-3 max-md:mr-2 max-md:text-[12px]
+                '>Acompanhe aqui!</Link>
             </div>
 
             <div>
