@@ -32,7 +32,7 @@ function BGHome(){
             </div>
 
             <div className='w-[20%] h-auto p-5 bg-[#d3d3d3] backdrop-blur-xl rounded-2xl bg-opacity-50 absolute top-[35%] left-[2.7%] z-10
-            max-md:h-58 max-md:w-96 max-md:p-4 max-md:top-[42%]'
+            max-md:h-58 max-md:w-96 max-md:p-4 max-md:top-[40%]'
              style={{ transform: `translateX(${-offset * .5}px)`}}>
                 <h3 className='text-center font-bold
                 max-md:text-[16px]
