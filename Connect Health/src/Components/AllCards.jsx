@@ -27,7 +27,7 @@ const AllCards = () => {
     try {
       let url;
       if (window.innerWidth <= 480) {
-        url = `192.168.0.102:8080/profissional?page=${page}`;
+        url = `http://192.168.0.102:8080/profissional?page=${page}`;
       } else {
         url = `http://localhost:8080/profissional?page=${page}`;
       }
