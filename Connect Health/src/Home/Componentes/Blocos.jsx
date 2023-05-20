@@ -7,7 +7,7 @@ function Blocos(){
         <div className='flex w-full h-auto items-center justify-center gap-20 mt-[48rem] 
         max-md:hidden
         '>
-            <div className='bg-bloco1 w-[25%] h-80 bg-contain bg-no-repeat flex-col flex
+            <div style={{backgroundImage: `url(../../../assets/bloco_1.png)`}} className='w-[25%] h-80 bg-contain bg-no-repeat flex-col flex
             max-md:w-[27%] max-md:h-auto
             '>
                 <h3 className='font-bold text-[20px] text-center text-[#fff] w-[80%] mt-10 
