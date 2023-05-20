@@ -1,5 +1,6 @@
 import ModelSobre from '../../../assets/modelsobre.svg'
 import Logo from '../../../assets/logo_preta.png'
+import bgSobre from '../../../assets/bgsobre.svg'
 import { FaHeart, FaHeartbeat } from 'react-icons/fa';
 
 
@@ -42,7 +43,7 @@ function Sobre(){
 
             {/* Inicos dos cards*/}
 
-            <div className='mt-44 mb-20 w-full h-[340px] bg-sobre
+            <div style={{backgroundImage: `url(${bgSobre})`}} className='mt-44 mb-20 w-full h-[340px] 
             max-md:mt-52 max-md:h-0
             '>
                 <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  
