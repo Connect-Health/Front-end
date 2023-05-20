@@ -1,7 +1,7 @@
 import ModelSobre from '../../../assets/modelsobre.svg'
 import Logo from '../../../assets/logo_preta.png'
 import bgSobre from '../../../assets/bgsobre.svg'
-import { FaHeart, FaHeartbeat } from 'react-icons/fa';
+import { FaHeartbeat } from 'react-icons/fa';
 
 
 function Sobre(){
