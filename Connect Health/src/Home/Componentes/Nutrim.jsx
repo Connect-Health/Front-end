@@ -96,7 +96,7 @@ const Nutrim = () => {
                 
             </div>
 
-            <div className=' mt-20 h-2/3'>
+            <div className=' mt-20 h-2/3 '>
               <img src={WaveFeed} alt="" />
             </div>
       </div>
