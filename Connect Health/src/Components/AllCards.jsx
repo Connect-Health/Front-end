@@ -25,9 +25,14 @@ const AllCards = () => {
 
   async function fetchProfissionais() {
     try {
-      const response = await axios.get(
-        `http://192.168.0.102:8080/profissional?page=${page}`
-      );
+      let url;
+      if (window.innerWidth <= 480) {
+        url = `192.168.0.102:8080/profissional?page=${page}`;
+      } else {
+        url = `http://localhost:8080/profissional?page=${page}`;
+      }
+  
+      const response = await axios.get(url);
       setData(response.data);
       const totalCount = response.data.length;
       setCount(Math.ceil(totalCount / pageSize));
