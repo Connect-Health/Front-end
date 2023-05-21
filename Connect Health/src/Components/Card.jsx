@@ -2,7 +2,7 @@ import React from 'react';
 import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props }) => {
+const Card = ({ profissional, border, border2, border3, texto, bg, bg2, areaUrl, ...props }) => {
   const MAX_ESPECIALIDADES = 3;
   const especiaisRestantes = Math.max(profissional.especialidade - MAX_ESPECIALIDADES, 0);
 
@@ -10,7 +10,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/profissional/${profissional.profissionalId}`);
+    navigate(`/profissional/${areaUrl}/${profissional.profissionalId}`);
   };
 
   return (

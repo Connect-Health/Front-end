@@ -73,6 +73,7 @@ const AllCards = () => {
                   texto='nutri'
                   key={profissional.id}
                   profissional={profissional}
+                  areaUrl='nutricionista'
                 />
               ))}
             </div>

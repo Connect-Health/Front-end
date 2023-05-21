@@ -14,7 +14,7 @@ import Avaliacoes from './minComponents/Avaliacoes'
 import Sobre from './minComponents/Sobre'
 
 
-const Perfil = () => {
+const Perfil = (props) => {
   const { id } = useParams();
 
   const [profissional, setProfissional] = useState({})
@@ -22,7 +22,7 @@ const Perfil = () => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get(`https://connect-health.up.railway.app/profissional/nutricionistas`)
+        const response = await axios.get(`https://connect-health.up.railway.app/profissional/${props.areaUrl}`)
         const profissionalEncontrado = response.data.find(profissional => profissional.profissionalId === parseInt(id))
         setProfissional(profissionalEncontrado)
       } catch (error) {

@@ -73,6 +73,7 @@ const AllCards = () => {
                   texto='psi'
                   key={profissional.id}
                   profissional={profissional}
+                  areaUrl='psicologo'
                 />
               ))}
             </div>
