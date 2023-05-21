@@ -1,6 +1,7 @@
 import ModelSobre from '../../../assets/modelsobre.svg'
 import Logo from '../../../assets/logo_preta.png'
-import { FaHeart, FaHeartbeat } from 'react-icons/fa';
+import bgSobre from '../../../assets/bgsobre.svg'
+import { FaHeartbeat } from 'react-icons/fa';
 
 
 function Sobre(){
@@ -18,18 +19,18 @@ function Sobre(){
             max-md:w-[100%] max-md:flex-col max-md:gap-2
             '>
                 <p className='w-[55%] p-10
-                max-md:w-[80%]                
+                max-md:w-[90%]  max-md:text-center             
                 '>Nós somos a Connect Health - uma plataforma 100% digital que oferece consultas psicologicas e nutricionais para todos que as necessitam. <br/> <br/> Nosso objetivo como instituição é popularizar a alimentação saúdavel e a saúde mental, visto que, muitas pessoas não tem condições para usufruir destes serviços. <br/> <br/> Queremos fazer o bem independente de quem seja. Não visando o lucro, e sim a saúde e bem estar dos nossos clientes. Sinta-se à vontade para explorar a nossa plataforma e explorar a si mesmo com a ajuda de nossos profissionais. 
                 </p>
 
                 <img className='w-[45%]
-                max-md:w-[65%]
+                max-md:w-[100%]
                 ' src={ModelSobre} alt="" />
             </div>
             
             <div className='w-full justify-center flex'>
                 <img className='w-[5%]
-                max-md:mt-10
+                max-md:mt-10 max-md:w-2/12
                 ' src={Logo} alt="" />
             </div>
 
@@ -42,13 +43,13 @@ function Sobre(){
 
             {/* Inicos dos cards*/}
 
-            <div className='mt-44 mb-20 w-full h-[340px] bg-sobre
+            <div style={{backgroundImage: `url(${bgSobre})`}} className='mt-44 mb-20 w-full h-[340px] 
             max-md:mt-52 max-md:h-0
             '>
                 <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  
                 max-md:grid-cols-1 max-md:gap-[23%] 
                 '>
-                    <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 '>
+                    <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
@@ -84,7 +85,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Standart <br/> R$100,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
@@ -120,7 +121,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4'>
+                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Premium <br/> R$150,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>

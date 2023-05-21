@@ -17,17 +17,17 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   return (
     <div key={profissional.id} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
       <div className={`w-[25%] border-r border-${border2} ${bg} flex flex-col`}>
-        <img src={profissional.avatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
+        <img src={profissional.urlAvatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
 
         <div className='mt-5 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Duração:</h4>
           <p className='text-center font-bold text-lg max-md:text-base'>{profissional.duracao}min</p>
         </div>
-        <Rating className='mt-2 self-center' name="size-large" value={profissional.avaliacao}  precision={1} readOnly size="small" />
+        <Rating className='mt-2 self-center' name="size-large" value={profissional.avaliacao}  precision={0.1} readOnly size="small" />
 
         <div className='mt-4 mb-2 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Consulta:</h4>
-          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>R${profissional.preco}0</p>
+          <p className='text-center font-bold text-2xl mt-2 max-md:text-lg'>R${profissional.preco},00</p>
         </div>
       </div>
 
@@ -55,6 +55,8 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
             </div>
           )}
         </div>
+
+        {console.log(profissional)}
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>

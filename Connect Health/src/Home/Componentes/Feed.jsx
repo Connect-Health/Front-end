@@ -38,7 +38,7 @@ function Feed(){
             </div>
 
             <div className='flex justify-center w-full mr-16 mt-16  '>
-                <img className='w-[45%] max-md:hidden'  src={ArcoFeed} alt="" />
+                <img className='w-[45%] max-md:hidden hover:translate-y-1 transition-all duration-150 hover:animate-spin '  src={ArcoFeed} alt="" />
             </div>
 
             <div className=''>
@@ -47,4 +47,4 @@ function Feed(){
         </div>
     )
 }
-export default Feed
+export default Feed;
