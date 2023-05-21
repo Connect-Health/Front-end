@@ -48,10 +48,10 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>
-          <p className='max-md:text-xs'>{descricaoProfissional > 175 ? (
-            <span>{descricaoProfissional.substring(0, 175) + '...'}</span>
+          <p className='max-md:text-xs'>{profissional.descricao.length > 175 ? (
+            <span>{profissional.descricao.substring(0, 175) + '...'}</span>
           ) : (
-            <span>{descricaoProfissional}</span>
+            <span>{profissional.descricao}</span>
           )}
 
           </p>

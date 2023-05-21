@@ -45,7 +45,7 @@ const Perfil = () => {
             <div className='flex gap-[2%] mt-16'>
               <div className='w-3/5 ml-5'>
                 <Especialidades profissional={profissional} />
-                <Sobre />
+                <Sobre profissional={profissional}/>
               </div>
 
               <div className='w-2/5'>
