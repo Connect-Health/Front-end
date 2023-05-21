@@ -1,10 +1,8 @@
 import React from 'react'
 import Fundo from '../../../assets/fundo.png'
-import Icone from '../../../assets/nutricon1.jpg'
 
 import TituloFoto from './TituloFoto'
 
-import Informacoes from './Informacoes'
 
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -14,7 +12,7 @@ import Avaliacoes from './minComponents/Avaliacoes'
 import Sobre from './minComponents/Sobre'
 
 
-const Perfil = (props) => {
+const Perfil = (props, {color}) => {
   const { id } = useParams();
 
   const [profissional, setProfissional] = useState({})
@@ -39,12 +37,12 @@ const Perfil = (props) => {
   return (
     <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#fff]/70 backdrop-blur-md pb-4 '>
         <div className=' w-full'>
-            <img src={Fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b' alt="" />
-            <TituloFoto profissional={profissional} nota={profissional.avaliacao}
+            <img src={props.fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b' alt="" />
+            <TituloFoto profissional={profissional} nota={profissional.avaliacao} color={color}
             />
             <div className='flex gap-[2%] mt-16'>
               <div className='w-3/5 ml-5'>
-                <Especialidades profissional={profissional} />
+                <Especialidades profissional={profissional}   />
                 <Sobre profissional={profissional}/>
               </div>
 

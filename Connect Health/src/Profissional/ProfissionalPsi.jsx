@@ -9,13 +9,18 @@ import Icone5 from '../../assets/nutricon5.jpg'
 import Button from './components/minComponents/Button'
 import { useEffect } from 'react';
 
+import fundo from '../../assets/fundopsi.jpg';
+
 const Profissional = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div className='bg-[#a74df1]/30'>
-        <Header />
+        <Header 
+            link="psicologia"
+            text="psi"
+        />
         <img className=' absolute -z-10 left-0 top-60' src={Icone1} alt="" />
         <img className=' absolute -z-10 right-0 top-60' src={Icone2} alt="" />
         <img className=' absolute -z-10 left-0 top-[120vh]' src={Icone3} alt="" />
@@ -23,8 +28,11 @@ const Profissional = () => {
         <img className=' absolute -z-10 left-1/2 top-[80vh] -translate-x-1/2' src={Icone5} alt="" />
         <Perfil 
             areaUrl="psicologos"
+            fundo={fundo}
         />
-        <Button />
+        <Button 
+            fundo="psi"
+        />
     </div>
   )
 }

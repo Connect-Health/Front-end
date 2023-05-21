@@ -3,7 +3,7 @@ import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import Rating from '@mui/material/Rating';
 
 
-const TituloFoto = ( { profissional }) => {
+const TituloFoto = ( { profissional }, {color}) => {
     const [isFav, setIsfav] = useState(false);
 
     function handleClick() {
@@ -15,14 +15,14 @@ const nota = profissional.avaliacao || 0
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={profissional.urlAvatar} className='w-3/4 rounded-full border-2 border-nutri relative z-10' alt="Imagem de perfil do Profissional" />
+            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10`} alt="Imagem de perfil do Profissional" />
         </div>
 
         <div className='w-3/4'>
             <div className='flex gap-40 items-center mt-3'>
                 <h1 className='pl-10 text-3xl'>{profissional.nome} {profissional.sobrenome}</h1>
                 <p onClick={handleClick} className='font-semibold flex items-center gap-2 '>
-                    {isFav ? <MdOutlineFavorite className='text-2xl text-nutri' /> : <MdOutlineFavoriteBorder className='text-2xl text-nutri' />}
+                    {isFav ? <MdOutlineFavorite className={`text-2xl text-azulsite/30`} /> : <MdOutlineFavoriteBorder className='text-2xl text-azulsite/30' />}
                     
                     Favoritar
                 </p>
