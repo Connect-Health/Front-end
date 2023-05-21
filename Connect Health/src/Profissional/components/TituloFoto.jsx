@@ -22,7 +22,7 @@ const nota = profissional.avaliacao || 0
             <div className='flex gap-40 items-center mt-3'>
                 <h1 className='pl-10 text-3xl'>{profissional.nome} {profissional.sobrenome}</h1>
                 <p onClick={handleClick} className='font-semibold flex items-center gap-2 '>
-                    {isFav ? <MdOutlineFavorite className={`text-2xl text-azulsite/30`} /> : <MdOutlineFavoriteBorder className='text-2xl text-azulsite/30' />}
+                    {isFav ? <MdOutlineFavorite className={`text-2xl text-azulsite/30 scale-125`} /> : <MdOutlineFavoriteBorder className='text-2xl text-azulsite/30 ' />}
                     
                     Favoritar
                 </p>
