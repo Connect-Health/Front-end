@@ -44,7 +44,7 @@ const nota = profissional.avaliacao || 0
                 </div>
             </div>
 
-            <div className='flex pl-12 gap-[20%] items-center mt-5'>
+            <div className='flex pl-12 gap-[20%] items-center mt-5 max-md:pl-0 max-md:justify-around max-md:gap-0 max-md:mt-10 '>
                 <div>
                     <p className='text-center'>Duração:</p>
                     <p className='font-bold text-lg text-center'>{profissional.duracao}min</p>
