@@ -7,6 +7,7 @@ export default {
   darkMode:'class',
   theme: {
     colors: {
+      "azulsite": "#0575E6",
       "cor-primaria": "#2B2A2A",
       "nutri": "#94E127",
       "white": "#FFFFFF",

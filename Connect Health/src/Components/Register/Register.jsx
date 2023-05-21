@@ -7,7 +7,7 @@ import {RiLinkedinFill} from 'react-icons/ri'
 import lockericon from '../../../assets/lockericon.png'
 import mailicon from '../../../assets/mailicon.png'
 
-function Login (){
+function Register (){
     return (
         <div className='flex'>
               <div className=" flex w-3/5 h-screen bg-bglogin bg-cover bg-center items-center">
@@ -53,4 +53,4 @@ function Login (){
 
     )
 }
-export default Login
+export default Register
