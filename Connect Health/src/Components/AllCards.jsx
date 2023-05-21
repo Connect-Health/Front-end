@@ -26,7 +26,7 @@ const AllCards = () => {
   async function fetchProfissionais() {
     try {
       const response = await axios.get(
-        `https://connect-health.up.railway.app/profissional?page=${page}`
+        `https://connect-health.up.railway.app/profissional/nutricionistas?page=${page}`
       );
       setData(response.data);
       const totalCount = response.data.length;
