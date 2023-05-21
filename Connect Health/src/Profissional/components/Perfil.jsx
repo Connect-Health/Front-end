@@ -22,8 +22,8 @@ const Perfil = () => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get(`http://localhost:8080/profissionais/nutricionistas`)
-        const profissionalEncontrado = response.data.find(profissional => profissional.id === parseInt(id))
+        const response = await axios.get(`https://connect-health.up.railway.app/profissional`)
+        const profissionalEncontrado = response.data.find(profissional => profissional.profissionalId === parseInt(id))
         setProfissional(profissionalEncontrado)
       } catch (error) {
         console.log(error)
@@ -54,6 +54,7 @@ const Perfil = () => {
             </div>
             
         </div>
+        {/* {console.log(profissional.avaliacao)} */}
     </div>
   )
 }

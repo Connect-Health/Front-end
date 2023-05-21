@@ -16,7 +16,7 @@ const nota = profissional.avaliacao || 0
   return (
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={profissional.avatar} className='w-3/4 rounded-full border-2 border-nutri relative z-10' alt="Imagem de perfil do Profissional" />
+            <img src={profissional.urlAvatar} className='w-3/4 rounded-full border-2 border-nutri relative z-10' alt="Imagem de perfil do Profissional" />
             <FaMedal className='relative self-end ml-[-65px] text-5xl mb-[-25px]'/>
         </div>
 
@@ -31,8 +31,9 @@ const nota = profissional.avaliacao || 0
             </div>
 
             <div className='flex gap-20 pl-14 items-center mt-2'>
-                <p className='font-semibold text-lg'>{profissional.areaAtuacao}</p>
-
+                {profissional && profissional.areaAtuacao && profissional.areaAtuacao.nome && (
+                    <p className='font-semibold text-lg'>{profissional.areaAtuacao.nome}</p>
+                )}
                 <div className='flex items-end gap-2'>
                     <Rating
                         name="text-feedback"
@@ -41,7 +42,7 @@ const nota = profissional.avaliacao || 0
                         precision={0.5}
                     />
                     <p className='font-bold'>{nota.toFixed(1)}</p>
-                    {console.log(nota)}
+                    
                 </div>
             </div>
 
@@ -52,7 +53,7 @@ const nota = profissional.avaliacao || 0
                 </div>
                 <div>
                     <p className='text-center'>Consulta:</p>
-                    <p className='font-bold text-xl text-center'>{profissional.preco}</p>
+                    <p className='font-bold text-xl text-center'>R${profissional.preco},00</p>
                 </div>
 
                 <div>
@@ -62,6 +63,7 @@ const nota = profissional.avaliacao || 0
             </div>
         </div>
     </div>
+    
   )
 }
 

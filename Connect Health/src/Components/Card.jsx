@@ -11,11 +11,11 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/profissional/${profissional.id}`);
+    navigate(`/profissional/${profissional.profissionalId}`);
   };
 
   return (
-    <div key={profissional.id} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
+    <div key={profissional.profissionalId} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
       <div className={`w-[25%] border-r border-${border2} ${bg} flex flex-col`}>
         <img src={profissional.urlAvatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
 
