@@ -3,7 +3,7 @@ import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import Rating from '@mui/material/Rating';
 
 
-const TituloFoto = ( { profissional }, {color}) => {
+const TituloFoto = ( { profissional }) => {
     const [isFav, setIsfav] = useState(false);
 
     function handleClick() {
@@ -13,15 +13,15 @@ const TituloFoto = ( { profissional }, {color}) => {
 const nota = profissional.avaliacao || 0
 
   return (
-    <div className='flex items-center w-full'>
-        <div className='w-1/4 flex justify-center -mt-20'>
-            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10`} alt="Imagem de perfil do Profissional" />
+    <div className='flex items-center w-full max-md:block'>
+        <div className='w-1/4 flex justify-center -mt-20 max-md:w-full max-md:justify-normal max-md:ml-[10%]'>
+            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10 max-md:w-1/3 max-md:h-1/3 `} alt="Imagem de perfil do Profissional" />
         </div>
 
-        <div className='w-3/4'>
-            <div className='flex gap-40 items-center mt-3'>
-                <h1 className='pl-10 text-3xl'>{profissional.nome} {profissional.sobrenome}</h1>
-                <p onClick={handleClick} className='font-semibold flex items-center gap-2 '>
+        <div className='w-3/4 max-md:w-full'>
+            <div className='flex gap-40 items-center mt-3 max-md:justify-between max-md:gap-0 max-md:px-3'>
+                <h1 className='pl-10 text-3xl max-md:text-xl max-md:pl-0'>{profissional.nome} {profissional.sobrenome}</h1>
+                <p onClick={handleClick} className='font-semibold flex items-center gap-2 max-md:gap-0.5 '>
                     {isFav ? <MdOutlineFavorite className={`text-2xl text-azulsite/30 scale-125`} /> : <MdOutlineFavoriteBorder className='text-2xl text-azulsite/30 ' />}
                     
                     Favoritar
