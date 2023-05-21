@@ -20,7 +20,7 @@ const nota = profissional.avaliacao || 0
 
         <div className='w-3/4 max-md:w-full'>
             <div className='flex gap-40 items-center mt-3 max-md:justify-between max-md:gap-0 max-md:px-3'>
-                <h1 className='pl-10 text-3xl max-md:text-xl max-md:pl-0'>{profissional.nome} {profissional.sobrenome}</h1>
+                <h1 className='pl-10 text-3xl max-md:text-2xl max-md:font-semibold max-md:pl-0'>{profissional.nome} {profissional.sobrenome}</h1>
                 <p onClick={handleClick} className='font-semibold flex items-center gap-2 max-md:gap-0.5 '>
                     {isFav ? <MdOutlineFavorite className={`text-2xl text-azulsite/30 scale-125`} /> : <MdOutlineFavoriteBorder className='text-2xl text-azulsite/30 ' />}
                     
@@ -28,7 +28,7 @@ const nota = profissional.avaliacao || 0
                 </p>
             </div>
 
-            <div className='flex gap-20 pl-14 items-center mt-2 max-md:gap-0 max-md:pl-0 max-md:justify-between'>
+            <div className='flex gap-20 pl-14 items-center mt-2 max-md:gap-0 max-md:pl-0 max-md:justify-between max-md:mt-0'>
                 {profissional && profissional.areaAtuacao && profissional.areaAtuacao.nome && (
                     <p className='font-semibold text-lg max-md:text-sm max-md:pl-10'>{profissional.areaAtuacao.nome}</p>
                 )}
