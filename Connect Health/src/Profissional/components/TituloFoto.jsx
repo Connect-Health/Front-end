@@ -46,17 +46,17 @@ const nota = profissional.avaliacao || 0
 
             <div className='flex pl-12 gap-[20%] items-center mt-5 max-md:pl-0 max-md:justify-around max-md:gap-0 max-md:mt-10 '>
                 <div>
-                    <p className='text-center'>Duração:</p>
+                    <p className='text-center max-md:text-sm'>Duração:</p>
                     <p className='font-bold text-lg text-center'>{profissional.duracao}min</p>
                 </div>
                 <div>
-                    <p className='text-center'>Consulta:</p>
-                    <p className='font-bold text-xl text-center'>R${profissional.preco},00</p>
+                    <p className='text-center max-md:text-sm'>Consulta:</p>
+                    <p className='font-bold text-2xl text-center'>R${profissional.preco},00</p>
                 </div>
 
                 <div>
-                    <p className='text-center'>Atende:</p>
-                    <p className='font-bold text-center'>idosos</p>
+                    <p className='text-center max-md:text-sm'>Atende:</p>
+                    <p className='font-bold text-lg text-center'>idosos</p>
                 </div>
             </div>
         </div>
