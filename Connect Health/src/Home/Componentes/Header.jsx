@@ -1,10 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Modo from '../../../assets/mode.png'
 import {BsArrowRight} from 'react-icons/bs'
 import vetor from '../../../assets/vectorHome.svg'
 import BarsSolid from '../../../assets/bars-solid.svg'
 
+import { useState, useEffect } from "react"
+
 const Header = () => {
+  const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        if (theme === "dark"){
+            document.documentElement.classList.add("dark");
+            
+        } else {
+            document.documentElement.classList.remove("dark");
+            
+        }
+    }, [theme]);
+
+    const handleThemeSwitch = () => {
+        setTheme(theme === "dark" ? "light" : "dark");
+    };
+
   return (
     <div id='home' className='relative z-50'>
       <div className='flex justify-between items-center py-3 px-10 bg-gradient-to-t to-gradi/60 from-white/0'>
@@ -22,6 +41,7 @@ const Header = () => {
           <Link to='/' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Cadastro</Link>
+          <img className='cursor-pointer dark:invert' src={Modo} alt="" onClick={handleThemeSwitch} />
         </div>
         <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-20 items-center flex-col
         max-md:hidden

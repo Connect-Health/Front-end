@@ -10,7 +10,7 @@ function Contato(){
     return(
         <div className='max-md:mt-[1100px]'>
             <div className='w-[100%]'>
-                <h1 className='text-center text-3xl font-bold text-[#5855F2]
+                <h1 className='text-center text-3xl font-bold text-[#5855F2] dark:text-white
                 max-md:text-xl
                 '>Entre em contato conosco!</h1>
             </div>

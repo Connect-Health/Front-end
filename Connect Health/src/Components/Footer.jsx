@@ -28,7 +28,7 @@ const Footer = (props) => {
             </div>
         </div>
 
-        <div className='flex items-center justify-between mx-10 mt-10 max-md:mt-5'>
+        <div className='flex items-center justify-between mx-10 mt-10 max-md:mt-5 '>
             <p className={`flex items-center ${props.invert} max-md:text-xs`}>
                 <MdCopyright />
                 2023 Connect Health

@@ -47,4 +47,4 @@ function Feed(){
         </div>
     )
 }
-export default Feed
+export default Feed;

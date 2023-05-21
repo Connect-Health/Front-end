@@ -29,7 +29,7 @@ function Sobre(){
             </div>
             
             <div className='w-full justify-center flex'>
-                <img className='w-[5%]
+                <img className='w-[5%] dark:invert
                 max-md:mt-10 max-md:w-2/12
                 ' src={Logo} alt="" />
             </div>
@@ -38,7 +38,7 @@ function Sobre(){
             max-md:mt-24
             '>
                 
-                <h3 className='text-center font-bold text-3xl text-[#171FDF]'>Nossos Planos:</h3>
+                <h3 className='text-center font-bold text-3xl text-[#171FDF] dark:text-white'>Nossos Planos:</h3>
             </div>
 
             {/* Inicos dos cards*/}
@@ -49,7 +49,7 @@ function Sobre(){
                 <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  
                 max-md:grid-cols-1 max-md:gap-[23%] 
                 '>
-                    <div className='bg-[#EBF3FF] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
+                    <div className='bg-[#EBF3FF] dark:bg-[#070a64] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
@@ -85,7 +85,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
+                    <div className='bg-[#EBF3FF] dark:bg-[#070a64] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Standart <br/> R$100,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
@@ -121,7 +121,7 @@ function Sobre(){
                             
                     </div>
 
-                    <div className='bg-[#EBF3FF] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
+                    <div className='bg-[#EBF3FF] dark:bg-[#070a64] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
                         <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Premium <br/> R$150,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
