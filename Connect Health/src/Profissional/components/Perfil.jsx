@@ -22,7 +22,7 @@ const Perfil = () => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get(`https://connect-health.up.railway.app/profissional`)
+        const response = await axios.get(`https://connect-health.up.railway.app/profissional/nutricionistas`)
         const profissionalEncontrado = response.data.find(profissional => profissional.profissionalId === parseInt(id))
         setProfissional(profissionalEncontrado)
       } catch (error) {
@@ -37,7 +37,7 @@ const Perfil = () => {
 
 
   return (
-    <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#f0f0f0]/70 backdrop-blur-md mb-8 '>
+    <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#fff]/70 backdrop-blur-md pb-4 '>
         <div className=' w-full'>
             <img src={Fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b' alt="" />
             <TituloFoto profissional={profissional} nota={profissional.avaliacao}
@@ -49,12 +49,12 @@ const Perfil = () => {
               </div>
 
               <div className='w-2/5'>
-                <Avaliacoes />
+                <Avaliacoes profissional={profissional} />
               </div>
             </div>
             
         </div>
-        {/* {console.log(profissional.avaliacao)} */}
+        
     </div>
   )
 }

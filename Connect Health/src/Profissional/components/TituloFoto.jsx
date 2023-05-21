@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import Rating from '@mui/material/Rating';
-import { FaMedal } from 'react-icons/fa';
 
 
 const TituloFoto = ( { profissional }) => {
@@ -17,7 +16,6 @@ const nota = profissional.avaliacao || 0
     <div className='flex items-center w-full'>
         <div className='w-1/4 flex justify-center -mt-20'>
             <img src={profissional.urlAvatar} className='w-3/4 rounded-full border-2 border-nutri relative z-10' alt="Imagem de perfil do Profissional" />
-            <FaMedal className='relative self-end ml-[-65px] text-5xl mb-[-25px]'/>
         </div>
 
         <div className='w-3/4'>
@@ -39,7 +37,7 @@ const nota = profissional.avaliacao || 0
                         name="text-feedback"
                         value={nota}
                         readOnly
-                        precision={0.5}
+                        precision={0.1}
                     />
                     <p className='font-bold'>{nota.toFixed(1)}</p>
                     

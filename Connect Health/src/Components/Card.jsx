@@ -37,26 +37,14 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
             {profissional.sobrenome}</span>
           </h2>
 
-        <div className={`flex flex-wrap bg-${border3} ${bg2} rounded-xl gap-1 justify-center`}>
-          {profissional.especialidade > MAX_ESPECIALIDADES ? (
-            <div className={`flex flex-wrap bg-${border3} py-3 rounded-xl px-2 gap-2 justify-evenly max-md:gap-0.5`}>
-              {/* {profissional.especialidade.slice(0, MAX_ESPECIALIDADES).map((especial, index) => (
-                <p key={index} className='border w-fit rounded-lg px-2 max-md:px-1 max-md:text-sm bg-white'>{especial}</p>
-              ))} */}
-              <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white'>{`+${especiaisRestantes}`}</span>
-            </div>
-          ) : (
-            <div className={`flex flex-wrap bg-${border3} py-3 rounded-xl px-2 gap-2 max-md:gap-0.5`}>
-              {/* {profissional.especialidade.map((especial, index) => (
-                <div key={index}>
-                  <span className='border w-fit rounded-lg px-2 bg-white py-1 max-md:px-1 max-md:text-sm max-md:py-0.5'>{especial}</span>
-                </div>
-              ))} */}
-            </div>
-          )}
-        </div>
-
-        {console.log(profissional)}
+          <div className={`flex flex-wrap bg-${border3} ${bg2} rounded-xl gap-1 justify-center w-full py-2`}>
+            {profissional.especialidade && profissional.especialidade.slice(0, 3).map((especialidade) => (
+              <p key={especialidade.especialidadeId} className="border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white">{especialidade.nome}</p>
+            ))}
+            {profissional.especialidade && profissional.especialidade.length > 3 && (
+              <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white'>{`+${profissional.especialidade.length - 3}`}</span>
+            )}
+          </div>
 
         <div>
           <h4 className='text-center text-lg mt-3 max-md:text-base'>Sobre mim:</h4>

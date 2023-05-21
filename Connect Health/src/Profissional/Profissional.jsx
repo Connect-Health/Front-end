@@ -14,13 +14,13 @@ const Profissional = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=''>
+    <div className='bg-[#4fec6f]/30'>
         <Header />
-        <img className='absolute -z-10 left-0 top-60' src={Icone1} alt="" />
-        <img className='absolute -z-10 right-0 top-60' src={Icone2} alt="" />
-        <img className='absolute -z-10 left-0 top-[120vh]' src={Icone3} alt="" />
-        <img className='absolute -z-10 right-0 top-[120vh]' src={Icone4} alt="" />
-        <img className='absolute -z-10 left-1/2 top-[80vh] -translate-x-1/2' src={Icone5} alt="" />
+        <img className=' absolute -z-10 left-0 top-60' src={Icone1} alt="" />
+        <img className=' absolute -z-10 right-0 top-60' src={Icone2} alt="" />
+        <img className=' absolute -z-10 left-0 top-[120vh]' src={Icone3} alt="" />
+        <img className=' absolute -z-10 right-0 top-[120vh]' src={Icone4} alt="" />
+        <img className=' absolute -z-10 left-1/2 top-[80vh] -translate-x-1/2' src={Icone5} alt="" />
         <Perfil />
         <Button />
     </div>
