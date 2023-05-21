@@ -28,18 +28,18 @@ const nota = profissional.avaliacao || 0
                 </p>
             </div>
 
-            <div className='flex gap-20 pl-14 items-center mt-2'>
+            <div className='flex gap-20 pl-14 items-center mt-2 max-md:gap-0 max-md:pl-0 max-md:justify-between'>
                 {profissional && profissional.areaAtuacao && profissional.areaAtuacao.nome && (
-                    <p className='font-semibold text-lg'>{profissional.areaAtuacao.nome}</p>
+                    <p className='font-semibold text-lg max-md:text-sm max-md:pl-10'>{profissional.areaAtuacao.nome}</p>
                 )}
-                <div className='flex items-end gap-2'>
+                <div className='flex items-center gap-2 max-md:gap-0 max-md:pr-3'>
                     <Rating
                         name="text-feedback"
                         value={nota}
                         readOnly
                         precision={0.1}
                     />
-                    <p className='font-bold'>{nota.toFixed(1)}</p>
+                    <p className='font-bold max-md:text-sm'>{nota.toFixed(1)}</p>
                     
                 </div>
             </div>
