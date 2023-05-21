@@ -26,7 +26,7 @@ const AllCards = () => {
   async function fetchProfissionais() {
     try {
       const response = await axios.get(
-        `http://localhost:8080/profissional?page=${page}`
+        `https://back-end-production-2cde.up.railway.app/profissional?page=${page}`
       );
       setData(response.data);
       const totalCount = response.data.length;
