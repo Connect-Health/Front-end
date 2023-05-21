@@ -41,8 +41,8 @@ const Perfil = (props, {color}) => {
             <img src={props.fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b max-md:rounded-none' alt="" />
             <TituloFoto profissional={profissional} nota={profissional.avaliacao} color={color}
             />
-            <div className='flex gap-[2%] mt-16 max-md:block'>
-              <div className='w-3/5 ml-5 max-md:w-full'>
+            <div className='flex gap-[2%] mt-16 max-md:block max-md:mt-6'>
+              <div className='w-3/5 ml-5 max-md:w-full ml-0'>
                 <Especialidades profissional={profissional}   />
                 <Sobre profissional={profissional}/>
               </div>
