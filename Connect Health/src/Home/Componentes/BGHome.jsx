@@ -2,6 +2,7 @@ import fundo_1 from '../../../assets/fundo_1.png'
 import cabeca_1 from '../../../assets/cabeça_1.png'
 import mulher_1 from '../../../assets/mulher_1.png'
 import Logo from '../../../assets/logo_preta.png'
+import estrela from '../../../assets/estrelas2.jpg'
 import Blocos from './Blocos'
 import Header from './Header'
 import Psico from './Psico'
@@ -27,7 +28,8 @@ function BGHome(){
     return(
         <div className='max-md:h-52'>
             
-            <div className={`relative dark:bg-bgestrela dark:bg-cover`} style={{ height: window.innerHeight}}>
+            <div className={`relative`} style={{ height: window.innerHeight}}>
+                <img src={estrela} className='hidden absolute dark:block ' alt="" />
                 <img className={`w-full absolute`} style={{ transform: `translateY(${offset * 0.35}px)`}} src={fundo_1} alt="" />
                 <img className='w-full absolute' style={{ transform: `translateY(${offset * 0.3}px)`}} src={cabeca_1} alt="" />
                 <img className='w-full absolute' style={{ transform: `translateY(${offset * 0.1}px)`}} src={mulher_1} alt="" />

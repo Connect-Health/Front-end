@@ -6,7 +6,6 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   const MAX_ESPECIALIDADES = 3;
   const especiaisRestantes = Math.max(profissional.especialidade - MAX_ESPECIALIDADES, 0);
 
-  const descricaoProfissional = profissional.descricao;
 
   const navigate = useNavigate();
 
@@ -17,7 +16,7 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, ...props
   return (
     <div key={profissional.profissionalId} className={`flex rounded-2xl border-2 bg-[#F5F5F5] bg-opacity-50 border-${border} box-content`} {...props}>
       <div className={`w-[25%] border-r border-${border2} ${bg} flex flex-col`}>
-        <img src={profissional.urlAvatar} className='m-auto mt-3 rounded-xl w-24 max-md:w-20 h-auto max-md:object-cover' />
+        <img src={profissional.urlAvatar} className='m-auto mt-3 rounded-xl w-24 h-24 max-md:w-20 object-cover object-top max-md:object-cover' />
 
         <div className='mt-5 max-md:mt-2'>
           <h4 className='text-center font-semibold max-md:text-sm'>Duração:</h4>
