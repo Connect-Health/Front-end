@@ -23,7 +23,7 @@ export default {
         "bloco3": "url('assets/bloco_3.png')",
         "sobre": "url('assets/bgsobre.svg')",
         "bglogin": "url('assets/bglogin.png')",
-        "bgestrela": "url('assets/7871.jpg')",
+        "bgestrela": "url('assets/estrelas2.jpg')",
       },
       boxShadow: {
         'nutrici': '0 10px 10px 0 rgba(148, 255, 39, 0.7)',

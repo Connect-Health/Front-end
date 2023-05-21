@@ -27,7 +27,7 @@ function BGHome(){
     return(
         <div className='max-md:h-52'>
             
-            <div className={`relative dark:bg-bgestrela dark:bg-contain`} style={{ height: window.innerHeight}}>
+            <div className={`relative dark:bg-bgestrela dark:bg-cover`} style={{ height: window.innerHeight}}>
                 <img className={`w-full absolute`} style={{ transform: `translateY(${offset * 0.35}px)`}} src={fundo_1} alt="" />
                 <img className='w-full absolute' style={{ transform: `translateY(${offset * 0.3}px)`}} src={cabeca_1} alt="" />
                 <img className='w-full absolute' style={{ transform: `translateY(${offset * 0.1}px)`}} src={mulher_1} alt="" />
