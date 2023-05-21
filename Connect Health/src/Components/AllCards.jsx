@@ -25,14 +25,9 @@ const AllCards = () => {
 
   async function fetchProfissionais() {
     try {
-      let url;
-      if (window.innerWidth <= 480) {
-        url = `https://back-end-production-2cde.up.railway.app/profissional?page=${page}`;
-      } else {
-        url = `http://localhost:8080/profissional?page=${page}`;
-      }
-  
-      const response = await axios.get(url);
+      const response = await axios.get(
+        `https://connect-health.up.railway.app/profissional?page=${page}`
+      );
       setData(response.data);
       const totalCount = response.data.length;
       setCount(Math.ceil(totalCount / pageSize));
