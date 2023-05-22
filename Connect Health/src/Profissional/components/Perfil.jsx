@@ -42,12 +42,12 @@ const Perfil = (props, {color}) => {
             <TituloFoto profissional={profissional} nota={profissional.avaliacao} color={color}
             />
             <div className='flex gap-[2%] mt-16 max-md:block max-md:mt-6'>
-              <div className='w-3/5 ml-5 max-md:w-full ml-0'>
+              <div className='w-3/5 ml-5 max-md:w-full max-md:ml-0'>
                 <Especialidades profissional={profissional}   />
                 <Sobre profissional={profissional}/>
               </div>
 
-              <div className='w-2/5 max-md:full'>
+              <div className='w-2/5 max-md:w-full'>
                 <Avaliacoes profissional={profissional} />
               </div>
             </div>

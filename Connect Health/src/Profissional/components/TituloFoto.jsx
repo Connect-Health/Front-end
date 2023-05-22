@@ -15,7 +15,7 @@ const nota = profissional.avaliacao || 0
   return (
     <div className='flex items-center w-full max-md:block'>
         <div className='w-1/4 flex justify-center -mt-20 max-md:w-full max-md:justify-normal max-md:pl-[10%]'>
-            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10 max-md:w-1/3 max-md:h-1/3 `} alt="Imagem de perfil do Profissional" />
+            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10 max-md:w-28 max-md:h-28 `} alt="Imagem de perfil do Profissional" />
         </div>
 
         <div className='w-3/4 max-md:w-full'>
