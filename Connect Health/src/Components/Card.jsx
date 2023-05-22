@@ -3,8 +3,6 @@ import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
 
 const Card = ({ profissional, border, border2, border3, texto, bg, bg2, areaUrl, ...props }) => {
-  const MAX_ESPECIALIDADES = 3;
-  const especiaisRestantes = Math.max(profissional.especialidade - MAX_ESPECIALIDADES, 0);
 
 
   const navigate = useNavigate();
@@ -38,10 +36,10 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, areaUrl,
 
           <div className={`flex flex-wrap bg-${border3} ${bg2} rounded-xl gap-1 justify-center w-full py-2`}>
             {profissional.especialidade && profissional.especialidade.slice(0, 3).map((especialidade) => (
-              <p key={especialidade.especialidadeId} className="border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white">{especialidade.nome}</p>
+              <p key={especialidade.especialidadeId} className="border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white max-md:w-fit">{especialidade.nome}</p>
             ))}
             {profissional.especialidade && profissional.especialidade.length > 3 && (
-              <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white'>{`+${profissional.especialidade.length - 3}`}</span>
+              <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white max-md:w-fit'>{`+${profissional.especialidade.length - 3}`}</span>
             )}
           </div>
 
