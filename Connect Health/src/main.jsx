@@ -13,6 +13,7 @@ import ProfissionalPsi from './Profissional/ProfissionalPsi'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import Feed from './Feed/app'
+import Register2 from './Components/Register/Register2'
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/register',
-    element: <Register />,
+    element: <Register2 />,
   },
   {
     path: '/feed',
