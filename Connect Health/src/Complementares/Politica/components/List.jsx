@@ -2,9 +2,9 @@ import React from 'react'
 
 const List = (props) => {
   return (
-    <div>
-        <li className=''>{props.list}</li>
-    </div>
+    <ul className=''>
+        <li className='list-disc mt-2'>{props.list}</li>
+    </ul>
   )
 }
 
