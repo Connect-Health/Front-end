@@ -10,7 +10,7 @@ import mailicon from '../../../assets/mailicon.png'
 function Login (){
     return (
         <div className='flex'>
-              <div className=" flex w-3/5 h-screen bg-bglogin bg-cover bg-center items-center">
+              <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center" style={{backgroundImage: "url(../../../assets/bglogin.png)"}}>
                  <Link to='/'>
                  <AiOutlineArrowLeft  className='absolute text-white text-5xl top-3 left-3'/>
                  </Link>
