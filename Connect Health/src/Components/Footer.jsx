@@ -37,7 +37,7 @@ const Footer = (props) => {
             <div className='flex gap-4 text-sm max-md:gap-2 max-md:grid max-md:grid-cols-2'>
                 <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Ajuda</p>
                 <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Contato</p>
-                <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Politica de Privacidade</p>
+                <Link to="/politica" className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Politica de Privacidade</Link>
                 <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Termos de Uso</p>
             </div>
         </div>
