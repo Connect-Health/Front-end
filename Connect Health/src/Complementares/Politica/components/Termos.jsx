@@ -7,7 +7,7 @@ const Termos = () => {
   return (
     <div className='pt-32 -mt-14 w-4/5 mx-auto px-[5%] bg-azulsite/10 shadow-md mb-10 pb-5'>
         <h2 className='text-center text-2xl font-bold leading-none' >Termos e Política de Privacidade</h2>
-        <h3 className='text-center text-xl font-semibold leading-snug'>Connect Health</h3>
+        <h3 className='text-center text-xl font-semibold leading-snug text-azulsite'>Connect Health</h3>
 
         <p className='text-center mt-5'>Data de entrada em vigor: Maio/2023</p>
 
