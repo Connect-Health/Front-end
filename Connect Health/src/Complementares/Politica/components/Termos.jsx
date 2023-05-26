@@ -33,7 +33,7 @@ const Termos = () => {
 
         <Paragraph text="2.1 Uso das Informações: As informações coletadas são utilizadas para:" />
 
-        <ul className='ml-14 mb-5 '>
+        <ul className='ml-14 mb-5 max-md:ml-8'>
           <List list="Fornecer os serviços contratados, como agendamento de consultas online, comunicação com profissionais freelancers e fornecimento de recursos adicionais;" />
           <List list="Personalizar a experiência do usuário, oferecendo recomendações e conteúdos relevantes;" />
           <List list="Garantir a segurança da plataforma, protegendo-a contra atividades fraudulentas, abuso ou violações de nossos Termos de Serviço;" />
@@ -42,7 +42,7 @@ const Termos = () => {
 
         <Paragraph text="2.2  Compartilhamento de Informações: Não compartilhamos informações pessoais dos usuários com terceiros sem o seu consentimento, exceto nas seguintes circunstâncias:" />
 
-        <ul className='ml-14 mb-5'>
+        <ul className='ml-14 mb-5 max-md:ml-8'>
           <List list="Com profissionais freelancers: Para facilitar a prestação dos serviços contratados, compartilhamos as informações fornecidas pelos usuários com os profissionais freelancers envolvidos na consulta;" />
           <List list="Com parceiros de processamento de pagamento: Para processar transações financeiras, podemos compartilhar informações com fornecedores de serviços de pagamento de confiança;" />
           <List list="Para cumprir com obrigações legais: Podemos compartilhar informações pessoais se formos obrigados por lei, regulamentação ou ordem judicial;" />
@@ -57,7 +57,7 @@ const Termos = () => {
 
         <Paragraph text="Os usuários da Connect Health têm direitos relacionados às suas informações pessoais, incluindo:" />
 
-        <ul className='ml-14'>
+        <ul className='ml-14 max-md:ml-8'>
           <List list="Acessar, corrigir ou atualizar seus dados pessoais;" />
           <List list="Solicitar a exclusão dos dados pessoais;" />
           <List list="Retirar o consentimento fornecido para o uso das informações;" />
