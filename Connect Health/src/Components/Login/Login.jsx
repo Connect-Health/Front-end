@@ -1,8 +1,7 @@
 
 import {AiOutlineArrowLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import {RiFacebookCircleFill} from 'react-icons/ri'
-import {RiLinkedinFill} from 'react-icons/ri'
+import { RiFacebookCircleFill, RiLinkedinFill } from 'react-icons/ri'
 import lockericon from '../../../assets/lockericon.png'
 import mailicon from '../../../assets/mailicon.png'
 import BgLogin from "../../../assets/bglogin.png"
