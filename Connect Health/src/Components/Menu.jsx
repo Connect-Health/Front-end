@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import BarsSolid from '../../assets/bars-solid.svg'
 import { AiOutlineClose } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 
 const Menu = () => {
@@ -19,11 +20,11 @@ const Menu = () => {
             <div className="fixed inset-0 bg-white z-50">
             <div className="max-w-md mx-auto py-4 px-6">
                 <AiOutlineClose className='absolute top-3 right-3 text-2xl' onClick={abrirMenu} />
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
+              <div className='flex justify-center items-center pt-[50%] flex-col'>
+                <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/psicologia">Psicologia</Link>
+                <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/nutricao">Nutrição</Link>
+                <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/feed">Feed de Notícias</Link>
+              </div>
             </div>
           </div>
         )}
