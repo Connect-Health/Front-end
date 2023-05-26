@@ -13,10 +13,7 @@ function Login (){
       console.log("LOGIN EFETUADO COM SUCESSO")
    }
 
-    const onFailure = (res) => {
-      console.log("LOGIN FALHOU COM SUCESSO")
-    }
-   const responseGoogle = (response) => {
+   const onFailure = (response) => {
       console.log(response);
     }
 
