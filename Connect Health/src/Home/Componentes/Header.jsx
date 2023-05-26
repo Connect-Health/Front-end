@@ -94,7 +94,7 @@ const Header = () => {
           <Link to='/nutricao' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Nutrição</Link>
-          <Link to='/' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/login' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Cadastro</Link>
           
