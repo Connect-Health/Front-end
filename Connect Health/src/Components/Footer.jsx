@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = (props) => {
   return (
-    <div className={`h-80 bg-${props.bg} flex flex-col max-md:h-52`}>
+    <div className={`h-auto bg-${props.bg} flex flex-col max-md:h-52`}>
         <img src={Elipse} alt="" className='absolute w-full' />
 
         <div className='flex items-center flex-col pt-16 max-md:pt-5'>
