@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 function Psico(){
     return(
         <div id="psicologia" className='max-md:mt-72'>
-           <img src={Wave} alt="" className='max-md:hidden'/>
+           <img src={Wave} alt="" className='max-md:hidden w-full'/>
            <div className='flex justify-evenly
            max-md:flex-col'>
                 <div className='w-[45%] mt-10 ml-24
@@ -45,7 +45,7 @@ function Psico(){
             </div>
 
             <div className='mt-20'>
-                <img src={PostPsi} alt="" />
+                <img src={PostPsi} alt="" className='w-full' />
             </div>
 
             <div className='w-full m-auto justify-center flex mt-10'>
