@@ -7,10 +7,13 @@ import {RiLinkedinFill} from 'react-icons/ri'
 import lockericon from '../../../assets/lockericon.png'
 import mailicon from '../../../assets/mailicon.png'
 
+import BgLogin from "../../../assets/bglogin.png"
+
 function Login (){
     return (
         <div className='flex'>
-              <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center" style={{backgroundImage: "url(../../../assets/bglogin.png)"}}>
+              <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center">
+                 <img src={BgLogin} alt="" className='absolute -z-10 w-3/5' />
                  <Link to='/'>
                  <AiOutlineArrowLeft  className='absolute text-white text-5xl top-3 left-3'/>
                  </Link>
