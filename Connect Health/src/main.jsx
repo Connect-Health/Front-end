@@ -14,6 +14,7 @@ import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
+import Politica from './Complementares/Politica/Politica'
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: '/feed',
     element: <Feed />,
+  },
+  {
+    path: '/politica',
+    element: <Politica />,
   }
 ])
 

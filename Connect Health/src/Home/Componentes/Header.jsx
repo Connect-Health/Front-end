@@ -14,6 +14,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { useState, useEffect } from "react"
+import Menu from '../../Components/Menu'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -86,7 +87,7 @@ const Header = () => {
         <div className='flex gap-10 z-10 
         max-md:-ml-5 max-md:w-[90%] 
         '>
-          <img className='max-md:h-6 max-md:block hidden' src={BarsSolid} alt="" />
+          <Menu />
           <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
           <Link to='/psicologia' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
@@ -94,7 +95,7 @@ const Header = () => {
           <Link to='/nutricao' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Nutrição</Link>
-          <Link to='/' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/login' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Cadastro</Link>
           
