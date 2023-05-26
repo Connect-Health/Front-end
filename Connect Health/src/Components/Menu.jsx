@@ -18,7 +18,7 @@ const Menu = () => {
         {open && (
             <div className="fixed inset-0 bg-white z-50">
             <div className="max-w-md mx-auto py-4 px-6">
-                <AiOutlineClose className='absolute top-3 right-3' />
+                <AiOutlineClose className='absolute top-3 right-3 text-2xl' onClick={abrirMenu} />
               <ul>
                 <li>Item 1</li>
                 <li>Item 2</li>
