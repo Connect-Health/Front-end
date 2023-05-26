@@ -47,8 +47,6 @@ function Login (){
                                        buttonText=" né nada"
                                        onSuccess={responseGoogle}
                                        onFailure={responseGoogle}
-                                       cookiePolicy={'single_host_origin'}
-                                       isSignedIn={true}
                                     />
                                     <Link to='/'><RiFacebookCircleFill className='text-azulsite text-5xl' /></Link>
                                     <Link to='/'> <RiLinkedinFill className='text-azulsite text-5xl pl-3' /></Link>
