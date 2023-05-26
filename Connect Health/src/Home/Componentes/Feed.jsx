@@ -28,13 +28,13 @@ function Feed(){
             </div>
 
             <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16  '>
-                <Link to='/' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]
+                <Link to='/feed' className='w-[15%] p-2 text-center bg-[#5D59FF] rounded-full text-[#fff]
                 max-md:w-[35%] max-md:mr-2 max-md:text-[13px]
                 '>Acompanhe aqui!</Link>
             </div>
 
             <div>
-                <img src={PostFeed} alt="" />
+                <img src={PostFeed} className='w-full' alt="" />
             </div>
 
             <div className='flex justify-center w-full mr-16 mt-16  '>

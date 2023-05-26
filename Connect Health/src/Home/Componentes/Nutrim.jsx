@@ -49,7 +49,7 @@ const Nutrim = () => {
                 ' src={Planutri} alt="" />
             </div>
 
-            <img className='mt-20' src={PostNutri} alt="" />
+            <img className='mt-20 w-full' src={PostNutri} alt="" />
             <div className='w-full m-auto justify-center flex mt-10'>
               
                 <h2 className='w-[25%] text-3xl text-nutri font-extrabold text-center
@@ -97,7 +97,7 @@ const Nutrim = () => {
             </div>
 
             <div className=' mt-20 h-2/3 '>
-              <img src={WaveFeed} alt="" />
+              <img src={WaveFeed} className='w-full' alt="" />
             </div>
       </div>
       

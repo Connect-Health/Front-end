@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = (props) => {
   return (
-    <div className={`h-80 bg-${props.bg} flex flex-col max-md:h-52`}>
+    <div className={`h-auto bg-${props.bg} flex flex-col max-md:h-52`}>
         <img src={Elipse} alt="" className='absolute w-full' />
 
         <div className='flex items-center flex-col pt-16 max-md:pt-5'>
@@ -36,9 +36,7 @@ const Footer = (props) => {
 
             <div className='flex gap-4 text-sm max-md:gap-2 max-md:grid max-md:grid-cols-2'>
                 <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Ajuda</p>
-                <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Contato</p>
                 <Link to="/politica" className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Politica de Privacidade</Link>
-                <p className={`font-semibold cursor-pointer ${props.invert} max-md:text-xs`}>Termos de Uso</p>
             </div>
         </div>
     </div>
