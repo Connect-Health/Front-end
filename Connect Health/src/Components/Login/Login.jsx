@@ -1,15 +1,18 @@
 
 import {AiOutlineArrowLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import {RiFacebookCircleFill} from 'react-icons/ri'
-import {BsGoogle} from 'react-icons/bs'
-import {RiLinkedinFill} from 'react-icons/ri'
+import { RiFacebookCircleFill, RiLinkedinFill } from 'react-icons/ri'
 import lockericon from '../../../assets/lockericon.png'
 import mailicon from '../../../assets/mailicon.png'
-
 import BgLogin from "../../../assets/bglogin.png"
+import GoogleLogin from 'react-google-login'
 
 function Login (){
+
+   const responseGoogle = (response) => {
+      console.log(response);
+    }
+
     return (
         <div className='flex'>
               <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center">
@@ -39,15 +42,14 @@ function Login (){
                            <h1 className='text-gradi/80 text-1x1 font-bold'>Esqueci a senha</h1>
                          </button>
                                  <div className='flex'>
-                                    <Link to='/'>
-                                    <BsGoogle className='text-azulsite pr-3 text-5xl '/>
-                                    </Link>
-                                    <Link to='/'>
-                                    <RiFacebookCircleFill className='text-azulsite text-5xl' />
-                                    </Link>
-                                    <Link to='/'>
-                                    <RiLinkedinFill className='text-azulsite text-5xl pl-3' />
-                                    </Link>
+                                    <GoogleLogin
+                                       clientId="471911563497-1ja3qk8l95t2sjlo761kd2bmohnruecu.apps.googleusercontent.com"
+                                       buttonText=" né nada"
+                                       onSuccess={responseGoogle}
+                                       onFailure={responseGoogle}
+                                    />
+                                    <Link to='/'><RiFacebookCircleFill className='text-azulsite text-5xl' /></Link>
+                                    <Link to='/'> <RiLinkedinFill className='text-azulsite text-5xl pl-3' /></Link>
                                  </div>
                                  <h1 className='text-1xl font-semibold mt-3'>Não tem conta? <Link to='/registerProfissional'><span className='text-azulsite'>Registre-se</span></Link></h1>
                          
