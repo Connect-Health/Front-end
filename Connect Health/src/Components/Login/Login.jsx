@@ -9,7 +9,11 @@ import GoogleLogin from 'react-google-login'
 
 function Login (){
 
-   const responseGoogle = (response) => {
+   const onSuccess = (res) => {
+      console.log("LOGIN EFETUADO COM SUCESSO")
+   }
+
+   const onFailure = (response) => {
       console.log(response);
     }
 
@@ -43,10 +47,10 @@ function Login (){
                          </button>
                                  <div className='flex'>
                                     <GoogleLogin
-                                       clientId="471911563497-1ja3qk8l95t2sjlo761kd2bmohnruecu.apps.googleusercontent.com"
-                                       buttonText=" né nada"
-                                       onSuccess={responseGoogle}
-                                       onFailure={responseGoogle}
+                                       clientId="1030844756804-vjfa1ifrgc703mc5cfa0iqk6tl19qaph.apps.googleusercontent.com"
+                                       buttonText=""
+                                       onSuccess={onSuccess}
+                                       onFailure={onFailure}
                                     />
                                     <Link to='/'><RiFacebookCircleFill className='text-azulsite text-5xl' /></Link>
                                     <Link to='/'> <RiLinkedinFill className='text-azulsite text-5xl pl-3' /></Link>
