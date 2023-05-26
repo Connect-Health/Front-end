@@ -156,8 +156,11 @@ const centro = () => {
           
           </div>
 
-          <div className='h-[800px] w-[250px] ml-[120px] bg-nutri'>
-          <h3>Recomendações</h3><button><BsThreeDots></BsThreeDots></button>
+          <div className='h-[800px] flex w-[210px] ml-[120px] mt-[60px] bg-white shadow-md text-[15px]'>
+                <h3 className="flex ml-2 items-center mb-[760px]">
+          Recomendações
+          <button className="ml-10"><BsThreeDots></BsThreeDots></button>
+        </h3>
           
           
           
