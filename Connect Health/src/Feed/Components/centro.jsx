@@ -7,6 +7,7 @@ import { BsPersonCircle } from 'react-icons/bs';
 import { BsGearFill } from 'react-icons/bs';
 import { GrGallery } from 'react-icons/gr';
 import { HiLocationMarker } from 'react-icons/hi';
+import { BsThreeDots } from 'react-icons/bs';
 import wiu from '../../../assets/wiu.jpeg';
 import verseck from '../../../assets/verseck.jpeg';
 import roger from '../../../assets/roger.png';
@@ -79,7 +80,7 @@ const centro = () => {
               <hr className="mt-3 border-[#8742] w-full" />
               <p className='mt-16 w-[500px]'>Emoções são mensagens que nos avisam de nossas necessidades !</p>
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#5050b9] space-x-4 '>
+                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
                 <button>
                   <FaHeart />
                   Curtir
@@ -108,7 +109,7 @@ const centro = () => {
               <p className='mt-16 w-[500px] text-justify'>A relação do ser humano com a comida vai além dos cuidados com a balança. A faculdade de Nutrição, nesse sentido, aborda de forma teórica e prática diversas formas de trabalhar com a alimentação no âmbito da saúde. Desde a consulta clínica até a atuação na indústria alimentícia, as possibilidades são várias.</p>
               <img className="h-[180px] w-[200px] ml-36 mt-10  " src={fruta} alt="" />
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#5050b9] space-x-4 '>
+                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
                 <button>
                   <FaHeart />
                   Curtir
@@ -135,7 +136,7 @@ const centro = () => {
               <p className='mt-12 w-[500px]'>Uma boa alimentação é essencial para manter uma vida saudável e prevenir doenças. Quando comemos alimentos nutritivos e balanceados, estamos fornecendo ao nosso corpo os nutrientes necessários para funcionar corretamente. </p>
               <img className="h-[280px] w-[500px]  mt-14  " src={mulher} alt="" />
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#5050b9] space-x-4 '>
+                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
                 <button>
                   <FaHeart />
                   Curtir
@@ -155,7 +156,12 @@ const centro = () => {
           
           </div>
 
-          <div className='h-[800px] bg-nutri'>ola</div>
+          <div className='h-[800px] w-[250px] ml-[120px] bg-nutri'>
+          <h3>Recomendações</h3><button><BsThreeDots></BsThreeDots></button>
+          
+          
+          
+          </div>
 
          
     
