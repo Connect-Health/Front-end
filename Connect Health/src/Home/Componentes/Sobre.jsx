@@ -43,7 +43,7 @@ function Sobre(){
 
             {/* Inicos dos cards*/}
 
-            <div style={{backgroundImage: `url(${bgSobre})`}} className='mt-44 mb-20 w-full h-[340px] 
+            <div style={{backgroundImage: `url(${bgSobre})`}} className='mt-44 mb-20 w-full bg-no-repeat bg-cover h-[340px] 
             max-md:mt-52 max-md:h-0
             '>
                 <div className='grid grid-cols-3 gap-[2.5%] mx-[5%]  

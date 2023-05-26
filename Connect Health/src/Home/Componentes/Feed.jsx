@@ -34,7 +34,7 @@ function Feed(){
             </div>
 
             <div>
-                <img src={PostFeed} alt="" />
+                <img src={PostFeed} className='w-full' alt="" />
             </div>
 
             <div className='flex justify-center w-full mr-16 mt-16  '>
