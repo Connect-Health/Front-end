@@ -6,15 +6,15 @@ import Logo from '../../../../assets/logo_preta.png'
 
 const Termos = () => {
   return (
-    <div className='pt-32 -mt-14 w-4/5 mx-auto px-[5%] bg-azulsite/10 shadow-md mb-10 pb-5 flex flex-col'>
+    <div className='pt-32 -mt-14 w-4/5 mx-auto px-[5%] bg-azulsite/10 shadow-md mb-10 pb-5 flex flex-col max-md:w-full max-md:pt-24'>
         <h2 className='text-center text-2xl font-bold leading-none' >Termos e Política de Privacidade</h2>
         <h3 className='text-center text-xl font-semibold leading-snug text-azulsite'>Connect Health</h3>
 
-        <img src={Logo} alt="" className='self-center w-32' />
+        <img src={Logo} alt="" className='self-center w-32 max-md:w-20 max-md:mt-4' />
 
         <p className='text-center mt-5'>Data de entrada em vigor: Maio/2023</p>
 
-        <p className='mt-3 mb-10'>Agradecemos por utilizar os serviços da Connect Health. Nossa plataforma oferece serviços de consultas online com profissionais freelancers nas áreas de nutrição e psicologia, buscando fornecer uma experiência segura e confiável para nossos usuários. A proteção e a privacidade dos dados pessoais são de extrema importância para nós. Leia atentamente os seguintes Termos e Política de Privacidade para entender como tratamos as informações coletadas e utilizadas em nossa plataforma.</p>
+        <p className='mt-3 mb-10 max-md:mt-5'>Agradecemos por utilizar os serviços da Connect Health. Nossa plataforma oferece serviços de consultas online com profissionais freelancers nas áreas de nutrição e psicologia, buscando fornecer uma experiência segura e confiável para nossos usuários. A proteção e a privacidade dos dados pessoais são de extrema importância para nós. Leia atentamente os seguintes Termos e Política de Privacidade para entender como tratamos as informações coletadas e utilizadas em nossa plataforma.</p>
         
         <div className='w-[95%] m-auto'>
         <Span 
