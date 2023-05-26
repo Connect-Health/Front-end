@@ -5,7 +5,7 @@ import userl from "../../../assets/userlog.png"
 
 const header = () => {
     return (
-<div className="bg-[#6B71EF] flex h-20">
+<div className="bg-[#48A3A7] flex h-20">
 <img className="invert p-2 ml-11" src={logo} alt="" />
 <img className=" p-6 ml-[1100px]" src={ring} alt="" />
 <img className="flex p-6 " src={userl} alt="" />
