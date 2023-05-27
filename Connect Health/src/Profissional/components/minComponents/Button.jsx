@@ -19,7 +19,7 @@ const CustomButton = (props) => {
         <button onClick={handleButtonClick} className='text-white py-2 px-10 max-md:px-4 '>Agendar Consulta</button>
       </div>
 
-      <Dialog open={showCalendar} onClose={handleCalendarClose}>
+      <Dialog open={showCalendar} onClose={handleCalendarClose} className=''>
         <DialogTitle>Agendar Consulta</DialogTitle>
         <DialogContent>
           <Calendario onClose={handleCalendarClose} />
