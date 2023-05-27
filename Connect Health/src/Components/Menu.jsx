@@ -19,8 +19,8 @@ const Menu = () => {
         </button>
 
         {open && (
-            <div className="fixed inset-0 bg-[#e4ebf8] z-50">
-                <div className="max-w-md mx-auto py-4 px-6">
+            <div className="fixed inset-0 bg-[#e4ebf8] z-50 h-[110vh]">
+                <div className=" mx-auto py-4 px-6">
                     <AiOutlineClose className='absolute top-4.5 right-3 text-2xl' onClick={abrirMenu} />
                     <div className='flex justify-center items-center pt-[30%] flex-col'>
                         <h2 className='text-xl font-bold uppercase mb-10'>Menu</h2>
@@ -33,7 +33,7 @@ const Menu = () => {
                     <img src={User} alt="" className='w-10 h-10 border p-1 rounded-full ' />
                 </Link>
 
-                <h1 className='font-bold absolute bottom-3 left-1/2 -translate-x-1/2 uppercase text-azulsite'>Connect Health</h1>
+                <h1 className='font-bold absolute bottom-20 left-1/2 -translate-x-1/2 uppercase text-azulsite'>Connect Health</h1>
             </div>
         )}
     </div>
