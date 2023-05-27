@@ -14,14 +14,15 @@ import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 import { useState, useEffect } from 'react'
 import Nutrim from './Nutrim'
 import Carrossel from './Carrossel'
+import psiSlide from '../../../assets/psiSlide.jpg'
 
-const slides= [
-    { image: '../../../assets/psiSlide.jpg', text: "Aqui, sua saúde mental é respeitada. Nos conte o que está sentindo hoje e amanhã viva como nunca!", title: "Psicologia" },
-    { image: "../../../assets/nutriSlide.jpg", text: "A alimentação é a parte mais importante do nosso dia. Mantenha sua alimentação saúdavel aqui!", title: "Nutrição" },
-    { image: "../../../assets/feedSlide.jpg", text: "Esteja por dentro de todas as novidades. Notícias, dicas, receitas, entre outras! tudo no nosso Feed!", title: "Feed de Noticias" },
-  ]
 
 function BGHome(){
+    const slides= [
+        { image: psiSlide, text: "Aqui, sua saúde mental é respeitada. Nos conte o que está sentindo hoje e amanhã viva como nunca!", title: "Psicologia" },
+        { image: "../../../assets/nutriSlide.jpg", text: "A alimentação é a parte mais importante do nosso dia. Mantenha sua alimentação saúdavel aqui!", title: "Nutrição" },
+        { image: "../../../assets/feedSlide.jpg", text: "Esteja por dentro de todas as novidades. Notícias, dicas, receitas, entre outras! tudo no nosso Feed!", title: "Feed de Noticias" },
+      ]
     const [offset, setOffset] = useState(0)
 
     useEffect( () => {
