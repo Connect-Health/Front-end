@@ -14,6 +14,8 @@ import roger from '../../../assets/roger.png';
 import fruta from '../../../assets/fruta.avif';
 import mulher from '../../../assets/mulhersaudavel.avif';
 import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
+import recomendar from '../../../assets/recomendar.png';
+import personal from '../../../assets/personal.png';
 
 
 const centro = () => {
@@ -82,7 +84,7 @@ const centro = () => {
               <hr className="mt-[60px] border-[#8742] w-full" />
                         <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
                 <button>
-                  <FaHeart />
+                  <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
                 </button>
                 <button>
@@ -90,7 +92,7 @@ const centro = () => {
                   Comentar
                 </button>
                 <button>
-                  <FaShare />
+                  <FaShare className='hover:text-[#4667fc]' />
                   Compartilhar
                 </button>
               </div>
@@ -111,7 +113,7 @@ const centro = () => {
               <hr className="mt-[60px] border-[#8742] w-full" />
                         <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
                 <button>
-                  <FaHeart />
+                  <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
                 </button>
                 <button>
@@ -119,7 +121,7 @@ const centro = () => {
                   Comentar
                 </button>
                 <button>
-                  <FaShare />
+                  <FaShare className='hover:text-[#4667fc]' />
                   Compartilhar
                 </button>
               </div>
@@ -136,9 +138,9 @@ const centro = () => {
               <p className='mt-12 w-[500px]'>Uma boa alimentação é essencial para manter uma vida saudável e prevenir doenças. Quando comemos alimentos nutritivos e balanceados, estamos fornecendo ao nosso corpo os nutrientes necessários para funcionar corretamente. </p>
               <img className="h-[280px] w-[500px]  mt-14  " src={mulher} alt="" />
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
+                        <div className='mt-[10px] text-[#48A3A7]  space-x-4 '>
                 <button>
-                  <FaHeart />
+                  <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
                 </button>
                 <button>
@@ -146,7 +148,7 @@ const centro = () => {
                   Comentar
                 </button>
                 <button>
-                  <FaShare />
+                  <FaShare className='hover:text-[#4667fc]'  />
                   Compartilhar
                 </button>
               </div>
@@ -156,17 +158,45 @@ const centro = () => {
           
           </div>
 
-          <div className='h-[800px] flex w-[210px] ml-[120px] mt-[60px] bg-white shadow-md text-[14px]'>
-          <hr className="mt-[40px] border-[#8742] w-full" />
-                <h3 className="flex ml-2 items-center mb-[760px]">
-          Recomendações
-          <button className="ml-10"><BsThreeDots></BsThreeDots></button>
-        </h3>
-        <hr className="mt-[40px] border-[#8742] w-full" />
-          
-          
-          
-          </div>
+                  <div className='h-[1000px] flex-col flex w-[210px] ml-[120px] mt-[60px] bg-white shadow-md text-[14px]'>
+          <h3 className="flex ml-2 items-center text-[gray]">
+            Recomendações
+            <button className="ml-10"><BsThreeDots></BsThreeDots></button>
+          </h3>
+          <hr className="mt-4 border-[#b4b4b422] w-full" />
+          <img className="ml-1 h-[130px] w-[200px] mt-4" src={recomendar} alt="" />
+          <h1 className='text-center text-[gray] mt-5'>CFN</h1>
+          <p className='w-40 text-center mt-2 ml-5'>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
+
+          <img className="h-[130px] ml-1 w-[200px] mt-4" src={personal} alt="" />
+          <h1 className='text-center text-[gray] mt-5'>Universidade do futebol</h1>
+          <p className='w-40 text-center mt-2 ml-5'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
+        <button className='mt-12'><p className='hover:text-[#124648] text-[#48A3A7]'>ver mais</p></button>
+
+
+
+
+        
+        <div className='h-[1000px] flex-col flex w-[210px] ml-[] mt-[60px] bg-white shadow-md text-[12px]'>
+          <h3 className="flex ml-2 items-center text-[black]">
+           Profissionais para seguir
+            <button className="ml-10"><BsThreeDots></BsThreeDots></button>
+          </h3>
+          <hr className="mt-4 border-[#b4b4b422] w-full" />
+          <img className="ml-1 h-[130px] w-[200px] mt-4" src={recomendar} alt="" />
+          <h1 className='text-center text-[gray] mt-5'>CFN</h1>
+          <p className='w-40 text-center mt-2 ml-5'>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
+
+          <img className="h-[130px] ml-1 w-[200px] mt-4" src={personal} alt="" />
+          <h1 className='text-center text-[gray] mt-5'>Universidade do futebol</h1>
+          <p className='w-40 text-center mt-2 ml-5'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
+        <button className='mt-12'><p className='hover:text-[#124648] text-[#48A3A7]'>ver mais</p></button>
+        </div>
+
+        
+        </div>
+
+        
 
          
     
