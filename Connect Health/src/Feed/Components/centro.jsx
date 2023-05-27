@@ -21,7 +21,7 @@ import personal from '../../../assets/personal.png';
 const centro = () => {
     return ( 
   <div className="flex bg-[#F7F7F7]">
-        <div className="flex-col text-justify text-white bg-[#48A3A7] h-[600px] w-[300px]  ml-10 mt-7 rounded-3xl  ">
+        <div className="flex-col text-justify text-white bg-[#48A3A7] h-[400px] w-[300px]  ml-10 mt-7 rounded-3xl  ">
         <div className="flex items-center space-x-2"> <BsBookmark className="text-red-500 w-6 h-6 ml-7" />  <p className="text-justify p-4">Notícias/Destaque</p></div>
 
         <div className="flex items-center space-x-2 "> 
@@ -39,22 +39,12 @@ const centro = () => {
             <FaGraduationCap className="text-red-500 w-6 h-6 ml-7" />
             <p className=" p-4">Ensinamentos</p>
             </div>
-
-            <div className="flex items-center space-x-2">
-            <BsPersonCircle className="text-red-500 w-6 h-6 ml-7" /> 
-            <p className=" p-4">Meu Perfil</p>
-            </div>
-
+            <br></br><br></br><br></br><br></br>
         <div className="flex items-center space-x-2"> 
         <BsGearFill className="text-red-500 w-6 h-6 ml-7" />    
             <p className=" p-4">Configurações</p>
             </div>
-            <br></br><br></br><br></br><br></br><br></br>
             
-            <div className="flex items-center space-x-2">
-          <BiExit className=" text-red-500 w-6 h-6 ml-7" />
-          <p className="p-4">Logout</p> 
-          </div>
           
 
 
@@ -177,7 +167,7 @@ const centro = () => {
 
 
         
-        <div className='h-[1000px] flex-col flex w-[210px] ml-[] mt-[60px] bg-white shadow-md text-[12px]'>
+        <div className='h-[1000px] flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
           <h3 className="flex ml-2 items-center text-[black]">
            Profissionais para seguir
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
