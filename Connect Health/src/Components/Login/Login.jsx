@@ -3,19 +3,17 @@ import {AiOutlineArrowLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { RiFacebookCircleFill, RiLinkedinFill } from 'react-icons/ri'
 import lockericon from '../../../assets/lockericon.png'
+import {FcGoogle} from 'react-icons/fc'
 import mailicon from '../../../assets/mailicon.png'
 import BgLogin from "../../../assets/bglogin.png"
-import GoogleLogin from 'react-google-login'
+import { GoogleLogin } from 'react-google-login'
+
 
 function Login (){
 
-   const onSuccess = (res) => {
-      console.log("LOGIN EFETUADO COM SUCESSO")
+   const  responseGoogle = (response) => {
+      console.log(response)
    }
-
-   const onFailure = (response) => {
-      console.log(response);
-    }
 
     return (
         <div className='flex'>
@@ -46,12 +44,16 @@ function Login (){
                            <h1 className='text-gradi/80 text-1x1 font-bold'>Esqueci a senha</h1>
                          </button>
                                  <div className='flex'>
-                                    <GoogleLogin
-                                       clientId="1030844756804-vjfa1ifrgc703mc5cfa0iqk6tl19qaph.apps.googleusercontent.com"
-                                       buttonText=""
-                                       onSuccess={onSuccess}
-                                       onFailure={onFailure}
-                                    />
+                                 <GoogleLogin
+                                    clientId="1030844756804-p2rd9igbt60jmlku3f8csn4qimt1svg0.apps.googleusercontent.com"
+                                    render={renderProps => (
+                                       <FcGoogle className='text-5xl pl-3'  onClick={renderProps.onClick} disabled={renderProps.disabled}></ FcGoogle>
+                                    )}
+                                    buttonText="Login"
+                                    onSuccess={responseGoogle}
+                                    onFailure={responseGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                 />
                                     <Link to='/'><RiFacebookCircleFill className='text-azulsite text-5xl' /></Link>
                                     <Link to='/'> <RiLinkedinFill className='text-azulsite text-5xl pl-3' /></Link>
                                  </div>
