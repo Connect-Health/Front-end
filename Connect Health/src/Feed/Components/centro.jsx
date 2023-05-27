@@ -21,7 +21,7 @@ import personal from '../../../assets/personal.png';
 const centro = () => {
     return ( 
   <div className="flex bg-[#F7F7F7]">
-        <div className="flex-col text-justify text-white bg-[#48A3A7] h-[400px] w-[300px]  ml-10 mt-7 rounded-3xl  ">
+        <div className="flex-col text-justify text-white bg-[#48A3A7] h-[400px] w-[300px]  ml-4 mt-7 rounded-3xl  ">
         <div className="flex items-center space-x-2"> <BsBookmark className="text-red-500 w-6 h-6 ml-7" />  <p className="text-justify p-4">Notícias/Destaque</p></div>
 
         <div className="flex items-center space-x-2 "> 
@@ -51,7 +51,7 @@ const centro = () => {
     </div>
     
       <div className="flex flex-col ">
-        <div className="flex flex-col text-justify text-[gray] bg-white h-[200px] w-[650px] ml-16 mt-14">
+        <div className="flex flex-col text-justify text-[gray] bg-white h-[200px] w-[650px] ml-7 mt-14">
           <form>
               <textarea className="flex resize-none w-28 h-14 flex-col space-y-4 p-4" placeholder='Título'></textarea>
             </form>
@@ -64,7 +64,7 @@ const centro = () => {
             </div>
           </form>
           </div>
-                    <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[330px] text-[gray] bg-white  w-650 ml-16 mt-14">
+                    <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[330px] text-[gray] bg-white  w-650 ml-7 mt-14">
             <img className="h-11 w-11 mt-3 ml-5 rounded-full" src={wiu} alt="" />
             <div className="flex flex-col items-start ml-3">
               <h3 className="mt-3">Dr.Willian Rizzo</h3>
@@ -92,7 +92,7 @@ const centro = () => {
 
             
           </div>
-          <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[630px] text-[gray] bg-white  ml-16 mt-14">
+          <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[630px] text-[gray] bg-white  ml-7 mt-14">
             <img className="h-11 w-11 mt-3 ml-5 rounded-full" src={verseck} alt="" />
             <div className="flex flex-col items-start ml-3">
               <h3 className="mt-3">Dr.Raphael Verseck</h3>
@@ -119,7 +119,7 @@ const centro = () => {
               </div>
               </div>
 
-              <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[700px] text-[gray] bg-white  w-650 ml-16 mt-14">
+              <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[700px] text-[gray] bg-white  w-650 ml-7 mt-14">
             <img className="h-11 w-11 mt-3 ml-5 rounded-full" src={roger} alt="" />
             <div className="flex flex-col items-start ml-3">
               <h3 className="mt-3">Dr.Roger Vieira</h3>
@@ -148,7 +148,7 @@ const centro = () => {
           
           </div>
 
-                  <div className='h-[1000px] flex-col flex w-[210px] ml-[120px] mt-[60px] bg-white shadow-md text-[14px]'>
+                  <div className='h-[1000px] flex-col flex w-[210px] ml-6 mt-[60px] bg-white shadow-md text-[14px]'>
           <h3 className="flex ml-2 items-center text-[gray]">
             Recomendações
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
