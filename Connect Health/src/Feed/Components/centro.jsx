@@ -1,9 +1,8 @@
 import { BsBookmark } from 'react-icons/bs';
-import { BiExit } from 'react-icons/bi';
-import { BsTrophy } from 'react-icons/bs';
+import { BsTrophy, BsEmojiSmile } from 'react-icons/bs';
 import { MdOutlineTravelExplore } from 'react-icons/md';
+import { AiOutlineArrowDown } from 'react-icons/ai';
 import { FaGraduationCap } from 'react-icons/fa';
-import { BsPersonCircle } from 'react-icons/bs'; 
 import { BsGearFill } from 'react-icons/bs';
 import { GrGallery } from 'react-icons/gr';
 import { HiLocationMarker } from 'react-icons/hi';
@@ -61,14 +60,15 @@ const centro = () => {
           <form>
               <textarea className="flex resize-none w-28 h-14 flex-col space-y-4 p-4" placeholder='Título'></textarea>
             </form>
-          <form className="flex flex-col shadow-md space-y-4 p-4">
-            <textarea className="bg-gray-800 resize-none  text-[gray] rounded-lg p-2" placeholder="Escreva seu texto"></textarea>
-            <div className="flex items-center">
-            <button> <GrGallery className="text-[#48A3A7] w-6 h-6 mr-3 " /></button>
-            <button> <HiLocationMarker className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
-              <button className="bg-[#48A3A7] hover:bg-[#185e62] text-white w-24 rounded-lg py-2 px-4">Postar</button>
-            </div>
-          </form>
+                      <form className="flex flex-col shadow-md space-y-4 p-4">
+              <textarea className="bg-gray-800 resize-none text-[gray] rounded-lg p-2" placeholder="Escreva seu texto"></textarea>
+              <div className="flex items-center">
+                <button><GrGallery className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
+                <button><HiLocationMarker className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
+                <button><BsEmojiSmile className='text-[#48A3A7] w-6 h-6 mr-3'></BsEmojiSmile></button>
+                <button className="ml-auto bg-[#48A3A7] hover:bg-[#185e62] text-white w-24 rounded-lg py-2 px-4">Postar</button>
+              </div>
+            </form>
           </div>
                     <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[330px] text-[gray] bg-white  w-650 ml-7 mt-14">
             <img className="h-11 w-11 mt-3 ml-5 rounded-full" src={wiu} alt="" />
@@ -151,10 +151,15 @@ const centro = () => {
               <hr></hr>
               </div>
               </div>
-          
+
+          <div class="flex justify-center items-center">
+                  <div class="w-14 h-14 rounded-full bg-[#48A3A7] hover:bg-[#4d6769] mt-20">
+                  <button> <AiOutlineArrowDown class="w-14 text-white h-14 "></AiOutlineArrowDown></button>
+                  </div>
+                </div>
           </div>
 
-                  <div className='h-[1000px] flex-col flex w-[210px] ml-6 mt-[60px] bg-white shadow-md text-[14px]'>
+                  <div className='h-[1000px] flex-col flex w-[210px] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
           <h3 className="flex ml-2 items-center text-[gray]">
             Recomendações
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
