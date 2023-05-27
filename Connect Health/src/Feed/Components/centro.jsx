@@ -39,7 +39,7 @@ const centro = () => {
             <FaGraduationCap className="text-red-500 w-6 h-6 ml-7" />
             <p className=" p-4">Ensinamentos</p>
             </div>
-            <br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br>
         <div className="flex items-center space-x-2"> 
         <BsGearFill className="text-red-500 w-6 h-6 ml-7" />    
             <p className=" p-4">Configurações</p>
