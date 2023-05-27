@@ -7,6 +7,7 @@ const Calendario = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [hourIntervals, setHourIntervals] = useState(createHourIntervals());
+  const [disabledHours, setDisabledHours] = useState([]);
 
   const handleDateClick = (index, date) => {
     setSelectedDates((prevDates) => {
@@ -33,11 +34,21 @@ const Calendario = () => {
     setShowConfirmation(false);
     setShowSnackbar(true);
 
-    const updatedIntervals = hourIntervals.map((interval) => {
-      if (interval.time === selectedHour) {
-        return { ...interval, available: false };
+    const updatedDisabledHours = [...disabledHours, { date: selectedDates.find((date) => date !== null), hour: selectedHour }];
+    setDisabledHours(updatedDisabledHours);
+
+    const updatedIntervals = hourIntervals.map((day) => {
+      const { date, intervals } = day;
+      if (date.toDateString() === selectedDates.find((date) => date !== null)?.toDateString()) {
+        const updatedIntervals = intervals.map((interval) => {
+          if (interval.time === selectedHour) {
+            return { ...interval, available: false };
+          }
+          return interval;
+        });
+        return { date, intervals: updatedIntervals };
       }
-      return interval;
+      return day;
     });
 
     setHourIntervals(updatedIntervals);
@@ -57,18 +68,33 @@ const Calendario = () => {
       intervals.push({ time: `${i}:00`, available: true });
     }
 
-    return intervals;
+    const currentDate = new Date();
+    const currentDayOfWeek = currentDate.getDay();
+
+    const updatedIntervals = intervals.map((interval) => ({
+      ...interval,
+      available: currentDayOfWeek !== 0 && currentDayOfWeek !== 6, // Disponível apenas de segunda a sexta-feira
+    }));
+
+    const hourIntervals = Array.from({ length: 7 }, (_, index) => {
+      const date = new Date();
+      date.setDate(date.getDate() + index);
+      return { date, intervals: updatedIntervals };
+    });
+
+    return hourIntervals;
   }
+
+  const isHourDisabled = (date, hour) => {
+    return disabledHours.some((disabledHour) => disabledHour.date?.toDateString() === date?.toDateString() && disabledHour.hour === hour);
+  };
 
   return (
     <div>
       <h1>Calendário</h1>
       <div className="flex gap-2 bg-gradi/10 shadow-md py-5 px-2 w-fit">
-
-        {Array.from({ length: 7 }, (_, index) => {
-          const date = new Date();
-          date.setDate(date.getDate() + index);
-
+        {hourIntervals.map((day, index) => {
+          const { date, intervals } = day;
           return (
             <div key={index}>
               <button
@@ -86,14 +112,15 @@ const Calendario = () => {
               {selectedDates[index] && selectedDates[index].toDateString() === date.toDateString() && (
                 <div className={`available-hours transition-all duration-500 ${selectedDates[index] ? 'h-auto' : 'h-0'}`}>
                   <ul>
-                    {hourIntervals.map((interval, intervalIndex) => (
+                    {intervals.map((interval, intervalIndex) => (
                       <li
                         key={interval.time}
                         onClick={() => handleHourClick(interval.time)}
                         className={`${
-                          interval.available ? 'bg-[#5ef371]/30 text-black' : 'bg-black/5 text-white'
-                        } p-2 text-center ${intervalIndex === hourIntervals.length - 1 ? '' : 'mb-1'}`}
-                        disabled={!interval.available}
+                          !interval.available || isHourDisabled(date, interval.time)
+                            ? 'bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer'
+                            : 'bg-black/5 text-white'
+                        } p-2 text-center ${intervalIndex === intervals.length - 1 ? '' : 'mb-1'}`}
                       >
                         {interval.time}
                       </li>
@@ -109,7 +136,7 @@ const Calendario = () => {
       <Dialog open={showConfirmation} onClose={handleConfirmationClose} className="">
         <DialogTitle className=" text-center">Confirmar Consulta</DialogTitle>
         <DialogContent className=" text-center">
-          <p>Data: {selectedDates.find((date) => date !== null)?.toLocaleDateString('pt-BR')}</p>
+          <p>Data: {selectedDates.find((date) => date !== null && date !== undefined)?.toLocaleDateString('pt-BR') || ''}</p>
           <p>Hora: {selectedHour}</p>
         </DialogContent>
         <DialogActions className="flex justify-between">
