@@ -83,24 +83,24 @@ const Header = () => {
   return (
     <div id='home' className='relative z-50 '>
       
-      <div className='flex justify-between items-center py-3 px-10 bg-gradient-to-t to-gradi/60 from-white/0'>
+      <div className='flex justify-between items-center py-5 px-10 bg-[#f5f5f5]'>
         <div className='flex gap-10 z-10 
         max-md:-ml-5 max-md:w-[90%] 
         '>
           <Menu />
           <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
-          <Link to='/psicologia' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Psicologia</Link>
-          <Link to='/nutricao' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Nutrição</Link>
-          <Link to='/login' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/login' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Cadastro</Link>
           
         </div>
-        <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-36 items-center flex-col
+        {/* <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-36 items-center flex-col
         max-md:hidden
         '>
           <img src={vetor} alt=""  className='absolute'/>
@@ -119,7 +119,7 @@ const Header = () => {
               '/>
           </div>
             
-        </div>
+        </div> */}
         <FormGroup onClick={handleThemeSwitch} className='absolute right-0'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}

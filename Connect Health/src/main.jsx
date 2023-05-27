@@ -15,7 +15,7 @@ import Register from './Components/Register/Register'
 import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
 import Politica from './Complementares/Politica/Politica'
-import Calendario from './Components/Calendario/Calendario'
+import Carrossel from './Home/Componentes/Carrossel'
 
 const router = createBrowserRouter([
   {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/calendario',
-    element: <Calendario />,
+    element: <Carrossel />,
   },
 ])
 
