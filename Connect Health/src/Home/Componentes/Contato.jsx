@@ -7,7 +7,8 @@ import { Snackbar, Alert } from '@mui/material';
 
 import DesenhoContato from '../../../assets/desenhocontato.svg';
 import WaveFooter from '../../../assets/wavefooterhome.svg';
-import Elipse from '../../../assets/Elipse.png';
+
+
 
 
 function Contato() {
