@@ -57,7 +57,7 @@ function Login (){
                                     <Link to='/'><RiFacebookCircleFill className='text-azulsite text-5xl' /></Link>
                                     <Link to='/'> <RiLinkedinFill className='text-azulsite text-5xl pl-3' /></Link>
                                  </div>
-                                 <h1 className='text-1xl font-semibold mt-3'>Não tem conta? <Link to='/registerProfissional'><span className='text-azulsite'>Registre-se</span></Link></h1>
+                                 <h1 className='text-1xl font-semibold mt-3'>Não tem conta? <Link to='/register' className='text-azulsite'>Registre-se</Link></h1>
                          
              </div>
      </div>
