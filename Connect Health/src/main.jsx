@@ -15,6 +15,7 @@ import Register from './Components/Register/Register'
 import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
 import Politica from './Complementares/Politica/Politica'
+import Calendario from './Components/Calendario/Calendario'
 
 const router = createBrowserRouter([
   {
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
   {
     path: '/politica',
     element: <Politica />,
-  }
+  },
+  {
+    path: '/calendario',
+    element: <Calendario />,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
