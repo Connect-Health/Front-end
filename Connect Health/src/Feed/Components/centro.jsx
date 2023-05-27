@@ -1,9 +1,8 @@
 import { BsBookmark } from 'react-icons/bs';
-import { BiExit } from 'react-icons/bi';
-import { BsTrophy } from 'react-icons/bs';
+import { BsTrophy, BsEmojiSmile } from 'react-icons/bs';
 import { MdOutlineTravelExplore } from 'react-icons/md';
+import { AiOutlineArrowDown } from 'react-icons/ai';
 import { FaGraduationCap } from 'react-icons/fa';
-import { BsPersonCircle } from 'react-icons/bs'; 
 import { BsGearFill } from 'react-icons/bs';
 import { GrGallery } from 'react-icons/gr';
 import { HiLocationMarker } from 'react-icons/hi';
@@ -16,6 +15,12 @@ import mulher from '../../../assets/mulhersaudavel.avif';
 import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
 import recomendar from '../../../assets/recomendar.png';
 import personal from '../../../assets/personal.png';
+import profissional1 from '../../../assets/profissional1.png';
+import profissional2 from '../../../assets/profissional2.png';
+import profissional3 from '../../../assets/profissional3.png';
+import profissional4 from '../../../assets/profissional4.png';
+import profissional5 from '../../../assets/profissional5.png';
+
 
 
 const centro = () => {
@@ -55,14 +60,15 @@ const centro = () => {
           <form>
               <textarea className="flex resize-none w-28 h-14 flex-col space-y-4 p-4" placeholder='Título'></textarea>
             </form>
-          <form className="flex flex-col shadow-md space-y-4 p-4">
-            <textarea className="bg-gray-800 resize-none  text-[gray] rounded-lg p-2" placeholder="Escreva seu texto"></textarea>
-            <div className="flex items-center">
-            <button> <GrGallery className="text-[#48A3A7] w-6 h-6 mr-3 " /></button>
-            <button> <HiLocationMarker className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
-              <button className="bg-[#48A3A7] hover:bg-[#185e62] text-white w-24 rounded-lg py-2 px-4">Postar</button>
-            </div>
-          </form>
+                      <form className="flex flex-col shadow-md space-y-4 p-4">
+              <textarea className="bg-gray-800 resize-none text-[gray] rounded-lg p-2" placeholder="Escreva seu texto"></textarea>
+              <div className="flex items-center">
+                <button><GrGallery className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
+                <button><HiLocationMarker className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
+                <button><BsEmojiSmile className='text-[#48A3A7] w-6 h-6 mr-3'></BsEmojiSmile></button>
+                <button className="ml-auto bg-[#48A3A7] hover:bg-[#185e62] text-white w-24 rounded-lg py-2 px-4">Postar</button>
+              </div>
+            </form>
           </div>
                     <div className="flex text-justify shadow-md text-gray-500 w-[650px] h-[330px] text-[gray] bg-white  w-650 ml-7 mt-14">
             <img className="h-11 w-11 mt-3 ml-5 rounded-full" src={wiu} alt="" />
@@ -145,10 +151,15 @@ const centro = () => {
               <hr></hr>
               </div>
               </div>
-          
+
+          <div class="flex justify-center items-center">
+                  <div class="w-14 h-14 rounded-full bg-[#48A3A7] hover:bg-[#4d6769] mt-20">
+                  <button> <AiOutlineArrowDown class="w-14 text-white h-14 "></AiOutlineArrowDown></button>
+                  </div>
+                </div>
           </div>
 
-                  <div className='h-[1000px] flex-col flex w-[210px] ml-6 mt-[60px] bg-white shadow-md text-[14px]'>
+                  <div className='h-[1000px] flex-col flex w-[210px] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
           <h3 className="flex ml-2 items-center text-[gray]">
             Recomendações
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
@@ -167,20 +178,45 @@ const centro = () => {
 
 
         
-        <div className='h-[1000px] flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
+        <div className='flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
           <h3 className="flex ml-2 items-center text-[black]">
            Profissionais para seguir
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
           </h3>
           <hr className="mt-4 border-[#b4b4b422] w-full" />
-          <img className="ml-1 h-[130px] w-[200px] mt-4" src={recomendar} alt="" />
-          <h1 className='text-center text-[gray] mt-5'>CFN</h1>
-          <p className='w-40 text-center mt-2 ml-5'>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
+        <div class="flex items-center">
+          <button><img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional1} alt="" /></button> 
+            <button><h3 class="flex ml-2 items-center text-[black]">
+            Dra.Carla Almeida
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+          </div>
+          <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional2} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dra.Michelle Gomes
+            </h3><p className='text-[10px] text-[gray]'>nutricionista</p></button> 
+            </div>
+            
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional3} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dra.Malu Santana
+            </h3><p className='text-[10px] text-[gray]'>nutricionista</p></button> 
+            </div>
 
-          <img className="h-[130px] ml-1 w-[200px] mt-4" src={personal} alt="" />
-          <h1 className='text-center text-[gray] mt-5'>Universidade do futebol</h1>
-          <p className='w-40 text-center mt-2 ml-5'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
-        <button className='mt-12'><p className='hover:text-[#124648] text-[#48A3A7]'>ver mais</p></button>
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional4} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+              Dr. Wendel Harrison
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+            </div>
+
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional5} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dr. Guilherme Garcia
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+            </div>
         </div>
 
         
