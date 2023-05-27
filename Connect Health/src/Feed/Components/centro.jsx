@@ -16,6 +16,12 @@ import mulher from '../../../assets/mulhersaudavel.avif';
 import { FaHeart, FaComment, FaShare } from 'react-icons/fa';
 import recomendar from '../../../assets/recomendar.png';
 import personal from '../../../assets/personal.png';
+import profissional1 from '../../../assets/profissional1.png';
+import profissional2 from '../../../assets/profissional2.png';
+import profissional3 from '../../../assets/profissional3.png';
+import profissional4 from '../../../assets/profissional4.png';
+import profissional5 from '../../../assets/profissional5.png';
+
 
 
 const centro = () => {
@@ -167,20 +173,45 @@ const centro = () => {
 
 
         
-        <div className='h-[1000px] flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
+        <div className='flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
           <h3 className="flex ml-2 items-center text-[black]">
            Profissionais para seguir
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>
           </h3>
           <hr className="mt-4 border-[#b4b4b422] w-full" />
-          <img className="ml-1 h-[130px] w-[200px] mt-4" src={recomendar} alt="" />
-          <h1 className='text-center text-[gray] mt-5'>CFN</h1>
-          <p className='w-40 text-center mt-2 ml-5'>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
+        <div class="flex items-center">
+          <button><img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional1} alt="" /></button> 
+            <button><h3 class="flex ml-2 items-center text-[black]">
+            Dra.Carla Almeida
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+          </div>
+          <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional2} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dra.Michelle Gomes
+            </h3><p className='text-[10px] text-[gray]'>nutricionista</p></button> 
+            </div>
+            
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional3} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dra.Malu Santana
+            </h3><p className='text-[10px] text-[gray]'>nutricionista</p></button> 
+            </div>
 
-          <img className="h-[130px] ml-1 w-[200px] mt-4" src={personal} alt="" />
-          <h1 className='text-center text-[gray] mt-5'>Universidade do futebol</h1>
-          <p className='w-40 text-center mt-2 ml-5'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
-        <button className='mt-12'><p className='hover:text-[#124648] text-[#48A3A7]'>ver mais</p></button>
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional4} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+              Dr. Wendel Harrison
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+            </div>
+
+            <div class="flex items-center">
+           <button> <img class="flex ml-1 h-[40px] w-[40px] mt-4" src={profissional5} alt="" /></button> 
+           <button> <h3 class="flex ml-2 items-center text-[black]">
+            Dr. Guilherme Garcia
+            </h3><p className='text-[10px] text-[gray]'>psicologo</p></button> 
+            </div>
         </div>
 
         
