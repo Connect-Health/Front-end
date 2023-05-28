@@ -6,7 +6,7 @@ import userl from "../../../assets/userlog.png"
 
 const header = () => {
     return (
-<div className="bg-[#48A3A7] w-full flex h-20">
+<div className="bg-[#658FF9] w-full flex h-20">
   <img className="invert p-2" src={logo} alt="" />
 
   <div className="flex flex-grow justify-end items-center">
