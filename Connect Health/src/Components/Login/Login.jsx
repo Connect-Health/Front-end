@@ -5,7 +5,6 @@ import lockericon from "../../../assets/lockericon.png";
 import mailicon from "../../../assets/mailicon.png";
 import BgLogin from "../../../assets/bglogin.png";
 import { FcGoogle } from "react-icons/fc";
-
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
@@ -72,13 +71,13 @@ function Login() {
           <h1 className="text-gradi/80 text-1x1 font-bold">Esqueci a senha</h1>
         </button>
         <div className="flex">
-          <FcGoogle className="text-5xl pl-3" />
           <GoogleLogin
             clientId="1030844756804-m94rijfndnkioau7eph93tf51rmcukqk.apps.googleusercontent.com"
-            textButton=""
+              render={renderProps => (
+                <FcGoogle className="text-5xl pl-3" onClick={renderProps.onClick} disabled={renderProps.disabled}></FcGoogle>)}
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
-            />
+            />,
           <Link to="/">
             <RiFacebookCircleFill className="text-azulsite text-5xl" />
           </Link>
