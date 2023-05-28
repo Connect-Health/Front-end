@@ -25,8 +25,8 @@ import profissional5 from '../../../assets/profissional5.png';
 
 const centro = () => {
     return ( 
-  <div className="flex bg-[#F7F7F7]">
-        <div className="flex-col text-justify text-white bg-[#658FF9] h-[400px] w-[300px]  ml-4 mt-7 rounded-3xl  ">
+  <div className="flex px-[5%] bg-[#F7F7F7]">
+        <div className="flex-col text-justify text-white bg-[#658FF9] h-[400px] w-[15%]  ml-4 mt-7 rounded-3xl  ">
         <div className="flex items-center space-x-2"> <BsBookmark className="text-red-500 w-6 h-6 ml-7" />  <p className="text-justify p-4">Notícias/Destaque</p></div>
 
         <div className="flex items-center space-x-2 "> 
@@ -55,7 +55,7 @@ const centro = () => {
 
     </div>
     
-      <div className="flex flex-col ">
+      <div className="flex w-[50%] flex-col ">
         <div className="flex flex-col text-justify text-[gray] bg-white h-[200px] w-[650px] ml-7 mt-14">
           <form>
               <textarea className="flex resize-none w-28 h-14 flex-col space-y-4 p-4" placeholder='Título'></textarea>
@@ -153,7 +153,7 @@ const centro = () => {
               </div>
           </div>
 
-                  <div className='h-[1050px] flex-col flex text-center w-[260px] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
+        <div className='h-[1050px] flex-col flex text-center w-[15%] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
           <h3 className="flex ml-2 items-center text-[gray]">
             Recomendações
             <button className="ml-24"><BsThreeDots></BsThreeDots></button>
