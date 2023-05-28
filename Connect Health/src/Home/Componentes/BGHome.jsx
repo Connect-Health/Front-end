@@ -7,12 +7,24 @@ import Blocos from './Blocos'
 import Header from './Header'
 import Psico from './Psico'
 
+import Psi from '../../../assets/psiSlide.jpg'
+
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 import { useState, useEffect } from 'react'
 import Nutrim from './Nutrim'
+import Carrossel from './Carrossel'
+import psiSlide from '../../../assets/psiSlide.jpg'
+import nutriSlide from '../../../assets/nutriSlide.jpg'
+import feedSlide from '../../../assets/feedSlide.jpg'
+
 
 function BGHome(){
+    const slides= [
+        { image: psiSlide, text: "Aqui, sua saúde mental é respeitada. Nos conte o que está sentindo hoje e amanhã viva como nunca!", title: "Psicologia" },
+        { image: nutriSlide, text: "A alimentação é a parte mais importante do nosso dia. Mantenha sua alimentação saúdavel aqui!", title: "Nutrição" },
+        { image: feedSlide, text: "Esteja por dentro de todas as novidades. Notícias, dicas, receitas, entre outras! tudo no nosso Feed!", title: "Feed de Noticias" },
+      ]
     const [offset, setOffset] = useState(0)
 
     useEffect( () => {
@@ -35,17 +47,24 @@ function BGHome(){
                 <img className='w-full absolute max-md:pt-10' style={{ transform: `translateY(${offset * 0.1}px)`}} src={mulher_1} alt="" />
             </div>
 
-            <div className='w-[20%] h-auto p-5 bg-[#d3d3d3] backdrop-blur-xl rounded-2xl bg-opacity-50 absolute top-[35%] left-[2.7%] z-10
-            max-md:h-58 max-md:w-96 max-md:p-4 max-md:top-[44%]'
-             style={{ transform: `translateX(${-offset * .5}px)`}}>
-                <h3 className='text-center font-bold
-                max-md:text-[16px]
-                '>Mantenha-se conectado à sua saúde!</h3>
-                <p className='text-sm text-center pt-3
-                max-md:text-[12px]
-                '>A saúde é um bem precioso que merece ser valorizado e cuidado com atenção. Aqui acreditamos que a saúde é a base para alcançar nossos objetivos e desfrutar de uma vida plena.</p>
-                <img className='w-[30%] pt-5  m-auto' src={Logo} alt="" />
+            <div className='flex justify-between flex-row'>
+                <div className='w-[20%] h-auto p-5 bg-[#d3d3d3] backdrop-blur-xl rounded-2xl bg-opacity-50 absolute top-[44%] left-[2.7%] z-10
+                max-md:h-58 max-md:w-96 max-md:p-4 max-md:top-[44%]'
+                style={{ transform: `translateX(${-offset * .5}px)`}}>
+                    <h3 className='text-center font-bold
+                    max-md:text-[16px]
+                    '>Mantenha-se conectado à sua saúde!</h3>
+                    <p className='text-sm text-center pt-3
+                    max-md:text-[12px]
+                    '>A saúde é um bem precioso que merece ser valorizado e cuidado com atenção. Aqui acreditamos que a saúde é a base para alcançar nossos objetivos e desfrutar de uma vida plena.</p>
+                    <img className='w-[30%] pt-5  m-auto' src={Logo} alt="" />
+                </div>
+                <div className="w-1/5 absolute right-10 bottom-16 max-md:hidden ">
+                    <Carrossel slides={slides} />
+                </div>
+
             </div>
+
         </div>
     )
 }

@@ -14,7 +14,7 @@ function Home() {
         <div className="dark:bg-black dark:bg-opacity-90 dark:text-white">
             <Header />
             <BGHome/>
-            <Blocos />
+            {/* <Blocos /> */}
             <Psico />
             <Nutrim/>       
             <Feed/>
