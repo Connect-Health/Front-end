@@ -25,8 +25,8 @@ import profissional5 from '../../../assets/profissional5.png';
 
 const centro = () => {
     return ( 
-  <div className="flex bg-[#F7F7F7]">
-        <div className="flex-col text-justify text-white bg-[#48A3A7] h-[400px] w-[300px]  ml-4 mt-7 rounded-3xl  ">
+  <div className="flex px-[5%] bg-[#F7F7F7]">
+        <div className="flex-col text-justify text-white bg-[#658FF9] h-[400px] w-[15%]  ml-4 mt-7 rounded-3xl  ">
         <div className="flex items-center space-x-2"> <BsBookmark className="text-red-500 w-6 h-6 ml-7" />  <p className="text-justify p-4">Notícias/Destaque</p></div>
 
         <div className="flex items-center space-x-2 "> 
@@ -55,7 +55,7 @@ const centro = () => {
 
     </div>
     
-      <div className="flex flex-col ">
+      <div className="flex w-[50%] flex-col ">
         <div className="flex flex-col text-justify text-[gray] bg-white h-[200px] w-[650px] ml-7 mt-14">
           <form>
               <textarea className="flex resize-none w-28 h-14 flex-col space-y-4 p-4" placeholder='Título'></textarea>
@@ -63,10 +63,10 @@ const centro = () => {
                       <form className="flex flex-col shadow-md space-y-4 p-4">
               <textarea className="bg-gray-800 resize-none text-[gray] rounded-lg p-2" placeholder="Escreva seu texto"></textarea>
               <div className="flex items-center">
-                <button><GrGallery className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
-                <button><HiLocationMarker className="text-[#48A3A7] w-6 h-6 mr-3" /></button>
-                <button><BsEmojiSmile className='text-[#48A3A7] w-6 h-6 mr-3'></BsEmojiSmile></button>
-                <button className="ml-auto bg-[#48A3A7] hover:bg-[#185e62] text-white w-24 rounded-lg py-2 px-4">Postar</button>
+                <button><GrGallery className="text-[#658FF9] w-6 h-6 mr-3" /></button>
+                <button><HiLocationMarker className="text-[#658FF9] w-6 h-6 mr-3" /></button>
+                <button><BsEmojiSmile className='text-[#658FF9] w-6 h-6 mr-3'></BsEmojiSmile></button>
+                <button className="ml-auto bg-[#658FF9] hover:bg-[#23638b] text-white w-24 rounded-lg py-2 px-4">Postar</button>
               </div>
             </form>
           </div>
@@ -78,7 +78,7 @@ const centro = () => {
               <hr className="mt-3 border-[#8742] w-full" />
               <p className='mt-16 w-[500px]'>Emoções são mensagens que nos avisam de nossas necessidades !</p>
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
+                        <div className='mt-[10px] text-[#658FF9] space-x-4 '>
                 <button>
                   <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
@@ -107,7 +107,7 @@ const centro = () => {
               <p className='mt-16 w-[500px] text-justify'>A relação do ser humano com a comida vai além dos cuidados com a balança. A faculdade de Nutrição, nesse sentido, aborda de forma teórica e prática diversas formas de trabalhar com a alimentação no âmbito da saúde. Desde a consulta clínica até a atuação na indústria alimentícia, as possibilidades são várias.</p>
               <img className="h-[180px] w-[200px] ml-36 mt-10  " src={fruta} alt="" />
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#48A3A7] space-x-4 '>
+                        <div className='mt-[10px] text-[#658FF9] space-x-4 '>
                 <button>
                   <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
@@ -134,7 +134,7 @@ const centro = () => {
               <p className='mt-12 w-[500px]'>Uma boa alimentação é essencial para manter uma vida saudável e prevenir doenças. Quando comemos alimentos nutritivos e balanceados, estamos fornecendo ao nosso corpo os nutrientes necessários para funcionar corretamente. </p>
               <img className="h-[280px] w-[500px]  mt-14  " src={mulher} alt="" />
               <hr className="mt-[60px] border-[#8742] w-full" />
-                        <div className='mt-[10px] text-[#48A3A7]  space-x-4 '>
+                        <div className='mt-[10px] text-[#658FF9]  space-x-4 '>
                 <button>
                   <FaHeart className='hover:text-[#fc4646]' />
                   Curtir
@@ -151,34 +151,28 @@ const centro = () => {
               <hr></hr>
               </div>
               </div>
-
-          <div class="flex justify-center items-center">
-                  <div class="w-14 h-14 rounded-full bg-[#48A3A7] hover:bg-[#4d6769] mt-20">
-                  <button> <AiOutlineArrowDown class="w-14 text-white h-14 "></AiOutlineArrowDown></button>
-                  </div>
-                </div>
           </div>
 
-                  <div className='h-[1000px] flex-col flex w-[210px] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
+        <div className='h-[1050px] flex-col flex text-center w-[15%] mr-[87px] mt-[60px] bg-white shadow-md text-[14px] ml-auto'>
           <h3 className="flex ml-2 items-center text-[gray]">
             Recomendações
-            <button className="ml-10"><BsThreeDots></BsThreeDots></button>
+            <button className="ml-24"><BsThreeDots></BsThreeDots></button>
           </h3>
           <hr className="mt-4 border-[#b4b4b422] w-full" />
-          <img className="ml-1 h-[130px] w-[200px] mt-4" src={recomendar} alt="" />
+          <img className="ml-1 h-[130px] w-[250px] mt-4" src={recomendar} alt="" />
           <h1 className='text-center text-[gray] mt-5'>CFN</h1>
-          <p className='w-40 text-center mt-2 ml-5'>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
+          <p className='w-40 text-center flex ml-14 mt-2 '>Comprometidos com os 17 ODS da ONU, Sistema Conselhos Federal e Regionais de Nutricionistas atua para promover a sustentabilidade e garantir a saúde e a segurança alimentar e nutricional da população</p>
 
-          <img className="h-[130px] ml-1 w-[200px] mt-4" src={personal} alt="" />
+          <img className="h-[130px] ml-1 w-[250px] mt-4" src={personal} alt="" />
           <h1 className='text-center text-[gray] mt-5'>Universidade do futebol</h1>
-          <p className='w-40 text-center mt-2 ml-5'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
-        <button className='mt-12'><p className='hover:text-[#124648] text-[#48A3A7]'>ver mais</p></button>
+          <p className='w-40 text-center mt-2 ml-14'>A  Psicologia do Esporte é importante para entender a influência dos fatores psicológicos no desempenho físico de um indivíduo e como a participação em esportes e exercício afeta o desenvolvimento psicológico, a saúde e o bem estar de uma pessoa.</p>
+        <button className='mt-14'><p className='hover:text-[#124648] text-[#658FF9]'>ver mais</p></button>
 
 
 
 
         
-        <div className='flex-col flex w-[210px]  mt-[60px] bg-white shadow-md text-[12px]'>
+        <div className='flex-col flex w-[260px]  mt-[60px] bg-white shadow-md text-[12px]'>
           <h3 className="flex ml-2 items-center text-[black]">
            Profissionais para seguir
             <button className="ml-10"><BsThreeDots></BsThreeDots></button>

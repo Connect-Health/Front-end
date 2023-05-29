@@ -7,8 +7,8 @@ import { Link } from "react-router-dom"
 
 const header = () => {
     return (
-<div className="bg-[#48A3A7] w-full flex h-20">
-  <img className="invert p-2" src={logo} alt="" />
+<div className="bg-[#658FF9] w-full flex h-20">
+  <img className="invert p-2 px-6" src={logo} alt="" />
 
   <div className="flex flex-grow justify-end items-center">
 <button> <img className="p-6 h-20" src={ring} alt="" /></button>
