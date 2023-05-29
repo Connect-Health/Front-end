@@ -9,7 +9,7 @@ function Feed(){
     return(
         <div id="feed">
             <div className='flex justify-evenly gap-36
-            max-md:flex-col
+            max-md:flex-col max-md:gap-6
             '>
                 <div className='w-[70%] mt-10 ml-36
                 max-md:mt-10 max-md:m-auto max-md:w-[75%]'>
@@ -22,7 +22,7 @@ function Feed(){
                 </div>
                     <div>
                         <img className='w-[45%] m-auto
-                        max-md:mt-8 max-md:w-[60%]
+                        max-md:mt- max-md:w-[70%]
                         ' src={ModelFeed} alt="" />
                     </div>
             </div>
