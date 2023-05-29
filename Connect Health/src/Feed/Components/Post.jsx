@@ -3,7 +3,7 @@ import { FaComment, FaHeart, FaShare } from 'react-icons/fa'
 
 const Post = ({post}) => {
   return (
-    <div key={post.postId} className="flex text-justify shadow-md text-gray-500  text-[gray] bg-white  mt-8">
+    <div key={post.postId} className="flex text-justify shadow-md text-gray-500  text-[gray] bg-white rounded-xl mt-8">
             <div className="flex flex-col items-start">
               <div className='flex items-center gap-7'>
                 <img className="h-16 w-16 mt-3 ml-5 rounded-full object-cover" src={post.profissional.urlAvatar} alt="" />
