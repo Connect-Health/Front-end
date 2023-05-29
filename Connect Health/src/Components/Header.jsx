@@ -25,7 +25,7 @@ const Header = (props) => {
 
         <div className='flex gap-5 z-10 max-md:hidden'>
             <Link to={props.link} className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>{props.areaNav}</Link>
-            <h2 className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Feed de Noticias</h2>
+            <Link to='/feed' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Feed de Noticias</Link>
             <Link to="/login" className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</Link>
         </div>
     </div>
