@@ -1,8 +1,8 @@
 import Wave from '../../../assets/purplewave.png'
 import Model from '../../../assets/mulher_psico.png'
 import Brain from '../../../assets/brain.png'
-import HeadPsi from '../../../assets/headpsi.svg'
-import PlusPsi from '../../../assets/pluspsi.svg'
+import HeadPsi from '../../../assets/headpsi.png'
+import PlusPsi from '../../../assets/pluspsi.png'
 import WaveNutri from '../../../assets/wavenutri.svg'
 import PostPsi from '../../../assets/postpsi.svg'
 import { Link } from 'react-router-dom'
@@ -63,14 +63,14 @@ function Psico(){
                     <h3>Prevenção de transtornos mentais como: </h3>
                     <h3>Ansiedade, depressão, estresse...</h3>
                 </div>
-                <img className='max-md:h-24' src={HeadPsi} alt="" />
+                <img className='w-[12%] max-md:h-24' src={HeadPsi} alt="" />
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
             max-md:gap-24 max-md:w-[90%]
             '>
                 
-                <img className='max-md:h-24' src={PlusPsi} alt="" />
+                <img className='w-[12%] max-md:h-24' src={PlusPsi} alt="" />
 
                 <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]
                 max-md:text-[14px] max-md:w-[54%] max-md:text-sm
