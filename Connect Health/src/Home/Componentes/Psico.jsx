@@ -63,14 +63,14 @@ function Psico(){
                     <h3>Prevenção de transtornos mentais como: </h3>
                     <h3>Ansiedade, depressão, estresse...</h3>
                 </div>
-                <img className='w-[12%] max-md:h-24' src={HeadPsi} alt="" />
+                <img className='w-[12%] max-md:h-24 max-md:w-28' src={HeadPsi} alt="" />
             </div>
 
             <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
             max-md:gap-24 max-md:w-[90%]
             '>
                 
-                <img className='w-[12%] max-md:h-24' src={PlusPsi} alt="" />
+                <img className='w-[12%] max-md:h-24 max-md:w-24' src={PlusPsi} alt="" />
 
                 <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]
                 max-md:text-[14px] max-md:w-[54%] max-md:text-sm
