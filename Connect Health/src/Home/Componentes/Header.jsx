@@ -83,7 +83,7 @@ const Header = () => {
   return (
     <div id='home' className='relative z-50 '>
       
-      <div className='flex justify-between items-center py-5 px-10 bg-[#f5f5f5]'>
+      <div className='flex justify-between items-center py-3 px-10 bg-[#f5f5f5]'>
         <div className='flex gap-10 z-10 
         max-md:-ml-5 max-md:w-[90%] 
         '>
@@ -95,10 +95,18 @@ const Header = () => {
           <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Nutrição</Link>
-          <Link to='/login' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          <Link to='/feed' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
+          max-md:hidden
+          '>Feed de Notícias</Link>
+        </div>
+
+        <div className='gap-6 flex mr-20 items-center'>
+          <Link to='/register' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300
           max-md:hidden
           '>Cadastro</Link>
-          
+          <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3
+          max-md:hidden
+          '>Login</Link>
         </div>
         {/* <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-36 items-center flex-col
         max-md:hidden

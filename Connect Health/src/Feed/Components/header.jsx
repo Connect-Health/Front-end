@@ -8,13 +8,16 @@ import { Link } from "react-router-dom"
 const header = () => {
     return (
 <div className="bg-[#658FF9] w-full flex h-20">
-  <img className="invert p-2 px-6" src={logo} alt="" />
+  <Link to='/' className="w-16 pt-2 ml-5">
+    <img className="invert " src={logo} alt="" />
+  </Link>
 
   <div className="flex flex-grow justify-end items-center">
 <button> <img className="p-6 h-20" src={ring} alt="" /></button>
- <Link to='/login'><img className="p-6 h-20" src={userl} alt="" /></Link>
-    <Link to ='/login'>
-      <h3 className="text-white text-[13px] p-2">LOGIN OU REGISTRE-SE</h3>
+ <Link to='/login'></Link>
+    <Link to ='/login' className="flex items-center mr-10">
+      <img className=" h-10 w-fit" src={userl} alt="" />
+      <h3 className="text-white text-[13px]">LOGIN OU REGISTRE-SE</h3>
     </Link>
   </div>
 </div>

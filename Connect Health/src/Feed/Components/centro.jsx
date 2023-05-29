@@ -49,7 +49,7 @@ const centro = () => {
 
 
     return (
-      <div className="w-1/2">
+      <div className="w-1/2 mb-10">
         <Postar />
         {data ? (
           data.map((post) => (
