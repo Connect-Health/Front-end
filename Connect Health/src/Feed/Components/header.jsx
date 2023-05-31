@@ -17,7 +17,9 @@ const header = () => {
  <Link to='/login'></Link>
     <Link to ='/login' className="flex items-center mr-10">
       <img className=" h-10 w-fit" src={userl} alt="" />
-      <h3 className="text-white text-[13px]">LOGIN OU REGISTRE-SE</h3>
+      <h3 className="text-white text-[13px]
+      max-md:hidden
+      ">LOGIN OU REGISTRE-SE</h3>
     </Link>
   </div>
 </div>

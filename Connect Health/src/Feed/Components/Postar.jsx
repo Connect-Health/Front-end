@@ -4,7 +4,9 @@ import { MdLocationOn, MdSubscriptions } from 'react-icons/md'
 
 const Postar = () => {
   return (
-    <div className='bg-white pt-3 pl-3 flex flex-col h-fit mt-10 rounded-xl mb-14'>
+    <div className='bg-white pt-3 pl-3 flex flex-col h-fit mt-10 rounded-xl mb-14
+    max-md:hidden
+    '>
         <input type="text" placeholder='Titulo' className='w-1/2 ml-10 py-2 pl-5 outline-none  focus:border rounded-lg border-gradi/40' />
         <input type="text" placeholder='Escreva seu texto' className='w-[90%] ml-10 py-2 pl-5 pb-10 mb-2 border-b border-gradi/40 outline-none  focus:border rounded-lg mt-5' />
 
