@@ -33,16 +33,16 @@ function Register() {
             setFocus('addressNumber');
          });
    };
-
+  
    return (
-      <div className='bg-[#d3d3d3]'>
+      <div className='bg-bgregister bg-cover'>
          <div className=''>
             <Link to='/'>
-               <AiOutlineArrowLeft className='absolute text-white text-5xl top-3 left-3' />
+               <AiOutlineArrowLeft className='absolute text-white text-5xl top-2 left-3' />
             </Link>
          </div>
 
-         <div className='bg-azulsite h-20 flex items-center justify-center'>
+         <div className='bg-azulsite h-16 flex items-center justify-center'>
             <h1 className='text-3xl text-white'>Faça seu cadastro!</h1>
          </div>
 
@@ -50,7 +50,7 @@ function Register() {
             <div className='flex  gap-14 justify-center p-5'>
                <p className='absolute left-[23%] top-[28%] text-sm text-[#5855F2]'>Nome*</p>
                <input
-                  className='rounded-sm w-[42%] h-16 pl-4 pt-5 outline-none border-[1px] border-[#c3c3c3]'
+                  className='rounded-sm w-[42%] h-16 pl-4 pt-5 outline-none border-[1px] border-azulsite'
                   required
                   type='text'
                   placeholder='Nome social ou de registro'
