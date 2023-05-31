@@ -7,10 +7,13 @@ import BgLogin from "../../../assets/bglogin.png";
 import { FcGoogle } from "react-icons/fc";
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+
 
 function Login() {
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
   useEffect(() => {
     gapi.load("auth2", () => {
       gapi.auth2.init({client_id: "1030844756804-m94rijfndnkioau7eph93tf51rmcukqk.apps.googleusercontent.com"});
@@ -46,8 +49,10 @@ function Login() {
           />
           <input
             type="text"
+            value={email}
             className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
             placeholder="E-mail"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="flex mr-5">
@@ -58,8 +63,10 @@ function Login() {
           />
           <input
             type="password"
+            value={password}
             className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
             placeholder="Senha"
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button
