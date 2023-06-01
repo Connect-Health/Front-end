@@ -18,6 +18,7 @@ export default {
     },
     extend: {
       backgroundImage: {
+        "bgregister": "url('assets/bg-reg.png')",
         "nutriImg": "url('assets/nutricao.png')",
         "bloco1": "url('bloco_1.png')",
         "bloco2": "url('assets/bloco_2.png')",

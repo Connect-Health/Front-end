@@ -11,6 +11,7 @@ import Psicologia from './Psicologia/Psicologia'
 import Profissional from './Profissional/Profissional'
 import ProfissionalPsi from './Profissional/ProfissionalPsi'
 import Login from './Components/Login/Login'
+import Loginprof from './Components/Login/loginprof'
 import Register from './Components/Register/Register'
 import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+  },
+  {
+    path: '/loginprof',
+    element: <Loginprof />,
   },
   {
     path: '/register',

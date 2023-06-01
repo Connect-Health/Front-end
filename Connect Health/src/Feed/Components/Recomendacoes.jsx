@@ -8,7 +8,9 @@ import personal from '../../../assets/personal.png';
 
 const Recomendacoes = () => {
   return (
-    <div className=' w-[20%] bg-white mt-10 mb-5 h-fit'>
+    <div className=' w-[20%] bg-white mt-10 mb-5 h-fit
+    max-md:hidden
+    '>
         <div className='flex items-center justify-around mt-10 pb-5 border-b-2 border-gradi/10'>
             <h2>recomendações</h2>
             <BsThreeDots />

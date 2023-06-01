@@ -9,11 +9,11 @@ import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useEffect,useState } from "react";
 
-
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
   useEffect(() => {
     gapi.load("auth2", () => {
       gapi.auth2.init({client_id: "1030844756804-m94rijfndnkioau7eph93tf51rmcukqk.apps.googleusercontent.com"});
@@ -25,22 +25,11 @@ function Login() {
   };
 
   return (
+
     <div className="flex">
-      <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center">
-        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5" />
-        <Link to="/">
-          <AiOutlineArrowLeft className="absolute text-white text-5xl top-3 left-3" />
-        </Link>
-        <div className="flex flex-col ml-20">
-          <h1 className="font-bold text-4xl text-white">Connect Health</h1>
-          <h2 className="text-2xl text-white mt-2">
-            Mantenha-se conectado com sua saúde!
-          </h2>
-        </div>
-      </div>
-      <div className="flex flex-col items-center w-[40%] justify-center gap-5">
+        <div className="flex flex-col items-center w-[40%] justify-center gap-6">
         <h1 className="font-extrabold text-4xl">Bem Vindo(a)!</h1>
-          <h1 className="font-extrabold text-1xl">É um <Link to="/loginprof" className="text-azulsite">Profissional</Link>? </h1>
+        <h1 className="font-extrabold text-1xl">É um <Link to="/login" className="text-azulsite">cliente</Link>? </h1>
         <div className="flex mr-5">
           <img
             className="relative left-10 top-2 w-6 h-6"
@@ -82,16 +71,16 @@ function Login() {
           <GoogleLogin
             clientId="1030844756804-m94rijfndnkioau7eph93tf51rmcukqk.apps.googleusercontent.com"
               render={renderProps => (
-                <FcGoogle className="text-5xl pl-3" onClick={renderProps.onClick} disabled={renderProps.disabled}></FcGoogle>)}
+                <FcGoogle className="text-5xl pl-2" onClick={renderProps.onClick} disabled={renderProps.disabled}></FcGoogle>)}
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
-            />,
+            />
           <Link to="/">
             <RiFacebookCircleFill className="text-azulsite text-5xl" />
           </Link>
           <Link to="/">
             {" "}
-            <RiLinkedinFill className="text-azulsite text-5xl pl-3" />
+            <RiLinkedinFill className="text-azulsite text-5xl " />
           </Link>
         </div>
         <h1 className="text-1xl font-semibold mt-3">
@@ -101,6 +90,21 @@ function Login() {
           </Link>
         </h1>
       </div>
+        {/*inicio da area da imagem lateral*/}
+      <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center flex">
+        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5" />
+        <Link to="/">
+          <AiOutlineArrowLeft className="absolute text-azulsite text-5xl top-3 left-3" />
+        </Link>
+        <div className="flex flex-col ml-60">
+          <h1 className="font-bold text-4xl text-white text-right">Connect Health</h1>
+          <h2 className="text-2xl text-white mt-2 ">
+            Mantenha-se conectado com sua saúde!
+          </h2>
+        </div>
+      </div>
+      {/* Fim da área da imagem lateral*/}
+      
     </div>
   );
 }
