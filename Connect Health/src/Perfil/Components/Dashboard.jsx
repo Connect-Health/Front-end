@@ -11,7 +11,7 @@ function Dashboard() {
             <div className="flex flex-col gap-2">
                 <div className="pt-5 pl-12 flex flex-col gap-2">
                     <h2 className="text-2xl">Painel de Controle</h2>
-                    <p className="text-sm">Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
+                    <p className="">Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
                 </div>
 
                 {/*Inicio div dos cartoes*/}

@@ -22,11 +22,11 @@ function Perfil() {
                             <p className=''>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
-                            <TiCalendar className='text-3xl' />
+                            
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
-                            <BiNews className='text-3xl' />
+                            
                             <p className=''>Novidades</p>
                             
                         </div>
