@@ -16,7 +16,7 @@ const Psicologia = () => {
   }, []);
 
   return (
-    <div>
+    <div className=''>
         <HomePsi />
         <Detalhes
           pai="bg-psi shadow-psico"

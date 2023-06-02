@@ -14,7 +14,7 @@ const theme = createTheme({
   },
 });
 
-const pageSize = 4;
+const pageSize = 10;
 
 const AllCards = () => {
   const [isLoading, setIsLoading] = useState(true);

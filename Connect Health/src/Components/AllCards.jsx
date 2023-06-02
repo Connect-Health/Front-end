@@ -14,7 +14,7 @@ const theme = createTheme({
   },
 });
 
-const pageSize = 4;
+const pageSize = 10;
 
 const AllCards = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +50,7 @@ const AllCards = () => {
   };
 
   return (
-    <>
+    <div className='dark:bg-black/90'>
       <div ref={componentRef} />
       {isLoading ? (
         <div className='flex justify-center items-center text-black'>
@@ -63,7 +63,7 @@ const AllCards = () => {
       ) : (
         <>
           {data.length > 0 ? (
-            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1 max-md:gap-y-3'>
+            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1 max-md:gap-y-3 dark:bg-black/90'>
               {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
                 <Card
                   border='[#94E127]'
@@ -97,7 +97,7 @@ const AllCards = () => {
           </Stack>
         </>
       )}
-    </>
+    </div>
   );
 };
 

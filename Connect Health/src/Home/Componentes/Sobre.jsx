@@ -50,7 +50,7 @@ function Sobre(){
                 max-md:grid-cols-1 max-md:gap-[23%] 
                 '>
                     <div className='bg-[#EBF3FF] dark:bg-[#070a64] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md'>
-                        <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$00,00</h2>
+                        <h2 className='text-xl text-center font-bold pt-6'>Plano mensal Gratuito <br/> R$50,00</h2>
                         <p>Você tem direito a:</p>
                         <div className='pb-10'>
                             <div className='flex items-center gap-1 justify-center'>

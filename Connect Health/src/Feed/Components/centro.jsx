@@ -3,6 +3,7 @@ import Post from './Post';
 import Postar from './Postar';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 
@@ -35,7 +36,10 @@ const centro = () => {
           <Post key={post.postId} post={post} />
         ))
       ) : (
-        <p>Carregando posts...</p>
+        <div className='flex flex-col items-center justify-center gap-2'>
+          <p className='text-center w-full'>Carregando posts...</p>
+          <CircularProgress />
+        </div>
       )}
 
       {data && data.length > visiblePosts && (

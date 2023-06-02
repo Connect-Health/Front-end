@@ -39,9 +39,9 @@ function BGHome(){
 
     return(
         <div className='max-md:h-52 '>
-            
+            <Header />
             <div className={`relative `} style={{ height: window.innerHeight}}>
-                <img src={estrela} className='hidden absolute dark:block ' alt="" />
+                <img src={estrela} className='hidden absolute dark:block -top-14' alt="" />
                 <img className={`w-full absolute max-md:pt-10`} style={{ transform: `translateY(${offset * 0.35}px)`}} src={fundo_1} alt="" />
                 <img className='w-full absolute max-md:pt-10' style={{ transform: `translateY(${offset * 0.3}px)`}} src={cabeca_1} alt="" />
                 <img className='w-full absolute max-md:pt-10' style={{ transform: `translateY(${offset * 0.1}px)`}} src={mulher_1} alt="" />
