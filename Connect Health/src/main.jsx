@@ -17,7 +17,7 @@ import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
 import Politica from './Complementares/Politica/Politica'
 import Carrossel from './Home/Componentes/Carrossel'
-import Perfil from './Components/Perfil/perfil'
+import Perfil from './Perfil/perfil'
 
 const router = createBrowserRouter([
   {
