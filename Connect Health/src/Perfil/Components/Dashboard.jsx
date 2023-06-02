@@ -1,12 +1,15 @@
 import React from "react";
 import Planta from '../../../assets/planta.svg'
 import { IoIosArrowForward } from 'react-icons/io'
+import {AiFillStar} from 'react-icons/ai'
+import {BsFillBookmarkFill} from 'react-icons/bs'
+import Ft from '../../../assets/ft.svg'
 
 function Dashboard() {
     return (
-        <div className="bg-white h-[92vh] w-[78%] rounded-lg mt-[2%]">
+        <div className="bg-white h-[92vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-6">
-                <div className="pt-8 pl-12 flex flex-col gap-4">
+                <div className="pt-5 pl-12 flex flex-col gap-4">
                     <h2 className="text-3xl">Painel de Controle</h2>
                     <p>Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
                 </div>
@@ -57,10 +60,73 @@ function Dashboard() {
                             <IoIosArrowForward className="text-2xl text-[#ddd018]" />
                         </div>
                     </div>
+                    <div className=" flex flex-col gap-6 mt-4">
+
+                        {/*Primeiro User*/}
+
+                        <div className="flex  items-center justify-between">
+                            <img src={Ft} alt="" />
+                            <div className="w-[30%]">
+                                <p className="font-bold">Wendel Harrison</p>
+                                <p className="text-sm">Bruno Scott</p>
+                            </div>
+                            <p>Feb 12</p>
+                            <div className="flex items-center gap-2">
+                                <AiFillStar className="text-[#ddd018]"/>
+                                <p>4.6</p>
+                            </div>
+                            <button>Perfil</button>
+                            <BsFillBookmarkFill/>
+                        </div>
+
+                        {/*Segundo */}
+                        <div className="flex  items-center justify-between">
+                            <img src={Ft} alt="" />
+                            <div className="w-[30%]">
+                                <p className="font-bold">Willian Rizzo</p>
+                                <p className="text-sm">Bruno Scott</p>
+                            </div>
+                            <p>Feb 12</p>
+                            <div className="flex items-center gap-2">
+                                <AiFillStar className="text-[#ddd018]"/>
+                                <p>4.6</p>
+                            </div>
+                            <button>Perfil</button>
+                            <BsFillBookmarkFill/>
+                        </div>
+
+                        <div className="flex  items-center justify-between">
+                            <img src={Ft} alt="" />
+                            <div className="w-[30%]">
+                                <p className="font-bold">Gabi Nunes</p>
+                                <p className="text-sm">Bruno Scott</p>
+                            </div>
+                            <p>Feb 12</p>
+                            <div className="flex items-center gap-2">
+                                <AiFillStar className="text-[#ddd018]"/>
+                                <p>4.6</p>
+                            </div>
+                            <button>Perfil</button>
+                            <BsFillBookmarkFill/>
+                        </div>
+
+                        <div className="flex  items-center justify-between">
+                            <img src={Ft} alt="" />
+                            <div className="w-[30%]">
+                                <p className="font-bold">Rafael Ferreira</p>
+                                <p className="text-sm">Bruno Scott</p>
+                            </div>
+                            <p>Feb 12</p>
+                            <div className="flex items-center gap-2">
+                                <AiFillStar className="text-[#ddd018]"/>
+                                <p>4.6</p>
+                            </div>
+                            <button>Perfil</button>
+                            <BsFillBookmarkFill/>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    
-                </div>
+                
             </div>
         </div>
     )
