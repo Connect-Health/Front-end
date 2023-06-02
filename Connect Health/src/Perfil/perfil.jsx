@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo_preta.png'
 import { AiFillAppstore } from "react-icons/ai";
-import { TiCalendar } from "react-icons/Ti";
 import { BiNews, BiLogIn } from "react-icons/Bi";
 import settings from '../../assets/setting.png'
 import Dashboard from './Components/Dashboard';
@@ -24,7 +23,6 @@ function Perfil() {
                             <p className=''>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
-                            <TiCalendar className='text-3xl' />
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
