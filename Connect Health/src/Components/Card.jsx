@@ -35,10 +35,17 @@ const Card = ({ profissional, border, border2, border3, texto, bg, bg2, areaUrl,
           </h2>
 
           <div className={`flex flex-wrap bg-${border3} ${bg2} rounded-xl gap-1 justify-center w-full py-2`}>
-            {profissional.especialidade && profissional.especialidade.slice(0, 3).map((especialidade) => (
-              <p key={especialidade.especialidadeId} className="border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white max-md:w-fit">{especialidade.nome}</p>
-            ))}
-            {profissional.especialidade && profissional.especialidade.length > 3 && (
+            {profissional.especialidade &&
+              Array.isArray(profissional.especialidade) &&
+              profissional.especialidade.slice(0, 3).map((especialidade) => (
+                <p
+                  key={especialidade.especialidadeId}
+                  className="border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white max-md:w-fit"
+                >
+                  {especialidade.nome}
+                </p>
+              ))}
+            {Array.isArray(profissional.especialidade) && profissional.especialidade.length > 3 && (
               <span className='border w-fit rounded-lg px-2 self-end max-md:px-1 max-md:text-sm bg-white max-md:w-fit'>{`+${profissional.especialidade.length - 3}`}</span>
             )}
           </div>
