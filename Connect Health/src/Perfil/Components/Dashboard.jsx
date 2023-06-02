@@ -7,11 +7,11 @@ import Ft from '../../../assets/ft.svg'
 
 function Dashboard() {
     return (
-        <div className="bg-white h-[92vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
-            <div className="flex flex-col gap-6">
-                <div className="pt-5 pl-12 flex flex-col gap-4">
-                    <h2 className="text-3xl">Painel de Controle</h2>
-                    <p>Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
+        <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
+            <div className="flex flex-col gap-2">
+                <div className="pt-5 pl-12 flex flex-col gap-2">
+                    <h2 className="text-2xl">Painel de Controle</h2>
+                    <p className="">Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
                 </div>
 
                 {/*Inicio div dos cartoes*/}
@@ -21,7 +21,7 @@ function Dashboard() {
                         <img className="h-40 -mt-10 -mb-8" src={Planta} alt="" />
                         <div className="z-1">
                             <h3 className="font-bold text-xl">9.6 AVERAGE SCORE</h3>
-                            <p>Better than 86% of students</p>
+                            <p className="text-sm">Better than 86% of students</p>
                         </div>
                     </div>
                     
@@ -30,14 +30,14 @@ function Dashboard() {
                     <div className='bg-[#e9e9e9aa] w-[23%] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
                         <div className=" flex items-center">
                             <div>
-                                <h1 className="text-2xl">Product Analytics</h1>
+                                <h1 className="text-xl w-[20%]">Product Analytics</h1>
                                 <p>Middle/Pro</p>
                             </div>
                             <div className=" border-2 w-[15%] h-7 text-center pl-1 rounded-md ">
                                 <IoIosArrowForward className="text-2xl " />
                             </div>
                         </div>
-                        <div className="z-1 w-[90%] mt-5">
+                        <div className="z-1 w-[90%] mt-6">
                             <div className="flex justify-between">
                                 <p>In Progress</p>
                                 <p>34%</p>
@@ -52,7 +52,7 @@ function Dashboard() {
 
                 {/* Fim segundo Card e da Div */}
 
-                <div className="w-[50%] ml-12 h-[40vh] flex flex-col">
+                <div className="w-[50%] ml-12 mt-10 h-[40vh] flex flex-col">
                     <div className=" flex justify-between items-center">
                         <p className="font-bold text-lg">Últimos pacientes atendidos</p>
                         <div className="flex">
