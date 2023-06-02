@@ -16,7 +16,7 @@ function Perfil() {
                 <img className='w-44 p-8 mb-[30px]' src={logo} />
 
 
-                <div className='flex flex-col gap-[134px]'>
+                <div className='flex flex-col gap-[120px]'>
                     <div className='flex flex-col pl-8 gap-[55px] w-[100%] '>
 
                         <div className='flex gap-4'>
@@ -24,22 +24,21 @@ function Perfil() {
                             <p className=''>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
-                            <TiCalendar className='text-3xl' />
+                            
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
-                            <BiNews className='text-3xl' />
+
                             <p className=''>Novidades</p>
                         </div>
                     </div>
 
-                    <div className='flex flex-col pl-8 gap-[100px] w-[100%] '>
+                    <div className='flex flex-col pl-8 gap-[50px] w-[100%] '>
                         <div className='flex gap-4'>
                             <img className='w-7' src={settings} />
                             <p className=''>Configurações</p>
                         </div>
                         <div className='flex gap-4'>
-                            <BiLogIn className='text-3xl' />
                             <p className=''>Sair</p>
                         </div>
                     </div>
