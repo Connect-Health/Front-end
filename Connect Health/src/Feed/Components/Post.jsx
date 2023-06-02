@@ -24,7 +24,7 @@ const Post = ({ post }) => {
           <img className={`h-16 w-16 mt-3 ml-5 rounded-full object-cover`} src={post.profissional.urlAvatar} alt="" />
           <div>
             <h3 className="mt-3 text-black/70 font-bold">{post.profissional.nome} {post.profissional.sobrenome}</h3>
-            <p className="text-xs mt-1">12 Horas atrás</p>
+            <p className="text-xs mt-1">{post.horaPublicacao} - {post.dataPublicacao}</p>
           </div>
         </div>
         <hr className="mt-3 border-[#8742] w-full" />
