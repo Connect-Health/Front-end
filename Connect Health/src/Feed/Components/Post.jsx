@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaComment, FaHeart, FaShare } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const MaxLength = 250;
 
@@ -23,7 +24,7 @@ const Post = ({ post }) => {
         <div className="flex items-center gap-7">
           <img className={`h-16 w-16 mt-3 ml-5 rounded-full object-cover`} src={post.profissional.urlAvatar} alt="" />
           <div>
-            <h3 className="mt-3 text-black/70 font-bold">{post.profissional.nome} {post.profissional.sobrenome}</h3>
+            <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`} className="mt-3 text-black/70 font-bold">{post.profissional.nome} {post.profissional.sobrenome}</Link>
             <p className="text-xs mt-1">{post.horaPublicacao} - {post.dataPublicacao}</p>
           </div>
         </div>

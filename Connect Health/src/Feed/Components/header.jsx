@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 const header = () => {
     return (
-<div className="bg-[#658FF9] w-full flex h-20">
+<div className="bg-[#658FF9] w-full flex h-20 fixed z-10">
   <Link to='/' className="w-16 pt-2 ml-5">
     <img className="invert " src={logo} alt="" />
   </Link>
