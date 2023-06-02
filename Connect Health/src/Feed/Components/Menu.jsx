@@ -5,7 +5,7 @@ import { MdSubscriptions } from 'react-icons/md'
 
 const Menu = () => {
   return (
-    <div className='bg-[#658FF9] p-2 flex flex-col rounded-2xl w-[20%] h-fit mt-10
+    <div className='bg-[#658FF9] p-2 flex flex-col rounded-2xl w-[20%] h-fit mt-10 fixed left-[2.5%] top-20
     max-md:hidden
     '>
         <div className='flex gap-5 px-10 items-center mt-12 cursor-pointer'>

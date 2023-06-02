@@ -9,7 +9,7 @@ function Feed() {
     return(
         <>
         <Header />  
-        <div className="flex px-[2.5%] gap-[2.5%] bg-[#f5f5f5]">
+        <div className="flex  bg-[#f5f5f5]">
             <Menu />
             <Centro />
             <Recomendacoes />
