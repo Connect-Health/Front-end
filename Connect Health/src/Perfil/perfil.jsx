@@ -1,7 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo_preta.png'
 import { AiFillAppstore } from "react-icons/ai";
-import { BiNews, BiLogIn } from "react-icons/Bi";
 import settings from '../../assets/setting.png'
 import Dashboard from './Components/Dashboard';
 
@@ -26,8 +25,8 @@ function Perfil() {
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
-                            <BiNews className='text-3xl' />
                             <p className=''>Novidades</p>
+                            
                         </div>
                     </div>
 
@@ -37,7 +36,6 @@ function Perfil() {
                             <p className=''>Configurações</p>
                         </div>
                         <div className='flex gap-4'>
-                            <BiLogIn className='text-3xl' />
                             <p className=''>Sair</p>
                         </div>
                     </div>
