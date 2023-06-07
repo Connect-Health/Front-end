@@ -3,6 +3,7 @@ import logo from '../../assets/logo_preta.png'
 import { AiFillAppstore } from "react-icons/ai";
 import settings from '../../assets/setting.png'
 import Dashboard from './Components/Dashboard';
+import Description from './Components/Description';
 
 
 function Perfil() {
@@ -22,13 +23,13 @@ function Perfil() {
                             <p className=''>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
-                            
+
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
-                            
+
                             <p className=''>Novidades</p>
-                            
+
                         </div>
                     </div>
 
@@ -44,7 +45,14 @@ function Perfil() {
                 </div>
             </div>
 
-            <Dashboard/>
+
+            <div className='flex w-[100%]'>
+                <Dashboard />
+                <div className="bg-[#f5f5f5] w-[20%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-28">
+                    <div className='bg-white rounded-full w-40 h-40 mt-16'></div>
+                </div>
+            </div>
+
         </div>
     )
 }
