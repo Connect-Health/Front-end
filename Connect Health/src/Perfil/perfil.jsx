@@ -48,7 +48,7 @@ function Perfil() {
 
             <div className='flex w-[100%]'>
                 <Dashboard />
-                <div className="bg-[#f5f5f5] w-[20%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-28">
+                <div className="bg-[#f5f5f5] w-[26%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
                     <div className='bg-white rounded-full w-40 h-40 mt-16'></div>
                 </div>
             </div>
