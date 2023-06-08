@@ -9,11 +9,21 @@ import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useEffect,useState } from "react";
 import axios from 'axios'
+import { Alert, Snackbar } from "@mui/material";
+
 
 function Login() {
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
+    
+
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState("");
+
+    const handleCloseSnackbar = () => {
+      setOpenSnackbar(false);
+    };
 
   useEffect(() => {
     gapi.load("auth2", () => {
@@ -22,7 +32,27 @@ function Login() {
   }, []);
 
   const responseGoogle = (response) => {
-    console.log(response);
+    const { email } = response.profileObj;
+  
+    fazerLoginGoogle(email);
+  };
+  
+  const fazerLoginGoogle = async (email) => {
+    try {
+      const response = await axios.post(
+        "https://connect-health.up.railway.app/profissional/loginGoogle",
+        { email }
+      );
+  
+      if (response.status === 200 && response.data === true) {
+        window.location.href = "/dashboard";
+      } else {
+        setSnackbarMessage("Email não autorizado");
+        setOpenSnackbar(true);
+      }
+    } catch (error) {
+      console.log("Erro durante o login:", error);
+    }
   };
 
   const fazerLogin = async () => {
@@ -34,7 +64,7 @@ function Login() {
       if (response.status === 200 && response.data === true) {
         window.location.href = '/dashboard'
       } else {
-        console.error('acesso negado, verifique suas credenciais')
+        setOpenSnackbar(true);
       }
     }  catch (error) {
       console.log("erro durante o login" + error);
@@ -122,8 +152,18 @@ function Login() {
         </div>
       </div>
       {/* Fim da área da imagem lateral*/}
-      
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        message={snackbarMessage}
+        anchorOrigin={{vertical: 'top', horizontal:'center'}}
+      >
+         <Alert severity="error"><p className="text-center text-lg">Erro ao fazer login. Verifique suas credenciais.</p></Alert>
+      </Snackbar>
     </div>
+
+    
   );
 }
 export default Login;
