@@ -14,7 +14,7 @@ const Menu = () => {
     }
   return (
     <div className='max-md:block hidden'>
-        <button onClick={abrirMenu} className='h-5 w-5'>
+        <button onClick={abrirMenu} className='h-4 w-4'>
                 <img src={BarsSolid} alt="" />
         </button>
 
@@ -27,6 +27,7 @@ const Menu = () => {
                         <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/psicologia">Psicologia</Link>
                         <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/nutricao">Nutrição</Link>
                         <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/feed">Feed de Notícias</Link>
+                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/eventos">Eventos Empresariais</Link>
                     </div>
                 </div>
                 <Link to="/login" className='absolute top-3 left-3 flex items-center' >
