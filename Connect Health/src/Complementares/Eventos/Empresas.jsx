@@ -7,10 +7,10 @@ const Empresas = () => {
             <img src="https://logospng.org/download/itau/logo-itau-4096.png" className='w-14 h-14' />
 
             <div className='flex flex-col items-center justify-center h-[60%]'>
-                <p className='mt-3'>Valor:</p>
-                <p>R$150 mil</p>
-                <p className='mt-6'>Consulta:</p>
-                <p>Presencial</p>
+                <p className='text-sm mt-3'>Valor:</p>
+                <p className='text-sm '>R$150 mil</p>
+                <p className='text-sm mt-6'>Consulta:</p>
+                <p className='text-sm '>Presencial</p>
             </div>
             
         </div>

@@ -24,7 +24,7 @@ const Eventos = () => {
 
         <h2 className='text-center text-lg font-semibold mt-10 mb-5'>Empresas que necessitam de serviços:</h2>
 
-        <div className='grid grid-cols-3 gap-x-5 mx-5 max-md:grid-cols-1'>
+        <div className='grid grid-cols-3 gap-x-5 mx-5 max-md:grid-cols-1 max-md:mx-1'>
             <Empresas />
             <Empresas />
             <Empresas />
