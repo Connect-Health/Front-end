@@ -19,7 +19,7 @@ const Post = ({ post }) => {
   const content = showFullContent ? post.conteudo : post.conteudo.slice(0, MaxLength);
 
   return (
-    <div key={post.postId} className="flex text-justify shadow-md text-gray-500 text-[gray] bg-white rounded-xl mt-8 max-md:text-sm max-md:w-[200%]">
+    <div key={post.postId} className="flex text-justify shadow-md text-gray-500 text-[gray] bg-white rounded-xl mt-8 max-md:text-sm max-md:w-[100%]">
       <div className="flex flex-col items-start max-md:w-[100%]">
       <div className={`flex items-center gap-7 w-full rounded-t-xl pb-5 pt-3  ${post.profissional.areaAtuacao.areaId === 2 ? 'bg-nutri/70' : post.profissional.areaAtuacao.areaId === 1 ? 'bg-psi/70' : ''}`}>
   <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`}>

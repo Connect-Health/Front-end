@@ -29,7 +29,7 @@ const centro = () => {
   };
 
   return (
-    <div className="w-1/2 mb-16 mx-auto mt-20">
+    <div className="w-1/2 mb-16 mx-auto mt-20 max-md:w-full">
       <Postar />
       {data ? (
         data.slice(0, visiblePosts).map((post) => (
