@@ -17,7 +17,17 @@ const Eventos = () => {
           areaNav="Inicio"
           pai="relative z-10"
         />
-        <Menu />
+        <Menu
+          area1="Inicio"
+          area2="Area psicologia"
+          area3="Area nutrição"
+          area4="Feed de noticias"
+
+          home=""
+          link2="psicologia"
+          link3="nutricao"
+          link4="feed"
+        />
         <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={events} alt="" />
 
         <div className='w-2/4 px-20 py-6 bg-white/90 backdrop-blur m-auto mt-[18rem] relative z-10 rounded max-md:w-full max-md:mt-[15rem] max-md:px-4'>

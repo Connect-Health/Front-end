@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import User from '../../assets/user.svg'
 
 
-const Menu = () => {
+const Menu = (props) => {
     const [open, setOpen] = useState(false)
 
     const abrirMenu = () => {
@@ -24,10 +24,10 @@ const Menu = () => {
                     <AiOutlineClose className='absolute top-4.5 right-3 text-2xl' onClick={abrirMenu} />
                     <div className='flex justify-center items-center pt-[30%] flex-col'>
                         <h2 className='text-xl font-bold uppercase mb-10'>Menu</h2>
-                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/psicologia">Psicologia</Link>
-                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/nutricao">Nutrição</Link>
-                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/feed">Feed de Notícias</Link>
-                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to="/eventos">Eventos Empresariais</Link>
+                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to={`/${props.home}`}>{props.area1}</Link>
+                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to={`/${props.link2}`}>{props.area2}</Link>
+                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to={`/${props.link3}`}>{props.area3}</Link>
+                        <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to={`/${props.link4}`}>{props.area4}</Link>
                     </div>
                 </div>
                 <Link to="/login" className='absolute top-3 left-3 flex items-center' >

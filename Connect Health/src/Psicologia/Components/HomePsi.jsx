@@ -17,7 +17,7 @@ const HomePsi = () => {
 
   return (
     <div className='h-[650px] flex flex-col max-md:h-full'>
-      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-full max-md:h-52 max-md:mt-10' alt="" />
+      <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-full max-md:h-52 max-md:mt-8' alt="" />
 
         <Header
             health="hover:text-psi"

@@ -7,6 +7,7 @@ import Filtros from '../Components/Filtros'
 import AllCards from '../Components/AllCards';
 import Footer from '../Components/Footer';
 import { useEffect } from 'react'
+import Menu from '../Components/Menu'
 
 
 function Nutricao() {
@@ -17,6 +18,17 @@ function Nutricao() {
   return (
     <div>
       <HomeNutri />
+      <Menu
+          area1="Inicio"
+          area2="Area psicologia"
+          area4="Eventos empresariais"
+          area3="Feed de noticias"
+
+          home=""
+          link2="psicologia"
+          link3="feed"
+          link4="eventos"
+      />
       <Detalhes 
         pai="bg-nutri shadow-nutrici"
         imagem ={Vetor}

@@ -87,7 +87,17 @@ const Header = () => {
         <div className='flex gap-10 z-10 
         max-md:-ml-5 max-md:w-[90%] 
         '>
-          <Menu />
+          <Menu 
+            area4="Eventos Empresariais"
+            area1="Area psicologia"
+            area2="Area nutrição"
+            area3="Feed de noticias"
+  
+            home="psicologia"
+            link2="mutricao"
+            link3="feed"
+            link4="eventos"
+          />
           <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
           <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden

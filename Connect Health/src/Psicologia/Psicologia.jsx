@@ -9,6 +9,7 @@ import AllCards from '../Components/AllcardsPsi';
 import Footer from '../Components/Footer'
 
 import { useEffect } from 'react'
+import Menu from '../Components/Menu'
 
 const Psicologia = () => {
   useEffect(() => {
@@ -18,6 +19,17 @@ const Psicologia = () => {
   return (
     <div className=''>
         <HomePsi />
+        <Menu
+          area1="Inicio"
+          area2="Area nutrição"
+          area4="Eventos empresariais"
+          area3="Feed de noticias"
+
+          home=""
+          link2="nutricao"
+          link3="feed"
+          link4="eventos"
+        />
         <Detalhes
           pai="bg-psi shadow-psico"
           imagem ={Vetor}
