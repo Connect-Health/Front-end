@@ -26,21 +26,21 @@ function Login() {
 
   return (
     <div className="flex">
-      <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center">
-        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5" />
+      <div className="flex w-3/5 h-screen  bg-cover bg-center items-center max-md:w-0">
+        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5 max-md:w-full max-md:h-screen" />
         <Link to="/">
-          <AiOutlineArrowLeft className="absolute text-white text-5xl top-3 left-3" />
+          <AiOutlineArrowLeft className="absolute text-white text-5xl top-3 left-3 max-md:text-3xl" />
         </Link>
-        <div className="flex flex-col ml-20">
+        <div className="flex flex-col ml-20 max-md:hidden">
           <h1 className="font-bold text-4xl text-white">Connect Health</h1>
           <h2 className="text-2xl text-white mt-2">
             Mantenha-se conectado com sua saúde!
           </h2>
         </div>
       </div>
-      <div className="flex flex-col items-center w-[40%] justify-center gap-5">
-        <h1 className="font-extrabold text-4xl">Bem Vindo(a)!</h1>
-          <h1 className="font-extrabold text-1xl">É um <Link to="/loginprof" className="text-azulsite">Profissional</Link>? </h1>
+      <div className="flex flex-col items-center w-[40%] justify-center gap-5 max-md:w-full max-md:mt-10">
+        <h1 className="font-extrabold text-4xl max-md:text-xl">Bem Vindo(a)!</h1>
+          <h1 className="font-extrabold text-1xl">É um <Link to="/loginprof" className="text-azulsite max-md:text-white max-md:border-b">Profissional</Link>? </h1>
         <div className="flex mr-5">
           <img
             className="relative left-10 top-2 w-6 h-6"
@@ -50,7 +50,7 @@ function Login() {
           <input
             type="text"
             value={email}
-            className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
+            className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required outline-none focus:outline-cor-primaria/20"
             placeholder="E-mail"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -64,7 +64,7 @@ function Login() {
           <input
             type="password"
             value={password}
-            className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
+            className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required outline-none focus:outline-cor-primaria/20 "
             placeholder="Senha"
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -96,7 +96,7 @@ function Login() {
         </div>
         <h1 className="text-1xl font-semibold mt-3">
           Não tem conta?{" "}
-          <Link to="/register" className="text-azulsite">
+          <Link to="/register" className="text-azulsite max-md:border-b max-md:border-white max-md:text-white">
             Registre-se
           </Link>
         </h1>
