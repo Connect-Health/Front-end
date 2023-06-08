@@ -94,7 +94,7 @@ const Header = () => {
             area3="Feed de noticias"
   
             home="psicologia"
-            link2="mutricao"
+            link2="nutricao"
             link3="feed"
             link4="eventos"
           />
