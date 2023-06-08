@@ -89,22 +89,25 @@ const Header = () => {
         '>
           <Menu />
           <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
-          <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
+          <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden
           '>Psicologia</Link>
-          <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
+          <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden
           '>Nutrição</Link>
-          <Link to='/feed' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
+          <Link to='/feed' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden
           '>Feed de Notícias</Link>
+          <Link to='/eventos' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
+          max-md:hidden
+          '>Eventos</Link>
         </div>
 
         <div className='gap-6 flex mr-20 items-center'>
           <Link to='/register' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
           max-md:hidden
           '>Cadastro</Link>
-          <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3
+          <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3 rounded
           max-md:hidden
           '>Login</Link>
         </div>

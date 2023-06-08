@@ -19,7 +19,7 @@ const Header = (props) => {
         </Link>
 
         <h2 className={`
-          text-white font-bold uppercase text-base ml-80 hover:scale-110 transition duration-300 ${props.colorArea}
+          text-white font-bold uppercase text-base hover:scale-110 transition duration-300 absolute left-1/2 -translate-x-1/2 ${props.colorArea}
           max-md:hidden
         `}>{props.area}</h2>
 

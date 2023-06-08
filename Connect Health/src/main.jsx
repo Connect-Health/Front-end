@@ -19,6 +19,7 @@ import Politica from './Complementares/Politica/Politica'
 import Carrossel from './Home/Componentes/Carrossel'
 import Perfil from './Perfil/perfil'
 import App from './App'
+import Eventos from './Complementares/Eventos/Eventos'
 
 const router = createBrowserRouter([
   
@@ -77,10 +78,13 @@ const router = createBrowserRouter([
         path: '/calendario',
         element: <Carrossel />,
       },
-    
       {
         path: '/perfil',
         element: <Perfil />,
+      },
+      {
+        path: '/eventos',
+        element: <Eventos />,
       },
     ]
   }
