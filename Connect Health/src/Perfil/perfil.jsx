@@ -3,6 +3,8 @@ import logo from '../../assets/logo_preta.png'
 import { AiFillAppstore } from "react-icons/ai";
 import settings from '../../assets/setting.png'
 import Dashboard from './Components/Dashboard';
+import {AiFillBell} from 'react-icons/ai'
+
 
 
 function Perfil() {
@@ -22,13 +24,13 @@ function Perfil() {
                             <p className=''>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
-                            
+
                             <p className=''>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
-                            
+
                             <p className=''>Novidades</p>
-                            
+
                         </div>
                     </div>
 
@@ -44,7 +46,28 @@ function Perfil() {
                 </div>
             </div>
 
-            <Dashboard/>
+
+            <div className='flex w-[100%]'>
+                <Dashboard />
+                <div className="bg-[#9DFF95] w-[26%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
+                    <div className='flex flex-col items-center gap-5 w-[80%]'>
+                        <div className='bg-white rounded-full w-40 h-40 mt-16 border-4 border-[#2edd1e]'></div>
+                        <div className='flex flex-col gap-3'>
+                            <h1 className='text-center font-bold text-xl'>Willian Rizzo</h1>
+                            <p  className='text-center text-lg'>Designer UI | UX </p>
+                        </div>
+                        <div className=' flex flex-col w-[100%] mt-6'>
+                            <div className=' flex items-center justify-between'>
+                                <h2 className='text-xl font-bold'>Alarmes</h2>
+                                <div className='bg-white p-2 rounded-full '>
+                                    <AiFillBell className='text-3xl text-[#ddd018] '/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
