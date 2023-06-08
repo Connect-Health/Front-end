@@ -5,6 +5,7 @@ import {AiFillStar} from 'react-icons/ai'
 import {BsFillBookmarkFill} from 'react-icons/bs'
 import Ft from '../../../assets/ft.svg'
 
+
 function Dashboard() {
     return (
         <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
