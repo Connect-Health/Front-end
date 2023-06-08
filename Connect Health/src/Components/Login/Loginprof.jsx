@@ -27,8 +27,8 @@ function Login() {
   return (
 
     <div className="flex">
-        <div className="flex flex-col items-center w-[40%] justify-center gap-6">
-        <h1 className="font-extrabold text-4xl">Bem Vindo(a)!</h1>
+        <div className="flex flex-col items-center w-[40%] justify-center gap-6 max-md:w-full relative z-0  ">
+        <h1 className="font-extrabold text-4xl max-md:text-2xl">Bem Vindo(a)!</h1>
         <h1 className="font-extrabold text-1xl">É um <Link to="/login" className="text-azulsite">cliente</Link>? </h1>
         <div className="flex mr-5">
           <img
@@ -91,12 +91,12 @@ function Login() {
         </h1>
       </div>
         {/*inicio da area da imagem lateral*/}
-      <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center flex">
-        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5" />
+      <div className=" flex w-3/5 h-screen  bg-cover bg-center items-center  max-md:w-0 ">
+        <img src={BgLogin} alt="" className="absolute -z-10 w-3/5 max-md:w-full max-md:h-screen max-md:z-0" />
         <Link to="/">
-          <AiOutlineArrowLeft className="absolute text-azulsite text-5xl top-3 left-3" />
+          <AiOutlineArrowLeft className="absolute text-azulsite text-5xl top-3 left-3 max-md:text-3xl" />
         </Link>
-        <div className="flex flex-col ml-60">
+        <div className="flex flex-col ml-60 max-md:hidden">
           <h1 className="font-bold text-4xl text-white text-right">Connect Health</h1>
           <h2 className="text-2xl text-white mt-2 ">
             Mantenha-se conectado com sua saúde!

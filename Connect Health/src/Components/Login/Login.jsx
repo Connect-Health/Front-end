@@ -39,7 +39,7 @@ function Login() {
         </div>
       </div>
       <div className="flex flex-col items-center w-[40%] justify-center gap-5 max-md:w-full">
-        <h1 className="font-extrabold text-4xl max-md:text-xl">Bem Vindo(a)!</h1>
+        <h1 className="font-extrabold text-4xl max-md:text-2xl">Bem Vindo(a)!</h1>
           <h1 className="font-extrabold text-1xl">É um <Link to="/loginprof" className="text-azulsite max-md:text-white max-md:border-b">Profissional</Link>? </h1>
         <div className="flex mr-5">
           <img
