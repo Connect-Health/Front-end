@@ -8,11 +8,12 @@ import { FcGoogle } from "react-icons/fc";
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useEffect,useState } from "react";
+import axios from 'axios'
 
 function Login() {
 
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [senha, setSenha] = useState('')
 
   useEffect(() => {
     gapi.load("auth2", () => {
@@ -23,6 +24,22 @@ function Login() {
   const responseGoogle = (response) => {
     console.log(response);
   };
+
+  const fazerLogin = async () => {
+    try {
+      const response = await axios.post(
+        "https://connect-health.up.railway.app/profissional/login",
+        {email, senha}
+      )
+      if (response.status === 200 && response.data === true) {
+        window.location.href = '/dashboard'
+      } else {
+        console.error('acesso negado, verifique suas credenciais')
+      }
+    }  catch (error) {
+      console.log("erro durante o login" + error);
+    }
+  }
 
   return (
 
@@ -52,15 +69,16 @@ function Login() {
           />
           <input
             type="password"
-            value={password}
+            value={senha}
             className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
             placeholder="Senha"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setSenha(e.target.value)}
           />
         </div>
         <button
           type="submit"
           className=" flex items-center justify-center bg-azulsite border-solid border-2 border-gradi/30 rounded-3xl w-80 h-12"
+          onClick={fazerLogin}
         >
           <h1 className="text-white text-1xl">Entrar</h1>
         </button>
