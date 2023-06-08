@@ -13,8 +13,8 @@ const Menu = () => {
         setOpen(!open);
     }
   return (
-    <div className='max-md:block hidden'>
-        <button onClick={abrirMenu} className='h-4 w-4'>
+    <div className='max-md:block hidden max-md:absolute z-50 left-2 top-2'>
+        <button onClick={abrirMenu} className='h-5 w-5 absolute z-50'>
                 <img src={BarsSolid} alt="" />
         </button>
 

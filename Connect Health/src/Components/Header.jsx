@@ -7,9 +7,8 @@ const Header = (props) => {
   return (
     <div className={`
       flex justify-between items-center py-3 px-10 z-50 bg-white/0 backdrop-blur-3xl ${props.pai}
-      max-md:w-full max-md:justify-normal max-md:px-2
+      max-md:w-full max-md:justify-normal max-md:px-2 max-md:py-5
     `}>
-        <Menu />
         <Link to='/' className={`
           font-semibold text-white text-lg w-6 transition duration-300 hover:scale-110 ${props.health}
           max-md:text-base max-md:absolute max-md:left-1/2 max-md:translate-x-[-50%] w-fit

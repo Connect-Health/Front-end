@@ -3,6 +3,7 @@ import Header from '../../Components/Header'
 
 import events from '../../../assets/eventos.jpg'
 import Empresas from './Empresas'
+import Menu from '../../Components/Menu'
 
 const Eventos = () => {
   return (
@@ -16,6 +17,7 @@ const Eventos = () => {
           areaNav="Inicio"
           pai="relative z-10"
         />
+        <Menu />
         <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={events} alt="" />
 
         <div className='w-2/4 px-20 py-6 bg-white/90 backdrop-blur m-auto mt-[18rem] relative z-10 rounded max-md:w-full max-md:mt-[15rem] max-md:px-4'>
