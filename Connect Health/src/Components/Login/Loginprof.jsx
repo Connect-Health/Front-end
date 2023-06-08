@@ -11,6 +11,9 @@ import { useEffect,useState } from "react";
 import axios from 'axios'
 import { Alert, Snackbar } from "@mui/material";
 
+import { useContext } from "react";
+import { AuthProvider } from "../../AutoContext/AuthContext";
+
 
 function Login() {
 

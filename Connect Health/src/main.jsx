@@ -20,6 +20,7 @@ import Carrossel from './Home/Componentes/Carrossel'
 import Perfil from './Perfil/perfil'
 import App from './App'
 import Eventos from './Complementares/Eventos/Eventos'
+import { AuthProvider } from './AutoContext/AuthContext'
 
 const router = createBrowserRouter([
   
@@ -92,7 +93,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
