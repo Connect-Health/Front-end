@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../../Components/Header'
 
 import events from '../../../assets/eventos.jpg'
-import Empresas from './empresas'
+import Empresas from './Empresas'
 
 const Eventos = () => {
   return (
