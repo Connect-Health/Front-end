@@ -15,6 +15,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AutoContext/AuthContext";
 
 
+
 function Login() {
     const navigate = useNavigate();
 
@@ -70,8 +71,9 @@ function Login() {
         {email, senha}
       )
       if (response.status === 200 && response.data.success === true) {
-        updateUser(response.data.profissional);
-        // window.location.href = '/dashboard'
+        updateUser(response.data.profissional)
+        localStorage.setItem("user", JSON.stringify(response.data.profissional));
+        navigate("/")
       } else {
         setOpenSnackbar(true);
       }

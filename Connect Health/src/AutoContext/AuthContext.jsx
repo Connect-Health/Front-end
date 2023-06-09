@@ -14,8 +14,14 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  const logout = () => {
+    window.location.reload();
+    updateUser(null);
+    localStorage.removeItem("user");
+  };
+
   return (
-    <AuthContext.Provider value={{ user, updateUser }}>
+    <AuthContext.Provider value={{ user, updateUser, logout }}>
       {children}
     </AuthContext.Provider>
   );

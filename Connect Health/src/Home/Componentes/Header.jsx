@@ -17,7 +17,9 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import { useState, useEffect } from "react"
-import Menu from '../../Components/Menu'
+import Menu2 from '../../Components/Menu'
+
+import { Menu, MenuItem } from "@mui/material";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -67,8 +69,23 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const { user } = useContext(AuthContext)
+  const { user, logout } = useContext(AuthContext)
   const [theme, setTheme] = useState("light");
+
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleLogout = () => {
+    logout();
+    handleMenuClose();
+  };
 
     useEffect(() => {
         if (theme === "dark"){
@@ -90,7 +107,7 @@ const Header = () => {
         <div className='flex gap-10 z-10 
         max-md:-ml-5 max-md:w-[90%] 
         '>
-          <Menu 
+          <Menu2
             area4="Eventos Empresariais"
             area1="Area psicologia"
             area2="Area nutrição"
@@ -118,9 +135,36 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 rounded-full object-cover max-md:hidden' />
+            <div>
+            <button onClick={handleMenuOpen}>
+            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 object-cover rounded-full' />
+            </button>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              {user && (
+                <MenuItem component={Link} to="/dashboard" onClick={handleMenuClose}>
+                  Dashboard
+                </MenuItem>
+              )}
+              {user && (
+                <MenuItem onClick={handleLogout}>Logout</MenuItem>
+              )}
+            </Menu>
+          </div>
           ) : (
-            <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3 rounded'>Login</Link>
+            <div className='flex items-center gap-5'>
+              <Link to='/register' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
+                max-md:hidden
+              '>Cadastro
+              </Link>
+              <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3 rounded
+                max-md:hidden
+              '>Login
+              </Link>
+            </div>
           )}
         </div>
         {/* <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-36 items-center flex-col
