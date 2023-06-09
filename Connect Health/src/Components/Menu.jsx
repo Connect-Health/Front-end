@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import BarsSolid from '../../assets/bars-solid.svg'
 import { AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 import User from '../../assets/user.svg'
+import { AuthContext } from '../AutoContext/AuthContext'
 
 
 const Menu = (props) => {
+    const { user } = useContext(AuthContext)
+
     const [open, setOpen] = useState(false)
 
     const abrirMenu = () => {
@@ -30,9 +33,14 @@ const Menu = (props) => {
                         <Link className='w-[90%] mx-auto mt-5 text-center bg-azulsite/25 py-3 uppercase font-bold shadow-md drop-shadow border-b rounded-xl ' to={`/${props.link4}`}>{props.area4}</Link>
                     </div>
                 </div>
-                <Link to="/login" className='absolute top-3 left-3 flex items-center' >
-                    <img src={User} alt="" className='w-10 h-10 border p-1 rounded-full ' />
-                </Link>
+                {user ? (
+            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 object-cover rounded-full absolute top-3 left-3' />
+          ) : (
+            <Link to="/login" className='absolute top-3 left-3 flex items-center' >
+                <img src={User} alt="" className='w-10 h-10 border p-1 rounded-full ' />
+            </Link>
+          )}
+                
 
                 <h1 className='font-bold absolute bottom-20 left-1/2 -translate-x-1/2 uppercase text-azulsite'>Connect Health</h1>
             </div>

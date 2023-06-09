@@ -1,16 +1,18 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 // Crie o contexto
 export const AuthContext = createContext();
 
 // Crie o provedor do contexto
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, updateUser] = useState(null);
 
-  // Função para atualizar as informações do usuário logado
-  const updateUser = (userData) => {
-    setUser(userData);
-  };
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      updateUser(JSON.parse(storedUser));
+    }
+  }, []);
 
   return (
     <AuthContext.Provider value={{ user, updateUser }}>

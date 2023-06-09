@@ -1,5 +1,5 @@
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RiFacebookCircleFill, RiLinkedinFill } from "react-icons/ri";
 import lockericon from "../../../assets/lockericon.png";
 import mailicon from "../../../assets/mailicon.png";
@@ -12,10 +12,13 @@ import axios from 'axios'
 import { Alert, Snackbar } from "@mui/material";
 
 import { useContext } from "react";
-import { AuthProvider } from "../../AutoContext/AuthContext";
+import { AuthContext } from "../../AutoContext/AuthContext";
 
 
 function Login() {
+    const navigate = useNavigate();
+
+    const { user, updateUser } = useContext(AuthContext);
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -47,8 +50,10 @@ function Login() {
         { email }
       );
   
-      if (response.status === 200 && response.data === true) {
-        window.location.href = "/dashboard";
+      if (response.status === 200 && response.data.success === true) {
+        updateUser(response.data.profissional)
+        localStorage.setItem("user", JSON.stringify(response.data.profissional));
+        navigate("/")
       } else {
         setSnackbarMessage("Email não autorizado");
         setOpenSnackbar(true);
@@ -64,8 +69,9 @@ function Login() {
         "https://connect-health.up.railway.app/profissional/login",
         {email, senha}
       )
-      if (response.status === 200 && response.data === true) {
-        window.location.href = '/dashboard'
+      if (response.status === 200 && response.data.success === true) {
+        updateUser(response.data.profissional);
+        // window.location.href = '/dashboard'
       } else {
         setOpenSnackbar(true);
       }
@@ -75,7 +81,8 @@ function Login() {
   }
 
   return (
-
+    
+    
     <div className="flex max-md:h-fit">
         <div className="flex flex-col items-center w-[40%] justify-center gap-6 max-md:w-full relative z-0  ">
         <h1 className="font-extrabold text-4xl max-md:text-2xl">Bem Vindo(a)!</h1>
