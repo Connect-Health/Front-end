@@ -105,7 +105,7 @@ const MenuMobile = () => {
                     <p>Adicionar Imagem</p>
                 </div>
 
-                <button className='absolute left-1/2 -translate-x-1/2 mt-5' onClick={handlePostar}>Enviar</button>
+                <button className='absolute left-1/2 -translate-x-1/2 mt-5 bottom-3 py-2 bg-azulsite w-[80%] rounded-lg font-bold text-white' onClick={handlePostar}>Enviar</button>
 
             </div>
 
