@@ -18,7 +18,7 @@ const Menu = (props) => {
     }
   return (
     <div className='max-md:block hidden max-md:absolute z-50 left-2 top-3'>
-        <button onClick={abrirMenu} className='h-5 w-5 absolute z-50'>
+        <button onClick={abrirMenu} className='h-5 w-5 absolute z-50 dark:invert'>
                 <img src={BarsSolid} alt="" />
         </button>
 
