@@ -118,7 +118,7 @@ const Post = ({ post, user }) => {
         <hr />
         {showComentarios && (
           
-          <div className="ml-[5%] mt-2">
+          <div className="ml-[5%] mt-2 w-[95%]">
             <div className='flex gap-5  mb-5'>
               <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full' alt="" />
               <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' />
