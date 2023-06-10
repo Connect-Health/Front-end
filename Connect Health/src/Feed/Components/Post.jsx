@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import { FaComment, FaHeart, FaShare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { AiFillDelete } from 'react-icons/ai';
+import Tooltip from '@mui/material/Tooltip';
+
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 const MaxLength = 250;
 
-const Post = ({ post }) => {
+const Post = ({ post, user }) => {
   const [showFullContent, setShowFullContent] = useState(false);
   const [expandPhoto, setExpandPhoto] = useState(false);
+
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
+  const handleCloseAlert = () => {
+    setShowDeleteAlert(false);
+  };
 
   const handleToggleContent = () => {
     setShowFullContent(!showFullContent);
@@ -18,21 +29,42 @@ const Post = ({ post }) => {
 
   const content = showFullContent ? post.conteudo : post.conteudo.slice(0, MaxLength);
 
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`https://connect-health.up.railway.app/post/${post.postId}`);
+      setShowDeleteAlert(true);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div key={post.postId} className="flex text-justify shadow-md text-gray-500 text-[gray] bg-white rounded-xl mt-8 max-md:text-sm max-md:w-[100%] w-full">
       <div className="flex flex-col items-start max-md:w-[100%] w-full">
-      <div className={`flex items-center gap-7 w-full rounded-t-xl pb-5 pt-3  ${post.profissional.areaAtuacao.areaId === 2 ? 'bg-nutri/70' : post.profissional.areaAtuacao.areaId === 1 ? 'bg-psi/70' : ''}`}>
-  <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`}>
-    <img className="h-16 w-16 mt-3 ml-5 rounded-full object-cover" src={post.profissional.urlAvatar} alt="" />
-  </Link>
-  <div>
-    <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`} className="mt-3 text-black/90 font-bold text-lg">{post.profissional.nome} {post.profissional.sobrenome}</Link>
-    <p className="text-xs mt-1 text-black/70 font-semibold">{post.horaPublicacao} - {post.dataPublicacao}</p>
-  </div>
-</div>
+        <div className={`flex items-center w-full justify-between rounded-t-xl pb-5 pt-3  ${post.profissional.areaAtuacao.areaId === 2 ? 'bg-nutri/70' : post.profissional.areaAtuacao.areaId === 1 ? 'bg-psi/70' : ''}`}>
+          <div className='flex items-center gap-7'>
+            <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`}>
+              <img className="h-16 w-16 mt-3 ml-5 rounded-full object-cover" src={post.profissional.urlAvatar} alt="" />
+            </Link>
+            <div>
+              <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`} className="mt-3 text-black/90 font-bold text-lg">{post.profissional.nome} {post.profissional.sobrenome}</Link>
+              <p className="text-xs mt-1 text-black/70 font-semibold">{post.horaPublicacao} - {post.dataPublicacao}</p>
+            </div>
+          </div>
+          {user && post.profissional.profissionalId === user.profissionalId && (
+            <button onClick={handleDelete} className="pr-10">
+              <Tooltip title="Deletar">
+                <AiFillDelete className='text-xl text-white' />
+              </Tooltip>
+            </button>
+          )}
+        </div>
         <hr className=" border-[#8742] w-full" />
         <div className="px-[5%]">
-          <p className="mt-7 pr-[5%] text-left text-black text-lg mb-5 max-md:text-sm max-md:mt-5">
+          <p className="mt-7 w-full text-left text-black text-lg mb-5 max-md:text-sm max-md:mt-5">
             {content}
           </p>
           {post.conteudo.length > MaxLength && !showFullContent && (
@@ -59,8 +91,14 @@ const Post = ({ post }) => {
             <FaShare className="hover:text-[#4667fc]" />
             Compartilhar
           </button>
+          
         </div>
         <hr />
+        <Snackbar open={showDeleteAlert} autoHideDuration={4000} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+          <MuiAlert onClose={handleCloseAlert} severity="success" sx={{ width: '100%' }}>
+            <p className='uppercase font-semibold'>Postagem deletada</p>
+          </MuiAlert>
+        </Snackbar>
       </div>
     </div>
   );

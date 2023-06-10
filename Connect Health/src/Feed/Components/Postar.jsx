@@ -3,13 +3,21 @@ import { BsImageFill, BsThreeDots } from 'react-icons/bs';
 import { MdLocationOn, MdSubscriptions } from 'react-icons/md';
 import axios from 'axios';
 import { AuthContext } from '../../AutoContext/AuthContext';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 const Postar = () => {
   const [titulo, setTitulo] = useState('');
   const [conteudo, setConteudo] = useState('');
   const { user } = useContext(AuthContext);
+  const [showSnackbar, setShowSnackbar] = useState(false);
 
   const handlePostar = async () => {
+    if (!user) {
+      showLoginSnackbar();
+      return;
+    }
+
     try {
       const currentDate = new Date();
       const dataPublicacao = currentDate.toISOString().split('T')[0];
@@ -35,6 +43,14 @@ const Postar = () => {
     }
   };
 
+  const showLoginSnackbar = () => {
+    setShowSnackbar(true);
+  };
+
+  const handleCloseSnackbar = () => {
+    setShowSnackbar(false);
+  };
+
   return (
     <div className='bg-white pt-3 pl-3 flex flex-col h-fit mt-10 rounded-xl mb-14 max-md:hidden'>
       <input
@@ -54,7 +70,7 @@ const Postar = () => {
 
       <div className='flex justify-between items-center'>
         <div className='items-center flex gap-3 ml-10 mt-3 mb-3'>
-          <BsImageFill className='text-2xl text-[#658FF9] cursor-pointer' />
+          <BsImageFill className='text-2xl text-[#658FF9] cursor-pointer' alt="imagem" />
           <MdSubscriptions className='text-2xl text-[#658FF9] cursor-pointer' />
           <MdLocationOn className='text-2xl text-[#658FF9] cursor-pointer' />
           <BsThreeDots className='text-2xl text-[#658FF9] cursor-pointer' />
@@ -69,6 +85,12 @@ const Postar = () => {
           </button>
         </div>
       </div>
+
+      <Snackbar open={showSnackbar} autoHideDuration={4000} onClose={handleCloseSnackbar} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
+        <MuiAlert onClose={handleCloseSnackbar} severity="warning" sx={{ width: '100%' }}>
+          <p className='text-black text-lg'>Faça login para fazer o seu post.</p>
+        </MuiAlert>
+      </Snackbar>
     </div>
   );
 };
