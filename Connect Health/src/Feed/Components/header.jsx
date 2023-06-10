@@ -19,13 +19,13 @@ const header = () => {
 
   <div className="flex flex-grow justify-end items-center">
     {user ? (
-      <div className='max-md:hidden flex items-center mr-10'>
+      <div className=' flex items-center mr-10'>
         <button> <img className="pr-5 h-8" src={ring} alt="" /></button>
         <Perfil />
       </div>
       ) : (
-        <Link to ='/login' className="flex items-center mr-10">
-          <img className=" h-10 w-10" src={userl} alt="" />
+        <Link to ='/login' className="flex items-center mr-10 max-md:mr-5">
+          <img className=" h-10 w-16" src={userl} alt="" />
           <h3 className="text-white text-[13px]
           max-md:hidden
           ">LOGIN OU REGISTRE-SE</h3>
