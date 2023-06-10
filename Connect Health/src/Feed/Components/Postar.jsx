@@ -11,6 +11,8 @@ const Postar = () => {
   const [conteudo, setConteudo] = useState('');
   const { user } = useContext(AuthContext);
   const [showSnackbar, setShowSnackbar] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
 
   const handlePostar = async () => {
     if (!user) {
@@ -38,8 +40,9 @@ const Postar = () => {
 
       setTitulo('');
       setConteudo('');
+      setShowSuccessAlert(true);
     } catch (error) {
-      console.log(error);
+      setShowErrorAlert(true);
     }
   };
 
@@ -49,6 +52,14 @@ const Postar = () => {
 
   const handleCloseSnackbar = () => {
     setShowSnackbar(false);
+  };
+
+  const handleSuccessAlertClose = () => {
+    setShowSuccessAlert(false);
+  };
+
+  const handleErrorAlertClose = () => {
+    setShowErrorAlert(false);
   };
 
   return (
@@ -89,6 +100,18 @@ const Postar = () => {
       <Snackbar open={showSnackbar} autoHideDuration={4000} onClose={handleCloseSnackbar} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
         <MuiAlert onClose={handleCloseSnackbar} severity="warning" sx={{ width: '100%' }}>
           <p className='text-black text-lg'>Faça login para fazer o seu post.</p>
+        </MuiAlert>
+      </Snackbar>
+
+      <Snackbar open={showSuccessAlert} autoHideDuration={4000} onClose={handleSuccessAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
+        <MuiAlert onClose={handleSuccessAlertClose} severity="success" sx={{ width: '100%' }}>
+          <p className='text-black text-lg'>Postagem feita com sucesso! Atualize a página para conferir</p>
+        </MuiAlert>
+      </Snackbar>
+
+      <Snackbar open={showErrorAlert} autoHideDuration={4000} onClose={handleErrorAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
+        <MuiAlert onClose={handleErrorAlertClose} severity="error" sx={{ width: '100%' }}>
+          <p className='text-black text-lg'>Erro ao fazer a postagem. Tente novamente.</p>
         </MuiAlert>
       </Snackbar>
     </div>
