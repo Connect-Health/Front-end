@@ -5,17 +5,16 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 
-
-
-const centro = () => {
-  const [data, setData] = useState(null);
+const Centro = () => {
+  const [data, setData] = useState([]);
   const [visiblePosts, setVisiblePosts] = useState(10);
 
   useEffect(() => {
     async function fetchPosts() {
       try {
         const response = await axios.get(`https://connect-health.up.railway.app/post`);
-        setData(response.data);
+        const reversedData = response.data.reverse(); 
+        setData(reversedData);
       } catch (error) {
         console.log(error);
       }
@@ -31,8 +30,8 @@ const centro = () => {
   return (
     <div className="w-1/2 mb-16 mx-auto mt-20 max-md:w-full">
       <Postar />
-      {data ? (
-        data.slice(0, visiblePosts).map((post) => (
+      {data.length > 0 ? (
+        data.slice(0, visiblePosts).map((post, index) => (
           <Post key={post.postId} post={post} />
         ))
       ) : (
@@ -42,7 +41,7 @@ const centro = () => {
         </div>
       )}
 
-      {data && data.length > visiblePosts && (
+      {data.length > visiblePosts && (
         <button className="absolute left-1/2 mt-5 text-3xl text-azulsite" onClick={loadMorePosts}>
           <BsFillArrowDownCircleFill />
         </button>
@@ -50,4 +49,5 @@ const centro = () => {
     </div>
   );
 };
-export default centro;
+
+export default Centro;
