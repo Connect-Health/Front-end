@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import User from '../../assets/user.svg'
 import { AuthContext } from '../AutoContext/AuthContext'
+import Perfil from './Perfil'
 
 
 const Menu = (props) => {
@@ -16,7 +17,7 @@ const Menu = (props) => {
         setOpen(!open);
     }
   return (
-    <div className='max-md:block hidden max-md:absolute z-50 left-2 top-2'>
+    <div className='max-md:block hidden max-md:absolute z-50 left-2 top-3'>
         <button onClick={abrirMenu} className='h-5 w-5 absolute z-50'>
                 <img src={BarsSolid} alt="" />
         </button>
@@ -34,7 +35,9 @@ const Menu = (props) => {
                     </div>
                 </div>
                 {user ? (
-            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 object-cover rounded-full absolute top-3 left-3' />
+                    <div className='absolute top-3 left-3'>
+                        <Perfil />
+                    </div>
           ) : (
             <Link to="/login" className='absolute top-3 left-3 flex items-center' >
                 <img src={User} alt="" className='w-10 h-10 border p-1 rounded-full ' />

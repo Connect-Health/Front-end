@@ -1,9 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Modo from '../../../assets/mode.png'
-import {BsArrowRight} from 'react-icons/bs'
-import vetor from '../../../assets/vectorHome.svg'
-import BarsSolid from '../../../assets/bars-solid.svg'
 
 import { useContext } from 'react'
 import { AuthContext } from '../../AutoContext/AuthContext'
@@ -13,13 +9,11 @@ import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 
 import { useState, useEffect } from "react"
 import Menu2 from '../../Components/Menu'
 
-import { Menu, MenuItem } from "@mui/material";
+import Perfil from '../../Components/Perfil'
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -69,23 +63,8 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const { user, logout } = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
   const [theme, setTheme] = useState("light");
-
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleLogout = () => {
-    logout();
-    handleMenuClose();
-  };
 
     useEffect(() => {
         if (theme === "dark"){
@@ -103,22 +82,24 @@ const Header = () => {
 
   return (
     <div id='home' className='relative z-50 '>
-      <div className='flex justify-between items-center py-3 px-10 bg-[#f5f5f5] dark:bg-white/0'>
+      <div className='flex justify-between items-center py-6 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
         <div className='flex gap-10 z-10 
-        max-md:-ml-5 max-md:w-[90%] 
+        
         '>
-          <Menu2
-            area4="Eventos Empresariais"
-            area1="Area psicologia"
-            area2="Area nutrição"
-            area3="Feed de noticias"
-  
-            home="psicologia"
-            link2="nutricao"
-            link3="feed"
-            link4="eventos"
-          />
-          <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
+          <div className='absolute top-0 left-1'>
+            <Menu2
+              area4="Eventos Empresariais"
+              area1="Area psicologia"
+              area2="Area nutrição"
+              area3="Feed de noticias"
+    
+              home="psicologia"
+              link2="nutricao"
+              link3="feed"
+              link4="eventos"
+            />
+          </div>
+          <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold max-md:absolute left-1/2 -translate-x-1/2 top-2.5'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
           <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden
           '>Psicologia</Link>
@@ -135,24 +116,8 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-            <div>
-            <button onClick={handleMenuOpen}>
-            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 object-cover rounded-full' />
-            </button>
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleMenuClose}
-            >
-              {user && (
-                <MenuItem component={Link} to="/dashboard" onClick={handleMenuClose}>
-                  Dashboard
-                </MenuItem>
-              )}
-              {user && (
-                <MenuItem onClick={handleLogout}>Logout</MenuItem>
-              )}
-            </Menu>
+          <div className='max-md:hidden'>
+            <Perfil />
           </div>
           ) : (
             <div className='flex items-center gap-5'>
@@ -187,7 +152,7 @@ const Header = () => {
           </div>
             
         </div> */}
-        <FormGroup onClick={handleThemeSwitch} className='absolute right-0'>
+        <FormGroup onClick={handleThemeSwitch} className='absolute -right-2'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}
             />
