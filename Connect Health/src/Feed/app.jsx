@@ -2,6 +2,7 @@ import Header from "./Components/header"
 import Centro from "./Components/centro"
 import Menu from "./Components/Menu"
 import Recomendacoes from "./Components/Recomendacoes"
+import MenuMobile from "./Components/MenuMobile"
 
 
 
@@ -14,6 +15,7 @@ function Feed() {
             <Centro />
             <Recomendacoes />
         </div>
+        <MenuMobile />
       
         
 
