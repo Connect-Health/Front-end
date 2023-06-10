@@ -12,7 +12,7 @@ const header = () => {
   const { user } = useContext(AuthContext)
 
     return (
-<div className="bg-[#658FF9] w-full flex h-20 fixed z-10">
+<div className="bg-[#658FF9] w-full flex h-20 fixed z-0">
   <Link to='/' className="w-16 pt-2 ml-5">
     <img className="invert " src={logo} alt="" />
   </Link>
