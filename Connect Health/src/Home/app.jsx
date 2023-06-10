@@ -11,7 +11,7 @@ import Footer from "../Components/Footer"
 
 function Home() {
     return(
-        <div className="dark:bg-black dark:bg-opacity-90 dark:text-white">
+        <div className="dark:bg-black dark:bg-opacity-90 dark:text-white max-md:overflow-x-hidden">
             <BGHome/>
             {/* <Blocos /> */}
             <Psico />
