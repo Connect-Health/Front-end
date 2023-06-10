@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { FaComment, FaHeart, FaShare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { AiFillDelete } from 'react-icons/ai';
+import { AiFillDelete, AiOutlineSend } from 'react-icons/ai';
 import Tooltip from '@mui/material/Tooltip';
 
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
+import { BsFillSendFill } from 'react-icons/bs';
 
 const MaxLength = 250;
 
@@ -118,14 +119,17 @@ const Post = ({ post, user }) => {
         <hr />
         {showComentarios && (
           
-          <div className="ml-[5%] mt-2 w-[95%]">
+          <div className="ml-[5%] mt-2 w-[100%]">
             <div className='flex gap-5  mb-5'>
               <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full' alt="" />
               <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' />
+              <button>
+                <AiOutlineSend className='text-2xl -ml-14' />
+              </button>
               
             </div>
             {comentarios.map((comentario) => (
-              <div key={comentario.comentarioId} className="w-[95%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
+              <div key={comentario.comentarioId} className="w-[100%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
                 <div className='flex gap-3 items-center'>
                   <img className='h-8 w-8 object-cover rounded-full' src={comentario.paciente.urlAvatar} alt="imagem" />
                   <p className='font-semibold'>{comentario.paciente.nome} {comentario.paciente.sobrenome}</p>
