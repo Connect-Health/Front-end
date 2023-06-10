@@ -25,7 +25,7 @@ const Perfil = () => {
     <div>
         <div className=''>
             <button onClick={handleMenuOpen}>
-            <img src={user.urlAvatar} alt='Avatar' className='w-10 h-10 object-cover rounded-full' />
+            <img src={user.urlAvatar} alt='Avatar' className='w-14 h-14 object-top object-cover rounded-full' />
             </button>
             <Menu
               anchorEl={anchorEl}
