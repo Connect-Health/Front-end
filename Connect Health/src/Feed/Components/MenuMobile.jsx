@@ -42,7 +42,10 @@ const MenuMobile = () => {
     
           setTitulo('');
           setConteudo('');
-          setShowSuccessAlert(true);
+          handleCloseModal();
+          setTimeout(() => {
+            setShowSuccessAlert(true);
+          }, 3000);
         } catch (error) {
           setShowErrorAlert(true);
         }
@@ -117,11 +120,6 @@ const MenuMobile = () => {
             </MuiAlert>
         </Snackbar>
 
-        <Snackbar open={showSuccessAlert} autoHideDuration={4000} onClose={handleSuccessAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
-            <MuiAlert onClose={handleSuccessAlertClose} severity="success" sx={{ width: '100%' }}>
-            <p className='text-black text-lg'>Postagem feita com sucesso! Atualize a página para conferir</p>
-            </MuiAlert>
-        </Snackbar>
 
         <Snackbar open={showErrorAlert} autoHideDuration={4000} onClose={handleErrorAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
             <MuiAlert onClose={handleErrorAlertClose} severity="error" sx={{ width: '100%' }}>
@@ -129,6 +127,11 @@ const MenuMobile = () => {
             </MuiAlert>
         </Snackbar>
       </Backdrop>
+        <Snackbar open={showSuccessAlert} autoHideDuration={4000} onClose={handleSuccessAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
+            <MuiAlert onClose={handleSuccessAlertClose} severity="success" sx={{ width: '100%' }}>
+            <p className='text-black text-lg'>Postagem feita com sucesso! <br/> Atualize a página para conferir</p>
+            </MuiAlert>
+        </Snackbar>
     </div>
   );
 };
