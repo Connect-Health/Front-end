@@ -99,7 +99,7 @@ const Postar = () => {
 
       <Snackbar open={showSnackbar} autoHideDuration={4000} onClose={handleCloseSnackbar} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
         <MuiAlert onClose={handleCloseSnackbar} severity="warning" sx={{ width: '100%' }}>
-          <p className='text-black text-lg'>Faça login para fazer o seu post.</p>
+          <p className='text-black text-lg'>Faça login como profissional para fazer o seu post.</p>
         </MuiAlert>
       </Snackbar>
 
