@@ -82,7 +82,7 @@ const Header = () => {
 
   return (
     <div id='home' className='relative z-50 '>
-      <div className='flex justify-between items-center py-6 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
+      <div className='flex justify-between items-center py-8 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
         <div className='flex gap-10 z-10 
         
         '>
@@ -116,7 +116,7 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-          <div className='max-md:hidden absolute right-24 top-3.5'>
+          <div className='max-md:hidden absolute right-32 top-3.5'>
             <Perfil />
           </div>
           ) : (
@@ -152,7 +152,7 @@ const Header = () => {
           </div>
             
         </div> */}
-        <FormGroup onClick={handleThemeSwitch} className='absolute -right-2'>
+        <FormGroup onClick={handleThemeSwitch} className='absolute right-0'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}
             />

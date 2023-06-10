@@ -18,6 +18,7 @@ const Post = ({ post, user }) => {
   const [showDeleteAlert, setShowDeleteAlert] = useState(false);
   const [comentarios, setComentarios] = useState([]);
   const [showComentarios, setShowComentarios] = useState(false);
+  const [novoComentario, setNovoComentario] = useState('');
 
   useEffect(() => {
     const fetchComentarios = async () => {
@@ -62,6 +63,30 @@ const Post = ({ post, user }) => {
 
   const handleToggleComentarios = () => {
     setShowComentarios(!showComentarios);
+  };
+
+  const handleNovoComentario = (e) => {
+    setNovoComentario(e.target.value);
+  };
+
+  const handleEnviarComentario = async () => {
+    try {
+      const comentarioData = {
+        comentario: novoComentario,
+        post: {
+          postId: post.postId,
+        },
+        paciente: {
+          pacienteId: user.pacienteId,
+        },
+      };
+
+      await axios.post('https://connect-health.up.railway.app/comentario', comentarioData);
+      setNovoComentario('');
+      setShowComentarios(true);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -110,20 +135,16 @@ const Post = ({ post, user }) => {
             <FaComment />
             Comentários
           </button>
-          
-          
         </div>
         <hr />
         {showComentarios && (
-          
           <div className="ml-[5%] mt-2 w-[100%]">
             <div className='flex gap-5  mb-5'>
-              <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full' alt="" />
-              <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' />
-              <button>
+              <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full object-top' alt="" />
+              <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' value={novoComentario} onChange={handleNovoComentario} />
+              <button onClick={handleEnviarComentario}>
                 <AiOutlineSend className='text-2xl -ml-14' />
               </button>
-              
             </div>
             {comentarios.map((comentario) => (
               <div key={comentario.comentarioId} className="w-[100%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
@@ -134,8 +155,6 @@ const Post = ({ post, user }) => {
                 <p className="mt-3 mb-2">{comentario.comentario}</p>
               </div>
             ))}
-
-            
           </div>
         )}
         <Snackbar open={showDeleteAlert} autoHideDuration={4000} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
