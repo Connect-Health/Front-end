@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaComment, FaHeart, FaShare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -15,6 +15,24 @@ const Post = ({ post, user }) => {
   const [expandPhoto, setExpandPhoto] = useState(false);
 
   const [showDeleteAlert, setShowDeleteAlert] = useState(false);
+  const [comentarios, setComentarios] = useState([]);
+  const [showComentarios, setShowComentarios] = useState(false);
+
+  useEffect(() => {
+    const fetchComentarios = async () => {
+      try {
+        const response = await axios.get(`https://connect-health.up.railway.app/comentario/post/${post.postId}`);
+        setComentarios(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    if (showComentarios) {
+      fetchComentarios();
+    }
+  }, [post.postId, showComentarios]);
+
   const handleCloseAlert = () => {
     setShowDeleteAlert(false);
   };
@@ -39,6 +57,10 @@ const Post = ({ post, user }) => {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const handleToggleComentarios = () => {
+    setShowComentarios(!showComentarios);
   };
 
   return (
@@ -83,9 +105,9 @@ const Post = ({ post, user }) => {
             <FaHeart className="hover:text-[#fc4646]" />
             Curtir
           </button>
-          <button className="flex items-center gap-2">
+          <button className="flex items-center gap-2" onClick={handleToggleComentarios}>
             <FaComment />
-            Comentar
+            Comentários
           </button>
           <button className="flex items-center gap-2">
             <FaShare className="hover:text-[#4667fc]" />
@@ -94,6 +116,27 @@ const Post = ({ post, user }) => {
           
         </div>
         <hr />
+        {showComentarios && (
+          
+          <div className="ml-[5%] mt-2">
+            <div className='flex gap-5  mb-5'>
+              <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full' alt="" />
+              <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' />
+              
+            </div>
+            {comentarios.map((comentario) => (
+              <div key={comentario.comentarioId} className="w-[95%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
+                <div className='flex gap-3 items-center'>
+                  <img className='h-8 w-8 object-cover rounded-full' src={comentario.paciente.urlAvatar} alt="imagem" />
+                  <p className='font-semibold'>{comentario.paciente.nome} {comentario.paciente.sobrenome}</p>
+                </div>
+                <p className="mt-3 mb-2">{comentario.comentario}</p>
+              </div>
+            ))}
+
+            
+          </div>
+        )}
         <Snackbar open={showDeleteAlert} autoHideDuration={4000} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
           <MuiAlert onClose={handleCloseAlert} severity="success" sx={{ width: '100%' }}>
             <p className='uppercase font-semibold'>Postagem deletada</p>
