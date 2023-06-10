@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Menu2 from '../../assets/bars-solid.svg'
 import Menu from './Menu'
+import Perfil from './Perfil'
+import { AuthContext } from '../AutoContext/AuthContext'
 
 const Header = (props) => {
+  const { user } = useContext(AuthContext)
+
   return (
     <div className={`
       flex justify-between items-center py-3 px-10 z-50 bg-white/0 backdrop-blur-3xl ${props.pai}
@@ -22,10 +26,17 @@ const Header = (props) => {
           max-md:hidden
         `}>{props.area}</h2>
 
-        <div className='flex gap-5 z-10 max-md:hidden'>
+        <div className='flex gap-5 z-10 max-md:hidden items-center'>
             <Link to={props.link} className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>{props.areaNav}</Link>
             <Link to='/feed' className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Feed de Noticias</Link>
-            <Link to="/login" className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</Link>
+            {user ? (
+              <div className='max-md:hidden'>
+                <Perfil />
+              </div>
+              ) : (
+                <Link to="/login" className='text-white uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300'>Cadastro</Link>
+              )
+            }
         </div>
     </div>
 

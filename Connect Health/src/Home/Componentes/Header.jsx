@@ -116,7 +116,7 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-          <div className='max-md:hidden'>
+          <div className='max-md:hidden absolute right-24 top-3.5'>
             <Perfil />
           </div>
           ) : (
