@@ -25,7 +25,7 @@ const header = () => {
       </div>
       ) : (
         <Link to ='/login' className="flex items-center mr-10">
-          <img className=" h-10 w-fit" src={userl} alt="" />
+          <img className=" h-10 w-10" src={userl} alt="" />
           <h3 className="text-white text-[13px]
           max-md:hidden
           ">LOGIN OU REGISTRE-SE</h3>
