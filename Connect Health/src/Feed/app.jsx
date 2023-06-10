@@ -8,7 +8,7 @@ import MenuMobile from "./Components/MenuMobile"
 
 function Feed() {
     return(
-        <>
+        <div className="overflow-x-hidden">
         <Header />  
         <div className="flex  bg-[#f5f5f5]">
             <Menu />
@@ -19,7 +19,7 @@ function Feed() {
       
         
 
-        </>
+        </div>
         
     )
 }

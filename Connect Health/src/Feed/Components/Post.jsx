@@ -110,10 +110,7 @@ const Post = ({ post, user }) => {
             <FaComment />
             Comentários
           </button>
-          <button className="flex items-center gap-2">
-            <FaShare className="hover:text-[#4667fc]" />
-            Compartilhar
-          </button>
+          
           
         </div>
         <hr />
