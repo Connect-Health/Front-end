@@ -9,7 +9,7 @@ import Ft from '../../../assets/ft.svg'
 function Dashboard() {
     return (
         <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 ">
                 <div className="pt-5 pl-12 flex flex-col gap-2">
                     <h2 className="text-2xl">Painel de Controle</h2>
                     <p className="">Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
@@ -18,7 +18,7 @@ function Dashboard() {
                 {/*Inicio div dos cartoes*/}
 
                 <div className="flex">
-                    <div className='bg-[#e3ea12] w-[23%] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
+                    <div className='bg-[#e3ea12] w-[26  %] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
                         <img className="h-40 -mt-10 -mb-8" src={Planta} alt="" />
                         <div className="z-1">
                             <h3 className="font-bold text-xl">9.6 AVERAGE SCORE</h3>
@@ -28,7 +28,7 @@ function Dashboard() {
                     
                     {/* Inicio segundo card */}
 
-                    <div className='bg-[#e9e9e9aa] w-[23%] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
+                    <div className='bg-[#e9e9e9aa] w-[26%] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
                         <div className=" flex items-center">
                             <div>
                                 <h1 className="text-xl w-[20%]">Product Analytics</h1>
@@ -53,7 +53,7 @@ function Dashboard() {
 
                 {/* Fim segundo Card e da Div */}
 
-                <div className="w-[50%] ml-12 mt-10 h-[40vh] flex flex-col">
+                <div className="w-[65%] ml-12 mt-10 h-[40vh] flex flex-col">
                     <div className=" flex justify-between items-center">
                         <p className="font-bold text-lg">Últimos pacientes atendidos</p>
                         <div className="flex">
