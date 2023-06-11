@@ -21,6 +21,7 @@ import Perfil from './Perfil/perfil'
 import App from './App'
 import Eventos from './Complementares/Eventos/Eventos'
 import { AuthProvider } from './AutoContext/AuthContext'
+import Perfil_Psi from './Perfil_Psico/perfil'
 
 const router = createBrowserRouter([
   
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path: '/perfil',
         element: <Perfil />,
+      },
+      {
+        path: '/perfil_psi',
+        element: <Perfil_Psi />,
       },
       {
         path: '/eventos',

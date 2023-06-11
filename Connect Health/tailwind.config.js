@@ -26,6 +26,7 @@ export default {
         "sobre": "url('assets/bgsobre.svg')",
         "bglogin": "url('assets/bglogin.png')",
         "bgestrela": "url('assets/estrelas2.jpg')",
+        "bghug": "url('assets/peoplehug.png')"
       },
       boxShadow: {
         'nutrici': '0 10px 10px 0 rgba(148, 255, 39, 0.7)',
