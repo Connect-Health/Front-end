@@ -37,9 +37,7 @@ const Comentario = ({ comentario, user, userId, onDeleteComentario }) => {
         )}
       </div>
       <p className="mt-3 mb-2 pl-5">{comentario.comentario}</p>
-      {comentario.paciente.pacienteId !== userId && (
-          <div className="text-red-500">Mensagem para não pacientes</div>
-      )}
+      
 
       <Snackbar
           open={showDeleteAlert}

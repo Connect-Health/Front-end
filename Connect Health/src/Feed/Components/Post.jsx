@@ -122,7 +122,7 @@ const Post = ({ post, user }) => {
         <div className={`flex items-center w-full justify-between rounded-t-xl pb-5 pt-3  ${post.profissional.areaAtuacao.areaId === 2 ? 'bg-nutri/70' : post.profissional.areaAtuacao.areaId === 1 ? 'bg-psi/70' : ''}`}>
           <div className='flex items-center gap-7'>
             <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`}>
-              <img className="h-16 w-16 mt-3 ml-5 rounded-full object-cover" src={post.profissional.urlAvatar} alt="" />
+              <img className="h-16 w-16 mt-3 ml-5 rounded-full object-cover object-top" src={post.profissional.urlAvatar} alt="" />
             </Link>
             <div>
               <Link to={`/profissional/${post.profissional.areaAtuacao.nome}/${post.profissional.profissionalId}`} className="mt-3 text-black/90 font-bold text-lg">{post.profissional.nome} {post.profissional.sobrenome}</Link>
