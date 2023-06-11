@@ -16,7 +16,7 @@ const Profissional = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className='bg-[#a74df1]/30'>
+    <div className='bg-[#a74df1]/30 '>
         <Header 
             link="psicologia"
             text="psi"
