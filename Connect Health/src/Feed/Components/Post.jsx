@@ -8,6 +8,9 @@ import Tooltip from '@mui/material/Tooltip';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { BsFillSendFill } from 'react-icons/bs';
+import Comentario from './Comentario';
+
+
 
 const MaxLength = 250;
 
@@ -100,7 +103,7 @@ const Post = ({ post, user }) => {
       setShowComentarios(true);
       setShowCommentSentAlert(true);
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -171,19 +174,14 @@ const Post = ({ post, user }) => {
               </button>
             </div>
             {comentarios.map((comentario) => (
-              <div key={comentario.comentarioId} className="w-[90%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
-                <div className='flex gap-3 items-center border-b pb-3 border-gradi/20'>
-                  <img className='h-8 w-8 object-cover rounded-full' src={comentario.paciente.urlAvatar} alt="imagem" />
-                  <p className='font-semibold'>{comentario.paciente.nome} {comentario.paciente.sobrenome}</p>
-                  {comentario.paciente.pacienteId === userId && (
-                    <button onClick={() => handleDeleteComentario(comentario.comentarioId)}>
-                      <AiFillDelete className='text-xl text-white' />
-                    </button>
-                  )}
-                </div>
-                <p className="mt-3 mb-2 pl-5">{comentario.comentario}</p>
-              </div>
-            ))}
+            <Comentario
+              key={comentario.comentarioId}
+              comentario={comentario}
+              user={user}
+              userId={userId}
+              onDeleteComentario={handleDeleteComentario}
+            />
+          ))}
           </div>
         )}
         <Snackbar open={showDeleteAlert} autoHideDuration={4000} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
