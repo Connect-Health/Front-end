@@ -29,12 +29,14 @@ const Centro = () => {
     setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 10);
   };
 
+  const userId = user ? user.id : '';
+
   return (
     <div className="w-1/2 mb-16 mx-auto mt-20 max-md:w-full">
       <Postar />
       {data.length > 0 ? (
         data.slice(0, visiblePosts).map((post, index) => (
-          <Post key={post.postId} post={post} user={user} /> // Fornecer a prop user para o Post
+          <Post key={post.postId} post={post} user={user} userId={userId} /> // Fornecer a prop user para o Post
         ))
       ) : (
         <div className="flex flex-col items-center justify-center gap-2">

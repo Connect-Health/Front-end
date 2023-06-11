@@ -14,11 +14,18 @@ const MaxLength = 250;
 const Post = ({ post, user }) => {
   const [showFullContent, setShowFullContent] = useState(false);
   const [expandPhoto, setExpandPhoto] = useState(false);
+  const [showCommentSentAlert, setShowCommentSentAlert] = useState(false);
+  const [userId, setUserId] = useState('');
 
   const [showDeleteAlert, setShowDeleteAlert] = useState(false);
   const [comentarios, setComentarios] = useState([]);
   const [showComentarios, setShowComentarios] = useState(false);
   const [novoComentario, setNovoComentario] = useState('');
+
+  const handleCloseAlerta = () => {
+    setShowDeleteAlert(false);
+    setShowCommentSentAlert(false); 
+  };
 
   useEffect(() => {
     const fetchComentarios = async () => {
@@ -35,8 +42,15 @@ const Post = ({ post, user }) => {
     }
   }, [post.postId, showComentarios]);
 
+  useEffect(() => {
+    if (user) {
+      setUserId(user.pacienteId || user.profissionalId);
+    }
+  }, [user]);
+
   const handleCloseAlert = () => {
     setShowDeleteAlert(false);
+    setShowCommentSentAlert(false); // Close the comment sent alert
   };
 
   const handleToggleContent = () => {
@@ -84,6 +98,16 @@ const Post = ({ post, user }) => {
       await axios.post('https://connect-health.up.railway.app/comentario', comentarioData);
       setNovoComentario('');
       setShowComentarios(true);
+      setShowCommentSentAlert(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDeleteComentario = async (comentarioId) => {
+    try {
+      await axios.delete(`https://connect-health.up.railway.app/comentario/${comentarioId}`);
+      setShowComentarios(true); 
     } catch (error) {
       console.log(error);
     }
@@ -147,19 +171,34 @@ const Post = ({ post, user }) => {
               </button>
             </div>
             {comentarios.map((comentario) => (
-              <div key={comentario.comentarioId} className="w-[100%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
-                <div className='flex gap-3 items-center'>
+              <div key={comentario.comentarioId} className="w-[90%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
+                <div className='flex gap-3 items-center border-b pb-3 border-gradi/20'>
                   <img className='h-8 w-8 object-cover rounded-full' src={comentario.paciente.urlAvatar} alt="imagem" />
                   <p className='font-semibold'>{comentario.paciente.nome} {comentario.paciente.sobrenome}</p>
+                  {comentario.paciente.pacienteId === userId && (
+                    <button onClick={() => handleDeleteComentario(comentario.comentarioId)}>
+                      <AiFillDelete className='text-xl text-white' />
+                    </button>
+                  )}
                 </div>
-                <p className="mt-3 mb-2">{comentario.comentario}</p>
+                <p className="mt-3 mb-2 pl-5">{comentario.comentario}</p>
               </div>
             ))}
           </div>
         )}
         <Snackbar open={showDeleteAlert} autoHideDuration={4000} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-          <MuiAlert onClose={handleCloseAlert} severity="success" sx={{ width: '100%' }}>
+          <MuiAlert onClose={handleCloseAlerta} severity="success" sx={{ width: '100%' }}>
             <p className='uppercase font-semibold'>Postagem deletada</p>
+          </MuiAlert>
+        </Snackbar>
+        <Snackbar
+          open={showCommentSentAlert}
+          autoHideDuration={4000}
+          onClose={handleCloseAlerta}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        >
+          <MuiAlert onClose={handleCloseAlerta} severity="success" sx={{ width: '100%' }}>
+            <p className='uppercase font-semibold'>Comentário enviado</p>
           </MuiAlert>
         </Snackbar>
       </div>
