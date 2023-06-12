@@ -14,7 +14,7 @@ function Perfil_Psi() {
         <div className='bg-[#B275FF] w-[100%] h-[100vh] flex gap-20'>
 
 
-            <div className=' w-[15%]'>
+            <div className=' w-[16%]'>
                 <img className='w-44 p-8 mb-[30px] invert' src={logo} />
 
 

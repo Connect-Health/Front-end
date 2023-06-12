@@ -9,7 +9,7 @@ import Ft from '../../../assets/ft.svg'
 
 function Dashboard() {
     return (
-        <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
+        <div className="bg-white h-[94%] w-[85%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-2 ">
                 <div className="pt-5 pl-12 flex flex-col gap-2">
                     <h2 className="text-2xl font-bold">Painel de Controle</h2>
@@ -19,7 +19,7 @@ function Dashboard() {
                 {/*Inicio div dos cartoes*/}
 
                 <div className="flex">
-                    <div style={{backgroundImage:'url(../../../assets/peoplehug.png)'}} className='bg-x bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                    <div style={{backgroundImage:'url(../../../assets/peoplehug.png)'}} className=' bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
                         <div className="">
                             <h1 className="text-2xl text-white">Home</h1>
                         </div>
@@ -48,7 +48,7 @@ function Dashboard() {
 
                 {/* Fim segundo Card e da Div */}
 
-                <div className="w-[65%] ml-12 mt-10 h-[40vh] flex flex-col">
+                <div className="w-[65%] ml-12 mt-4 h-[40%]  flex flex-col">
                     <div className=" flex justify-between items-center">
                         <p className="font-bold text-lg">Últimos pacientes atendidos</p>
                         <div className="flex">
