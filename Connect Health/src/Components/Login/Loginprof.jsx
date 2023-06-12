@@ -19,7 +19,7 @@ import { AuthContext } from "../../AutoContext/AuthContext";
 function Login() {
     const navigate = useNavigate();
 
-    const { user, updateUser } = useContext(AuthContext);
+    const { updateUser } = useContext(AuthContext);
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -54,7 +54,7 @@ function Login() {
       if (response.status === 200 && response.data.success === true) {
         updateUser(response.data.profissional)
         localStorage.setItem("user", JSON.stringify(response.data.profissional));
-        navigate("/")
+        navigate("/perfil_nutri")
       } else {
         setSnackbarMessage("Email não autorizado");
         setOpenSnackbar(true);
@@ -73,7 +73,7 @@ function Login() {
       if (response.status === 200 && response.data.success === true) {
         updateUser(response.data.profissional)
         localStorage.setItem("user", JSON.stringify(response.data.profissional));
-        navigate("/")
+        navigate("/perfil_nutri")
       } else {
         setOpenSnackbar(true);
       }
@@ -83,8 +83,6 @@ function Login() {
   }
 
   return (
-    
-    
     <div className="flex max-md:h-fit">
         <div className="flex flex-col items-center w-[40%] justify-center gap-6 max-md:w-full relative z-0  ">
         <h1 className="font-extrabold text-4xl max-md:text-2xl">Bem Vindo(a)!</h1>

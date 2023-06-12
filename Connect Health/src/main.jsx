@@ -81,7 +81,7 @@ const router = createBrowserRouter([
         element: <Carrossel />,
       },
       {
-        path: '/perfil',
+        path: '/perfil_nutri',
         element: <Perfil />,
       },
       {

@@ -35,7 +35,28 @@ function Login() {
   }, []);
 
   const responseGoogle = (response) => {
-    console.log(response);
+    const { email } = response.profileObj;
+    fazerLoginGoogle(email);
+  };
+
+  const fazerLoginGoogle = async (email) => {
+    try {
+      const response = await axios.post(
+        "https://connect-health.up.railway.app/paciente/loginGoogle",
+        { email }
+      );
+  
+      if (response.status === 200 && response.data.success === true) {
+        updateUser(response.data.paciente)
+        localStorage.setItem("user", JSON.stringify(response.data.paciente));
+        navigate("/")
+      } else {
+        setSnackbarMessage("Email não autorizado");
+        setOpenSnackbar(true);
+      }
+    } catch (error) {
+      console.log("Erro durante o login:", error);
+    }
   };
 
   const fazerLogin = async () => {

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Outlet } from 'react-router-dom'
+import {  Outlet } from 'react-router-dom'
 import { AuthContext } from './AutoContext/AuthContext'
 
 const App = () => {
@@ -7,9 +7,7 @@ const App = () => {
   return (
     <div>
         <Outlet>
-        </Outlet>
-
-        
+        </Outlet>  
     </div>
   )
 }

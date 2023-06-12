@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../../assets/logo_preta.png'
 import ProfilePic from '../../assets/profilepic.png'
 import { AiFillAppstore } from "react-icons/ai";
@@ -7,9 +7,11 @@ import Dashboard from './Components/Dashboard';
 import { AiFillBell } from 'react-icons/ai'
 import {AiOutlineMore} from 'react-icons/ai'
 import {AiOutlineSound} from 'react-icons/ai'
+import { AuthContext } from '../AutoContext/AuthContext';
 
 
 function Perfil() {
+    const { user } = useContext(AuthContext)
     return (
         <div className='bg-[#38dd29] w-[100%] h-[100vh] flex gap-20'>
 
