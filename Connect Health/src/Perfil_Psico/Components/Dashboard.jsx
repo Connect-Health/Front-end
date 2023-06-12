@@ -19,7 +19,7 @@ function Dashboard() {
                 {/*Inicio div dos cartoes*/}
 
                 <div className="flex">
-                    <div style={{backgroundImage:'../../../assets/peoplehug.png'}} className='bg-bghug bg-x bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                    <div style={{backgroundImage:'assets/peoplehug.png'}} className='bg-bghug bg-x bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
                         <div className="">
                             <h1 className="text-2xl text-white">Home</h1>
                         </div>
