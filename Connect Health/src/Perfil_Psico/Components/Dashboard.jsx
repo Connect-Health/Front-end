@@ -27,7 +27,7 @@ function Dashboard() {
 
                     {/* Inicio segundo card */}
 
-                    <div style={{backgroundImage:'../../../assets/socialmedia.png'}} className='bg-bgsocial  bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                    <div style={{backgroundImage:{Ft}}} className='bg-bgsocial  bg-no-repeat  w-[15%] h-[20vh] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
                         <div className="">
                             <h1 className="text-2xl text-white">Feed</h1>
                         </div>
