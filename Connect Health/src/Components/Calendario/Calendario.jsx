@@ -85,9 +85,7 @@ const Calendario = () => {
     return hourIntervals;
   }
 
-  const isHourDisabled = (date, hour) => {
-    return disabledHours.some((disabledHour) => disabledHour.date?.toDateString() === date?.toDateString() && disabledHour.hour === hour);
-  };
+  
 
   return (
     <div>
@@ -117,7 +115,7 @@ const Calendario = () => {
                         key={interval.time}
                         onClick={() => handleHourClick(interval.time)}
                         className={`${
-                          !interval.available || isHourDisabled(date, interval.time)
+                          !interval.available(date, interval.time)
                             ? 'bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer'
                             : 'bg-black/5 text-white'
                         } p-2 text-center ${intervalIndex === intervals.length - 1 ? '' : 'mb-1'}`}
@@ -156,7 +154,7 @@ const Calendario = () => {
         autoHideDuration={3000}
         onClose={handleSnackbarClose}
         message="Consulta confirmada!"
-        className={` text-white`} // Adiciona uma classe personalizada para definir a cor de fundo do Snackbar
+        className={` text-white`}
       />
     </div>
   );

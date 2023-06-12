@@ -9,6 +9,7 @@ import { AuthContext } from "../../AutoContext/AuthContext";
 
 function Dashboard() {
     const { user } = useContext(AuthContext)
+    
     return (
         <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-2 ">
