@@ -54,7 +54,7 @@ function Login() {
       if (response.status === 200 && response.data.success === true) {
         updateUser(response.data.profissional)
         localStorage.setItem("user", JSON.stringify(response.data.profissional));
-        navigate("/")
+        navigate("/perfil_nutri")
       } else {
         setSnackbarMessage("Email não autorizado");
         setOpenSnackbar(true);
@@ -73,7 +73,7 @@ function Login() {
       if (response.status === 200 && response.data.success === true) {
         updateUser(response.data.profissional)
         localStorage.setItem("user", JSON.stringify(response.data.profissional));
-        navigate("/")
+        navigate("/perfil_nutri")
       } else {
         setOpenSnackbar(true);
       }

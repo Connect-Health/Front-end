@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Planta from '../../../assets/planta.svg'
 import { IoIosArrowForward } from 'react-icons/io'
 import {AiFillStar} from 'react-icons/ai'
 import {BsFillBookmarkFill} from 'react-icons/bs'
 import Ft from '../../../assets/ft.svg'
+import { AuthContext } from "../../AutoContext/AuthContext";
 
 
 function Dashboard() {
+    const { user } = useContext(AuthContext)
     return (
         <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-2 ">
                 <div className="pt-5 pl-12 flex flex-col gap-2">
                     <h2 className="text-2xl">Painel de Controle</h2>
-                    <p className="">Bem vindo de volta, Willian! Esperamos que seu dia seja incrível.</p>
+                    <p className="">Bem vindo de volta, {user.nome}! Esperamos que seu dia seja incrível.</p>
                 </div>
 
                 {/*Inicio div dos cartoes*/}
