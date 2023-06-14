@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../../assets/logo_preta.png'
 import ProfilePic from '../../assets/profilepic.png'
 import { AiFillAppstore } from "react-icons/ai";
@@ -7,9 +7,23 @@ import Dashboard from './Components/Dashboard';
 import { AiFillBell } from 'react-icons/ai'
 import {AiOutlineMore} from 'react-icons/ai'
 import {AiOutlineSound} from 'react-icons/ai'
+import { AuthContext } from '../AutoContext/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 
 function Perfil_Psi() {
+    const {user, logout} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    if (!user){
+        return <div>Carregando...</div>
+    }
+
+    const fazerLogout = () => {
+        logout()
+        navigate("/")
+    }
+
     return (
         <div className='bg-[#B275FF] w-[100%] h-[100vh] flex gap-20'>
 
@@ -42,21 +56,22 @@ function Perfil_Psi() {
                             <p className=''>Configurações</p>
                         </div>
                         <div className='flex gap-4'>
-                            <p className=''>Sair</p>
+                            <p onClick={fazerLogout} className=''>Sair</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {console.log(user)}
 
             <div className='flex w-[100%]'>
                 <Dashboard />
                 <div className="bg-[#E7A9FD] w-[26%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
                     <div className='flex flex-col items-center gap-5 w-[80%]'>
-                        <img className='object-cover rounded-full w-[180px] h-[180px] mt-10 border-4 border-[#B275FF]' src={ProfilePic} alt="" />
+                        <img className='object-cover rounded-full w-[180px] h-[180px] mt-10 border-4 border-[#B275FF]' src={user.urlAvatar} alt="" />
                         <div className='flex flex-col gap-2'>
-                            <h1 className='text-center font-bold text-xl'>Willian Rizzo</h1>
-                            <p className='text-center text-base'>Designer UI | UX </p>
+                            <h1 className='text-center font-bold text-xl'>{user.nome} {user.sobrenome}</h1>
+                            <p className='text-center text-base'>{user.areaAtuacao.nome}</p>
                         </div>
                         <div className=' flex flex-col w-[100%] mt-2'>
                             <div className=' flex items-center justify-between'>

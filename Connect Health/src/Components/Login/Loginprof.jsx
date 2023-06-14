@@ -73,7 +73,12 @@ function Login() {
       if (response.status === 200 && response.data.success === true) {
         updateUser(response.data.profissional)
         localStorage.setItem("user", JSON.stringify(response.data.profissional));
-        navigate("/perfil_nutri")
+
+        if (response.data.profissional.areaAtuacao.nome === "Nutricionista"){
+          navigate("/perfil_nutri")
+        } else if (response.data.profissional.areaAtuacao.nome === "Psicologo") {
+          navigate("/perfil_psi")
+        }
       } else {
         setOpenSnackbar(true);
       }
