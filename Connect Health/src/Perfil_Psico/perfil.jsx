@@ -1,14 +1,9 @@
-import React, { useContext } from 'react'
-import logo from '../../assets/logo_preta.png'
-import ProfilePic from '../../assets/profilepic.png'
-import { AiFillAppstore } from "react-icons/ai";
-import settings from '../../assets/setting.png'
-import Dashboard from './Components/Dashboard';
-import { AiFillBell } from 'react-icons/ai'
-import {AiOutlineMore} from 'react-icons/ai'
-import {AiOutlineSound} from 'react-icons/ai'
-import { AuthContext } from '../AutoContext/AuthContext';
+import React, { useContext } from 'react';
+import { AiFillBell, AiOutlineMore, AiOutlineSound } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo_preta.png';
+import { AuthContext } from '../AutoContext/AuthContext';
+import Dashboard from './Components/Dashboard';
 
 
 function Perfil_Psi() {
@@ -16,12 +11,11 @@ function Perfil_Psi() {
     const navigate = useNavigate()
 
     if (!user){
-        return <div>Carregando...</div>
+        navigate("/psicologia")
     }
-
+    
     const fazerLogout = () => {
         logout()
-        navigate("/")
     }
 
     return (

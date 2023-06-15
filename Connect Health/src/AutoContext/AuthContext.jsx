@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const logout = () => {
-    window.location.reload();
+    
     updateUser(null);
     localStorage.removeItem("user");
   };
