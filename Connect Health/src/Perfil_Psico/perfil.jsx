@@ -103,7 +103,6 @@ function Perfil_Psi() {
                             </div>
                         </div>
                     </div>
-        
                 </div>
             )
         }
