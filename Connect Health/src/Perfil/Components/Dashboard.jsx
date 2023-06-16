@@ -11,7 +11,7 @@ function Dashboard() {
     const { user } = useContext(AuthContext)
     
     return (
-        <div className="bg-white h-[94vh] w-[78%] rounded-lg mt-[2%] shadow-2xl">
+        <div className="bg-white h-[94%] w-[78%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-2 ">
                 <div className="pt-5 pl-12 flex flex-col gap-2">
                     <h2 className="text-2xl">Painel de Controle</h2>
@@ -21,42 +21,36 @@ function Dashboard() {
                 {/*Inicio div dos cartoes*/}
 
                 <div className="flex">
-                    <div className='bg-[#e3ea12] w-[26  %] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
-                        <img className="h-40 -mt-10 -mb-8" src={Planta} alt="" />
-                        <div className="z-1">
-                            <h3 className="font-bold text-xl">9.6 AVERAGE SCORE</h3>
-                            <p className="text-sm">Better than 86% of students</p>
+                    <div style={{backgroundImage:'url(../../../assets/peoplehug.png)'}} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div className="">
+                            <h1 className="text-2xl text-white">Home</h1>
                         </div>
                     </div>
-                    
+
                     {/* Inicio segundo card */}
 
-                    <div className='bg-[#e9e9e9aa] w-[26%] h-[27vh] pt-8 ml-12 flex flex-col gap-2  rounded-lg items-center'>
-                        <div className=" flex items-center">
-                            <div>
-                                <h1 className="text-xl w-[20%]">Product Analytics</h1>
-                                <p>Middle/Pro</p>
-                            </div>
-                            <div className=" border-2 w-[15%] h-7 text-center pl-1 rounded-md ">
-                                <IoIosArrowForward className="text-2xl " />
-                            </div>
+                    <div style={{backgroundImage:'url(../../../assets/socialmedia.png)'}} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div className="">
+                            <h1 className="text-2xl text-white">Feed</h1>
                         </div>
-                        <div className="z-1 w-[90%] mt-6">
-                            <div className="flex justify-between">
-                                <p>In Progress</p>
-                                <p>34%</p>
-                            </div>
-                            
-                            <div class="w-full bg-[#ffffff] rounded-full h-2.5 ">
-                                <div class="w-[60%] bg-[#ddd018] h-2.5 rounded-full"></div>
-                            </div>
+                    </div>
+
+                    <div style={{backgroundImage:'url(../../../assets/bgcomida.png)'}} className=' bg-cover w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div className="">
+                            <h1 className="text-2xl text-white text-center">Nutrição</h1>
+                        </div>
+                    </div>
+
+                    <div style={{backgroundImage:'url(../../../assets/enterprise.png)'}} className=' bg-cover  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div className="">
+                            <h1 className="text-2xl text-white">Eventos</h1>
                         </div>
                     </div>
                 </div>
 
                 {/* Fim segundo Card e da Div */}
 
-                <div className="w-[65%] ml-12 mt-10 h-[40vh] flex flex-col">
+                <div className="w-[65%] ml-12 mt-10 h-[40%] flex flex-col">
                     <div className=" flex justify-between items-center">
                         <p className="font-bold text-lg">Últimos pacientes atendidos</p>
                         <div className="flex">
