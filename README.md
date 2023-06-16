@@ -4,8 +4,8 @@
 
 # Front-End - Connect Health
 
-[![React](https://img.shields.io/badge/React-17-blue?logo=react)](https://pt-br.reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.2.15-blue?logo=tailwind-css)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-17-blue?logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%5E2.2.19-blue?logo=tailwind-css)](https://tailwindcss.com/)
 
 
 ## Repositório Relacionado
