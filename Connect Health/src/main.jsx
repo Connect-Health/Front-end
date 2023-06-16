@@ -22,6 +22,7 @@ import App from './App'
 import Eventos from './Complementares/Eventos/Eventos'
 import { AuthProvider } from './AutoContext/AuthContext'
 import Perfil_Psi from './Perfil_Psico/perfil'
+import Chatbot from './Components/ChatBot/Chatbot'
 
 const router = createBrowserRouter([
   
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
       {
         path: '/eventos',
         element: <Eventos />,
+      },
+      {
+        path: '/chat',
+        element: <Chatbot />,
       },
     ]
   }
