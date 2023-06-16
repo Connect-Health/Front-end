@@ -8,8 +8,8 @@ import { useState } from "react";
 
 const Chatbot = () => {
   const configuration = new Configuration({
-    apiKey: "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",
-    leanguage:"pt-br",
+    apiKey: "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",
+    language: "pt-br",
   });
 
   const openai = new OpenAIApi(configuration);
@@ -47,24 +47,24 @@ const Chatbot = () => {
   };
 
   return (
-    <div className=''>
-      <div className="header-section mt-10">
-        <div className='w-[25%] m-auto  text-center'>
-          <h1 className='font-bold text-xl'>Olá! Sou a Debinha!🤖</h1>
-          <p>Como posso te ajudar?</p>
-        </div>
-        {storedValues.length < 1 && (
-          <div className='mt-5 w-[45%] m-auto text-center'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae velit ea corporis. Facilis sunt rerum delectus consectetur animi mollitia officia culpa sit veritatis placeat quae, officiis ipsam omnis rem distinctio?
-            </p>
+    <div className='bg-gradi h-[100%]'>
+      <div className=''>
+        <div className="header-section pt-10">
+          <div className='w-[25%] m-auto  text-center'>
+            <h1 className='font-bold text-xl text-white'>Olá! Sou a Debinha!🤖</h1>
+            <p className='text-white'>Como posso te ajudar?</p>
           </div>
-        )}
+          {storedValues.length < 1 && (
+            <div className='mt-5 w-[45%] m-auto text-center'>
+
+            </div>
+          )}
+        </div>
+
+        <FormSection generateResponse={generateResponse} />
+
+        {storedValues.length > 0 && <AnswerSection storedValues={storedValues} />}
       </div>
-
-      <FormSection generateResponse={generateResponse} />
-
-      {storedValues.length > 0 && <AnswerSection storedValues={storedValues} />}
     </div>
   )
 }
