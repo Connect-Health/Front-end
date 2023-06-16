@@ -6,23 +6,23 @@ import Nutricao from './Nutricao/Nutricao'
 
 import "@fontsource/montserrat"
 
-import { createBrowserRouter, RouterProvider} from "react-router-dom"
-import Psicologia from './Psicologia/Psicologia'
-import Profissional from './Profissional/Profissional'
-import ProfissionalPsi from './Profissional/ProfissionalPsi'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import App from './App'
+import { AuthProvider } from './AutoContext/AuthContext'
+import Eventos from './Complementares/Eventos/Eventos'
+import Politica from './Complementares/Politica/Politica'
+import Chatbot from './Components/ChatBot/Chatbot'
 import Login from './Components/Login/Login'
 import Loginprof from './Components/Login/Loginprof'
 import Register from './Components/Register/Register'
-import Feed from './Feed/app'
 import Register2 from './Components/Register/Register2'
-import Politica from './Complementares/Politica/Politica'
+import Feed from './Feed/app'
 import Carrossel from './Home/Componentes/Carrossel'
 import Perfil from './Perfil/perfil'
-import App from './App'
-import Eventos from './Complementares/Eventos/Eventos'
-import { AuthProvider } from './AutoContext/AuthContext'
 import Perfil_Psi from './Perfil_Psico/perfil'
-import Chatbot from './Components/ChatBot/Chatbot'
+import Profissional from './Profissional/Profissional'
+import ProfissionalPsi from './Profissional/ProfissionalPsi'
+import Psicologia from './Psicologia/Psicologia'
 
 const router = createBrowserRouter([
   
@@ -97,6 +97,10 @@ const router = createBrowserRouter([
         path: '/chat',
         element: <Chatbot />,
       },
+      {
+        path: '/pagamentos',
+        element: <Pagamento />,
+      }
     ]
   }
 ])
