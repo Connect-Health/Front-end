@@ -10,27 +10,32 @@
 
 ## Repositório Relacionado
 
-- [Repositório do Front-end](https://github.com/Connect-Health/Front-end)
+- [Repositório do Back-end](https://github.com/Connect-Health/Back-end)
 
 ## Sobre o Projeto
 
-O Connect Health é um projeto desenvolvido para a disciplina de Projeto Integrador 2 do curso de Análise e Desenvolvimento de Sistemas da Universidade Tecnológica Federal do Paraná (UTFPR) - Câmpus Campo Mourão.
+A Connect Health é uma plataforma online que oferece serviços de consultas e informações relacionadas à área da psicologia e nutrição. Com o objetivo de proporcionar acesso conveniente e seguro aos profissionais de saúde, a Connect Health permite que os usuários tenham consultas remotas com especialistas qualificados, garantindo conveniência e conforto em um ambiente virtual.
 
 ## Tecnologias Utilizadas
 
 <div style="display: inline_block">
-  <img align="center" alt="Java" height="40" width="40" title="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-  <img align="center" alt="Spring Boot" height="40" width="40" title="Spring Boot" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
-  <img align="center" alt="MySQL" height="40" width="40" title="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+ <img align="center" alt="Figma" height="40" width="40" title="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+ <img align="center" alt="React" height="40" width="40" title="React" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+ <img align="center" alt="JavaScript" height="40" width="40" title="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+ <img align="center" alt="Photoshop" height="40" width="40" title="Photoshop" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg">
+
+
+
+
 </div>
 
 ## Autores
 
-O BackEnd da Connect Health foi desenvolvido pelos seguintes colaboradores:
+O Front-End da Connect Health foi desenvolvido pelos seguintes colaboradores:
 
-| ![Gabriela Nunes](https://avatars.githubusercontent.com/u/92945219?v=4) | ![Guilherme Gabriel Garcia](https://avatars.githubusercontent.com/u/125367739?v=4) | ![Rafael Ferreira Machado](https://avatars.githubusercontent.com/u/104914975?v=4) | ![Wendel Harrison](https://avatars.githubusercontent.com/u/99509845?v=4) |
+| ![Roger Vieira](https://avatars.githubusercontent.com/u/125038606?v=4) | ![Raphael Verseck](https://avatars.githubusercontent.com/u/125279606?v=4) |  ![Wendel Harrison](https://avatars.githubusercontent.com/u/99509845?v=4) | ![Willian Rizzo](https://avatars.githubusercontent.com/u/125279572?v=4)
 | :---------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-|                             Gabriela Nunes                              |                              Guilherme Gabriel Garcia                              |                              Rafael Ferreira Machado                              |                              Wendel Harrison                             |
+|                             Roger Vieira                              |                              Raphael Verseck                              |                              Wendel Harrison                              |                              Willian Rizzo                             |
 
 ## Licença
 
