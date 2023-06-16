@@ -99,7 +99,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/pagamentos',
-        element: <Pagamento />,
+        element: <Pagamentos />,
       }
     ]
   }
