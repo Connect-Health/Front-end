@@ -46,17 +46,18 @@ const Chatbot = () => {
   };
 
   return (
-    <div>
-      <div className="header-section">
-        <h1>ChatGPT CLONE 🤖</h1>
+    <div className=''>
+      <div className="header-section mt-10">
+        <div className='w-[25%] m-auto  text-center'>
+          <h1 className='font-bold text-xl'>Olá! Sou a Debinha!🤖</h1>
+          <p>Como posso te ajudar?</p>
+        </div>
         {storedValues.length < 1 && (
-          <p>
-            I am an automated question and answer system, designed to assist you
-            in finding relevant information. You are welcome to ask me any
-            queries you may have, and I will do my utmost to offer you a
-            reliable response. Kindly keep in mind that I am a machine and
-            operate solely based on programmed algorithms.
-          </p>
+          <div className='mt-8 w-[45%] m-auto text-center'>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae velit ea corporis. Facilis sunt rerum delectus consectetur animi mollitia officia culpa sit veritatis placeat quae, officiis ipsam omnis rem distinctio?
+            </p>
+          </div>
         )}
       </div>
 
