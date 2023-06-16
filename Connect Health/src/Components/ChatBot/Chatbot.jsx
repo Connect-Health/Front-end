@@ -3,16 +3,19 @@ import { Configuration, OpenAIApi } from "openai";
 
 import FormSection from "./FormSection";
 import AnswerSection from './AnswerSection';
+import { Link } from 'react-router-dom';
 
 import { useState } from "react";
+import Header from '../Header';
 
 const Chatbot = () => {
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
     language: "pt-br",
   });
 
   const openai = new OpenAIApi(configuration);
+  
 
   const [storedValues, setStoredValues] = useState([]);
 
@@ -49,7 +52,8 @@ const Chatbot = () => {
   return (
     <div className='bg-gradi h-[100%]'>
       <div className=''>
-        <div className="header-section pt-10">
+        <div className="header-section pt-2">
+        <Header/>
           <div className='w-[25%] m-auto  text-center'>
             <h1 className='font-bold text-xl text-white'>Olá! Sou a Debinha!🤖</h1>
             <p className='text-white'>Como posso te ajudar?</p>
