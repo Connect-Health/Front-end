@@ -31,11 +31,11 @@ A Connect Health é uma plataforma online que oferece serviços de consultas e i
 
 ## Autores
 
-O BackEnd da Connect Health foi desenvolvido pelos seguintes colaboradores:
+O Front-End da Connect Health foi desenvolvido pelos seguintes colaboradores:
 
-| ![Gabriela Nunes](https://avatars.githubusercontent.com/u/92945219?v=4) | ![Guilherme Gabriel Garcia](https://avatars.githubusercontent.com/u/125367739?v=4) | ![Rafael Ferreira Machado](https://avatars.githubusercontent.com/u/104914975?v=4) | ![Wendel Harrison](https://avatars.githubusercontent.com/u/99509845?v=4) |
+| ![Roger Vieira](https://avatars.githubusercontent.com/u/125038606?v=4) | ![Raphael Verseck](https://avatars.githubusercontent.com/u/125279606?v=4) |  ![Wendel Harrison](https://avatars.githubusercontent.com/u/99509845?v=4) | ![Willian Rizzo](https://avatars.githubusercontent.com/u/125279572?v=4)
 | :---------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-|                             Gabriela Nunes                              |                              Guilherme Gabriel Garcia                              |                              Rafael Ferreira Machado                              |                              Wendel Harrison                             |
+|                             Roger Vieira                              |                              Raphael Verseck                              |                              Wendel Harrison                              |                              Willian Rizzo                             |
 
 ## Licença
 
