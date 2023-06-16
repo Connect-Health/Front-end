@@ -1,7 +1,7 @@
 function Pagamentos () {
     return (
         <div>
-            Rafa 
+            Rafa
         </div>
     )
 }
