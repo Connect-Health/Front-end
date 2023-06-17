@@ -60,7 +60,7 @@ function Perfil() {
 
             <div className='flex w-[100%]'>
                 <Dashboard />
-                <div className="bg-[#9DFF95] w-[26%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
+                <div className="bg-[#9DFF95] w-[26%] h-[94%] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
                     <div className='flex flex-col items-center gap-5 w-[80%]'>
                         <img className='object-cover rounded-full w-[180px] h-[180px] mt-10 border-4 border-[#38dd29]' src={user.urlAvatar} alt="" />
                         <div className='flex flex-col gap-2'>
