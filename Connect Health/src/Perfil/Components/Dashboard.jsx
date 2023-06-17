@@ -50,7 +50,7 @@ function Dashboard() {
 
                 {/* Fim segundo Card e da Div */}
 
-                <div className="w-[65%] ml-12 mt-10 h-[40%] flex flex-col">
+                <div className="w-[65%] ml-12 mt-5 h-[35%] flex flex-col">
                     <div className=" flex justify-between items-center">
                         <p className="font-bold text-lg">Últimos pacientes atendidos</p>
                         <div className="flex">
