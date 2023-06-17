@@ -4,13 +4,28 @@ import { Configuration, OpenAIApi } from "openai";
 import FormSection from "./FormSection";
 import AnswerSection from './AnswerSection';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+
 
 import { useState } from "react";
 import Header from '../Header';
 
+
+
 const Chatbot = () => {
+
+  axios.get('https://connect-health.up.railway.app/chat')
+  .then(function (response) {
+    // aqui acessamos o corpo da resposta:
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
+    console.log(error);
+  })
+
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "",
     language: "pt-br",
   });
 
