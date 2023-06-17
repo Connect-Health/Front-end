@@ -39,6 +39,13 @@ function Login() {
     fazerLoginGoogle(email);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      fazerLogin();
+    }
+  };
+
   const fazerLoginGoogle = async (email) => {
     try {
       const response = await axios.post(
@@ -123,6 +130,7 @@ function Login() {
             className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required outline-none focus:outline-cor-primaria/20 "
             placeholder="Senha"
             onChange={(e) => setSenha(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </div>
         <button

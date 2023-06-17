@@ -32,8 +32,13 @@ const Perfil = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              {user && (
-                <MenuItem component={Link} to="/dashboard" onClick={handleMenuClose}>
+              {user && user.areaAtuacao && user.areaAtuacao.areaId == 2 && (
+                <MenuItem component={Link} to="/perfil_nutri" onClick={handleMenuClose}>
+                  Dashboard
+                </MenuItem>
+              )}
+              {user && user.areaAtuacao && user.areaAtuacao.areaId == 1 && (
+                <MenuItem component={Link} to="/perfil_psi" onClick={handleMenuClose}>
                   Dashboard
                 </MenuItem>
               )}

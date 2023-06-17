@@ -32,6 +32,13 @@ function Login() {
       setOpenSnackbar(false);
     };
 
+    const handleKeyDown = (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        fazerLogin();
+      }
+    };
+
   useEffect(() => {
     gapi.load("auth2", () => {
       gapi.auth2.init({client_id: "1030844756804-m94rijfndnkioau7eph93tf51rmcukqk.apps.googleusercontent.com"});
@@ -118,6 +125,7 @@ function Login() {
             className="border-solid border-2 border-gradi/30 rounded-3xl w-80 h-10 pl-11 required "
             placeholder="Senha"
             onChange={(e) => setSenha(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </div>
         <button
