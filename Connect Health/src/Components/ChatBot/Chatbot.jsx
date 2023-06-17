@@ -12,12 +12,19 @@ import Header from '../Header';
 
 
 
+
 const Chatbot = () => {
 
+  const [ChaveBot, setChaveBot] = useState("") 
   axios.get('https://connect-health.up.railway.app/chat')
   .then(function (response) {
     // aqui acessamos o corpo da resposta:
-    console.log(response.data);
+    const chave = response.data;
+      const chaveBotSemUltimaLetra = chave.slice(0, -1); // Usando o método slice
+      // Ou: const chaveBotSemUltimaLetra = chave.substring(0, chave.length - 1); // Usando a função substring
+      setChaveBot(chaveBotSemUltimaLetra);
+      console.log(ChaveBot)
+    
   })
   .catch(function (error) {
     // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
@@ -25,7 +32,7 @@ const Chatbot = () => {
   })
 
   const configuration = new Configuration({
-    apiKey: "",
+    apiKey: ChaveBot,
     language: "pt-br",
   });
 
@@ -44,7 +51,9 @@ const Chatbot = () => {
       presence_penalty: 0.0,
       stop: ["/"],
     };
-
+    
+    
+    
     let completeOptions = {
       ...options,
       prompt: newQuestion,
@@ -52,6 +61,7 @@ const Chatbot = () => {
 
     const response = await openai.createCompletion(completeOptions);
 
+    console.log(Chatbot);
     if (response.data.choices) {
       setStoredValues([
         {
