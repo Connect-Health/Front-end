@@ -145,6 +145,7 @@ function Register() {
                            type="text required"
                            id="Telefone"
                            name="Telefone"
+                           maxLength={11}
                            value={telefone}
                            onChange={(e) => setTelefone(e.target.value)}
                            placeholder='11 99999-9999'
@@ -181,6 +182,7 @@ function Register() {
                               type="text required"
                               id="CPF"
                               name="CPF"
+                              maxLength={14}
                               value={cpf}
                               onChange={(e) => setCpf(e.target.value)}
                               placeholder='000.000.000-00'
@@ -250,6 +252,7 @@ function Register() {
                            type="text required"
                            id="CEP"
                            name="CEP"
+                           maxLength={11}
                            value={cep}
                            onChange={(e) => setCep(e.target.value)}
                            placeholder='00000-000'
