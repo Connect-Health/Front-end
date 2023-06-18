@@ -95,10 +95,6 @@ const router = createBrowserRouter([
         element: <Eventos />,
       },
       {
-        path: '/chat',
-        element: <Chatbot />,
-      },
-      {
         path: '/pagamentos',
         element: <Pagamentos />,
       }

@@ -7,6 +7,7 @@ import Feed from "./Componentes/Feed"
 import Sobre from "./Componentes/Sobre"
 import Contato from "./Componentes/Contato"
 import Footer from "../Components/Footer"
+import Chatbot from "../Components/ChatBot/Chatbot"
 
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
                 bgSec="[#457ff4]"
                 invert="invert"
             />
+            <Chatbot />
         </div>
         
     )

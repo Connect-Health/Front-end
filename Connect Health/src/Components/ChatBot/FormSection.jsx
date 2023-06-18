@@ -11,16 +11,16 @@ const FormSection = ({ generateResponse }) => {
   };
 
   return (
-    <div className=" flex items-center gap-2 absolute left-1/2 -translate-x-1/2 bottom-2 w-[70%] ">
+    <div className=" flex items-center gap-2 w-full absolute bottom-0 ">
       <input type="text"
-        className="form-control bg-azulsite  py-3 pl-5 w-[95%] rounded-lg text-white placeholder:text-white outline-none focus:border border-white"
+        className="form-control bg-[#47ace7]  py-2 pl-5 w-[95%] rounded-lg text-white placeholder:text-white outline-none"
         placeholder="Me pergunte algo..."
         value={newQuestion}
         onChange={(e) => setNewQuestion(e.target.value)}
         onKeyDown={handleKeyPress}
       />
       <button
-        className=" bg-[#7c5afa] p-4 rounded text-white "
+        className=" bg-[#13d6dd] p-2 rounded text-2xl "
         onClick={() => generateResponse(newQuestion, setNewQuestion)}
 
       >
