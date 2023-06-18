@@ -10,6 +10,7 @@ import Footer from '../Components/Footer'
 
 import { useEffect } from 'react'
 import Menu from '../Components/Menu'
+import Chatbot from '../Components/ChatBot/Chatbot'
 
 const Psicologia = () => {
   useEffect(() => {
@@ -41,6 +42,7 @@ const Psicologia = () => {
           profissionais="Psicólogos"
         />
         <AllCards />
+        <Chatbot />
         <Footer 
            bg="psi"
            bgSec="[#9e20f1]"
