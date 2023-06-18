@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillCopy } from "react-icons/ai";
 
 const AnswerSection = ({ storedValues }) => {
   const copyText = (text) => {
@@ -7,16 +8,12 @@ const AnswerSection = ({ storedValues }) => {
 
   return (
     <div className="">
-
-      <div className="answer-container bg-[#0c74dbd3] w-[70%] ml-[15%] -mt-[35%] p-5 text-white absolute rounded-2xl overflow-y-scroll max-h-[400px]">
-        {storedValues.slice(0, 3).map((value, index) => {
+      <div id="scroll-bot" className="answer-container bg-[#0c74dbd3] w-[70%] h-[70vh] mt-0 overflow-y-scroll snap-center snap-always m-auto p-5 text-white  rounded-2xl flex flex-col-reverse">
+        {storedValues.map((value, index) => {
           return (
-            <div className="answer-section border-b-2 mb-5" key={index}>
-              <p className="question font-bold text-xl">{value.question}</p>
-              <p className="answer text-right ">{value.answer}</p>
-              <div className="copy-icon" onClick={() => copyText(value.answer)}>
-                <i className="fa-solid fa-copy"></i>
-              </div>
+            <div className="border-b pb-3 pt-3" key={index}>
+              <p className=" font-bold text-xl">{value.question}</p>
+              <p className="text-left border w-fit py-1 px-3 rounded bg-white text-azulsite ">{value.answer}</p>
             </div>
           );
         })}

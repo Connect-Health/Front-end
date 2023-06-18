@@ -26,6 +26,7 @@ const HomePsi = () => {
             colorArea="hover:text-psi"
             link="/nutricao"
             areaNav="nutrição"
+            feed="text-white"
         />
 
         <div className='h-[655px] w-[35%] mt-[-55px] bg-[#9916FF]/30 max-md:h-[201px] max-md:mt-0 max-md:w-[45%]'>

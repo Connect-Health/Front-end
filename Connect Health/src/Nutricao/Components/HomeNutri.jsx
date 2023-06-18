@@ -27,7 +27,8 @@ const HomeNutri = () => {
           area="Nutrição"
           colorArea="hover:text-[#01c929]"
           link="/psicologia"
-          areaNav="Psicologia" 
+          areaNav="Psicologia"
+          feed="text-white"
         
         />
         <div className='

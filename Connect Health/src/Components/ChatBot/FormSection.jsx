@@ -1,22 +1,30 @@
 import { useState } from "react";
+import { AiOutlineSend } from "react-icons/ai";
 
 const FormSection = ({ generateResponse }) => {
   const [newQuestion, setNewQuestion] = useState("");
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      generateResponse(newQuestion, setNewQuestion);
+    }
+  };
+
   return (
-    <div className="form-section flex flex-col gap-8 m-auto items-center mt-[23.1%] ">
-      <textarea
-        rows="5"
-        className="form-control bg-azulsite w-[70%] mt-8 h-[15%] pt-5 pl-5 rounded-2xl text-white placeholder:text-white outline-none"
+    <div className=" flex items-center gap-2 absolute left-1/2 -translate-x-1/2 bottom-2 w-[70%] ">
+      <input type="text"
+        className="form-control bg-azulsite  py-3 pl-5 w-[95%] rounded-lg text-white placeholder:text-white outline-none focus:border border-white"
         placeholder="Me pergunte algo..."
         value={newQuestion}
         onChange={(e) => setNewQuestion(e.target.value)}
-      ></textarea>
+        onKeyDown={handleKeyPress}
+      />
       <button
-        className="btn bg-[#7c5afa] p-5 w-[15%] rounded-2xl text-white "
+        className=" bg-[#7c5afa] p-4 rounded text-white "
         onClick={() => generateResponse(newQuestion, setNewQuestion)}
+
       >
-        Gerar Resposta 🤖
+        <AiOutlineSend />
       </button>
     </div>
   );

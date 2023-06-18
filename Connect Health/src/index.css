@@ -21,3 +21,7 @@ body::-webkit-scrollbar {
     border-radius: 5px;       /* roundness of the scroll thumb */
   }
 
+  #scroll-bot::-webkit-scrollbar {
+    width: 0;
+  }
+

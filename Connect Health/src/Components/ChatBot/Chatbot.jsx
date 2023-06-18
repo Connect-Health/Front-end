@@ -18,12 +18,9 @@ const Chatbot = () => {
   const [ChaveBot, setChaveBot] = useState("") 
   axios.get('https://connect-health.up.railway.app/chat')
   .then(function (response) {
-    // aqui acessamos o corpo da resposta:
     const chave = response.data;
       const chaveBotSemUltimaLetra = chave.slice(0, -1); // Usando o método slice
-      // Ou: const chaveBotSemUltimaLetra = chave.substring(0, chave.length - 1); // Usando a função substring
       setChaveBot(chaveBotSemUltimaLetra);
-      console.log(ChaveBot)
     
   })
   .catch(function (error) {
@@ -34,6 +31,7 @@ const Chatbot = () => {
   const configuration = new Configuration({
     apiKey: ChaveBot,
     language: "pt-br",
+    engine: "text-davinci-003",
   });
 
   const openai = new OpenAIApi(configuration);
@@ -75,17 +73,18 @@ const Chatbot = () => {
   };
 
   return (
-    <div className='bg-gradi h-[100%]'>
+    <div className='bg-[#ebeff3] h-screen'>
       <div className=''>
         <div className="header-section pt-2">
-        <Header/>
-          <div className='w-[25%] m-auto  text-center'>
-            <h1 className='font-bold text-xl text-white'>Olá! Sou a Debinha!🤖</h1>
-            <p className='text-white'>Como posso te ajudar?</p>
-          </div>
+        <Header
+          health="hover:text-azulsite"
+          connect="text-azulsite"
+          feed="text-black"
+        />
+          
           {storedValues.length < 1 && (
-            <div className='mt-5 w-[45%] m-auto text-center'>
-
+            <div className=' w-[70%] absolute left-1/2 -translate-x-1/2 bottom-[4rem] flex flex-col-reverse h-2/3 rounded  bg-white m-auto text-center'>
+              <p>Estou aguardando a sua pergunta!</p>
             </div>
           )}
         </div>

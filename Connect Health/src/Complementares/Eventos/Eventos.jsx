@@ -16,6 +16,7 @@ const Eventos = () => {
           link="/"
           areaNav="Inicio"
           pai="relative z-10"
+          feed="text-white  "
         />
         <Menu
           area1="Inicio"
