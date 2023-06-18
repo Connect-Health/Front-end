@@ -8,6 +8,7 @@ import AllCards from '../Components/AllCards';
 import Footer from '../Components/Footer';
 import { useEffect } from 'react'
 import Menu from '../Components/Menu'
+import Chatbot from '../Components/ChatBot/Chatbot'
 
 
 function Nutricao() {
@@ -41,6 +42,7 @@ function Nutricao() {
         profissionais="Nutricionistas"
       />
       <AllCards />
+      <Chatbot />
       <Footer
         bg="nutri"
         bgSec="[#95FF00]"

@@ -82,7 +82,7 @@ const getOpenAIResponse = async (question) => {
   };
   
   return (
-    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] fixed right-1 bottom-1">
+    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] fixed z-50 right-1 bottom-1">
       {isOpen ? (
         <div>
           <div  onClick={toggleChatbot}  className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3">
