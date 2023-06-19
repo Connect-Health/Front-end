@@ -4,6 +4,7 @@ import Header from '../../Components/Header'
 import events from '../../../assets/eventos.jpg'
 import Empresas from './Empresas'
 import Menu from '../../Components/Menu'
+import Chatbot from '../../Components/ChatBot/Chatbot'
 
 const Eventos = () => {
   return (
@@ -42,6 +43,8 @@ const Eventos = () => {
             <Empresas />
             <Empresas />
         </div>
+
+        <Chatbot />
     </div>
   )
 }
