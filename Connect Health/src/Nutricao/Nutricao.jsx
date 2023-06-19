@@ -9,6 +9,7 @@ import Footer from '../Components/Footer';
 import { useEffect } from 'react'
 import Menu from '../Components/Menu'
 import Chatbot from '../Components/ChatBot/Chatbot'
+import Typeformnutri from './Components/Typeformnutri'
 
 
 function Nutricao() {
@@ -47,6 +48,7 @@ function Nutricao() {
         bg="nutri"
         bgSec="[#95FF00]"
       />
+      <Typeformnutri></Typeformnutri>
       
     </div>
   )
