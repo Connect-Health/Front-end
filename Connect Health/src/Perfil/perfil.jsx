@@ -9,7 +9,7 @@ import {AiOutlineMore} from 'react-icons/ai'
 import {AiOutlineSound} from 'react-icons/ai'
 import { AuthContext } from '../AutoContext/AuthContext';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 function Perfil() {
     const { user, logout } = useContext(AuthContext)
@@ -24,7 +24,7 @@ function Perfil() {
 
 
             <div className=' w-[15%]'>
-                <img className='w-44 p-8 mb-[30px]' src={logo} />
+                <Link to='/'><img className='w-44 p-8 mb-[30px]' src={logo} /></Link>
 
 
                 <div className='flex flex-col gap-[120px]'>
