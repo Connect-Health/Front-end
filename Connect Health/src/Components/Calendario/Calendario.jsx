@@ -85,8 +85,6 @@ const Calendario = () => {
     return hourIntervals;
   }
 
-  
-
   return (
     <div>
       <h1>Calendário</h1>
@@ -115,9 +113,9 @@ const Calendario = () => {
                         key={interval.time}
                         onClick={() => handleHourClick(interval.time)}
                         className={`${
-                          !interval.available(date, interval.time)
+                          interval.available
                             ? 'bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer'
-                            : 'bg-black/5 text-white'
+                            : 'bg-black/ text-white'
                         } p-2 text-center ${intervalIndex === intervals.length - 1 ? '' : 'mb-1'}`}
                       >
                         {interval.time}
