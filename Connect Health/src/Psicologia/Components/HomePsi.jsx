@@ -5,6 +5,7 @@ import BackGround from '../../../assets/psi.png'
 
 import { useEffect, useState } from 'react';
 import AnimatedPsi from '../../Components/Letters/AnimatedPsi'
+import { Link } from 'react-router-dom';
 
 
 const HomePsi = () => {
@@ -14,10 +15,6 @@ const HomePsi = () => {
         return  setLetterClass('texts-animate-hover')
         }, 3000)
     }, [])
-
-    const handleAvaliacaoClick = () => {
-      window.open('https://ciykc8pk09m.typeform.com/to/QgE54Y2m', 'https://ciykc8pk09m.typeform.com/to/QgE54Y2m'); 
-    };
 
   return (
     <div className='h-[650px] flex flex-col max-md:h-full'>
@@ -148,13 +145,12 @@ const HomePsi = () => {
                 Faça aqui uma breve avaliação aqui para sabermos como podemos te ajudar
             </p>
 
-            <button
-          className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3 max-md:mb-1'
-          onClick={handleAvaliacaoClick}
+            <Link to="/psicologia/typeform"
+          className='bg-[#761ddc] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3 max-md:mb-1'
         >
           avaliação
           <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
-        </button>
+        </Link>
             </div>
 
         </div>

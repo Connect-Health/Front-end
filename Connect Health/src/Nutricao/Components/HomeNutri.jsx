@@ -5,6 +5,7 @@ import BackGround from '../../../assets/nutricao.png'
 
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../../Components/Letters/AnimatedLetters'
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,9 +17,7 @@ const HomeNutri = () => {
         }, 3000)
     }, [])
 
-    const handleAvaliacaoClick = () => {
-      window.open('https://ciykc8pk09m.typeform.com/to/IhzbkQNX', 'https://ciykc8pk09m.typeform.com/to/IhzbkQNX'); 
-    };
+    
 
   return (
     <div className='
@@ -142,13 +141,12 @@ const HomeNutri = () => {
             Faça aqui uma breve avaliação para sabermos como podemos te ajudar
           </p>
 
-          <button
+          <Link to="/nutricao/typeform"
           className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3 max-md:mb-1'
-          onClick={handleAvaliacaoClick}
         >
           avaliação
           <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
-        </button>
+        </Link>
         </div>
 
       </div>

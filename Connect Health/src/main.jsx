@@ -25,6 +25,7 @@ import Profissional from './Profissional/Profissional'
 import ProfissionalPsi from './Profissional/ProfissionalPsi'
 import Psicologia from './Psicologia/Psicologia'
 import Typeformnutri from './Nutricao/Components/Typeformnutri'
+import Typeformpsico from './Psicologia/Components/Typeformpsico'
 
 const router = createBrowserRouter([
   
@@ -44,8 +45,16 @@ const router = createBrowserRouter([
         element: <Nutricao />,
       },
       {
+        path: '/nutricao/typeform',
+        element: <Typeformnutri />,
+      },
+      {
         path: '/psicologia',
         element: <Psicologia />,
+      },
+      {
+        path: '/psicologia/typeform',
+        element: <Typeformpsico />,
       },
       {
         path: '/profissional/nutricionista/:id',
@@ -66,10 +75,6 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />,
-      },
-      {
-        path: '/registerProfissional',
-        element: <Register2 />,
       },
       {
         path: '/feed',
