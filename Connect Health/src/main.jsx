@@ -24,6 +24,7 @@ import Perfil_Psi from './Perfil_Psico/perfil'
 import Profissional from './Profissional/Profissional'
 import ProfissionalPsi from './Profissional/ProfissionalPsi'
 import Psicologia from './Psicologia/Psicologia'
+import Typeformnutri from './Nutricao/Components/Typeformnutri'
 
 const router = createBrowserRouter([
   

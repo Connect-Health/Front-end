@@ -15,6 +15,10 @@ const HomePsi = () => {
         }, 3000)
     }, [])
 
+    const handleAvaliacaoClick = () => {
+      window.open('https://ciykc8pk09m.typeform.com/to/QgE54Y2m', 'https://ciykc8pk09m.typeform.com/to/QgE54Y2m'); 
+    };
+
   return (
     <div className='h-[650px] flex flex-col max-md:h-full'>
       <img src={BackGround} className='absolute -z-10 h-[650px] w-[65%] flex self-end max-md:w-full max-md:h-52 max-md:mt-8' alt="" />
@@ -144,10 +148,13 @@ const HomePsi = () => {
                 Faça aqui uma breve avaliação aqui para sabermos como podemos te ajudar
             </p>
 
-            <button className='bg-psi px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:px-2 max-md:text-xs'>
-                avaliação
-                <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
-            </button>
+            <button
+          className='bg-[#1DDC53] px-5 py-1 rounded-3xl text-white font-semibold flex items-center gap-2 max-md:text-sm max-md:font-normal max-md:px-3 max-md:mb-1'
+          onClick={handleAvaliacaoClick}
+        >
+          avaliação
+          <MdSubdirectoryArrowRight className='text-lg max-md:text-sm' />
+        </button>
             </div>
 
         </div>
