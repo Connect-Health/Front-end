@@ -1,34 +1,27 @@
-import React from 'react'
+import React from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 import FormSection from "./FormSection";
-import AnswerSection from './AnswerSection';
-import { Link } from 'react-router-dom';
-import axios from 'axios'
-
+import AnswerSection from "./AnswerSection";
+import axios from "axios";
 
 import { useState } from "react";
-import Header from '../Header';
-import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai';
-
-
-
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 const Chatbot = () => {
-
   const [isOpen, setIsOpen] = useState(false);
-  const [ChaveBot, setChaveBot] = useState("") 
-  axios.get('https://connect-health.up.railway.app/chat')
-  .then(function (response) {
-    const chave = response.data;
+  const [ChaveBot, setChaveBot] = useState("");
+  axios
+    .get("https://connect-health.up.railway.app/chat")
+    .then(function (response) {
+      const chave = response.data;
       const chaveBotSemUltimaLetra = chave.slice(0, -1); // Usando o método slice
       setChaveBot(chaveBotSemUltimaLetra);
-    
-  })
-  .catch(function (error) {
-    // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
-    console.log(error);
-  })
+    })
+    .catch(function (error) {
+      // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
+      console.log(error);
+    });
 
   const configuration = new Configuration({
     apiKey: ChaveBot,
@@ -37,73 +30,87 @@ const Chatbot = () => {
   });
 
   const openai = new OpenAIApi(configuration);
-  
 
   const [storedValues, setStoredValues] = useState([]);
 
   const generateResponse = async (newQuestion, setNewQuestion) => {
-  let responseText = '';
-  const resposta1 = [
-    'O Que é Connect Health',
-    'O que é Connect'
-  ];
+    let responseText = "";
+    const perguntasERespostas = [
+      {
+        pergunta: "O que é Connect Health?",
+        resposta:
+          "A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.",
+      },
+      {
+        pergunta: "Qual é o objetivo da Connect Health?",
+        resposta:
+          "O objetivo da Connect Health é fornecer uma solução abrangente para cuidados de saúde digital, facilitando o acesso à assistência médica, psicológica e nutricional.",
+      },
+      // Adicione mais perguntas e respostas aqui
+    ];
   
-  for (let i = 0; i < resposta1.length; i++) {
-    if (newQuestion.includes(resposta1[i])) {
-      responseText = 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.';
-      break; // Encerra o loop assim que uma correspondência for encontrada
+    const lowercaseQuestion = newQuestion.toLowerCase();
+  
+    for (const { pergunta, resposta } of perguntasERespostas) {
+      if (lowercaseQuestion.includes(pergunta.toLowerCase())) {
+        responseText = resposta;
+        break; // Encerra o loop assim que uma correspondência for encontrada
+      }
     }
-  }
-  
-  if (!responseText) {
-    responseText = 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.';
-  }
-  
 
-  
-  setStoredValues([
-    {
-      question: newQuestion,
-      answer: responseText,
-    },
-    ...storedValues,
-  ]);
-  setNewQuestion("");
-};
-
-const getOpenAIResponse = async (question) => {
-  const options = {
-    model: "text-davinci-003",
-    temperature: 0,
-    max_tokens: 100,
-    top_p: 1,
-    frequency_penalty: 0.0,
-    presence_penalty: 0.0,
-    stop: ["/"],
-    prompt: question,
+    setStoredValues([
+      {
+        question: newQuestion,
+        answer: responseText,
+      },
+      ...storedValues,
+    ]);
+    setNewQuestion("");
   };
 
-  const response = await openai.createCompletion(options);
-  return response.data.choices[0].text;
-};
+  const getOpenAIResponse = async (question) => {
+    const options = {
+      model: "text-davinci-003",
+      temperature: 0,
+      max_tokens: 100,
+      top_p: 1,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.0,
+      stop: ["/"],
+      prompt: question,
+    };
+
+    const response = await openai.createCompletion(options);
+    return response.data.choices[0].text;
+  };
 
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
   };
-  
+
   return (
     <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] fixed z-50 right-1 bottom-1">
       {isOpen ? (
         <div>
-          <div  onClick={toggleChatbot}  className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3">
-            <p className='text-lg  text-white'>Débinha</p>
-            <AiOutlineArrowDown className='text-2xl text-white' />
+          <div
+            onClick={toggleChatbot}
+            className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
+          >
+            <p className="text-lg  text-white">Débinha</p>
+            <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
           <div id="scroll-bot" className="h-[60vh] mb-10 overflow-y-scroll">
             {storedValues.length === 0 && (
-                <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">Olá! Sou a Débinha, a assistente virtual da <span className='font-semibold'>Connect Health</span>. Estou aqui para responder às suas perguntas sobre saúde e bem-estar. Pode me perguntar qualquer coisa! 😊</p>
-              )}
-            {storedValues.length > 0 && <AnswerSection storedValues={storedValues} />}
+              <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
+                Olá! Sou a Débinha, a assistente virtual da{" "}
+                <span className="font-semibold">Connect Health</span>. Estou
+                aqui para responder às suas perguntas sobre saúde e bem-estar.
+                Pode me perguntar qualquer coisa! 😊
+              </p>
+            )}
+            {storedValues.length > 0 && (
+              <AnswerSection storedValues={storedValues} />
+            )}
             <FormSection generateResponse={generateResponse} />
           </div>
         </div>
@@ -112,8 +119,8 @@ const getOpenAIResponse = async (question) => {
           onClick={toggleChatbot}
           className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
         >
-          <p className='text-lg  text-white'>Débinha</p>
-          <AiOutlineArrowUp className='text-2xl text-white' />
+          <p className="text-lg  text-white">Débinha</p>
+          <AiOutlineArrowUp className="text-2xl text-white" />
         </div>
       )}
     </div>
