@@ -37,17 +37,17 @@ const Chatbot = () => {
     let responseText = "";
     const perguntasERespostas = [
       {
-        pergunta: "O que é Connect Health?",
+        perguntas: ["O que é Connect Health?", "O que é Connect?"],
         resposta:
           "A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.",
       },
       {
-        pergunta: "Qual é o objetivo da Connect Health?",
+        perguntas: ["Qual é o objetivo da Connect Health?"],
         resposta:
           "O objetivo da Connect Health é fornecer uma solução abrangente para cuidados de saúde digital, facilitando o acesso à assistência médica, psicológica e nutricional.",
       },
       {
-        pergunta: "Quais são os serviços oferecidos pela Connect Health?",
+        perguntas: ["Quais são os serviços oferecidos pela Connect Health?"],
         resposta:
           "A Connect Health oferece serviços de psicologia, nutrição e saúde.",
       },
@@ -56,10 +56,15 @@ const Chatbot = () => {
 
     const lowercaseQuestion = newQuestion.toLowerCase();
 
-    for (const { pergunta, resposta } of perguntasERespostas) {
-      if (lowercaseQuestion.includes(pergunta.toLowerCase())) {
-        responseText = resposta;
-        break; // Encerra o loop assim que uma correspondência for encontrada
+    for (const { perguntas, resposta } of perguntasERespostas) {
+      for (const pergunta of perguntas) {
+        if (lowercaseQuestion.includes(pergunta.toLowerCase())) {
+          responseText = resposta;
+          break; // Encerra o loop interno quando uma correspondência for encontrada
+        }
+      }
+      if (responseText) {
+        break; // Encerra o loop externo quando uma correspondência for encontrada
       }
     }
 
