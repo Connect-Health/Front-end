@@ -45,13 +45,49 @@ const Chatbot = () => {
   let responseText = '';
   const resposta1 = [
     'O Que é Connect Health',
-    'O que é Connect'
+    'O que é Connect',
+    'Connect'
   ];
+  
+  const resposta2 = [
+    'Como acessar o feed de noticias',
+    'ter acesso a o feed',
+    'Feed de noticias',
+    'feed'
+  ];
+
+  const resposta3 = [
+    'Como encontrar um profissional de psicologia',
+    'Como encontrar um profissional de Nutrição',
+    'Ter acesso a um profissional',
+    'como encontrar um profissional',
+    'profissional',
+    'Profissional'
+  ];
+  
   
   for (let i = 0; i < resposta1.length; i++) {
     if (newQuestion.includes(resposta1[i])) {
       responseText = 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.';
       break; // Encerra o loop assim que uma correspondência for encontrada
+    }
+  }
+  
+  if (!responseText) {
+    for (let i = 0; i < resposta2.length; i++) {
+      if (newQuestion.includes(resposta2[i])) {
+        responseText = 'Primeiramente você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".';
+        break;
+      }
+    }
+  }
+
+  if (!responseText) {
+    for (let i = 0; i < resposta3.length; i++) {
+      if (newQuestion.includes(resposta3[i])) {
+        responseText = 'Você pode encontrar de diversas formas Profissionais tanto da psicologia quanto da nutrição na plataforma uma delas é pela àrea expecifica de cada um, tambem tem o Feed de noticias e encontrará os mais recomendados';
+        break;
+      }
     }
   }
   
