@@ -48,9 +48,10 @@ const Chatbot = () => {
   } else if (newQuestion.toLowerCase().includes('sua pergunta específica 2')) {
     responseText = 'Resposta para a pergunta específica 2';
   } else {
-    responseText = await getOpenAIResponse(newQuestion);
+    responseText = 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.';
   }
 
+  
   setStoredValues([
     {
       question: newQuestion,
