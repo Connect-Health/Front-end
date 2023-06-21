@@ -43,13 +43,22 @@ const Chatbot = () => {
 
   const generateResponse = async (newQuestion, setNewQuestion) => {
   let responseText = '';
-  if (newQuestion.toLowerCase().includes('O que é a connect Health')) {
-    responseText = 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.';
-  } else if (newQuestion.toLowerCase().includes('sua pergunta específica 2')) {
-    responseText = 'Resposta para a pergunta específica 2';
-  } else {
+  const resposta1 = [
+    'O Que é Connect Health',
+    'O que é Connect'
+  ];
+  
+  for (let i = 0; i < resposta1.length; i++) {
+    if (newQuestion.includes(resposta1[i])) {
+      responseText = 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.';
+      break; // Encerra o loop assim que uma correspondência for encontrada
+    }
+  }
+  
+  if (!responseText) {
     responseText = 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.';
   }
+  
 
   
   setStoredValues([
