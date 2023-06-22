@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+
 
 function Copyright(props) {
   return (
@@ -50,11 +52,11 @@ export default function Register2() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+          <Avatar className='mb-3' sx={{bgcolor: 'primary.main' }}>
+            
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            Registre-se!
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -144,28 +146,47 @@ export default function Register2() {
                     maxLength: 11
                   }}
                 />
-                
+
               </Grid>
-              
+              <Grid item xs={12} className='flex gap-4'>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Genero</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+
+                    label="Genero"
+                  >
+                    <MenuItem value={1}>Masculino</MenuItem>
+                    <MenuItem value={2}>Feminino</MenuItem>
+                    <MenuItem value={3}>Outros</MenuItem>
+                    <MenuItem value={4}>Prefiro não informar</MenuItem>
+                  </Select>
+                </FormControl>
+                
+
+              </Grid>
             </Grid>
+
+
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              Continuar
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
+                <Link href="/loginprof" variant="body2">
+                 Já possui uma conta? Faça seu Login!
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
   );
