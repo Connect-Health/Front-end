@@ -77,6 +77,10 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: '/registerprof',
+        element: <Register2 />,
+      },
+      {
         path: '/feed',
         element: <Feed />,
       },
