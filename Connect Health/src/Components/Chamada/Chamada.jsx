@@ -21,15 +21,26 @@ const Chamada = () => {
     // start the call
     zp.joinRoom({
       container: element,
+      sharedLinks: [
+        {
+          name: "Copiar Link",
+          url: `https://connect-health.net.br/chamada/${roomID}`,
+        },
+      ],
       scenario: {
         mode: ZegoUIKitPrebuilt.OneONoneCall,
       },
+      showScreenshareBtn: false,
     });
   };
 
   return (
     <div>
-        <div ref={myMeeting} />
+      <div
+        className="myCallContainer"
+        ref={myMeeting}
+        style={{ width: "100vw", height: "100vh" }}
+      ></div>
     </div>
   );
 };
