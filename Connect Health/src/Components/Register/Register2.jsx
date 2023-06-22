@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 function AdditionalInputs() {
   return (
@@ -49,12 +50,13 @@ function AdditionalInputs() {
 export default function Register2() {
   const [currentStep, setCurrentStep] = useState(1);
   const [nome, setNome] = useState('');
+  const [senha, setSenha] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [telefone, setTelefone] = useState('');
   const [dataNascimento, setDataNascimento] = useState('');
   const [cpf, setCpf] = useState('');
   const [email, setEmail] = useState('');
-  const [genero, setGenero] = useState('');
+  const [genero, setGenero] = useState(1);
 
 
   const handleSubmit = (event) => {
@@ -106,6 +108,8 @@ export default function Register2() {
                       fullWidth
                       id="firstName"
                       label="Nome"
+                      value={nome}
+                      onChange={(texto) => setNome(texto.target.value)}
                       autoFocus
                     />
                   </Grid>
@@ -116,6 +120,8 @@ export default function Register2() {
                       id="lastName"
                       label="Sobrenome"
                       name="lastName"
+                      value={sobrenome}
+                      onChange={(texto) => setSobrenome(texto.target.value)}
                       autoComplete="family-name"
                     />
                   </Grid>
@@ -126,6 +132,8 @@ export default function Register2() {
                       id="email"
                       label="Email"
                       name="email"
+                      value={email}
+                      onChange={(texto) => setEmail(texto.target.value)}
                       autoComplete="email"
                     />
                   </Grid>
@@ -137,6 +145,8 @@ export default function Register2() {
                       label="Senha"
                       type="password"
                       id="password"
+                      value={senha}
+                      onChange={(texto) => setSenha(texto.target.value)}
                       autoComplete="new-password"
                     />
                     <TextField
@@ -144,6 +154,8 @@ export default function Register2() {
                       fullWidth
                       name="cpf"
                       label="CPF"
+                      value={cpf}
+                      onChange={(texto) => setCpf(texto.target.value)}
                       type="text"
                       id="cpf"
                       autoComplete="cpf"
@@ -164,7 +176,7 @@ export default function Register2() {
                     />
                   </Grid>
                   <Grid item xs={12} className="flex gap-4">
-                    <TextField required fullWidth name="data" type="date" id="data" autoComplete="data" />
+                    <TextField required fullWidth name="data" type="date" id="data" autoComplete="data" value={dataNascimento} onChange={(texto) => setDataNascimento(texto.target.value)} />
                     <TextField
                       required
                       fullWidth
@@ -172,6 +184,8 @@ export default function Register2() {
                       label="Telefone"
                       type="tel"
                       id="telefone"
+                      value={telefone}
+                      onChange={(texto) => setTelefone(texto.target.value)}
                       autoComplete="telefone"
                       inputProps={{
                         maxLength: 11,
@@ -181,7 +195,7 @@ export default function Register2() {
                   <Grid item xs={12} className="flex gap-4">
                     <FormControl fullWidth>
                       <InputLabel id="demo-simple-select-label">Gênero</InputLabel>
-                      <Select labelId="demo-simple-select-label" id="demo-simple-select" label="Gênero">
+                      <Select labelId="demo-simple-select-label" id="demo-simple-select" label="Gênero" value={genero} onChange={(texto) => setGenero(texto.target.value)}>
                         <MenuItem value={1}>Masculino</MenuItem>
                         <MenuItem value={2}>Feminino</MenuItem>
                         <MenuItem value={3}>Outros</MenuItem>
@@ -191,20 +205,20 @@ export default function Register2() {
                   </Grid>
                 </>
               )}
-
-              {currentStep === 2 && <AdditionalInputs />}
-
               {currentStep === 2 && (
                 <Grid item xs={12}>
-                  <Button variant="contained" onClick={handleGoBack}>
-                    Voltar
+                  <Button variant='outlined' onClick={handleGoBack}>
+                    <AiOutlineArrowLeft className='text-xl'/>
                   </Button>
                 </Grid>
               )}
 
+              {currentStep === 2 && <AdditionalInputs />}
+
+              
               <Grid item xs={12}>
                 <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-                  {currentStep === 1 ? 'Continuar' : 'Finalizar'}
+                  {currentStep === 1 ? 'Continuar' : 'Finalizar'} 
                 </Button>
               </Grid>
               <Grid container justifyContent="flex-end">
