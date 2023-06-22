@@ -37,12 +37,12 @@ const Chatbot = () => {
     let responseText = "";
     const perguntasERespostas = [
       {
-        perguntas: ["o que é connect health?", "o que é connect?"],
+        perguntas: ["o que é connect health", "o que é connect"],
         resposta:
           "A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.",
       },
       {
-        perguntas: ["qual é o objetivo da connect health?"],
+        perguntas: ["qual é o objetivo da connect health"],
         resposta:
           "O objetivo da Connect Health é fornecer uma solução abrangente para cuidados de saúde digital, facilitando o acesso à assistência médica, psicológica e nutricional.",
       },
