@@ -18,28 +18,31 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 function AdditionalInputs() {
   return (
     <>
-      <Grid item xs={12} className="flex gap-4">
-        {/* Adicione aqui os inputs adicionais que deseja exibir */}
-        <TextField
-          required
-          fullWidth
-          name="additionalInput1"
-          label="Input Adicional 1"
-          type="text"
-          id="additionalInput1"
-          autoComplete="additional-input1"
-        />
-      </Grid>
-      <Grid item xs={12} className="flex gap-4">
-        <TextField
-          required
-          fullWidth
-          name="additionalInput2"
-          label="Input Adicional 2"
-          type="text"
-          id="additionalInput2"
-          autoComplete="additional-input2"
-        />
+      <Grid  container spacing={2} sx={{ mt: 2 }} >
+        <Grid item xs={12} className="flex gap-4">
+          {/* Adicione aqui os inputs adicionais que deseja exibir */}
+          <TextField
+            required
+            fullWidth
+            name="cep"
+            label="CEP"
+            type="text"
+            id="cep"
+            autoComplete="cep"
+          />
+          <TextField
+            required
+            fullWidth
+            name="additionalInput2"
+            label="Input Adicional 2"
+            type="text"
+            id="additionalInput2"
+            autoComplete="additional-input2"
+          />
+        </Grid>
+        <Grid item xs={12} className="flex gap-4">
+          
+        </Grid>
       </Grid>
     </>
   );
@@ -205,20 +208,21 @@ export default function Register2() {
                   </Grid>
                 </>
               )}
+
               {currentStep === 2 && (
                 <Grid item xs={12}>
                   <Button variant='outlined' onClick={handleGoBack}>
-                    <AiOutlineArrowLeft className='text-xl'/>
+                    <AiOutlineArrowLeft className='text-xl' />
                   </Button>
                 </Grid>
               )}
 
               {currentStep === 2 && <AdditionalInputs />}
 
-              
+
               <Grid item xs={12}>
                 <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-                  {currentStep === 1 ? 'Continuar' : 'Finalizar'} 
+                  {currentStep === 1 ? 'Continuar' : 'Finalizar'}
                 </Button>
               </Grid>
               <Grid container justifyContent="flex-end">
