@@ -2,12 +2,12 @@ import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { useParams } from "react-router-dom";
 
 const Chamada = () => {
-  const { roomID } = useParams();
+  const { roomID } = useParams() || "random(5)";
 
   const myMeeting = async (element) => {
     const appID = 432733439;
     const serverSecret = "1eb23befe3b3cb706f15dd3e19bf00ed";
-    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForProduction(
       appID,
       serverSecret,
       roomID,
