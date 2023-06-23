@@ -112,9 +112,6 @@ const Header = () => {
           <Link to='/eventos' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
           max-md:hidden
           '>Eventos</Link>
-          <Link to='/chat' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
-          max-md:hidden
-          '>Chat Bot</Link>
         </div>
 
         <div className='gap-6 flex mr-20 items-center'>
