@@ -13,7 +13,7 @@ const Chamada = () => {
   const myMeeting = async (element) => {
     const appID = 432733439;
     const serverSecret = "1eb23befe3b3cb706f15dd3e19bf00ed";
-    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForProduction(
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       appID,
       serverSecret,
       roomID,
@@ -33,14 +33,14 @@ const Chamada = () => {
         },
       ],
       scenario: {
-        mode: ZegoUIKitPrebuilt.VideoConference,
+        mode: ZegoUIKitPrebuilt.OneONoneCall,
       },
       showScreenshareBtn: false,
     });
   };
 
   return (
-    <div className="pecinha ">
+    <div className="pecinha">
       <img src={logo} className="absolute z-50 top-1 left-1 w-20" alt="" />
       <div
         className=" bg-azulsite "

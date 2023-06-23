@@ -47,8 +47,24 @@ const Chatbot = () => {
         response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
       },
       {
-        questions: ['olá'],
-        response: 'Oie sou Débi assistente virtual da connect',
+        questions: ['olá', 'oi', 'oie'],
+        response: 'Oie sou Débi uma inteligencia artificial feita para te ajudar',
+      },
+      {
+        questions: ['tudo bem', 'como vai', 'como está'],
+        response: 'eu estou bem e você?',
+      },
+      {
+        questions: ['tudo bem', 'como vai', 'como está'],
+        response: 'eu estou bem e você?',
+      },
+      {
+        questions: ['estou bem', 'bem', 'estou otimo'],
+        response: 'que bom, como posso te ajudar?',
+      },
+      {
+        questions: ['o que você acha do joquina', 'joca', 'joquinha'],
+        response: 'ele é até que legal, mas eu sou melhor',
       },
     ];
   
@@ -108,13 +124,13 @@ const Chatbot = () => {
             onClick={toggleChatbot}
             className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
           >
-            <p className="text-lg  text-white">Débinha</p>
+            <p className="text-lg  text-white">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
           <div id="scroll-bot" className="h-[60vh] mb-10 overflow-y-scroll">
             {storedValues.length === 0 && (
               <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
-                Olá! Sou a Débinha, a assistente virtual da{" "}
+                Olá! Sou a Débi a assistente virtual da{" "}
                 <span className="font-semibold">Connect Health</span>. Estou
                 aqui para responder às suas perguntas sobre saúde e bem-estar.
                 Pode me perguntar qualquer coisa! 😊
@@ -131,7 +147,7 @@ const Chatbot = () => {
           onClick={toggleChatbot}
           className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
         >
-          <p className="text-lg  text-white">Débinha</p>
+          <p className="text-lg  text-white">Débi</p>
           <AiOutlineArrowUp className="text-2xl text-white" />
         </div>
       )}

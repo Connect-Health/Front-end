@@ -18,32 +18,70 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 function AdditionalInputs() {
   return (
     <>
-      <Grid  container spacing={2} sx={{ mt: 2 }} >
-        <Grid item xs={12} className="flex gap-4">
-          {/* Adicione aqui os inputs adicionais que deseja exibir */}
-          <TextField
-            required
-            fullWidth
-            name="cep"
-            label="CEP"
-            type="text"
-            id="cep"
-            autoComplete="cep"
-          />
-          <TextField
-            required
-            fullWidth
-            name="additionalInput2"
-            label="Input Adicional 2"
-            type="text"
-            id="additionalInput2"
-            autoComplete="additional-input2"
-          />
+    
+      <Container component="main" maxWidth="xs">
+        <Grid container spacing={2} sx={{ mt: 2 }} >
+          <Grid item xs={12} className="flex gap-4">
+            {/* Adicione aqui os inputs adicionais que deseja exibir */}
+            <TextField
+              required
+              fullWidth
+              name="cep"
+              label="CEP"
+              type="text"
+              id="cep"
+              autoComplete="cep"
+              inputProps={{
+                maxLength: 10
+              }}
+            />
+            <TextField
+              required
+              fullWidth
+              name="logradouro"
+              label="Logradouro"
+              type="text"
+              id="logradouro"
+              autoComplete="logradouro"
+            />
+          </Grid>
+          <Grid item xs={12} className="flex gap-4">
+
+          </Grid>
         </Grid>
-        <Grid item xs={12} className="flex gap-4">
-          
+        <Grid container spacing={2}>
+          <Grid item xs={12} className="flex gap-4">
+            {/* Adicione aqui os inputs adicionais que deseja exibir */}
+            <TextField
+              required
+              fullWidth
+              name="bairro"
+              label="Bairro"
+              type="text"
+              id="bairro"
+              autoComplete="bairro"
+              inputProps={{
+                maxLength: 10
+              }}
+            />
+            <TextField
+              required
+              fullWidth
+              name="cidade"
+              label="Cidade"
+              type="text"
+              id="cidade"
+              autoComplete="cidade"
+            />
+          </Grid>
+          <Grid item xs={12} className="flex gap-4">
+
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
+
+
+
     </>
   );
 }
