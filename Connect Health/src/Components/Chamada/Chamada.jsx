@@ -13,7 +13,7 @@ const Chamada = () => {
   const myMeeting = async (element) => {
     const appID = 432733439;
     const serverSecret = "1eb23befe3b3cb706f15dd3e19bf00ed";
-    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForProduction(
       appID,
       serverSecret,
       roomID,
