@@ -28,7 +28,7 @@ const Chamada = () => {
         },
       ],
       scenario: {
-        mode: ZegoUIKitPrebuilt.GroupCall,
+        mode: ZegoUIKitPrebuilt.VideoConference,
       },
       showScreenshareBtn: false,
     });
