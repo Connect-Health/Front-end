@@ -2,13 +2,12 @@ import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../AutoContext/AuthContext";
-import logo from '../../../assets/logo_preta.png'
+import logo from "../../../assets/logo_preta.png";
 
 const Chamada = () => {
   const { roomID } = useParams();
   const { user } = useContext(AuthContext);
 
-  
   const nomeUsuario = user?.nome || "";
 
   const myMeeting = async (element) => {
@@ -34,7 +33,7 @@ const Chamada = () => {
         },
       ],
       scenario: {
-        mode: ZegoUIKitPrebuilt.VideoConference,
+        mode: ZegoUIKitPrebuilt.OneONoneCall,
       },
       showScreenshareBtn: false,
     });
@@ -47,9 +46,7 @@ const Chamada = () => {
         className=" bg-azulsite "
         ref={myMeeting}
         style={{ width: "100vw", height: "100vh" }}
-      >
-        
-      </div>
+      ></div>
     </div>
   );
 };
