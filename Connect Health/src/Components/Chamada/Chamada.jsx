@@ -2,6 +2,7 @@ import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../AutoContext/AuthContext";
+import logo from '../../../assets/logo_preta.png'
 
 const Chamada = () => {
   const { roomID } = useParams();
@@ -21,7 +22,6 @@ const Chamada = () => {
       nomeUsuario
     );
 
-    // Create instance object from Kit Token.
     const zp = ZegoUIKitPrebuilt.create(kitToken);
 
     // start the call
@@ -40,12 +40,15 @@ const Chamada = () => {
   };
 
   return (
-    <div>
+    <div className="pecinha ">
+      <img src={logo} className="absolute z-50 top-1 left-1 w-20" alt="" />
       <div
-        className="myCallContainer"
+        className=" bg-azulsite "
         ref={myMeeting}
         style={{ width: "100vw", height: "100vh" }}
-      ></div>
+      >
+        
+      </div>
     </div>
   );
 };
