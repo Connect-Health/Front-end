@@ -98,12 +98,12 @@ function Register() {
                   <AiOutlineArrowLeft className="absolute text-azulsite text-3xl top-5 left-5" />
                </Link>
                <div className="flex flex-col mt-4 mb-14 max-md:justify-center ">
-                  <h1 className="font-extrabold text-4xl text-azulsite text-center max-md:text-2xl">Registre-se!</h1>
-                  <Link to="/registerprof">
-                     <p className="font-bold mt-3 text-center">É um <span className='text-azulsite'>profissional</span>?</p>
+                  <h1 className="font-extrabold text-5xl text-azulsite text-center mb-5 max-md:text-2xl">Registre-se!</h1>
+                  <Link to="/registerprofregisterprof">
+                     <p className="font-bold  text-2xl text-center">É um <span className='text-azulsite'>profissional</span>?</p>
                   </Link>
                </div>
-            <div>
+            <div  className='-mt-5'>
                
 
             <div className='flex  mx-auto h-auto px-5 py-2 rounded shadow-lg justify-center gap-14 bg-[#ebebeb] max-md:block max-md:px-0'>

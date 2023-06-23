@@ -15,7 +15,7 @@ import Politica from "./Complementares/Politica/Politica";
 import Login from "./Components/Login/Login";
 import Loginprof from "./Components/Login/Loginprof";
 import Register from "./Components/Register/Register";
-import Register2 from "./Components/Register/Register2";
+import Registerprof from "./Components/Register/Registerprof";
 import Feed from "./Feed/app";
 import Carrossel from "./Home/Componentes/Carrossel";
 import Perfil from "./Perfil/perfil";
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/registerprof",
-        element: <Register2 />,
+        element: <Registerprof />,
       },
       {
         path: "/feed",
