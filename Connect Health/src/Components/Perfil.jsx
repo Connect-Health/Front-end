@@ -34,7 +34,6 @@ const Perfil = () => {
               </Avatar>
             )}
             </button>
-            {console.log(user.urlAvatar)}
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
