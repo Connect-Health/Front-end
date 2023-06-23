@@ -47,7 +47,7 @@ const Chatbot = () => {
         response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
       },
       {
-        questions: ['olá', 'oi', 'oie'],
+        questions: ['olá', 'oi', 'oie', 'ola'],
         response: 'Oie sou Débi uma inteligencia artificial feita para te ajudar',
       },
       {
@@ -65,6 +65,18 @@ const Chatbot = () => {
       {
         questions: ['o que você acha do joquina', 'joca', 'joquinha'],
         response: 'ele é até que legal, mas eu sou melhor',
+      },
+      {
+        questions: ['você é uma mulher'],
+        response: 'Bom! eu sou uma inteligencia artificial, ou seja, não possuo um gerenero',
+      },
+      {
+        questions: ['quem te criou'],
+        response: 'fui criada pelos doctor devs, os criadores da connect',
+      },
+      {
+        questions: ['qual seu nome'],
+        response: 'meu nome é Débi, fui inspirada na professora Débora',
       },
     ];
   
