@@ -32,72 +32,49 @@ const Chatbot = () => {
   const openai = new OpenAIApi(configuration);
 
   const [storedValues, setStoredValues] = useState([]);
-
   const generateResponse = async (newQuestion, setNewQuestion) => {
-    let responseText = '';
-    const resposta1 = [
-      'O Que é Connect Health',
-      'O que é Connect',
-      'O que é Connect',
-      'Connect',
-      'connect'
+    const questionMappings = [
+      {
+        questions: ['connect', 'o que é connect health', 'connect health'],
+        response: 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.',
+      },
+      {
+        questions: ['feed', 'como acessar o feed de noticias'],
+        response: 'Primeiramente, você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".',
+      },
+      {
+        questions: ['profissional', 'como encontrar um profissional de psicologia'],
+        response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
+      },
     ];
   
-    const resposta2 = [
-      'Como acessar o feed de noticias',
-      'ter acesso a o feed',
-      'Feed de noticias',
-      'feed'
-    ];
+    const lowerCaseQuestion = newQuestion.toLowerCase();
   
-    const resposta3 = [
-      'Como encontrar um profissional de psicologia',
-      'Como encontrar um profissional de Nutrição',
-      'Ter acesso a um profissional',
-      'como encontrar um profissional',
-      'profissional',
-      'Profissional'
-    ];
-  
-  
-    for (let i = 0; i < resposta1.length; i++) {
-      if (newQuestion.includes(resposta1[i])) {
-        responseText = 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.';
-        break; // Encerra o loop assim que uma correspondência for encontrada
+    for (const mapping of questionMappings) {
+      const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
+      if (matchedQuestion) {
+        setStoredValues([
+          {
+            question: newQuestion,
+            answer: mapping.response,
+          },
+          ...storedValues,
+        ]);
+        setNewQuestion("");
+        return;
       }
-    }
-  
-    if (!responseText) {
-      for (let i = 0; i < resposta2.length; i++) {
-        if (newQuestion.includes(resposta2[i])) {
-          responseText = 'Primeiramente você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".';
-          break;
-        }
-      }
-    }
-  
-    if (!responseText) {
-      for (let i = 0; i < resposta3.length; i++) {
-        if (newQuestion.includes(resposta3[i])) {
-          responseText = 'Você pode encontrar de diversas formas Profissionais tanto da psicologia quanto da nutrição na plataforma uma delas é pela àrea expecifica de cada um, tambem tem o Feed de noticias e encontrará os mais recomendados';
-          break;
-        }
-      }
-    }
-  
-    if (!responseText) {
-      responseText = 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.';
     }
   
     setStoredValues([
       {
         question: newQuestion,
-        answer: responseText,
+        answer: 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.',
       },
       ...storedValues,
     ]);
     setNewQuestion("");
   };
+  
 
   const getOpenAIResponse = async (question) => {
     const options = {
