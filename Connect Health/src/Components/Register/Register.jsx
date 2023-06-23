@@ -95,10 +95,10 @@ function Register() {
    return (
       <div className=''>
                <Link to="/">
-                  <AiOutlineArrowLeft className="absolute text-azulsite text-5xl top-3 left-3" />
+                  <AiOutlineArrowLeft className="absolute text-azulsite text-3xl top-5 left-5" />
                </Link>
-               <div className="flex flex-col mt-4 mb-14">
-                  <h1 className="font-extrabold text-4xl text-azulsite text-center">Registre-se!</h1>
+               <div className="flex flex-col mt-4 mb-14 max-md:justify-center ">
+                  <h1 className="font-extrabold text-4xl text-azulsite text-center max-md:text-2xl">Registre-se!</h1>
                   <Link to="/">
                      <p className="font-bold mt-3 text-center">É um <span className='text-azulsite'>profissional</span>?</p>
                   </Link>
@@ -106,9 +106,9 @@ function Register() {
             <div>
                
 
-            <div className='flex w-fit mx-auto h-auto px-5 py-2 rounded shadow-lg justify-center gap-14 bg-[#ebebeb]'>
+            <div className='flex  mx-auto h-auto px-5 py-2 rounded shadow-lg justify-center gap-14 bg-[#ebebeb] max-md:block max-md:px-0'>
                {/*Inicio do Forms */}
-               <form className=' flex w-auto px-3 py-2 rounded'>
+               <form className=' flex px-3 py-2 rounded'>
                   {/* Formatação do forms */}
                   <div className=' flex flex-col items-center justify-evenly '>
                      <h1 className='text-xl font-bold text-azulsite mb-5'>Informações pessoais</h1>
@@ -122,7 +122,7 @@ function Register() {
                            value={nome}
                            onChange={(e) => setNome(e.target.value)}
                            placeholder='Primeiro nome'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      {/* Input Sobrenome */}
@@ -135,7 +135,7 @@ function Register() {
                            value={sobrenome}
                            onChange={(e) => setSobrenome(e.target.value)}
                            placeholder='Segundo nome'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      {/* Input telefone */}
@@ -149,13 +149,13 @@ function Register() {
                            value={telefone}
                            onChange={(e) => setTelefone(e.target.value)}
                            placeholder='11 99999-9999'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      {/* Input Genero */}
                      <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                         <span className="mb-1  text-azulsite text-xl">Genero*:</span>
-                        <select className="w-80 border border-gray-300 px-3 py-2 rounded"
+                        <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         onChange={(e) => {
                            const selectedGenero = e.target.value;
                            let id = 0;
@@ -186,7 +186,7 @@ function Register() {
                               value={cpf}
                               onChange={(e) => setCpf(e.target.value)}
                               placeholder='000.000.000-00'
-                              className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                              className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                            />
                         </label>
 
@@ -198,19 +198,19 @@ function Register() {
                            name="aniversario"
                            value={dataNascimento}
                            onChange={(e) => setDataNascimento(e.target.value)}
-                           className="w-80 border border-gray-300 px-3 py-2 rounded required:"
+                           className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                            <span className="mb-1  text-azulsite text-xl">E-mail*:</span>
                            <input
-                              type="e-mail required"
+                              type="email"
                               id="email"
                               name="email"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
                               placeholder='seuemail@gmail'
-                           className="w-80 border border-gray-300 px-3 py-2 rounded"
+                           className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                            
                            />
                         </label>
@@ -224,7 +224,7 @@ function Register() {
                            value={senha}
                            onChange={(e) => setSenha(e.target.value)}
                            placeholder='Digite sua senha'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                   </div>
@@ -243,7 +243,7 @@ function Register() {
                            value={logradouro}
                            onChange={(e) => setLogradouro(e.target.value)}
                            placeholder='Rua connect health'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                   <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
@@ -256,7 +256,7 @@ function Register() {
                            value={cep}
                            onChange={(e) => setCep(e.target.value)}
                            placeholder='00000-000'
-                           className=" w-80  border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80  border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
@@ -268,7 +268,7 @@ function Register() {
                            value={cidade}
                            onChange={(e) => setCidade(e.target.value)}
                            placeholder='São Paulo'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                   
@@ -281,7 +281,7 @@ function Register() {
                            value={bairro}
                            onChange={(e) => setBairro(e.target.value)}
                            placeholder='00000-000'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      
@@ -294,7 +294,7 @@ function Register() {
                            value={uf}
                            onChange={(e) => setUf(e.target.value)}
                            placeholder='SP'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
 
@@ -307,7 +307,7 @@ function Register() {
                            value={complemento}
                            onChange={(e) => setComplemento(e.target.value)}
                            placeholder='Ap 20 Bloco 2'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
 
@@ -320,7 +320,7 @@ function Register() {
                            value={numero}
                            onChange={(e) => setNumero(e.target.value)}
                            placeholder='73'
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                         />
                      </label>
                      <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
@@ -331,7 +331,7 @@ function Register() {
                            name="numero"
                            placeholder='Brasil'
                            disabled
-                           className=" w-80 border border-gray-300 px-3 py-2 rounded disabled:bg-gradi/20"
+                           className=" w-80 border border-gray-300 px-3 py-2 rounded disabled:bg-gradi/20 max-md:w-full"
                         />
                      </label>
                      </div> 
