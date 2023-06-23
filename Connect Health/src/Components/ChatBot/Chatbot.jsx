@@ -117,12 +117,12 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] fixed z-50 right-1 bottom-1">
+    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] max-md:w-[45%] fixed z-50 right-1 bottom-1">
       {isOpen ? (
         <div>
           <div
             onClick={toggleChatbot}
-            className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
+            className="w-full max-md:w-[100%]  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
           >
             <p className="text-lg  text-white">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
