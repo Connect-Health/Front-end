@@ -23,6 +23,7 @@
     "gapi-script": "^1.2.0",
     "mdb-react-ui-kit": "^6.1.0",
     "openai": "^3.3.0",
+    "randomcolor": "^0.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.1",

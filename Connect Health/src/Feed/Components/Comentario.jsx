@@ -2,6 +2,7 @@ import { Snackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 import React, { useState } from 'react';
 import { AiFillDelete } from 'react-icons/ai';
+import Perfil from '../../Components/Perfil';
 
 
 
@@ -25,7 +26,7 @@ const Comentario = ({ comentario, user, userId, onDeleteComentario }) => {
     <div className="w-[90%] bg-[#ebebeb]/50 pt-3 pl-3 pr-3 pb-1 mb-5 rounded-lg">
       <div className="flex justify-between items-center border-b pb-3 border-gradi/20">
         <div className='flex gap-3 items-center'>
-            <img className="h-8 w-8 object-cover rounded-full" src={comentario.paciente.urlAvatar } alt="imagem" />
+            <Perfil />
             <p className="font-semibold">
             {comentario.paciente.nome} {comentario.paciente.sobrenome}
             </p>

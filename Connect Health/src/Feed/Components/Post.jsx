@@ -9,6 +9,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { BsFillSendFill } from 'react-icons/bs';
 import Comentario from './Comentario';
+import Perfil from '../../Components/Perfil';
 
 
 
@@ -167,7 +168,7 @@ const Post = ({ post, user }) => {
         {showComentarios && (
           <div className="ml-[5%] mt-2 w-[100%]">
             <div className='flex gap-5  mb-5'>
-              <img src={user.urlAvatar} className='h-10 w-10 object-cover rounded-full object-top' alt="" />
+              <Perfil />
               <input type="text" placeholder='Seu comentário' className='w-4/5 rounded-3xl pl-5 border border-gradi/50 focus:border-black outline-none placeholder:text-sm' value={novoComentario} onChange={handleNovoComentario} />
               <button onClick={handleEnviarComentario}>
                 <AiOutlineSend className='text-2xl -ml-14' />
