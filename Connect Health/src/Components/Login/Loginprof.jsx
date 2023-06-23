@@ -156,7 +156,7 @@ function Login() {
         </div>
         <h1 className="text-1xl font-semibold mt-3">
           Não tem conta?{" "}
-          <Link to="/register" className="text-azulsite">
+          <Link to="/registerprof" className="text-azulsite">
             Registre-se
           </Link>
         </h1>
