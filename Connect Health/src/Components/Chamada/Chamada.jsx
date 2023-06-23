@@ -34,8 +34,9 @@ const Chamada = () => {
         },
       ],
       scenario: {
-        mode: ZegoUIKitPrebuilt.OneONoneCall,
+        mode: ZegoUIKitPrebuilt.GroupCall,
       },
+      showScreenshareBtn: false,
     });
   };
 

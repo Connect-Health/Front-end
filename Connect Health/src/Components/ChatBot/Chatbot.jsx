@@ -43,8 +43,12 @@ const Chatbot = () => {
         response: 'Primeiramente, você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".',
       },
       {
-        questions: ['profissional', 'como encontrar um profissional de psicologia'],
+        questions: ['profissional', 'profissional de psicologia', 'profissional de nutrição', 'como encontrar um profissional de psicologia', 'como encontrar um profissional de nutrição'],
         response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
+      },
+      {
+        questions: ['olá'],
+        response: 'Oie sou Débi assistente virtual da connect',
       },
     ];
   
@@ -55,7 +59,7 @@ const Chatbot = () => {
       if (matchedQuestion) {
         setStoredValues([
           {
-            question: newQuestion,
+            question: newQuestion,  
             answer: mapping.response,
           },
           ...storedValues,
