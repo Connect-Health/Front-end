@@ -1,14 +1,8 @@
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
-import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { AuthContext } from "../../AutoContext/AuthContext";
 
 const Chamada = () => {
   const { roomID } = useParams();
-  const { user } = useContext(AuthContext);
-
-  
-  const nomeUsuario = user?.nome || "";
 
   const myMeeting = async (element) => {
     const appID = 432733439;
@@ -18,7 +12,7 @@ const Chamada = () => {
       serverSecret,
       roomID,
       Date.now().toString(),
-      nomeUsuario
+      "Usuario"
     );
 
     // Create instance object from Kit Token.
@@ -36,6 +30,7 @@ const Chamada = () => {
       scenario: {
         mode: ZegoUIKitPrebuilt.GroupCall,
       },
+      showScreenshareBtn: false,
     });
   };
 
