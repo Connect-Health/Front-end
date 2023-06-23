@@ -40,7 +40,7 @@ const Chamada = () => {
   };
 
   return (
-    <div className="pecinha ">
+    <div className="pecinha">
       <img src={logo} className="absolute z-50 top-1 left-1 w-20" alt="" />
       <div
         className=" bg-azulsite "
