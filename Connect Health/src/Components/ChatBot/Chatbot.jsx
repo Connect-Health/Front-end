@@ -32,59 +32,49 @@ const Chatbot = () => {
   const openai = new OpenAIApi(configuration);
 
   const [storedValues, setStoredValues] = useState([]);
-
   const generateResponse = async (newQuestion, setNewQuestion) => {
-    let responseText = "";
-    const perguntasERespostas = [
+    const questionMappings = [
       {
-        perguntas: ["o que é connect health", "o que é connect"],
-        resposta:
-          "A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.",
+        questions: ['connect', 'o que é connect health', 'connect health'],
+        response: 'A Connect Health é uma multiplataforma com foco na saúde digital que explora a área da Psicologia e Nutrição.',
       },
       {
-        perguntas: ["qual é o objetivo da connect health"],
-        resposta:
-          "O objetivo da Connect Health é fornecer uma solução abrangente para cuidados de saúde digital, facilitando o acesso à assistência médica, psicológica e nutricional.",
+        questions: ['feed', 'como acessar o feed de noticias'],
+        response: 'Primeiramente, você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".',
       },
       {
-        perguntas: ["quais são os serviços oferecidos pela connect health?"],
-        resposta:
-          "A Connect Health oferece serviços de psicologia, nutrição e saúde.",
+        questions: ['profissional', 'como encontrar um profissional de psicologia'],
+        response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
       },
-      {
-
-      }
-      // Adicione mais perguntas e respostas aqui
     ];
-
-    const lowercaseQuestion = newQuestion.toLowerCase();
-
-    for (const { perguntas, resposta } of perguntasERespostas) {
-      for (const pergunta of perguntas) {
-        if (lowercaseQuestion.includes(pergunta.toLowerCase())) {
-          responseText = resposta;
-          break; // Encerra o loop interno quando uma correspondência for encontrada
-        }
-      }
-      if (responseText) {
-        break; // Encerra o loop externo quando uma correspondência for encontrada
+  
+    const lowerCaseQuestion = newQuestion.toLowerCase();
+  
+    for (const mapping of questionMappings) {
+      const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
+      if (matchedQuestion) {
+        setStoredValues([
+          {
+            question: newQuestion,
+            answer: mapping.response,
+          },
+          ...storedValues,
+        ]);
+        setNewQuestion("");
+        return;
       }
     }
-
-    if (!responseText) {
-      responseText =
-        "Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.";
-    }
-
+  
     setStoredValues([
       {
         question: newQuestion,
-        answer: responseText,
+        answer: 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.',
       },
       ...storedValues,
     ]);
     setNewQuestion("");
   };
+  
 
   const getOpenAIResponse = async (question) => {
     const options = {
