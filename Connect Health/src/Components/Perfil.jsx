@@ -1,7 +1,8 @@
-import {  Menu, MenuItem } from '@mui/material'
+import {  Menu, MenuItem, Avatar } from '@mui/material'
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../AutoContext/AuthContext';
 import { Link } from 'react-router-dom';
+import { deepOrange } from '@mui/material/colors';
 
 const Perfil = () => {
   const { user, logout } = useContext(AuthContext)
@@ -25,8 +26,15 @@ const Perfil = () => {
     <div>
         <div className=''>
             <button onClick={handleMenuOpen}>
-            <img src={user.urlAvatar} alt='Avatar' className='w-14 h-14 object-top object-cover rounded-full' />
+            {user.urlAvatar ? (
+              <img src={user.urlAvatar} alt='Avatar' className='w-14 h-14 object-top object-cover rounded-full' />
+            ) : (
+              <Avatar sx={{ bgcolor: '#9FDFF4' }} className='w-14 h-14 rounded-full'>
+                {user.nome.charAt(0)}
+              </Avatar>
+            )}
             </button>
+            {console.log(user.urlAvatar)}
             <Menu
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}

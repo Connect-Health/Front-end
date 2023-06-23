@@ -48,7 +48,6 @@ function Nutricao() {
         bg="nutri"
         bgSec="[#95FF00]"
       />
-      <Typeformnutri></Typeformnutri>
       
     </div>
   )
