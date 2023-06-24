@@ -182,7 +182,7 @@ function Register() {
                               type="text required"
                               id="CPF"
                               name="CPF"
-                              maxLength={14}
+                              maxLength={11}
                               value={cpf}
                               onChange={(e) => setCpf(e.target.value)}
                               placeholder='000.000.000-00'
