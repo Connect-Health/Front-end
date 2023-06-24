@@ -1,27 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Configuration, OpenAIApi } from "openai";
 
 import FormSection from "./FormSection";
 import AnswerSection from "./AnswerSection";
 import axios from "axios";
-
-import { useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [ChaveBot, setChaveBot] = useState("");
-  axios
-    .get("https://connect-health.up.railway.app/chat")
-    .then(function (response) {
-      const chave = response.data;
-      const chaveBotSemUltimaLetra = chave.slice(0, -1); // Usando o método slice
-      setChaveBot(chaveBotSemUltimaLetra);
-    })
-    .catch(function (error) {
-      // aqui temos acesso ao erro, quando alguma coisa inesperada acontece:
-      console.log(error);
-    });
+  const [speechResponse, setSpeechResponse] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://connect-health.up.railway.app/chat")
+      .then(function (response) {
+        const chave = response.data;
+        const chaveBotSemUltimaLetra = chave.slice(0, -1);
+        setChaveBot(chaveBotSemUltimaLetra);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
   const configuration = new Configuration({
     apiKey: ChaveBot,
@@ -32,6 +33,7 @@ const Chatbot = () => {
   const openai = new OpenAIApi(configuration);
 
   const [storedValues, setStoredValues] = useState([]);
+
   const generateResponse = async (newQuestion, setNewQuestion) => {
     const questionMappings = [
       {
@@ -68,7 +70,7 @@ const Chatbot = () => {
       },
       {
         questions: ['você é uma mulher'],
-        response: 'Bom! eu sou uma inteligencia artificial, ou seja, não possuo um gerenero',
+        response: 'Bom! eu sou uma inteligencia artificial, ou seja, não possuo um genero',
       },
       {
         questions: ['quem te criou'],
@@ -79,24 +81,28 @@ const Chatbot = () => {
         response: 'meu nome é Débi, fui inspirada na professora Débora',
       },
     ];
-  
+
+    const voices = speechSynthesis.getVoices();
     const lowerCaseQuestion = newQuestion.toLowerCase();
-  
+
+    console.log(voices[1])
+
     for (const mapping of questionMappings) {
       const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
       if (matchedQuestion) {
         setStoredValues([
           {
-            question: newQuestion,  
+            question: newQuestion,
             answer: mapping.response,
           },
           ...storedValues,
         ]);
         setNewQuestion("");
+        setSpeechResponse(mapping.response);
         return;
       }
     }
-  
+
     setStoredValues([
       {
         question: newQuestion,
@@ -105,8 +111,8 @@ const Chatbot = () => {
       ...storedValues,
     ]);
     setNewQuestion("");
+    setSpeechResponse('Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.');
   };
-  
 
   const getOpenAIResponse = async (question) => {
     const options = {
@@ -127,6 +133,23 @@ const Chatbot = () => {
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect
+  useEffect(() => {
+      if (speechResponse !== "") {
+        const speech = new SpeechSynthesisUtterance(speechResponse);
+        speech.
+       
+  voice = speechSynthesis.getVoices().find(
+          (voice) => voice.voiceURI === 'Microsoft Maria - Portuguese (Brazil)'
+        );
+        speech.rate = 1.5; // Ajuste o valor conforme necessário (1.2 é um pouco mais rápido)
+        window.speechSynthesis.speak(speech);
+        
+        
+  setSpeechResponse("");
+      }
+    }, [speechResponse]);
 
   return (
     <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] max-md:w-[45%] fixed z-50 right-1 bottom-1">
@@ -149,7 +172,10 @@ const Chatbot = () => {
               </p>
             )}
             {storedValues.length > 0 && (
-              <AnswerSection storedValues={storedValues} />
+              <AnswerSection
+                storedValues={storedValues}
+                setSpeechResponse={setSpeechResponse}
+              />
             )}
             <FormSection generateResponse={generateResponse} />
           </div>
