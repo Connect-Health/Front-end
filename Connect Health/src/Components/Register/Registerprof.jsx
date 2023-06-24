@@ -34,7 +34,13 @@ function Register() {
     const [numero, setNumero] = useState('');
     const [email, setEmail] = useState('');
     const [urlAvatar, setUrlAvatar] = useState('');
+    const [urlCertificado, setUrlCertificado] = useState('');
     const [senha, setSenha] = useState('');
+    const [duracao, setDuracao] = useState('');
+    const [preco, setPreco] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [areaAtuacao, setAreaAtuacao] = useState('');
+    const [especialidades, setEspecialidades] = useState('');
     const [generoId, setGeneroId] = useState(1);
 
 
@@ -58,6 +64,12 @@ function Register() {
                 },
                 email,
                 urlAvatar,
+                urlCertificado,
+                duracao,
+                preco,
+                descricao,
+                areaAtuacao,
+                especialidades,
                 senha,
                 genero: {
                     generoId
@@ -240,8 +252,8 @@ function Register() {
                                     type="text"
                                     id="Avatar"
                                     name="Avatar"
-                                    value={logradouro}
-                                    onChange={(e) => setLogradouro(e.target.value)}
+                                    value={urlAvatar}
+                                    onChange={(e) => setUrlAvatar(e.target.value)}
                                     placeholder='Digite a URL da imagem'
                                     className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                                 />
@@ -252,15 +264,19 @@ function Register() {
                                     type="text"
                                     id="Certificado"
                                     name="Certificado"
-                                    value={logradouro}
-                                    onChange={(e) => setLogradouro(e.target.value)}
+                                    value={urlCertificado}
+                                    onChange={(e) => setUrlCertificado(e.target.value)}
                                     placeholder='Digite a URL do certificado'
                                     className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                                 />
                             </label>
                             <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                                 <span className="mb-1  text-azulsite text-xl">Qual seu tempo de consulta?*:</span>
-                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full">
+                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
+                                    id='duracao'
+                                    value={duracao}
+                                    onChange={(e) => setDuracao(e.target.value)}
+                                >
                                     <option value="none">Selecione </option>
                                     <option value="30">30 Minutos</option>
                                     <option value="40">40 Minutos</option>
@@ -274,14 +290,19 @@ function Register() {
                                     type="text"
                                     id="Preco"
                                     name="Preco"
-                                    value={logradouro}
-                                    onChange={(e) => setLogradouro(e.target.value)}
+                                    value={preco}
+                                    onChange={(e) => setPreco(e.target.value)}
                                     placeholder='Max: 100 reais'
                                     className=" w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                                 />
                             </label>
 
-                            <label htmlFor="name" className="flex flex-col justify-center text-azulsite text-xl mb-3">
+                            <label htmlFor="name" className="flex flex-col justify-center text-azulsite text-xl mb-3"
+                                name='descricao'
+                                id='descricao'
+                                value={descricao}
+                                onChange={(e) => setDescricao(e.target.value)}
+                            >
                                 <span className="mb-1 text-left text-azulsite text-xl">Nos conte sobre você!*:</span>
                                 <textarea className='w-80 h-36 border border-gray-300 px-3 py-2 rounded max-md:w-full resize-none' >
                                 </textarea>
@@ -289,7 +310,12 @@ function Register() {
 
                             <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                                 <span className="mb-1  text-azulsite text-xl">Qual a sua area de atuação?*:</span>
-                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full">
+                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
+                                    name='areaAtuacao'
+                                    id='areaAtuacao'
+                                    value={areaAtuacao}
+                                    onChange={(e) => setAreaAtuacao(e.target.value)}
+                                >
                                     <option value="none">Selecione </option>
                                     <option value={1}>Psicologo(o/a)</option>
                                     <option value={2}>Nutricionista</option>
@@ -297,7 +323,12 @@ function Register() {
                             </label>
                             <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                                 <span className="mb-1  text-azulsite text-xl">Quais suas especialidades?*:</span>
-                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full">
+                                <select className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
+                                    name='especialidades'
+                                    id='especialidades'
+                                    value={especialidades}
+                                    onChange={(e) => setEspecialidades(e.target.value)}
+                                >
                                     <option value="none">Selecione </option>
                                     <option value={1}>Psicologo(o/a)</option>
                                     <option value={2}>Nutricionista</option>
