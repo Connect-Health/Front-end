@@ -146,7 +146,7 @@ const Chatbot = () => {
     }, [speechResponse]);
 
   return (
-    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] max-md:w-[45%] fixed z-50 right-1 bottom-1">
+    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] max-md:w-full fixed z-50 right-1 bottom-1">
       {isOpen ? (
         <div>
           <div
@@ -156,7 +156,7 @@ const Chatbot = () => {
             <p className="text-lg  text-white">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
-          <div id="scroll-bot" className="h-[60vh] mb-10 overflow-y-scroll">
+          <div id="scroll-bot" className="h-[60vh] mb-10 overflow-y-scroll max-md:h-[90vh] max-md:w-screen">
             {storedValues.length === 0 && (
               <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
                 Olá! Sou a Débi a assistente virtual da{" "}
