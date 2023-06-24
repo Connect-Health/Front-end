@@ -85,7 +85,7 @@ const Chatbot = () => {
     const voices = speechSynthesis.getVoices();
     const lowerCaseQuestion = newQuestion.toLowerCase();
 
-    console.log(voices[1])
+    console.log(voices)
 
     for (const mapping of questionMappings) {
       const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
@@ -134,19 +134,13 @@ const Chatbot = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect
   useEffect(() => {
       if (speechResponse !== "") {
         const speech = new SpeechSynthesisUtterance(speechResponse);
-        speech.
-       
-  voice = speechSynthesis.getVoices().find(
-          (voice) => voice.voiceURI === 'Microsoft Maria - Portuguese (Brazil)'
-        );
-        speech.rate = 1.5; // Ajuste o valor conforme necessário (1.2 é um pouco mais rápido)
+        speech.voice = speechSynthesis.getVoices().find(
+        (voice) => voice.voiceURI === 'Microsoft Maria - Portuguese (Brazil)');
+        speech.rate = 1.5; // Ajuste o valor conforme necessário (1.5 é um pouco mais rápido)
         window.speechSynthesis.speak(speech);
-        
-        
   setSpeechResponse("");
       }
     }, [speechResponse]);
