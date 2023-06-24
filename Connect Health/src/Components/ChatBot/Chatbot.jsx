@@ -48,7 +48,7 @@ const Chatbot = () => {
       },
       {
         questions: ['olá', 'oi', 'oie', 'ola'],
-        response: 'Oie sou Débi uma inteligencia artificial feita para te ajudar',
+        response: 'Oie sou Débi uma inteligencia artificial feita para te ajudar!',
       },
       {
         questions: ['tudo bem', 'como vai', 'como está'],

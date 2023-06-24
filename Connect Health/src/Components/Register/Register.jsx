@@ -99,7 +99,7 @@ function Register() {
                </Link>
                <div className="flex flex-col mt-4 mb-14 max-md:justify-center ">
                   <h1 className="font-extrabold text-5xl text-azulsite text-center mb-5 max-md:text-2xl">Registre-se!</h1>
-                  <Link to="/registerprofregisterprof">
+                  <Link to="/registerprof">
                      <p className="font-bold  text-2xl text-center">É um <span className='text-azulsite'>profissional</span>?</p>
                   </Link>
                </div>

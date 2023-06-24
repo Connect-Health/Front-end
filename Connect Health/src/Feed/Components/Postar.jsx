@@ -62,6 +62,10 @@ const Postar = () => {
     setShowErrorAlert(false);
   };
 
+  const handleVerPublicacaoClick = () => {
+    window.location.reload();
+  };
+
   return (
     <div className='bg-white pt-3 pl-3 flex flex-col h-fit mt-10 rounded-xl mb-14 max-md:hidden'>
       <input
@@ -105,7 +109,7 @@ const Postar = () => {
 
       <Snackbar open={showSuccessAlert} autoHideDuration={4000} onClose={handleSuccessAlertClose} anchorOrigin={{vertical: 'top', horizontal:'center'}}>
         <MuiAlert onClose={handleSuccessAlertClose} severity="success" sx={{ width: '100%' }}>
-          <p className='text-black text-lg'>Postagem feita com sucesso! Atualize a página para conferir</p>
+          <p className='text-black text-lg'>Postagem feita com sucesso! <span className='border-b-2 cursor-pointer' onClick={handleVerPublicacaoClick}>Ver publicação!</span></p>
         </MuiAlert>
       </Snackbar>
 
