@@ -21,7 +21,6 @@ const Calendario = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [hourIntervals, setHourIntervals] = useState(createHourIntervals());
-  const [disabledHours, setDisabledHours] = useState([]);
   const [hourAvailability, setHourAvailability] = useState([]);
 
   const { user } = useContext(AuthContext);
@@ -35,12 +34,12 @@ const Calendario = () => {
 
         const calendario = response.data;
 
-        console.log(calendario);
+        setHourAvailability(calendario);
       } catch (error) {
         console.log(error);
       }
     };
-    
+
     fetchCalendario();
   }, []);
 
@@ -65,8 +64,6 @@ const Calendario = () => {
   };
 
   const handleConfirmAppointment = async () => {
-    console.log("Consulta confirmada!");
-
     setShowConfirmation(false);
     setShowSnackbar(true);
 
@@ -92,17 +89,9 @@ const Calendario = () => {
         "https://connect-health.up.railway.app/calendario",
         calendario
       );
-
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
-
-    const updatedDisabledHours = [
-      ...disabledHours,
-      { date: selectedDates.find((date) => date !== null), hour: selectedHour },
-    ];
-    setDisabledHours(updatedDisabledHours);
 
     const updatedIntervals = hourIntervals.map((day) => {
       const { date, intervals } = day;
@@ -186,21 +175,45 @@ const Calendario = () => {
                     }`}
                   >
                     <ul>
-                      {intervals.map((interval, intervalIndex) => (
-                        <li
-                          key={interval.time}
-                          onClick={() => handleHourClick(interval.time)}
-                          className={`${
-                            interval.available
-                              ? "bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer"
-                              : "bg-black/ text-white"
-                          } p-2 text-center ${
-                            intervalIndex === intervals.length - 1 ? "" : "mb-1"
-                          }`}
-                        >
-                          {interval.time}
-                        </li>
-                      ))}
+                      {intervals.map((interval, intervalIndex) => {
+                        const isUnavailable = hourAvailability.some((hour) => {
+                          const selectedDate = selectedDates.find(
+                            (date) => date !== null
+                          );
+                          return (
+                            selectedDate
+                              .toLocaleDateString("pt-BR")
+                              .split("/")
+                              .reverse()
+                              .join("-") === hour.data &&
+                            hour.reservado &&
+                            hour.horario === interval.time + ":00"
+                          );
+                        });
+
+                        if (isUnavailable) {
+                          // Horário já foi marcado, renderize algo indicando que não está disponível
+                          return (
+                            <li
+                              key={intervalIndex}
+                              className="bg-gray-300 text-gray-500 cursor-not-allowed p-2 text-center my-1"
+                            >
+                              {interval.time}
+                            </li>
+                          );
+                        } else {
+                          // Horário está disponível, renderize normalmente
+                          return (
+                            <li
+                              key={intervalIndex}
+                              onClick={() => handleHourClick(interval.time)}
+                              className="bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer p-2 text-center my-1"
+                            >
+                              {interval.time}
+                            </li>
+                          );
+                        }
+                      })}
                     </ul>
                   </div>
                 )}
