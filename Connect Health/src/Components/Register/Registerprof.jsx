@@ -118,7 +118,7 @@ function Register() {
             <div className='-mt-5'>
 
 
-                <div className='flex  mx-auto h-auto px-5 py-2 rounded shadow-lg justify-center gap-14 bg-[#ebebeb] max-md:block max-md:px-0'>
+                <div className='flex  mx-auto h-auto px-5 py-2 rounded shadow-lg justify-center gap-14 bg-[#ebebeb] max-md:flex-col max-md:items-center max-md:px-0'>
                     {/*Inicio do Forms */}
                     <form className=' flex px-3 py-2 rounded'>
                         {/* Formatação do forms */}
