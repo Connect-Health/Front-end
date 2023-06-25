@@ -93,7 +93,6 @@ const Chatbot = () => {
     const voices = speechSynthesis.getVoices();
     const lowerCaseQuestion = newQuestion.toLowerCase();
 
-    console.log(voices)
 
     for (const mapping of questionMappings) {
       const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
