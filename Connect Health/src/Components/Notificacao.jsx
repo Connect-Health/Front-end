@@ -42,6 +42,30 @@ const Notificacao = () => {
         navigate(`/chamada/${profissionalId}`)
       }
 
+      const isConsultaFutura = (dataConsulta, horarioConsulta) => {
+        const dataHoraConsulta = new Date(`${dataConsulta}T${horarioConsulta}`);
+        const dataHoraAtual = new Date();
+
+        return dataHoraConsulta > dataHoraAtual;
+    };
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const day = padZero(date.getDate());
+        const month = padZero(date.getMonth() + 1);
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+      }
+      
+      function formatTime(timeString) {
+        const [hours, minutes] = timeString.split(':');
+        return `${hours}:${minutes}`;
+      }
+      
+      function padZero(value) {
+        return value.toString().padStart(2, '0');
+      }
+
   return (
     <div>
         {user && user.pacienteId && (
@@ -61,14 +85,18 @@ const Notificacao = () => {
             </DialogTitle>
 
             <DialogContent className='bg-azulsite/30'>
-            {user && user.pacienteId && data.length > 0 ? (
-                data.map((consultas) => (
-                    <div className='mx-3 mb-3 py-2 px-6 flex w-96 justify-between items-center bg-white rounded-md'>
-                        <div className=''>
-                            <h1>{consultas.profissional.nome} - {consultas.profissional.areaAtuacao.nome}</h1>
-                            <p>Dia: {consultas.data}</p>
-                            <p>Às: {consultas.horario}</p>
-                        </div>
+                    {user && user.pacienteId && data.length > 0 ? (
+                        data
+                            .filter((consultas) =>
+                                isConsultaFutura(consultas.data, consultas.horario)
+                            )
+                            .map((consultas) => (
+                            <div className='mx-3 mb-3 py-2 px-6 flex w-96 justify-between items-center bg-white rounded-md'>
+                                <div className=''>
+                                    <h1>{consultas.profissional.nome} - {consultas.profissional.areaAtuacao.nome}</h1>
+                                    <p>Dia: {formatDate(consultas.data)}</p>
+                                    <p>Às: {formatTime(consultas.horario)}</p>
+                                </div>
 
                         <div className='mr-4'>
                             {consultas.profissional.areaAtuacao.areaId === 1 && (
