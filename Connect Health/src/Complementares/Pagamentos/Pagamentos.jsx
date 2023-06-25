@@ -35,16 +35,23 @@ function Pagamentos () {
 
             <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
         <div className='flex'>
-            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
-                JAIR
+            <div className="bg-azulsite w-80 mt-[5rem] ml-24 rounded-lg h-[300px]">
+                <h1  className='text-white text-[25px] text-center p-5'>Plano Vitalidade</h1>
+                <p className='text-white p-2 text-center'>
+                    -2 consultas de psicologia <br/>
+                    - 1 consulta de nutrição<br/>
+                    - Acesso ao feed de noticias<br/>
+                    - Gerenciamento de consultas
+                </p>
+                <button className='text-[17px] text-white ml-[110px] bg-'>SELECIONE</button>
             </div>
 
             
-            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
+            <div className="bg-azulsite w-80 mt-[5rem] ml-24 rounded-lg h-[300px]">
                 JAIR
             </div>
 
-            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
+            <div className="bg-azulsite w-80 mt-[5rem] ml-24 rounded-lg h-[300px]">
                 JAIR
             </div>
         </div>
