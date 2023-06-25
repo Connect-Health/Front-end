@@ -1,13 +1,48 @@
-import React, { useState } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Snackbar } from '@mui/material';
+import React, { useContext, useEffect, useState } from "react";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  Snackbar,
+} from "@mui/material";
+import { AuthContext } from "../../AutoContext/AuthContext";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const Calendario = () => {
-  const [selectedDates, setSelectedDates] = useState(Array.from({ length: 7 }, () => null));
+  const { id } = useParams();
+
+  const [selectedDates, setSelectedDates] = useState(
+    Array.from({ length: 7 }, () => null)
+  );
   const [selectedHour, setSelectedHour] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [hourIntervals, setHourIntervals] = useState(createHourIntervals());
   const [disabledHours, setDisabledHours] = useState([]);
+  const [hourAvailability, setHourAvailability] = useState([]);
+
+  const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    const fetchCalendario = async () => {
+      try {
+        const response = await axios.get(
+          `https://connect-health.up.railway.app/calendario/profissional/${id}`
+        );
+
+        const calendario = response.data;
+
+        console.log(calendario);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    
+    fetchCalendario();
+  }, []);
 
   const handleDateClick = (index, date) => {
     setSelectedDates((prevDates) => {
@@ -29,17 +64,52 @@ const Calendario = () => {
     setShowConfirmation(false);
   };
 
-  const handleConfirmAppointment = () => {
-    console.log('Consulta confirmada!');
+  const handleConfirmAppointment = async () => {
+    console.log("Consulta confirmada!");
+
     setShowConfirmation(false);
     setShowSnackbar(true);
 
-    const updatedDisabledHours = [...disabledHours, { date: selectedDates.find((date) => date !== null), hour: selectedHour }];
+    try {
+      const calendario = {
+        data: selectedDates
+          .find((date) => date !== null)
+          ?.toLocaleDateString("pt-BR")
+          .split("/")
+          .reverse()
+          .join("-"),
+        horario: selectedHour + ":00",
+        reservado: true,
+        profissional: {
+          profissionalId: parseInt(id),
+        },
+        paciente: {
+          pacienteId: user.pacienteId,
+        },
+      };
+
+      const response = await axios.post(
+        "https://connect-health.up.railway.app/calendario",
+        calendario
+      );
+
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+
+    const updatedDisabledHours = [
+      ...disabledHours,
+      { date: selectedDates.find((date) => date !== null), hour: selectedHour },
+    ];
     setDisabledHours(updatedDisabledHours);
 
     const updatedIntervals = hourIntervals.map((day) => {
       const { date, intervals } = day;
-      if (date.toDateString() === selectedDates.find((date) => date !== null)?.toDateString()) {
+      if (
+        date.toDateString() ===
+        selectedDates.find((date) => date !== null)?.toDateString()
+      ) {
         const updatedIntervals = intervals.map((interval) => {
           if (interval.time === selectedHour) {
             return { ...interval, available: false };
@@ -96,43 +166,62 @@ const Calendario = () => {
               <button
                 onClick={() => handleDateClick(index, date)}
                 className={`${
-                  selectedDates[index] && selectedDates[index].toDateString() === date.toDateString()
-                    ? 'bg-azulsite/70 text-white'
-                    : 'bg-azulsite/50'
+                  selectedDates[index] &&
+                  selectedDates[index].toDateString() === date.toDateString()
+                    ? "bg-azulsite/70 text-white"
+                    : "bg-azulsite/50"
                 } rounded w-14 py-1`}
               >
-                <div className="leading-tight">{date.toLocaleDateString('pt-BR', { weekday: 'short' })}</div>
+                <div className="leading-tight">
+                  {date.toLocaleDateString("pt-BR", { weekday: "short" })}
+                </div>
                 <div className="leading-none">{date.getDate()}</div>
               </button>
 
-              {selectedDates[index] && selectedDates[index].toDateString() === date.toDateString() && (
-                <div className={`available-hours transition-all duration-500 ${selectedDates[index] ? 'h-auto' : 'h-0'}`}>
-                  <ul>
-                    {intervals.map((interval, intervalIndex) => (
-                      <li
-                        key={interval.time}
-                        onClick={() => handleHourClick(interval.time)}
-                        className={`${
-                          interval.available
-                            ? 'bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer'
-                            : 'bg-black/ text-white'
-                        } p-2 text-center ${intervalIndex === intervals.length - 1 ? '' : 'mb-1'}`}
-                      >
-                        {interval.time}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {selectedDates[index] &&
+                selectedDates[index].toDateString() === date.toDateString() && (
+                  <div
+                    className={`available-hours transition-all duration-500 ${
+                      selectedDates[index] ? "h-auto" : "h-0"
+                    }`}
+                  >
+                    <ul>
+                      {intervals.map((interval, intervalIndex) => (
+                        <li
+                          key={interval.time}
+                          onClick={() => handleHourClick(interval.time)}
+                          className={`${
+                            interval.available
+                              ? "bg-[#5ef371]/30 text-black hover:bg-[#5ef371] transition-all duration-300 cursor-pointer"
+                              : "bg-black/ text-white"
+                          } p-2 text-center ${
+                            intervalIndex === intervals.length - 1 ? "" : "mb-1"
+                          }`}
+                        >
+                          {interval.time}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
           );
         })}
       </div>
 
-      <Dialog open={showConfirmation} onClose={handleConfirmationClose} className="">
+      <Dialog
+        open={showConfirmation}
+        onClose={handleConfirmationClose}
+        className=""
+      >
         <DialogTitle className=" text-center">Confirmar Consulta</DialogTitle>
         <DialogContent className=" text-center">
-          <p>Data: {selectedDates.find((date) => date !== null && date !== undefined)?.toLocaleDateString('pt-BR') || ''}</p>
+          <p>
+            Data:{" "}
+            {selectedDates
+              .find((date) => date !== null && date !== undefined)
+              ?.toLocaleDateString("pt-BR") || ""}
+          </p>
           <p>Hora: {selectedHour}</p>
         </DialogContent>
         <DialogActions className="flex justify-between">
