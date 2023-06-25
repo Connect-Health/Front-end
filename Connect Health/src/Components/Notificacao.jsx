@@ -8,7 +8,6 @@ import axios from 'axios'
 const Notificacao = () => {
     const { user } = useContext(AuthContext)
     const [data, setData] = useState([])
-    const [open, setOpen] = useState(false)
     const navigate = useNavigate()
 
     const [anchorel, setAnchorel] = useState(null);
@@ -84,14 +83,14 @@ const Notificacao = () => {
                 Próximas Consultas
             </DialogTitle>
 
-            <DialogContent className='bg-azulsite/30'>
+            <DialogContent className='bg-azulsite/30 max-md:w-full'>
                     {user && user.pacienteId && data.length > 0 ? (
                         data
                             .filter((consultas) =>
                                 isConsultaFutura(consultas.data, consultas.horario)
                             )
                             .map((consultas) => (
-                            <div className='mx-3 mb-3 py-2 px-6 flex w-96 justify-between items-center bg-white rounded-md'>
+                            <div className='mx-3 mb-3 py-2 px-6 flex w-96 justify-between items-center bg-white rounded-md max-md:w-60 max-md:flex-col max-md:justify-center max-md:gap-5'>
                                 <div className=''>
                                     <h1>{consultas.profissional.nome} - {consultas.profissional.areaAtuacao.nome}</h1>
                                     <p>Dia: {formatDate(consultas.data)}</p>
