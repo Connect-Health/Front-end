@@ -154,17 +154,17 @@ const Chatbot = () => {
     }, [speechResponse]);
 
   return (
-    <div id="chatbot" className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25vw] max-md:w-auto  fixed z-50 right-1 bottom-1">
+    <div id="chatbot" className="chatbot  bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25vw] max-md:w-auto  fixed z-50 right-1 bottom-1">
       {isOpen ? (
-        <div className="max-md:w-screen h-[60vh] max-md:h-[90vh] w-[25vw] ">
+        <div className="max-md:w-screen h-[60vh] max-md:h-[90vh] w-[25vw]">
           <div
             onClick={toggleChatbot}
             className=" max-md:w-[100%]   bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
           >
-            <p className="text-lg  text-white">Débi</p>
+            <p className="text-lg  text-white z-50">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
-          <div id="scroll-bot" className=" mb-10 overflow-y-scroll max-md:w-screen">
+          <div id="scroll-bot" className=" mb-10  max-md:w-screen">
             {storedValues.length === 0 && (
               <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
                 Olá! Sou a Débi a assistente virtual da{" "}
@@ -185,7 +185,7 @@ const Chatbot = () => {
       ) : (
         <div
           onClick={toggleChatbot}
-          className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
+          className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3 "
         >
           <p className="text-lg  text-white">Débi</p>
           <AiOutlineArrowUp className="text-2xl text-white" />
