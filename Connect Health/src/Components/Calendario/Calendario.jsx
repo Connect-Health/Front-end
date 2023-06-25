@@ -45,7 +45,7 @@ const Calendario = () => {
         console.log(error);
       }
     };
-
+    
     fetchCalendario();
   }, []);
 
@@ -71,8 +71,6 @@ const Calendario = () => {
   };
 
   const handleConfirmAppointment = async () => {
-    console.log("Consulta confirmada!");
-
     setShowConfirmation(false);
     setShowSnackbar(true);
 
@@ -98,8 +96,6 @@ const Calendario = () => {
         "https://connect-health.up.railway.app/calendario",
         calendario
       );
-
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
