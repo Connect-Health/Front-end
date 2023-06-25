@@ -20,6 +20,7 @@
     "@typeform/embed-react": "^2.21.0",
     "animate.css": "^4.1.1",
     "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
     "firebase": "^9.22.1",
     "gapi-script": "^1.2.0",
     "mdb-react-ui-kit": "^6.1.0",

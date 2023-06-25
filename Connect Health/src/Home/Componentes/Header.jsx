@@ -14,6 +14,7 @@ import { useState, useEffect } from "react"
 import Menu2 from '../../Components/Menu'
 
 import Perfil from '../../Components/Perfil'
+import Notificacao from '../../Components/Notificacao';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -116,7 +117,8 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-          <div className='max-md:hidden'>
+          <div className='max-md:hidden flex items-center gap-8'>
+            <Notificacao />
             <Perfil />
           </div>
           ) : (
