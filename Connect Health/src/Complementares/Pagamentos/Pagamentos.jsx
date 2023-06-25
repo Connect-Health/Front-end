@@ -33,12 +33,23 @@ function Pagamentos () {
         
         <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={Ajuda} />
 
-        <div>
-                <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
-            <div className="bg-azulsite w-60 mt-[24rem]">
+            <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
+        <div className='flex'>
+            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+                JAIR
             </div>
-            <img className='m-auto w-14 mt-[24rem]' src={seguro} />
+
+            
+            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+                JAIR
+            </div>
+
+            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+                JAIR
+            </div>
         </div>
+        
+            <img className='m-auto w-14 mt-[24rem]' src={seguro} />
 
 
         </div>
