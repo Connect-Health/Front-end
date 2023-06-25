@@ -50,11 +50,7 @@ const Chatbot = () => {
       },
       {
         questions: ['olá', 'oi', 'oie', 'ola'],
-        response: 'Oie sou Débi uma inteligencia artificial feita para te ajudar!',
-      },
-      {
-        questions: ['tudo bem', 'como vai', 'como está'],
-        response: 'eu estou bem e você?',
+        response: 'Oie sou Débi, uma inteligência artificial feita para te ajudar! me pergunte algo',
       },
       {
         questions: ['tudo bem', 'como vai', 'como está'],
@@ -66,20 +62,32 @@ const Chatbot = () => {
       },
       {
         questions: ['o que você acha do joquina', 'joca', 'joquinha'],
-        response: 'ele é até que legal, mas eu sou melhor',
+        response: 'É um parceiro de estudo e é legalzinho, mas eu sou bem melhor e mais desenvolvida',
       },
       {
         questions: ['você é uma mulher'],
-        response: 'Bom! eu sou uma inteligencia artificial, ou seja, não possuo um genero',
+        response: 'Bom! eu sou uma inteligência artificial, ou seja, não possuo um genero',
       },
       {
         questions: ['quem te criou'],
-        response: 'fui criada pelos doctor devs, os criadores da connect',
+        response: 'fui criada pelos doctor devs, os criadores da Connect Health',
       },
       {
         questions: ['qual seu nome'],
-        response: 'meu nome é Débi, fui inspirada na professora Débora',
+        response: 'meu nome é Débi, fui inspirada na professora Débora do Instituto Proa',
       },
+      {
+        questions: ['nutrição', 'nutricao', 'nutriçao'],
+        response: 'A nutrição é uma área da saúde pouco valorizada pelos brasileiros, mas que tem grande importância na vida humana. Cuide da sua alimentação!',
+      },
+      {
+        questions: ['psicologia'],
+        response: 'A psicologia é muito importante para todos, através dela, podemos se previnir de muitas outra doenças. Conheça nossa equipe de profissionais!',
+      },
+      {
+        questions: ['caro', 'planos caros', 'consultas caras', ],
+        response: 'Deixe-me te fazer uma pergunta. Quanto vale sua saúde e seu bem-estar hoje? pense melhor nisso!',
+      }
     ];
 
     const voices = speechSynthesis.getVoices();
@@ -146,17 +154,17 @@ const Chatbot = () => {
     }, [speechResponse]);
 
   return (
-    <div className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25%] max-md:w-full fixed z-50 right-1 bottom-1">
+    <div id="chatbot" className="chatbot bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25vw] max-md:w-auto  fixed z-50 right-1 bottom-1">
       {isOpen ? (
-        <div>
+        <div className="max-md:w-screen h-[60vh] max-md:h-[90vh] w-[25vw] ">
           <div
             onClick={toggleChatbot}
-            className="w-full max-md:w-[100%]  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
+            className=" max-md:w-[100%]   bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
           >
             <p className="text-lg  text-white">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
-          <div id="scroll-bot" className="h-[60vh] mb-10 overflow-y-scroll max-md:h-[90vh] max-md:w-screen">
+          <div id="scroll-bot" className=" mb-10 overflow-y-scroll max-md:w-screen">
             {storedValues.length === 0 && (
               <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
                 Olá! Sou a Débi a assistente virtual da{" "}
