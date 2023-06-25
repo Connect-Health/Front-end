@@ -30,10 +30,16 @@ function Pagamentos () {
             link3="nutricao"
             link4="feed"
         />
-
+        
         <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={Ajuda} />
 
-        <img className='m-auto w-14 mt-[24rem]' src={seguro} />
+        <div>
+                <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
+            <div className="bg-azulsite w-60 mt-[24rem]">
+            </div>
+            <img className='m-auto w-14 mt-[24rem]' src={seguro} />
+        </div>
+
 
         </div>
     )
