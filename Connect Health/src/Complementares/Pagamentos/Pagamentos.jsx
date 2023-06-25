@@ -35,16 +35,16 @@ function Pagamentos () {
 
             <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
         <div className='flex'>
-            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
                 JAIR
             </div>
 
             
-            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
                 JAIR
             </div>
 
-            <div className="bg-azulsite w-80 mt-[7.5rem] ml-20 rounded-lg h-[300px]">
+            <div className="bg-azulsite w-80 mt-[5rem] ml-20 rounded-lg h-[300px]">
                 JAIR
             </div>
         </div>
