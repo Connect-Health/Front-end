@@ -152,7 +152,7 @@ const Header = () => {
           </div>
             
         </div> */}
-        <FormGroup onClick={handleThemeSwitch} className='absolute right-0 -top-1'>
+        <FormGroup onClick={handleThemeSwitch} className='absolute right-0 max-md:-top-1'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}
             />
