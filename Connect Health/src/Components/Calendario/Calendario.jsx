@@ -24,6 +24,7 @@ const Calendario = () => {
   const [disabledHours, setDisabledHours] = useState([]);
   const [hourAvailability, setHourAvailability] = useState([]);
   const [apiAvailability, setApiAvailability] = useState([]);
+  const [selectedDay, setSelectedDay] = useState(null); // Novo estado para armazenar o dia selecionado
 
   const { user } = useContext(AuthContext);
 
@@ -35,17 +36,17 @@ const Calendario = () => {
         );
 
         const calendario = response.data;
-        const availableHours = calendario.map(item => ({
+        const availableHours = calendario.map((item) => ({
           data: new Date(item.data),
           horario: item.horario,
-          disponivel: item.disponivel
+          disponivel: item.disponivel,
         }));
         setApiAvailability(availableHours);
       } catch (error) {
         console.log(error);
       }
     };
-    
+
     fetchCalendario();
   }, []);
 
@@ -148,8 +149,11 @@ const Calendario = () => {
       available:
         currentDayOfWeek !== 0 &&
         currentDayOfWeek !== 6 &&
-        apiAvailability.some((apiItem) =>
-          isSameDate(apiItem.data, date) && apiItem.horario === interval.time && apiItem.disponivel
+        apiAvailability.some(
+          (apiItem) =>
+            isSameDate(apiItem.data, date) &&
+            apiItem.horario === interval.time &&
+            apiItem.disponivel
         ),
     }));
 
@@ -204,6 +208,7 @@ const Calendario = () => {
                         });
                         setSelectedHour(interval.time);
                         setShowConfirmation(true);
+                        setSelectedDay(date); // Atualizar o dia selecionado
                       }}
                     >
                       {interval.time}
@@ -225,30 +230,25 @@ const Calendario = () => {
         <DialogContent className=" text-center">
           <p>
             Data:{" "}
-            {selectedDates
-              .find((date) => date !== null && date !== undefined)
-              ?.toLocaleDateString("pt-BR") || ""}
+            {selectedDay && selectedDay.toLocaleDateString("pt-BR")} {/* Mostrar a data selecionada */}
           </p>
           <p>Hora: {selectedHour}</p>
         </DialogContent>
-        <DialogActions className="flex justify-between">
-          <Button onClick={handleConfirmationClose} color="secondary">
+        <DialogActions>
+          <Button onClick={handleConfirmationClose} color="primary">
             Cancelar
           </Button>
-          <div className="flex justify-end">
-            <Button onClick={handleConfirmAppointment} color="primary">
-              Confirmar
-            </Button>
-          </div>
+          <Button onClick={handleConfirmAppointment} color="primary">
+            Confirmar
+          </Button>
         </DialogActions>
       </Dialog>
 
       <Snackbar
         open={showSnackbar}
-        autoHideDuration={5000}
+        autoHideDuration={3000}
         onClose={handleSnackbarClose}
-        message="Consulta agendada com sucesso!"
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        message="Consulta marcada com sucesso!"
       />
     </div>
   );
