@@ -68,8 +68,14 @@ function Register() {
                 duracao,
                 preco,
                 descricao,
-                areaAtuacao,
-                especialidades,
+                areaAtuacao:{
+                    areaId
+                },
+                especialidades: [
+                    {
+                        
+                    }
+                ],
                 senha,
                 genero: {
                     generoId
