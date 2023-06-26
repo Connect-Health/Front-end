@@ -65,11 +65,11 @@ const Chatbot = () => {
         response: 'É um parceiro de estudo e é legalzinho, mas eu sou bem melhor e mais desenvolvida',
       },
       {
-        questions: ['você é uma mulher'],
+        questions: ['você é uma mulher', 'você é um homem', 'você é homem', 'você é mulher', 'voce e uma mulher', 'voce e um homem', 'voce e homem', 'voce e mulher', 'voce é uma mulher', 'voce é um homem', 'voce é homem', 'voce é mulher'],
         response: 'Bom! eu sou uma inteligência artificial, ou seja, não possuo um genero',
       },
       {
-        questions: ['quem te criou'],
+        questions: ['quem te criou', "quem te fez", "quem é seu criador", "quem é seu pai", "quem é sua mãe"],
         response: 'fui criada pelos doctor devs, os criadores da Connect Health',
       },
       {
