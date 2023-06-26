@@ -30,10 +30,50 @@ function Pagamentos () {
             link3="nutricao"
             link4="feed"
         />
-
+        
         <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={Ajuda} />
 
-        <img className='m-auto w-14 mt-[24rem]' src={seguro} />
+            <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
+        <div className='flex justify-center '>
+            <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px]">
+                <br></br> <h1  className='text-black text-[25px] text-center p-5'>Plano Vitalidade</h1>
+                <p className='text-black p-2 text-center'>
+                    -2 consultas de psicologia <br/>
+                    - 1 consulta de nutrição<br/>
+                    - Consultas de 30 minutos<br/>
+                    - Gerenciamento de consultas
+                </p>
+                <button className='text-[17px] bg-[#f1f1dc] text-black rounded-lg h-12 ml-[110px] hover:bg-[#d4d1d1]'>SELECIONE</button>
+            </div>
+
+            
+            <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px]">
+            <h1  className='text-black text-[25px] text-center p-5'>Plano mensal Equilíbrio</h1>
+                <p className='text-black p-2 text-center'>
+                    -4 consultas de psicologia <br/>
+                    - 2 consulta de nutrição<br/>
+                    - Consultas de 45 minutos<br/>
+                    - Gerenciamento de consultas
+                </p>
+                <button className='text-[17px] bg-[#f1f1dc] text-black rounded-lg h-12 ml-[110px] hover:bg-[#d4d1d1] '>SELECIONE</button>
+            </div>
+
+            <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px]">
+            <h1  className='text-black text-[25px] text-center p-5'>Plano mensal Excelência</h1>
+                <p className='text-black p-2 text-center'>
+                    -5 consultas de psicologia <br/>
+                    - 2 consulta de nutrição<br/>
+                    - Consultas de 60 minutos<br/>
+                    - Gerenciamento de consultas
+                </p>
+                <button className='text-[17px] bg-[#f1f1dc] text-black rounded-lg h-12 ml-[110px] hover:bg-[#d4d1d1]'>SELECIONE</button>
+            </div>
+        </div>
+        
+            <img className='m-auto w-14 mt-[10rem]' src={seguro} />
+            <h1 className='text-azulsite mt-[20px] text-center text-[30px]'>Agora escolha como você quer realizar o pagamento!</h1>
+
+
 
         </div>
     )

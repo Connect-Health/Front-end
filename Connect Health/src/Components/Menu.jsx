@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import User from '../../assets/user.svg'
 import { AuthContext } from '../AutoContext/AuthContext'
 import Perfil from './Perfil'
+import Notificacao from './Notificacao'
 
 
 const Menu = (props) => {
@@ -35,8 +36,9 @@ const Menu = (props) => {
                     </div>
                 </div>
                 {user ? (
-                    <div className='absolute top-3 left-3'>
+                    <div className='absolute top-3 left-3 flex items-center gap-5'>
                         <Perfil />
+                        <Notificacao />
                     </div>
           ) : (
             <Link to="/login" className='absolute top-3 left-3 flex items-center' >

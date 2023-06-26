@@ -14,6 +14,7 @@ import { useState, useEffect } from "react"
 import Menu2 from '../../Components/Menu'
 
 import Perfil from '../../Components/Perfil'
+import Notificacao from '../../Components/Notificacao';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -82,7 +83,7 @@ const Header = () => {
 
   return (
     <div id='home' className='relative z-50 '>
-      <div className='flex justify-between items-center py-4 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
+      <div className='flex justify-between items-center py-4 max-md:pb-8 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
         <div className='flex gap-10 z-10 
         
         '>
@@ -116,7 +117,8 @@ const Header = () => {
 
         <div className='gap-6 flex mr-20 items-center'>
         {user ? (
-          <div className='max-md:hidden'>
+          <div className='max-md:hidden flex items-center gap-8'>
+            <Notificacao />
             <Perfil />
           </div>
           ) : (
@@ -125,7 +127,7 @@ const Header = () => {
                 max-md:hidden
               '>Cadastro
               </Link>
-              <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2 px-3 rounded
+              <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2  px-3 rounded
                 max-md:hidden
               '>Login
               </Link>
@@ -152,7 +154,7 @@ const Header = () => {
           </div>
             
         </div> */}
-        <FormGroup onClick={handleThemeSwitch} className='absolute right-0'>
+        <FormGroup onClick={handleThemeSwitch} className='absolute right-0 max-md:-top-1'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}
             />
