@@ -4,6 +4,7 @@ import ProfilePic from '../../assets/profilepic.png'
 import { AiFillAppstore } from "react-icons/ai";
 import settings from '../../assets/setting.png'
 import Dashboard from './Components/Dashboard';
+import Config from './Components/Config';
 import { AiFillBell } from 'react-icons/ai'
 import {AiOutlineMore} from 'react-icons/ai'
 import {AiOutlineSound} from 'react-icons/ai'
@@ -48,7 +49,8 @@ function Perfil() {
                     <div className='flex flex-col pl-8 gap-[50px] w-[100%] '>
                         <div className='flex gap-4'>
 
-                            <p className='cursor-pointer'>Configurações</p>
+                        <Config/>
+                            
                         </div>
                         <div className='flex gap-4'>
                             <p onClick={handleLogout} className='cursor-pointer'>Sair</p>
