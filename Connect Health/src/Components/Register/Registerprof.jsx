@@ -78,7 +78,7 @@ function Register() {
 
 
 
-            const response = await axios.post("https://connect-health.up.railway.app/paciente", dados)
+            const response = await axios.post("https://connect-health.up.railway.app/profissional", dados)
             setOpenSnackbar(true);
             setSnackbarMessage("Cadastro Concluído");
             setTimeout(() => {
