@@ -2,9 +2,9 @@ import React from 'react'
 import Header from '../../Components/Header'
 
 import Menu from '../../Components/Menu'
+import Footer from '../../Components/Footer'
 
 import Ajuda from '../../../assets/ajuda.jpg'
-import seguro from '../../../assets/seguro.png'
 
 function Pagamentos() {
     return (
@@ -12,7 +12,7 @@ function Pagamentos() {
             <Header
                 health="hover:text-azulsite"
                 connect="text-azulsite"
-                area="Pagamento"
+                area="Pagamentos"
                 colorArea="hover:text-[#0f44ff]"
                 link="/"
                 areaNav="Inicio"
@@ -33,66 +33,66 @@ function Pagamentos() {
 
             <img className='absolute top-0 z-0 w-full h-[25rem] object-cover max-md:h-[18rem]' src={Ajuda} />
 
-            <h1 className='text-azulsite mt-[24rem] text-center text-[40px]'>Planos disponíveis</h1>
-            <div className='flex justify-center '>
-                <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
-                    <br></br> <h1 className='text-black text-[25px] text-center p-5'>Plano Vitalidade</h1>
-                    <p className='text-black p-2 text-center'>
-                        -2 consultas de psicologia <br />
-                        - 1 consulta de nutrição<br />
-                        - Consultas de 30 minutos<br />
-                        - Gerenciamento de consultas
-                    </p>
-                    <div className='mt-5'>
-                        <stripe-buy-button className=''
-                            buy-button-id="buy_btn_1NMx6pECStP5J8BJnaXENPCL"
-                            publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
-                        >
-                        </stripe-buy-button>
+            <div className='w-full flex items-center justify-center'>
+                <h1 className='text-azulsite mt-[24rem] text-[40px]'>Planos disponíveis</h1>
+            </div>
+
+            <div>
+                <div className='flex justify-center pb-20 '>
+                    <div className="bg-white w-80 mt-[5rem] rounded-lg h-[300px] flex flex-col items-center">
+                        <br></br> <h1 className='text-black text-[25px] text-center p-5'>Plano Vitalidade</h1>
+                        <p className='text-black p-2 text-center'>
+                            -2 consultas de psicologia <br />
+                            - 1 consulta de nutrição<br />
+                            - Consultas de 30 minutos<br />
+                            - Gerenciamento de consultas
+                        </p>
+                        <div className='mt-5'>
+                            <stripe-buy-button className=''
+                                buy-button-id="buy_btn_1NMx6pECStP5J8BJnaXENPCL"
+                                publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
+                            >
+                            </stripe-buy-button>
+                        </div>
                     </div>
-                </div>
 
 
-                <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
-                    <h1 className='text-black text-[25px] text-center p-5'>Plano mensal Equilíbrio</h1>
-                    <p className='text-black p-2 text-center'>
-                        -4 consultas de psicologia <br />
-                        - 2 consulta de nutrição<br />
-                        - Consultas de 45 minutos<br />
-                        - Gerenciamento de consultas
-                    </p>
-                    <div className='mt-5'>
-                        <stripe-buy-button className=''
-                            buy-button-id="buy_btn_1NMx6pECStP5J8BJnaXENPCL"
-                            publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
-                        >
-                        </stripe-buy-button>
+                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
+                        <h1 className='text-black text-[25px] text-center p-3'>Plano mensal Equilíbrio</h1>
+                        <p className='text-black p-2 text-center'>
+                            -4 consultas de psicologia <br />
+                            - 2 consulta de nutrição<br />
+                            - Consultas de 45 minutos<br />
+                            - Gerenciamento de consultas
+                        </p>
+                        <div className='mt-5'>
+                            <stripe-buy-button
+                                buy-button-id="buy_btn_1NMZyzECStP5J8BJ2aWFWFHb"
+                                publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
+                            >
+                            </stripe-buy-button>
+                        </div>
                     </div>
-                </div>
 
-                <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col">
-                    <h1 className='text-black text-[25px] text-center p-5'>Plano mensal Excelência</h1>
-                    <p className='text-black p-2 text-center'>
-                        -5 consultas de psicologia <br />
-                        - 2 consulta de nutrição<br />
-                        - Consultas de 60 minutos<br />
-                        - Gerenciamento de consultas
-                    </p>
-                    <div className='mt-5'>
-                        <stripe-buy-button className=''
-                            buy-button-id="buy_btn_1NMx6pECStP5J8BJnaXENPCL"
-                            publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
-                        >
-                        </stripe-buy-button>
+                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
+                        <h1 className='text-black text-[25px] text-center p-3'>Plano mensal Excelência</h1>
+                        <p className='text-black p-2 text-center'>
+                            -5 consultas de psicologia <br />
+                            - 2 consulta de nutrição<br />
+                            - Consultas de 60 minutos<br />
+                            - Gerenciamento de consultas
+                        </p>
+                        <div className='mt-5'>
+                            <stripe-buy-button
+                                buy-button-id="buy_btn_1NNEP4ECStP5J8BJJ9Cn6Ek7"
+                                publishable-key="pk_live_51NLysPECStP5J8BJaNMb21HpesCUF1SRf9Wn6MJjWk3aQN25QR8fCo3JgOOaq9ZTAD7dJEykJbnl8zzENRME40dg00ixAhqnTE"
+                            >
+                            </stripe-buy-button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <img className='m-auto w-14 mt-[10rem]' src={seguro} />
-            <h1 className='text-azulsite mt-[20px] text-center text-[30px]'>Agora escolha como você quer realizar o pagamento!</h1>
-
-
-
+            <Footer/>
         </div>
     )
 }
