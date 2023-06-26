@@ -39,8 +39,8 @@ function Register() {
     const [duracao, setDuracao] = useState('');
     const [preco, setPreco] = useState('');
     const [descricao, setDescricao] = useState('');
-    const [areaAtuacao, setAreaAtuacao] = useState('');
-    const [especialidades, setEspecialidades] = useState('');
+    const [areaAtuacao, setAreaAtuacao] = useState(1);
+    const [especialidades, setEspecialidades] = useState(1);
     const [generoId, setGeneroId] = useState(1);
 
 
@@ -69,7 +69,7 @@ function Register() {
                 preco,
                 descricao,
                 areaAtuacao:{
-                    areaId
+                    areaId:areaAtuacao
                 },
                 especialidades: [
                     {
@@ -82,13 +82,13 @@ function Register() {
                 }
             }
 
-
+            console.log(dados)
 
             const response = await axios.post("https://connect-health.up.railway.app/profissional", dados)
             setOpenSnackbar(true);
             setSnackbarMessage("Cadastro Concluído");
             setTimeout(() => {
-                navigate("/login")
+                navigate("/loginprof")
             }, 2000);
         } catch (error) {
             console.log(error)
@@ -293,7 +293,7 @@ function Register() {
                             <label htmlFor="name" className="flex flex-col text-azulsite text-xl mb-3">
                                 <span className="mb-1  text-azulsite text-xl">Qual o preço da sua consulta?*:</span>
                                 <input
-                                    type="text"
+                                    type="number"
                                     id="Preco"
                                     name="Preco"
                                     value={preco}
