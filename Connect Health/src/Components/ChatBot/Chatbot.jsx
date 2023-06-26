@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Configuration, OpenAIApi } from "openai";
-
-import FormSection from "./FormSection";
-import AnswerSection from "./AnswerSection";
 import axios from "axios";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import FormSection from "./FormSection";
+import AnswerSection from "./AnswerSection";
+import { FaMicrophone } from "react-icons/fa";
+
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [ChaveBot, setChaveBot] = useState("");
   const [speechResponse, setSpeechResponse] = useState("");
+  const [isListening, setIsListening] = useState(false); // Add isListening state variable
+
 
   useEffect(() => {
     axios
@@ -34,7 +37,24 @@ const Chatbot = () => {
 
   const [storedValues, setStoredValues] = useState([]);
 
-  const generateResponse = async (newQuestion, setNewQuestion) => {
+  const startListening = () => {
+    setIsListening(true);
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.lang = "pt-BR"; // Define o idioma para português brasileiro
+    recognition.start();
+
+    recognition.onresult = function (event) {
+      const speechResult = event.results[0][0].transcript;
+      generateResponse(speechResult);
+      setIsListening(false);
+    };
+
+    recognition.onend = function () {
+      setIsListening(false);
+    };
+  };
+
+  const generateResponse = async (newQuestion) => {
     const questionMappings = [
       {
         questions: ['connect', 'o que é connect health', 'connect health'],
@@ -65,16 +85,16 @@ const Chatbot = () => {
         response: 'É um parceiro de estudo e é legalzinho, mas eu sou bem melhor e mais desenvolvida',
       },
       {
-        questions: ['você é uma mulher', 'você é um homem', 'você é homem', 'você é mulher', 'voce e uma mulher', 'voce e um homem', 'voce e homem', 'voce e mulher', 'voce é uma mulher', 'voce é um homem', 'voce é homem', 'voce é mulher'],
+        questions: ['você é uma mulher', 'você é um homem', 'você é homem', 'você é mulher'],
         response: 'Bom! eu sou uma inteligência artificial, ou seja, não possuo um genero',
       },
       {
         questions: ['quem te criou', "quem te fez", "quem é seu criador", "quem é seu pai", "quem é sua mãe"],
-        response: 'fui criada pelos doctor devs, os criadores da Connect Health',
+        response: 'Fui criada pelos doctor devs, os criadores da Connect Health',
       },
       {
-        questions: ['qual seu nome'],
-        response: 'meu nome é Débi, fui inspirada na professora Débora do Instituto Proa',
+        questions: ['qual o seu nome'],
+        response: 'Meu nome é Débi, fui inspirada na professora Débora do Instituto Proa',
       },
       {
         questions: ['nutrição', 'nutricao', 'nutriçao'],
@@ -87,15 +107,20 @@ const Chatbot = () => {
       {
         questions: ['caro', 'planos caros', 'consultas caras', ],
         response: 'Deixe-me te fazer uma pergunta. Quanto vale sua saúde e seu bem-estar hoje? pense melhor nisso!',
-      }
+      },
+      {
+        questions: [''],
+        response: '',
+      },
     ];
 
     const voices = speechSynthesis.getVoices();
     const lowerCaseQuestion = newQuestion.toLowerCase();
 
-
     for (const mapping of questionMappings) {
-      const matchedQuestion = mapping.questions.find(question => lowerCaseQuestion.includes(question));
+      const matchedQuestion = mapping.questions.find((question) =>
+        lowerCaseQuestion.includes(question)
+      );
       if (matchedQuestion) {
         setStoredValues([
           {
@@ -104,7 +129,6 @@ const Chatbot = () => {
           },
           ...storedValues,
         ]);
-        setNewQuestion("");
         setSpeechResponse(mapping.response);
         return;
       }
@@ -113,28 +137,14 @@ const Chatbot = () => {
     setStoredValues([
       {
         question: newQuestion,
-        answer: 'Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.',
+        answer:
+          "Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.",
       },
       ...storedValues,
     ]);
-    setNewQuestion("");
-    setSpeechResponse('Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente.');
-  };
-
-  const getOpenAIResponse = async (question) => {
-    const options = {
-      model: "text-davinci-003",
-      temperature: 0,
-      max_tokens: 100,
-      top_p: 1,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
-      stop: ["/"],
-      prompt: question,
-    };
-
-    const response = await openai.createCompletion(options);
-    return response.data.choices[0].text;
+    setSpeechResponse(
+      "Desculpe, não entendi sua pergunta. Por favor, faça uma pergunta diferente."
+    );
   };
 
   const toggleChatbot = () => {
@@ -142,20 +152,21 @@ const Chatbot = () => {
   };
 
   useEffect(() => {
-      if (speechResponse !== "") {
-        const speech = new SpeechSynthesisUtterance(speechResponse);
-        speech.voice = speechSynthesis.getVoices().find(
-        (voice) => voice.voiceURI === 'Microsoft Maria - Portuguese (Brazil)');
-        speech.rate = 1.5; // Ajuste o valor conforme necessário (1.5 é um pouco mais rápido)
-        window.speechSynthesis.speak(speech);
-  setSpeechResponse("");
-      }
-    }, [speechResponse]);
+    if (speechResponse !== "") {
+      const speech = new SpeechSynthesisUtterance(speechResponse);
+      speech.voice = speechSynthesis.getVoices().find(
+        (voice) => voice.voiceURI === "Microsoft Maria - Portuguese (Brazil)"
+      );
+      speech.rate = 1.5; // Ajuste o valor conforme necessário (1.5 é um pouco mais rápido)
+      window.speechSynthesis.speak(speech);
+      setSpeechResponse("");
+    }
+  }, [speechResponse]);
 
   return (
     <div id="chatbot" className="chatbot  bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25vw] max-md:w-auto  fixed z-50 right-1 bottom-1">
       {isOpen ? (
-        <div className="max-md:w-screen h-[60vh] max-md:h-[90vh] w-[25vw]">
+        <div className="max-md:w-screen h-[62vh] max-md:h-[90vh] w-[25vw]">
           <div
             onClick={toggleChatbot}
             className=" max-md:w-[100%]   bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
@@ -163,7 +174,10 @@ const Chatbot = () => {
             <p className="text-lg  text-white z-50">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
-          <div id="scroll-bot" className=" mb-10  max-md:w-screen">
+          <div
+            id="scroll-bot"
+            className=" mb-10  max-md:w-screen"
+          >
             {storedValues.length === 0 && (
               <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
                 Olá! Sou a Débi a assistente virtual da{" "}
@@ -178,16 +192,23 @@ const Chatbot = () => {
                 setSpeechResponse={setSpeechResponse}
               />
             )}
+            <div onClick={startListening} disabled={isListening}
+              className="bg-[#13d6dd] z-30 absolute w-12 mt-[98.5%] p-2 rounded text-2xl flex justify-center items-center cursor-pointer">
+              <FaMicrophone className="text-2xl text-white" />
+            </div>
             <FormSection generateResponse={generateResponse} />
           </div>
         </div>
       ) : (
         <div
-          onClick={toggleChatbot}
+        onClick={toggleChatbot}
           className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3 "
         >
           <p className="text-lg  text-white">Débi</p>
-          <AiOutlineArrowUp className="text-2xl text-white" />
+          <AiOutlineArrowUp
+           
+            className="text-2xl text-white"
+          />
         </div>
       )}
     </div>
