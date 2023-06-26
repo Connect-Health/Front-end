@@ -30,15 +30,15 @@ function Perfil_Psi() {
 
                             <div className='flex gap-4'>
 
-                                <p className=''>Painel de controle</p>
+                                <p className='cursor-pointer'>Painel de controle</p>
                             </div>
                             <div className='flex gap-4'>
 
-                                <p className=''>Meu calendario</p>
+                                <p className='cursor-pointer'>Meu calendario</p>
                             </div>
                             <div className='flex gap-4'>
 
-                                <p className=''>Novidades</p>
+                                <p className='cursor-pointer'>Novidades</p>
 
                             </div>
                         </div>
@@ -46,10 +46,10 @@ function Perfil_Psi() {
                         <div className='flex flex-col pl-8 gap-[50px] w-[100%] text-white '>
                             <div className='flex gap-4'>
 
-                                <p className=''>Configurações</p>
+                                <p className='cursor-pointer'>Configurações</p>
                             </div>
                             <div className='flex gap-4'>
-                                <p onClick={fazerLogout} className=''>Sair</p>
+                                <p onClick={fazerLogout} className='cursor-pointer'>Sair</p>
                             </div>
                         </div>
                     </div>

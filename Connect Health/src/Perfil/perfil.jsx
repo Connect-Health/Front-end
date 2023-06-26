@@ -32,15 +32,15 @@ function Perfil() {
 
                         <div className='flex gap-4'>
 
-                            <p className=''>Painel de controle</p>
+                            <p className='cursor-pointer'>Painel de controle</p>
                         </div>
                         <div className='flex gap-4'>
 
-                            <p className=''>Meu calendario</p>
+                            <p className='cursor-pointer'>Meu calendario</p>
                         </div>
                         <div className='flex gap-4'>
 
-                            <p className=''>Novidades</p>
+                            <p className='cursor-pointer'>Novidades</p>
 
                         </div>
                     </div>
@@ -48,10 +48,10 @@ function Perfil() {
                     <div className='flex flex-col pl-8 gap-[50px] w-[100%] '>
                         <div className='flex gap-4'>
 
-                            <p className=''>Configurações</p>
+                            <p className='cursor-pointer'>Configurações</p>
                         </div>
                         <div className='flex gap-4'>
-                            <p onClick={handleLogout} className=''>Sair</p>
+                            <p onClick={handleLogout} className='cursor-pointer'>Sair</p>
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
 import Planta from '../../../assets/planta.svg'
 import { IoIosArrowForward } from 'react-icons/io'
-import {AiFillStar} from 'react-icons/ai'
-import {BsFillBookmarkFill} from 'react-icons/bs'
+import { AiFillStar } from 'react-icons/ai'
+import { BsFillBookmarkFill } from 'react-icons/bs'
 import Ft from '../../../assets/ft.svg'
+
 import { AuthContext } from "../../AutoContext/AuthContext";
+import { Link } from 'react-router-dom'
 
 
 function Dashboard() {
     const { user } = useContext(AuthContext)
-    
+
     return (
         <div className="bg-white h-[94%] w-[78%] rounded-lg mt-[2%] shadow-2xl">
             <div className="flex flex-col gap-2 ">
@@ -21,31 +23,31 @@ function Dashboard() {
                 {/*Inicio div dos cartoes*/}
 
                 <div className="flex">
-                    <div style={{backgroundImage:'url(../../../assets/peoplehug.png)'}} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
-                        <div className="">
+                    <Link to='/' style={{ backgroundImage: 'url(../../../assets/peoplehug.png)' }} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div>
                             <h1 className="text-2xl text-white">Home</h1>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Inicio segundo card */}
 
-                    <div style={{backgroundImage:'url(../../../assets/socialmedia.png)'}} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
-                        <div className="">
+                    <Link to='/feed' style={{ backgroundImage: 'url(../../../assets/socialmedia.png)' }} className=' bg-no-repeat  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div>
                             <h1 className="text-2xl text-white">Feed</h1>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div style={{backgroundImage:'url(../../../assets/bgcomida.png)'}} className=' bg-cover w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
-                        <div className="">
-                            <h1 className="text-2xl text-white text-center">Nutrição</h1>
+                    <Link to='/nutricao' style={{ backgroundImage: 'url(../../../assets/bgcomida.png)' }} className=' bg-cover w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div>
+                            <h1 className="text-2xl text-white">Nutrição</h1>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div style={{backgroundImage:'url(../../../assets/enterprise.png)'}} className=' bg-cover  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
-                        <div className="">
+                    <Link to='/eventos' style={{ backgroundImage: 'url(../../../assets/enterprise.png)' }} className=' bg-cover  w-[15%] h-[150px] ml-12 mt-10 flex flex-col gap-2 rounded-lg items-center justify-center'>
+                        <div>
                             <h1 className="text-2xl text-white">Eventos</h1>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 {/* Fim segundo Card e da Div */}
@@ -70,11 +72,11 @@ function Dashboard() {
                             </div>
                             <p>Feb 12</p>
                             <div className="flex items-center gap-2">
-                                <AiFillStar className="text-[#ddd018]"/>
+                                <AiFillStar className="text-[#ddd018]" />
                                 <p>4.6</p>
                             </div>
                             <button>Perfil</button>
-                            <BsFillBookmarkFill/>
+                            <BsFillBookmarkFill />
                         </div>
 
                         {/*Segundo */}
@@ -86,11 +88,11 @@ function Dashboard() {
                             </div>
                             <p>Feb 12</p>
                             <div className="flex items-center gap-2">
-                                <AiFillStar className="text-[#ddd018]"/>
+                                <AiFillStar className="text-[#ddd018]" />
                                 <p>4.6</p>
                             </div>
                             <button>Perfil</button>
-                            <BsFillBookmarkFill/>
+                            <BsFillBookmarkFill />
                         </div>
 
                         <div className="flex  items-center justify-between">
@@ -101,11 +103,11 @@ function Dashboard() {
                             </div>
                             <p>Feb 12</p>
                             <div className="flex items-center gap-2">
-                                <AiFillStar className="text-[#ddd018]"/>
+                                <AiFillStar className="text-[#ddd018]" />
                                 <p>4.6</p>
                             </div>
                             <button>Perfil</button>
-                            <BsFillBookmarkFill/>
+                            <BsFillBookmarkFill />
                         </div>
 
                         <div className="flex  items-center justify-between">
@@ -116,15 +118,15 @@ function Dashboard() {
                             </div>
                             <p>Feb 12</p>
                             <div className="flex items-center gap-2">
-                                <AiFillStar className="text-[#ddd018]"/>
+                                <AiFillStar className="text-[#ddd018]" />
                                 <p>4.6</p>
                             </div>
                             <button>Perfil</button>
-                            <BsFillBookmarkFill/>
+                            <BsFillBookmarkFill />
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     )
