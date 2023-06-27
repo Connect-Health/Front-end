@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import { Microfone } from "./Microfone";
 
-const FormSection = ({ generateResponse, startListening, isListening }) => {
+const FormSection = ({ generateResponse }) => {
   const [newQuestion, setNewQuestion] = useState("");
 
   const handleKeyPress = (e) => {
@@ -12,10 +12,10 @@ const FormSection = ({ generateResponse, startListening, isListening }) => {
   };
 
   return (
-    <div className=" flex items-center gap-2 w-full absolute bottom-0 z-0">
-    <div className="w-16 z-0">
+    <div className=" flex items-center gap-2 w-full absolute bottom-0 ">
+      <div className="w-14 ">
 
-    </div>
+      </div>
 
       <input
         type="text"

@@ -65,7 +65,7 @@ const Chatbot = () => {
         response: 'Primeiramente, você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".',
       },
       {
-        questions: ['profissional', 'profissional de psicologia', 'profissional de nutrição', 'como encontrar um profissional de psicologia', 'como encontrar um profissional de nutrição'],
+        questions: ['profissional', 'profissional de psicologia', 'profissional de nutrição', 'como encontrar um profissional de psicologia', 'como encontrar um profissional de nutrição', 'profissionais'],
         response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
       },
       {
@@ -79,6 +79,10 @@ const Chatbot = () => {
       {
         questions: ['estou bem', 'bem', 'estou otimo'],
         response: 'que bom, como posso te ajudar?',
+      },
+      {
+        questions: ['obrigada', 'obgd', 'muito obrigada', 'obrigado', 'muito obrigado'],
+        response: 'Fico feliz em ter ajudado, volte sempre!',
       },
       {
         questions: ['o que você acha do joquina', 'joca', 'joquinha'],
@@ -109,11 +113,53 @@ const Chatbot = () => {
         response: 'Deixe-me te fazer uma pergunta. Quanto vale sua saúde e seu bem-estar hoje? pense melhor nisso!',
       },
       {
-        questions: [''],
-        response: '',
+        questions: ['como agendar uma consulta', 'quero agendar uma consulta', 'como marcar uma consulta'],
+        response: 'Para agendar uma consulta, você pode acessar a área de agendamentos na plataforma. Lá você encontrará os profissionais disponíveis e poderá escolher a data e hora que melhor se encaixam na sua agenda.',
       },
-    ];
+      {
+        questions: ['posso cancelar uma consulta', 'como cancelar uma consulta agendada', 'posso cancelar a consulta'],
+        response: 'Sim, é possível cancelar uma consulta agendada. Basta acessar a área de agendamentos e selecionar a opção de cancelamento. No entanto, verifique as políticas de cancelamento da Connect Health para evitar possíveis taxas ou penalidades.',
+      },
+      {
+        questions: ['qual a duração de uma consulta', 'quanto tempo dura uma consulta'],
+        response: 'A duração de uma consulta pode variar dependendo do profissional e do tipo de serviço. Em geral, as consultas costumam ter duração média de 30 minutos a 1 hora. No entanto, é sempre bom verificar com o profissional para ter essa informação precisa.',
+      },
+      {
+        questions: ['quais formas de pagamento são aceitas', 'como posso pagar pelas consultas'],
+        response: 'A Connect Health aceita diferentes formas de pagamento para as consultas, como cartões de crédito, transferências bancárias e boletos. Durante o processo de agendamento, você poderá selecionar a opção de pagamento de sua preferência.',
+      },
+      {
+        questions: ['existe reembolso para as consultas', 'posso ser reembolsado pelas consultas'],
+        response: 'O reembolso das consultas pode variar dependendo do plano contratado e das políticas de reembolso da Connect Health. É recomendado entrar em contato com o suporte da plataforma para obter mais informações sobre essa questão.',
+      },
+      {
+        questions: ['o atendimento é online?', 'as consultas são virtuais?', 'como funciona o atendimento'],
+        response: 'Sim, o atendimento na Connect Health é totalmente online. As consultas são realizadas de forma virtual, por meio de videochamadas seguras dentro da plataforma. Isso proporciona conveniência e flexibilidade para os pacientes.',
+      },
+      {
+        questions: ['posso agendar consultas com mais de um profissional?', 'é possível ter mais de um profissional de saúde?', 'posso ter acompanhamento de nutricionista e psicólogo ao mesmo tempo'],
+        response: 'Sim, você pode agendar consultas com mais de um profissional na Connect Health. Se você precisa de acompanhamento tanto de um nutricionista quanto de um psicólogo, por exemplo, é possível agendar consultas separadas com cada um deles.',
+      },
+      {
+        questions: ['como faço para trocar de profissional?', 'posso mudar de psicólogo ou nutricionista?', 'quero trocar meu profissional de saúde'],
+        response: 'Se você deseja trocar de profissional, basta entrar em contato com o suporte da Connect Health. Eles poderão auxiliá-lo no processo de alteração e ajudar a encontrar um novo profissional que atenda às suas necessidades.',
+      },
+      {
+        questions: ['como funciona o Feed de Notícias?', 'o que encontro no Feed de Notícias', 'como posso utilizar o Feed de Notícias'],
+        response: 'O Feed de Notícias é uma seção da plataforma onde você encontrará artigos, dicas, novidades e informações relevantes sobre saúde mental, nutrição e bem-estar. Você pode utilizá-lo para se manter atualizado e encontrar conteúdos úteis relacionados à sua saúde.',
+      },
+      {
+        questions: ['como faço para entrar em contato com o suporte?', 'preciso de ajuda, como entro em contato?', 'onde encontro o suporte', 'como entro em contato', 'Contato'],
+        response: 'Para entrar em contato com o suporte da Connect Health, você pode acessar a seção de Contato. Para obter assistência personalizada.',
+      },
+      {
+        questions: ['instagram', 'instagram da Connect Health', 'Rede Sociais', 'rede social'],
+        response: 'Aqui está o instagram da Connect Health @cnnthealth',
+      },
 
+    ];
+    
+  
     const voices = speechSynthesis.getVoices();
     const lowerCaseQuestion = newQuestion.toLowerCase();
 
@@ -192,11 +238,13 @@ const Chatbot = () => {
                 setSpeechResponse={setSpeechResponse}
               />
             )}
-            <div onClick={startListening} disabled={isListening}
-              className="bg-[#13d6dd] z-30 absolute w-12 mt-[98.5%] p-2 rounded text-2xl flex justify-center items-center cursor-pointer">
-              <FaMicrophone className="text-2xl text-white" />
-            </div>
+          
             <FormSection generateResponse={generateResponse} />
+
+            <div onClick={startListening} disabled={isListening} className="fixed top-[91.5%] right-90">
+              <FaMicrophone className="bg-[#13d6dd] z-30 w-12 p-2 rounded text-4xl text-white" />
+            </div>
+
           </div>
         </div>
       ) : (
