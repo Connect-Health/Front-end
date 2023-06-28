@@ -15,6 +15,7 @@ import Menu2 from '../../Components/Menu'
 
 import Perfil from '../../Components/Perfil'
 import Notificacao from '../../Components/Notificacao';
+import usePersistedState from '../../utils/usePersistedState';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -65,7 +66,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const Header = () => {
   const { user } = useContext(AuthContext)
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = usePersistedState("theme", "dark");
 
     useEffect(() => {
         if (theme === "dark"){
@@ -79,6 +80,9 @@ const Header = () => {
 
     const handleThemeSwitch = () => {
         setTheme(theme === "dark" ? "light" : "dark");
+        if (theme === "dark"){
+            document.documentElement.classList.remove("dark");
+        }
     };
 
   return (

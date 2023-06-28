@@ -108,7 +108,6 @@ const Notificacao = () => {
                                     Entrar
                                 </button>
                             )}
-                            {console.log(consultas.paciente)}
                         </div>
                     </div>
                 ))) : (
