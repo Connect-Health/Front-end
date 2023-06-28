@@ -241,7 +241,7 @@ const Chatbot = () => {
             className=" mb-10  max-md:w-screen"
           >
             {storedValues.length === 0 && (
-              <p className="bg-white w-[95%] m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
+              <p className="bg-white w-[95%] text-black m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
                 Olá! Sou a Débi a assistente virtual da{" "}
                 <span className="font-semibold">Connect Health</span>. Estou
                 aqui para responder às suas perguntas sobre saúde e bem-estar.
