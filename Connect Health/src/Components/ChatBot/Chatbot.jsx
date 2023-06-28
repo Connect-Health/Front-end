@@ -133,28 +133,44 @@ const Chatbot = () => {
         response: 'O reembolso das consultas pode variar dependendo do plano contratado e das políticas de reembolso da Connect Health. É recomendado entrar em contato com o suporte da plataforma para obter mais informações sobre essa questão.',
       },
       {
-        questions: ['o atendimento é online?', 'as consultas são virtuais?', 'como funciona o atendimento'],
+        questions: ['o atendimento é online?', 'as consultas são virtuais', 'como funciona o atendimento'],
         response: 'Sim, o atendimento na Connect Health é totalmente online. As consultas são realizadas de forma virtual, por meio de videochamadas seguras dentro da plataforma. Isso proporciona conveniência e flexibilidade para os pacientes.',
       },
       {
-        questions: ['posso agendar consultas com mais de um profissional?', 'é possível ter mais de um profissional de saúde?', 'posso ter acompanhamento de nutricionista e psicólogo ao mesmo tempo'],
+        questions: ['posso agendar consultas com mais de um profissional', 'é possível ter mais de um profissional de saúde', 'posso ter acompanhamento de nutricionista e psicólogo ao mesmo tempo'],
         response: 'Sim, você pode agendar consultas com mais de um profissional na Connect Health. Se você precisa de acompanhamento tanto de um nutricionista quanto de um psicólogo, por exemplo, é possível agendar consultas separadas com cada um deles.',
       },
       {
-        questions: ['como faço para trocar de profissional?', 'posso mudar de psicólogo ou nutricionista?', 'quero trocar meu profissional de saúde'],
+        questions: ['como faço para trocar de profissional', 'posso mudar de psicólogo ou nutricionista', 'quero trocar meu profissional de saúde'],
         response: 'Se você deseja trocar de profissional, basta entrar em contato com o suporte da Connect Health. Eles poderão auxiliá-lo no processo de alteração e ajudar a encontrar um novo profissional que atenda às suas necessidades.',
       },
       {
-        questions: ['como funciona o Feed de Notícias?', 'o que encontro no Feed de Notícias', 'como posso utilizar o Feed de Notícias'],
+        questions: ['como funciona o Feed de Notícias', 'o que encontro no Feed de Notícias', 'como posso utilizar o Feed de Notícias'],
         response: 'O Feed de Notícias é uma seção da plataforma onde você encontrará artigos, dicas, novidades e informações relevantes sobre saúde mental, nutrição e bem-estar. Você pode utilizá-lo para se manter atualizado e encontrar conteúdos úteis relacionados à sua saúde.',
       },
       {
-        questions: ['como faço para entrar em contato com o suporte?', 'preciso de ajuda, como entro em contato?', 'onde encontro o suporte', 'como entro em contato', 'Contato'],
+        questions: ['como faço para entrar em contato com o suporte', 'preciso de ajuda, como entro em contato', 'onde encontro o suporte', 'como entro em contato', 'Contato'],
         response: 'Para entrar em contato com o suporte da Connect Health, você pode acessar a seção de Contato. Para obter assistência personalizada.',
       },
       {
         questions: ['instagram', 'instagram da Connect Health', 'Rede Sociais', 'rede social'],
         response: 'Aqui está o instagram da Connect Health @cnnthealth',
+      },
+      {
+        questions: ["posso agendar uma consulta de emergência na Connect Health", "consultas de urgência", "atendimento imediato"],
+        response: "A Connect Health não oferece consultas de emergência ou atendimento imediato. Caso você esteja passando por uma emergência médica ou psicológica, é recomendado entrar em contato com serviços de emergência locais ou buscar atendimento presencial."
+      },
+      {
+        questions: ["A Connect Health é uma plataforma de saúde", "A Connect Health oferece serviços médicos"],
+        response: "Sim, a Connect Health é uma plataforma de saúde que oferece serviços de psicologia e nutrição."
+      },
+      {
+        questions: ["a Connect Health oferece programas de bem-estar", "programas de saúde na plataforma", "cuidados holísticos"],
+        response: "Sim, a Connect Health oferece programas de bem-estar que abrangem diferentes aspectos da saúde, como alimentação saudável, atividade física, gestão do estresse e outros cuidados holísticos. Esses programas visam promover um estilo de vida equilibrado e ajudar os usuários a alcançarem seus objetivos de saúde e bem-estar."
+      },
+      {
+        questions: ["posso solicitar reembolso caso não fique satisfeito com o serviço?", "política de reembolso da Connect Health", "garantia de satisfação"],
+        response: "As políticas de reembolso da Connect Health podem variar. É recomendado entrar em contato com o suporte da plataforma ou verificar os termos e condições específicos relacionados ao reembolso para obter informações mais detalhadas sobre a política de reembolso da Connect Health."
       },
 
     ];
