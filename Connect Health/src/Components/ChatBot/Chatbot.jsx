@@ -257,9 +257,11 @@ const Chatbot = () => {
           
             <FormSection generateResponse={generateResponse} />
 
-            <div onClick={startListening} disabled={isListening} className="fixed top-[91.5%] right-90">
-              <FaMicrophone className="bg-[#13d6dd] z-30 w-12 p-2 rounded text-4xl text-white" />
-            </div>
+            <div onClick={startListening} disabled={isListening} className={`fixed top-[91.5%] right-90`}>
+                <FaMicrophone className={`bg-[#13d6dd] z-30 w-12 p-2 rounded text-4xl text-white ${isListening ? 'bg-azulsite' : 'reconhecimento-ativado'}`} />
+              </div>
+
+
 
           </div>
         </div>
