@@ -15,7 +15,6 @@ const CardAvaliacao = ({ profissional }) => {
           `https://connect-health.up.railway.app/avaliacao/profissional/${profissional.profissionalId}`
         );
         setAvaliacoes(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -34,9 +33,9 @@ const CardAvaliacao = ({ profissional }) => {
   return (
     <div className='flex flex-col items-center'>
       {avaliacoesToShow.length > 0 ? (
-        avaliacoesToShow.map((avaliacao) => (
+        avaliacoesToShow.map((avaliacao, index) => (
           <div
-            key={avaliacao.id}
+            key={index}
             className='drop-shadow-lg w-[90%] pb-6 rounded-2xl mt-10 mx-auto  bg-white max-md:pb-3 max-md:mb-0 max-md:mt-5'
           >
             <div className='ml-4 pt-4 flex gap-5 '>
