@@ -17,6 +17,7 @@ const Calendario = () => {
   const [selectedDates, setSelectedDates] = useState(
     Array.from({ length: 7 }, () => null)
   );
+  const [selectedDayIndex, setSelectedDayIndex] = useState(-1); // Estado para controlar o índice do dia selecionado
   const [selectedHour, setSelectedHour] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
@@ -47,6 +48,14 @@ const Calendario = () => {
     setSelectedDates((prevDates) => {
       const updatedDates = [...prevDates];
       updatedDates[index] = updatedDates[index] ? null : date;
+
+      // Verificar se outro dia está selecionado e fechar o painel de horários
+      if (selectedDayIndex !== -1 && selectedDayIndex !== index) {
+        updatedDates[selectedDayIndex] = null;
+      }
+
+      setSelectedDayIndex(index);
+
       return updatedDates;
     });
     setSelectedHour(null);
@@ -84,7 +93,7 @@ const Calendario = () => {
           pacienteId: user.pacienteId,
         },
       };
-      
+
       const response = await axios.post(
         "https://connect-health.up.railway.app/calendario",
         calendario
