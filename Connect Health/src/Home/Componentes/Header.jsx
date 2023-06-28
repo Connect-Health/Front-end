@@ -66,7 +66,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const Header = () => {
   const { user } = useContext(AuthContext)
-  const [theme, setTheme] = usePersistedState("theme", "dark");
+  const [theme, setTheme] = usePersistedState("theme", "light");
 
     useEffect(() => {
         if (theme === "dark"){
