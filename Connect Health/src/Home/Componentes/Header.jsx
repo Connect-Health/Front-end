@@ -161,6 +161,7 @@ const Header = () => {
         <FormGroup onClick={handleThemeSwitch} className='absolute right-0 max-md:-top-1'>
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }}  />}
+              checked={theme === "dark"}
             />
           </FormGroup>
       </div>
