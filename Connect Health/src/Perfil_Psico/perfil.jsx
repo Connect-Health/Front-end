@@ -5,6 +5,7 @@ import logo from '../../assets/logo_preta.png';
 import { AuthContext } from '../AutoContext/AuthContext';
 import Dashboard from './Components/Dashboard';
 import { Link } from 'react-router-dom';
+import Config from './Components/Config';
 
 function Perfil_Psi() {
     const { user, logout } = useContext(AuthContext)
@@ -46,7 +47,7 @@ function Perfil_Psi() {
                         <div className='flex flex-col pl-8 gap-[50px] w-[100%] text-white '>
                             <div className='flex gap-4'>
 
-                                <p className='cursor-pointer'>Configurações</p>
+                               <Config/>
                             </div>
                             <div className='flex gap-4'>
                                 <p onClick={fazerLogout} className='cursor-pointer'>Sair</p>

@@ -53,21 +53,21 @@ function Config() {
 
                             >
                                 <option value="none">Editar Especialidades</option>
-                                <option value="10">Clínica Infantil</option>
-                                <option value="20">Clínica</option>
-                                <option value="30">Esportiva</option>
-                                <option value="40">Materno-Infantil</option>
-                                <option value="50">Estética</option>
-                                <option value="60">Vegetariana</option>
-                                <option value="70">Vegana</option>
-                                <option value="80">Geriátrica</option>
-                                <option value="90">Transtornos alimentares</option>
-                                <option value="100">Saúde mental</option>
-                                <option value="100">Desordens hormonais</option>
-                                <option value="100">Doenças metábolicas</option>
-                                <option value="100">Distúrbios de sono</option>
-                                <option value="100">Gastroinstestinal</option>
-                                <option value="100">Alergias alimentares</option>
+                                <option value="10">Ansiedade</option>
+                                <option value="20">Estresse</option>
+                                <option value="30">Sexualidade</option>
+                                <option value="40">Bornout</option>
+                                <option value="50">Medo</option>
+                                <option value="60">Depressão</option>
+                                <option value="70">Drogas</option>
+                                <option value="80">Sexualidade</option>
+                                <option value="90">Obesidade</option>
+                                <option value="100">TOC - Transtorno Obsessivo Compulsivo</option>
+                                <option value="100">Autoestima</option>
+                                <option value="100">Morte e luto</option>
+                                <option value="100">Conflitos amorosos</option>
+                                <option value="100">TDAH</option>
+                                <option value="100">Borderline</option>
                             </select>
                         </div>
                         <div className="mt-5">
