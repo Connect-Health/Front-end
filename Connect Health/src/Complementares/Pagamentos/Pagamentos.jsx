@@ -38,8 +38,8 @@ function Pagamentos() {
             </div>
 
             <div>
-                <div className='flex justify-center pb-20 '>
-                    <div className="bg-white w-80 mt-[5rem] rounded-lg h-[300px] flex flex-col items-center">
+                <div className='flex justify-center pb-20 max-md:flex-col max-md:items-center '>
+                    <div className="bg-white w-80 mt-[5rem] rounded-lg h-[300px] flex flex-col items-center max-md:ml-0">
                         <br></br> <h1 className='text-black text-[25px] text-center p-5'>Plano Vitalidade</h1>
                         <p className='text-black p-2 text-center'>
                             -2 consultas de psicologia <br />
@@ -57,7 +57,7 @@ function Pagamentos() {
                     </div>
 
 
-                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
+                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center max-md:ml-0">
                         <h1 className='text-black text-[25px] text-center p-3'>Plano mensal Equilíbrio</h1>
                         <p className='text-black p-2 text-center'>
                             -4 consultas de psicologia <br />
@@ -74,7 +74,7 @@ function Pagamentos() {
                         </div>
                     </div>
 
-                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center">
+                    <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center max-md:ml-0">
                         <h1 className='text-black text-[25px] text-center p-3'>Plano mensal Excelência</h1>
                         <p className='text-black p-2 text-center'>
                             -5 consultas de psicologia <br />
