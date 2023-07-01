@@ -32,6 +32,8 @@ function Register() {
   const [especialidades, setEspecialidades] = useState(1);
   const [generoId, setGeneroId] = useState(1);
 
+  const [todasEspecialidades, setTodasEspecialidades] = useState([]);
+
   const enviarRegistro = async () => {
     try {
       const dados = {
@@ -58,12 +60,16 @@ function Register() {
         areaAtuacao: {
           areaId: areaAtuacao,
         },
-        especialidades: [{}],
+        especialidade: especialidades.map((especialidadeId) => ({
+          especialidadeId: parseInt(especialidadeId, 10),
+        })),
         senha,
         genero: {
           generoId,
         },
       };
+
+      console.log(dados);
 
       const response = await axios.post(
         "https://connect-health.up.railway.app/profissional",
@@ -99,6 +105,22 @@ function Register() {
       checkCEP();
     }
   }, [cep]);
+
+  useEffect(() => {
+    const getEspecialidades = async () => {
+      try {
+        const response = await axios.get(
+          areaAtuacao === 1
+            ? "https://connect-health.up.railway.app/especialidade/psicologia"
+            : "https://connect-health.up.railway.app/especialidade/nutricao"
+        );
+        setTodasEspecialidades(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getEspecialidades();
+  }, [areaAtuacao]);
 
   const formatCep = (value) => {
     // Remove caracteres não numéricos
@@ -198,6 +220,10 @@ function Register() {
                       id = 1;
                     } else if (selectedGenero === "Feminino") {
                       id = 2;
+                    } else if (selectedGenero === "Outro") {
+                      id = 3;
+                    } else if (selectedGenero === "Prefiro não responder") {
+                      id = 4;
                     }
                     setGeneroId(id);
                     console.log(generoId);
@@ -206,6 +232,10 @@ function Register() {
                   {" "}
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
+                  <option value="Outro">Outro</option>
+                  <option value="Prefiro não responder">
+                    Prefiro não responder
+                  </option>
                 </select>
               </label>
 
@@ -397,14 +427,28 @@ function Register() {
                   Quais suas especialidades?*:
                 </span>
                 <select
+                  multiple
                   className="w-80 border border-gray-300 px-3 py-2 rounded max-md:w-full"
                   name="especialidades"
                   id="especialidades"
                   value={especialidades}
-                  onChange={(e) => setEspecialidades(e.target.value)}
+                  onChange={(e) =>
+                    setEspecialidades(
+                      Array.from(
+                        e.target.selectedOptions,
+                        (option) => option.value
+                      )
+                    )
+                  }
                 >
-                  <option value={1}>Psicologo(o/a)</option>
-                  <option value={2}>Nutricionista</option>
+                  {todasEspecialidades.map((especialidade) => (
+                    <option
+                      key={especialidade.especialidadeId}
+                      value={especialidade.especialidadeId}
+                    >
+                      {especialidade.nome}
+                    </option>
+                  ))}
                 </select>
               </label>
             </div>
