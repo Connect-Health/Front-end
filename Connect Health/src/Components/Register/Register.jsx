@@ -89,10 +89,20 @@ function Register() {
         alert("CEP não encontrado");
       }
     };
-    if (cep.length === 8) {
+    if (cep.length === 9) {
       checkCEP();
     }
   }, [cep]);
+
+  const formatCep = (value) => {
+    // Remove caracteres não numéricos
+    const numericValue = value.replace(/\D/g, "");
+
+    // Formata o valor do CEP (ex: 12345678 -> 12345-678)
+    const formattedValue = numericValue.replace(/(\d{5})(\d{1,3})/, "$1-$2");
+
+    return formattedValue;
+  };
 
   return (
     <div className="">
@@ -300,7 +310,7 @@ function Register() {
                   name="CEP"
                   maxLength={9}
                   value={cep}
-                  onChange={(e) => setCep(e.target.value)}
+                  onChange={(e) => setCep(formatCep(e.target.value))}
                   placeholder="00000-000"
                   className=" w-80  border border-gray-300 px-3 py-2 rounded max-md:w-full"
                 />
