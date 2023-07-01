@@ -65,7 +65,7 @@ const Chatbot = () => {
         response: 'Primeiramente, você deve ter efetuado login. Caso já esteja logado, basta ir ao menu superior da página inicial e clicar em "Feed de Notícias".',
       },
       {
-        questions: ['profissional', 'profissional de psicologia', 'profissional de nutrição', 'como encontrar um profissional de psicologia', 'como encontrar um profissional de nutrição', 'profissionais'],
+        questions: ['profissional', 'profissional de psicologia', 'profissional de nutrição', 'como encontrar um profissional de psicologia', 'como encontrar um profissional de nutrição', 'como encontrar profissionais'],
         response: 'Você pode encontrar profissionais tanto da psicologia quanto da nutrição de diversas formas na plataforma. Uma delas é através da área específica de cada um. Também é possível encontrar pelo Feed de Notícias, onde estão os profissionais mais recomendados.',
       },
       {
@@ -125,7 +125,7 @@ const Chatbot = () => {
         response: 'A duração de uma consulta pode variar dependendo do profissional e do tipo de serviço. Em geral, as consultas costumam ter duração média de 30 minutos a 1 hora. No entanto, é sempre bom verificar com o profissional para ter essa informação precisa.',
       },
       {
-        questions: ['quais formas de pagamento são aceitas', 'como posso pagar pelas consultas'],
+        questions: ['quais formas de pagamento são aceitas', 'como posso pagar pelas consultas', "forma de pagamento"],
         response: 'A Connect Health aceita diferentes formas de pagamento para as consultas, como cartões de crédito, transferências bancárias e boletos. Durante o processo de agendamento, você poderá selecionar a opção de pagamento de sua preferência.',
       },
       {
