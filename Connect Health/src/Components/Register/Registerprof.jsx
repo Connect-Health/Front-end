@@ -65,8 +65,6 @@ function Register() {
         },
       };
 
-      console.log(dados);
-
       const response = await axios.post(
         "https://connect-health.up.railway.app/profissional",
         dados
@@ -77,7 +75,7 @@ function Register() {
         navigate("/loginprof");
       }, 2000);
     } catch (error) {
-      console.log(error);
+        alert("Erro ao cadastrar");
     }
   };
 
@@ -429,7 +427,7 @@ function Register() {
                   type="text required"
                   id="CEP"
                   name="CEP"
-                  maxLength={11}
+                  maxLength={9}
                   value={cep}
                   onChange={(e) => setCep(e.target.value)}
                   placeholder="00000-000"

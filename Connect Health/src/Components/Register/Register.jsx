@@ -75,20 +75,24 @@ function Register() {
     }
   };
 
-  const checkCEP = (e) => {
-    const cep = e.target.value.replace(/\D/g, "");
-    console.log(cep);
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setAddress(data.logradouro);
-        setNeighborhood(data.bairro);
-        setCity(data.localidade);
-        setUf(data.uf);
-        setFocus("addressNumber");
-      });
-  };
+  useEffect(() => {
+    const checkCEP = async () => {
+      try {
+        const response = await axios.get(
+          `https://viacep.com.br/ws/${cep}/json/`
+        );
+        setLogradouro(response.data.logradouro);
+        setBairro(response.data.bairro);
+        setCidade(response.data.localidade);
+        setUf(response.data.uf);
+      } catch (error) {
+        alert("CEP não encontrado");
+      }
+    };
+    if (cep.length === 8) {
+      checkCEP();
+    }
+  }, [cep]);
 
   return (
     <div className="">
@@ -294,7 +298,7 @@ function Register() {
                   type="text required"
                   id="CEP"
                   name="CEP"
-                  maxLength={11}
+                  maxLength={9}
                   value={cep}
                   onChange={(e) => setCep(e.target.value)}
                   placeholder="00000-000"
