@@ -60,7 +60,7 @@ function Pagamentos() {
                     <div className="bg-white w-80 mt-[5rem] ml-16 rounded-lg h-[300px] flex flex-col items-center max-md:ml-0">
                         <h1 className='text-black text-[25px] text-center p-3'>Plano mensal Equilíbrio</h1>
                         <p className='text-black p-2 text-center'>
-                            -4 consultas de psicologia <br />
+                            - 4 consultas de psicologia <br />
                             - 2 consulta de nutrição<br />
                             - Consultas de 45 minutos<br />
                             - Gerenciamento de consultas
