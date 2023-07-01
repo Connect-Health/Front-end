@@ -184,7 +184,6 @@ function Register() {
                       id = 4;
                     }
                     setGeneroId(id);
-                    console.log(generoId);
                   }}
                 >
                   <option value="Masculino">Masculino</option>
