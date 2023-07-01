@@ -69,8 +69,6 @@ function Register() {
         },
       };
 
-      console.log(dados);
-
       const response = await axios.post(
         "https://connect-health.up.railway.app/profissional",
         dados
