@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
-import Card from './Card';
-import { Box, CircularProgress } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
+import React, { useEffect, useState, useRef } from "react";
+import axios from "axios";
+import Card from "./Card";
+import { Box, CircularProgress } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#94E127',
+      main: "#94E127",
     },
   },
 });
@@ -37,8 +37,6 @@ const AllCards = () => {
       setIsLoading(false);
     }
   }
-
-  console.log(data)
   useEffect(() => {
     setIsLoading(true);
     fetchProfissionais();
@@ -46,51 +44,53 @@ const AllCards = () => {
 
   const handleChangePage = (event, value) => {
     setPage(value);
-    componentRef.current.scrollIntoView({ behavior: 'smooth' });
+    componentRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className='dark:bg-black/90'>
+    <div>
       <div ref={componentRef} />
       {isLoading ? (
-        <div className='flex justify-center items-center text-black'>
+        <div className="flex justify-center items-center text-black">
           <ThemeProvider theme={theme}>
-            <Box sx={{ display: 'flex' }}>
-              <CircularProgress color='primary' />
+            <Box sx={{ display: "flex" }}>
+              <CircularProgress color="primary" />
             </Box>
           </ThemeProvider>
         </div>
       ) : (
         <>
           {data.length > 0 ? (
-            <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1 max-md:gap-y-3 dark:bg-black/90'>
-              {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
-                <Card
-                  border='[#94E127]'
-                  border2='nutri'
-                  border3='[#D7F2E0]'
-                  bg2='bg-[#D7F2E0]'
-                  texto='nutri'
-                  key={profissional.id}
-                  profissional={profissional}
-                  areaUrl='nutricionista'
-                />
-              ))}
+            <div className="grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1 max-md:gap-y-3">
+              {data
+                .slice((page - 1) * pageSize, page * pageSize)
+                .map((profissional) => (
+                  <Card
+                    border="[#94E127]"
+                    border2="nutri"
+                    border3="[#D7F2E0]"
+                    bg2="bg-[#D7F2E0]"
+                    texto="nutri"
+                    key={profissional.id}
+                    profissional={profissional}
+                    areaUrl="nutricionista"
+                  />
+                ))}
             </div>
           ) : (
-            <div className='flex justify-center items-center text-black'>
+            <div className="flex justify-center items-center text-black">
               <p>Não foi possível carregar os dados.</p>
             </div>
           )}
           <Stack>
             <ThemeProvider theme={theme}>
               <Pagination
-                className='m-auto my-10'
+                className="m-auto my-10"
                 count={count}
                 page={page}
-                variant='outlined'
-                shape='rounded'
-                color='primary'
+                variant="outlined"
+                shape="rounded"
+                color="primary"
                 onChange={handleChangePage}
               />
             </ThemeProvider>
