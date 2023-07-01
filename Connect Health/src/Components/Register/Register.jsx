@@ -75,19 +75,33 @@ function Register() {
     }
   };
 
-  const checkCEP = (e) => {
-    const cep = e.target.value.replace(/\D/g, "");
-    console.log(cep);
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setAddress(data.logradouro);
-        setNeighborhood(data.bairro);
-        setCity(data.localidade);
-        setUf(data.uf);
-        setFocus("addressNumber");
-      });
+  useEffect(() => {
+    const checkCEP = async () => {
+      try {
+        const response = await axios.get(
+          `https://viacep.com.br/ws/${cep}/json/`
+        );
+        setLogradouro(response.data.logradouro);
+        setBairro(response.data.bairro);
+        setCidade(response.data.localidade);
+        setUf(response.data.uf);
+      } catch (error) {
+        alert("CEP não encontrado");
+      }
+    };
+    if (cep.length === 9) {
+      checkCEP();
+    }
+  }, [cep]);
+
+  const formatCep = (value) => {
+    // Remove caracteres não numéricos
+    const numericValue = value.replace(/\D/g, "");
+
+    // Formata o valor do CEP (ex: 12345678 -> 12345-678)
+    const formattedValue = numericValue.replace(/(\d{5})(\d{1,3})/, "$1-$2");
+
+    return formattedValue;
   };
 
   return (
@@ -184,7 +198,6 @@ function Register() {
                       id = 4;
                     }
                     setGeneroId(id);
-                    console.log(generoId);
                   }}
                 >
                   <option value="Masculino">Masculino</option>
@@ -295,9 +308,9 @@ function Register() {
                   type="text required"
                   id="CEP"
                   name="CEP"
-                  maxLength={11}
+                  maxLength={9}
                   value={cep}
-                  onChange={(e) => setCep(e.target.value)}
+                  onChange={(e) => setCep(formatCep(e.target.value))}
                   placeholder="00000-000"
                   className=" w-80  border border-gray-300 px-3 py-2 rounded max-md:w-full"
                 />
