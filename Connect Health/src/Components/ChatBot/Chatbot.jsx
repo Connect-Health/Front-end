@@ -185,7 +185,7 @@ const Chatbot = () => {
         response: "Os eventos da connect são para empresas que contrata nossos serviços, e nós contatamos profissionais da nossa plataforma para atender as nessecidades da empresa.",
       },
       {
-        questions: ["plano equilibrio", " equilibrio", "o que tem o plano equilibrio"],
+        questions: ["plano equilibrio", "equilibrio", "o que tem o plano equilibrio"],
         response: "O plano Equilíbrio custa 100 reais mensalmente nele você tera direito a 4 consultas com Psicólogo, 2 consulta com Nutricionista e todas elas terá uma duração de 45 minutos."
       },
       {
