@@ -133,7 +133,7 @@ const Chatbot = () => {
         response: 'O reembolso das consultas pode variar dependendo do plano contratado e das políticas de reembolso da Connect Health. É recomendado entrar em contato com o suporte da plataforma para obter mais informações sobre essa questão.',
       },
       {
-        questions: ['o atendimento é online?', 'as consultas são virtuais', 'como funciona o atendimento'],
+        questions: ['o atendimento é online', 'as consultas são virtuais', 'como funciona o atendimento'],
         response: 'Sim, o atendimento na Connect Health é totalmente online. As consultas são realizadas de forma virtual, por meio de videochamadas seguras dentro da plataforma. Isso proporciona conveniência e flexibilidade para os pacientes.',
       },
       {
@@ -165,12 +165,60 @@ const Chatbot = () => {
         response: "Sim, a Connect Health é uma plataforma de saúde que oferece serviços de psicologia e nutrição."
       },
       {
-        questions: ["a Connect Health oferece programas de bem-estar", "programas de saúde na plataforma", "cuidados holísticos"],
+        questions: ["a Connect Health oferece programas de bem-estar", "programas de saúde na plataforma", "cuidados holísticos", "Cuidados"],
         response: "Sim, a Connect Health oferece programas de bem-estar que abrangem diferentes aspectos da saúde, como alimentação saudável, atividade física, gestão do estresse e outros cuidados holísticos. Esses programas visam promover um estilo de vida equilibrado e ajudar os usuários a alcançarem seus objetivos de saúde e bem-estar."
       },
       {
-        questions: ["posso solicitar reembolso caso não fique satisfeito com o serviço?", "política de reembolso da Connect Health", "garantia de satisfação"],
+        questions: ["posso solicitar reembolso caso não fique satisfeito com o serviço", "política de reembolso da Connect Health", "garantia de satisfação"],
         response: "As políticas de reembolso da Connect Health podem variar. É recomendado entrar em contato com o suporte da plataforma ou verificar os termos e condições específicos relacionados ao reembolso para obter informações mais detalhadas sobre a política de reembolso da Connect Health."
+      },
+      {
+        questions: ["planos", "quais são os planos que a connect oferece", "planos disponiveis", ],
+        response: "A Connect Health possui três tipos de planos: Vitalidade, Equilíbrio e Excelência. Cada um deles possui suas qualidades, basta averiguar qual mais se adequa a você."
+      },
+      {
+        questions: ["plano vitalidade", "vitalidade", "o que tem o plano vitalidade"],
+        response: "O plano vitalidade custa 50 reais mensalmente nele você tera direito a 2 consultas com Psicólogo, 1 consulta com Nutricionista e todas elas terá uma duração de 30 minutos."
+      },
+      {
+        questions: ["eventos", "como funciona os eventos", "para que serve a página eventos"],
+        response: "Os eventos da connect são para empresas que contrata nossos serviços, e nós contatamos profissionais da nossa plataforma para atender as nessecidades da empresa.",
+      },
+      {
+        questions: ["plano equilibrio", " equilibrio", "o que tem o plano equilibrio"],
+        response: "O plano Equilíbrio custa 100 reais mensalmente nele você tera direito a 4 consultas com Psicólogo, 2 consulta com Nutricionista e todas elas terá uma duração de 45 minutos."
+      },
+      {
+        questions: ["plano excelência", "excelência", "o que tem o plano excelência"],
+        response: "O plano Exelência custa 150 reais mensalmente nele você tera direito a 5 consultas com Psicólogo, 2 consulta com Nutricionista e todas elas terá uma duração de 60 minutos.",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
+      },
+      {
+        questions: [""],
+        response: "",
       },
 
     ];
