@@ -194,7 +194,7 @@ const Chatbot = () => {
       },
       {
         questions: ["demoday", "Demoday"],
-        response: "Sejam muito bem vindos ao Demoday! Espero que gostem e aproveitem bastante!",
+        response: "Sejam muito bem-vindos ao Demoday! Espero que gostem e aproveitem bastante!",
       },
       {
         questions: [""],
