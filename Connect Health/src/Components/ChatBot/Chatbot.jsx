@@ -193,6 +193,10 @@ const Chatbot = () => {
         response: "O plano Exelência custa 150 reais mensalmente nele você tera direito a 5 consultas com Psicólogo, 2 consulta com Nutricionista e todas elas terá uma duração de 60 minutos.",
       },
       {
+        questions: ["demoday"],
+        response: "Sejam muito bem vindos ao Demoday! Espero que voce goste e aproveite bastante!",
+      },
+      {
         questions: [""],
         response: "",
       },
