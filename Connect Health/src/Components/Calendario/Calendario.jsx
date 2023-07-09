@@ -141,7 +141,7 @@ const Calendario = () => {
 
     const updatedIntervals = intervals.map((interval) => ({
       ...interval,
-      available: currentDayOfWeek !== 0 && currentDayOfWeek !== 6, // Disponível apenas de segunda a sexta-feira
+      available: currentDayOfWeek !== 0 && currentDayOfWeek !== 6,
     }));
 
     const hourIntervals = Array.from({ length: 7 }, (_, index) => {
@@ -201,7 +201,7 @@ const Calendario = () => {
                         });
 
                         if (isUnavailable) {
-                          // Horário já foi marcado, renderize algo indicando que não está disponível
+                         
                           return (
                             <li
                               key={intervalIndex}
@@ -211,7 +211,6 @@ const Calendario = () => {
                             </li>
                           );
                         } else {
-                          // Horário está disponível, renderize normalmente
                           return (
                             <li
                               key={intervalIndex}
