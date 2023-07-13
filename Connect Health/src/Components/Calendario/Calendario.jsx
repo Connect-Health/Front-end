@@ -48,8 +48,6 @@ const Calendario = () => {
     setSelectedDates((prevDates) => {
       const updatedDates = [...prevDates];
       updatedDates[index] = updatedDates[index] ? null : date;
-
-      // Verificar se outro dia está selecionado e fechar o painel de horários
       if (selectedDayIndex !== -1 && selectedDayIndex !== index) {
         updatedDates[selectedDayIndex] = null;
       }
