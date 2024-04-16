@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
+import MuiAlert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+import axios from 'axios';
+import React, { useContext, useState } from 'react';
 import { BsImageFill, BsThreeDots } from 'react-icons/bs';
 import { MdLocationOn, MdSubscriptions } from 'react-icons/md';
-import axios from 'axios';
 import { AuthContext } from '../../AutoContext/AuthContext';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
 
 const Postar = () => {
   const [titulo, setTitulo] = useState('');
@@ -35,7 +35,7 @@ const Postar = () => {
         },
       };
 
-      const response = await axios.post('https://connect-health.up.railway.app/post', post);
+      const response = await axios.post('https://connecthealth-backend.onrender.com/post', post);
       console.log(response.data);
 
       setTitulo('');

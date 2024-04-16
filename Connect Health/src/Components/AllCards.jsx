@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import axios from "axios";
-import Card from "./Card";
 import { Box, CircularProgress } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import Card from "./Card";
 
 const theme = createTheme({
   palette: {
@@ -26,7 +26,7 @@ const AllCards = () => {
   async function fetchProfissionais() {
     try {
       const response = await axios.get(
-        `https://connect-health.up.railway.app/profissional/nutricionistas?page=${page}`
+        `https://connecthealth-backend.onrender.com/profissional/nutricionistas?page=${page}`
       );
       setData(response.data);
       const totalCount = response.data.length;

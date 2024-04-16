@@ -1,9 +1,9 @@
+import { Alert, Snackbar } from "@mui/material";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import { Alert, Snackbar } from "@mui/material";
 
 function Register() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -62,7 +62,7 @@ function Register() {
       };
 
       const response = await axios.post(
-        "https://connect-health.up.railway.app/paciente",
+        "https://connecthealth-backend.onrender.com/paciente",
         dados
       );
       setOpenSnackbar(true);

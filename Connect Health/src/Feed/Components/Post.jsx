@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { FaComment, FaHeart, FaShare } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { AiFillDelete, AiOutlineSend } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { AiFillDelete, AiOutlineSend } from "react-icons/ai";
+import { FaComment, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import Comentario from "./Comentario";
+import Snackbar from "@mui/material/Snackbar";
 import Perfil from "../../Components/Perfil";
+import Comentario from "./Comentario";
 
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale"; // Importe o módulo de localização para pt-BR
@@ -35,7 +35,7 @@ const Post = ({ post, user }) => {
     const fetchComentarios = async () => {
       try {
         const response = await axios.get(
-          `https://connect-health.up.railway.app/comentario/post/${post.postId}`
+          `https://connecthealth-backend.onrender.com/comentario/post/${post.postId}`
         );
         setComentarios(response.data);
       } catch (error) {
@@ -74,7 +74,7 @@ const Post = ({ post, user }) => {
   const handleDelete = async () => {
     try {
       await axios.delete(
-        `https://connect-health.up.railway.app/post/${post.postId}`
+        `https://connecthealth-backend.onrender.com/post/${post.postId}`
       );
       setShowDeleteAlert(true);
       setTimeout(() => {
@@ -106,7 +106,7 @@ const Post = ({ post, user }) => {
       };
 
       await axios.post(
-        "https://connect-health.up.railway.app/comentario",
+        "https://connecthealth-backend.onrender.com/comentario",
         comentarioData
       );
       setNovoComentario("");
@@ -118,7 +118,7 @@ const Post = ({ post, user }) => {
   const handleDeleteComentario = async (comentarioId) => {
     try {
       await axios.delete(
-        `https://connect-health.up.railway.app/comentario/${comentarioId}`
+        `https://connecthealth-backend.onrender.com/comentario/${comentarioId}`
       );
       setShowComentarios(true);
     } catch (error) {

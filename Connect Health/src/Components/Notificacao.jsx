@@ -1,18 +1,13 @@
+import {
+    Dialog,
+    DialogContent,
+    DialogTitle
+} from "@mui/material";
+import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { IoMdNotifications } from "react-icons/io";
-import { AuthContext } from "../AutoContext/AuthContext";
-import {
-  Backdrop,
-  Dialog,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Menu,
-  MenuItem,
-  Modal,
-} from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { AuthContext } from "../AutoContext/AuthContext";
 
 const Notificacao = () => {
   const { user } = useContext(AuthContext);
@@ -32,7 +27,7 @@ const Notificacao = () => {
   async function fetchConsultas() {
     try {
       const response = await axios.get(
-        `https://connect-health.up.railway.app/calendario/paciente/${user.pacienteId}`
+        `https://connecthealth-backend.onrender.com/calendario/paciente/${user.pacienteId}`
       );
       setData(response.data);
     } catch (error) {

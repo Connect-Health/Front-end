@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import Rating from '@mui/material/Rating';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 
 const CardAvaliacao = ({ profissional }) => {
@@ -12,7 +12,7 @@ const CardAvaliacao = ({ profissional }) => {
     const fetchAvaliacoes = async () => {
       try {
         const response = await axios.get(
-          `https://connect-health.up.railway.app/avaliacao/profissional/${profissional.profissionalId}`
+          `https://connecthealth-backend.onrender.com/avaliacao/profissional/${profissional.profissionalId}`
         );
         setAvaliacoes(response.data);
       } catch (error) {

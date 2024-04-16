@@ -1,12 +1,11 @@
-import React, { useContext, useState } from 'react';
-import { Box, Button, BottomNavigation, BottomNavigationAction, Snackbar, Backdrop } from '@mui/material';
-import Modal from '@mui/material/Modal';
 import AddIcon from '@mui/icons-material/Add';
-import { AuthContext } from '../../AutoContext/AuthContext';
 import CloseIcon from '@mui/icons-material/Close';
-import MuiAlert from '@mui/material/Alert';
 import ImageIcon from '@mui/icons-material/Image';
+import { Backdrop, BottomNavigation, BottomNavigationAction, Box, Button, Snackbar } from '@mui/material';
+import MuiAlert from '@mui/material/Alert';
 import axios from 'axios';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../AutoContext/AuthContext';
 
 const MenuMobile = () => {
     const { user } = useContext(AuthContext);
@@ -37,7 +36,7 @@ const MenuMobile = () => {
             },
           };
     
-          const response = await axios.post('https://connect-health.up.railway.app/post', post);
+          const response = await axios.post('https://connecthealth-backend.onrender.com/post', post);
           console.log(response.data);
     
           setTitulo('');

@@ -1,15 +1,15 @@
+import { Alert, Snackbar } from "@mui/material";
+import axios from 'axios';
+import { gapi } from "gapi-script";
+import { useEffect, useState } from "react";
+import GoogleLogin from "react-google-login";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 import { RiFacebookCircleFill, RiLinkedinFill } from "react-icons/ri";
+import { Link, useNavigate } from "react-router-dom";
+import BgLogin from "../../../assets/bglogin.png";
 import lockericon from "../../../assets/lockericon.png";
 import mailicon from "../../../assets/mailicon.png";
-import BgLogin from "../../../assets/bglogin.png";
-import { FcGoogle } from "react-icons/fc";
-import GoogleLogin from "react-google-login";
-import { gapi } from "gapi-script";
-import { useEffect,useState } from "react";
-import axios from 'axios'
-import { Alert, Snackbar } from "@mui/material";
 
 import { useContext } from "react";
 import { AuthContext } from "../../AutoContext/AuthContext";
@@ -54,7 +54,7 @@ function Login() {
   const fazerLoginGoogle = async (email) => {
     try {
       const response = await axios.post(
-        "https://connect-health.up.railway.app/profissional/loginGoogle",
+        "https://connecthealth-backend.onrender.com/profissional/loginGoogle",
         { email }
       );
   
@@ -74,7 +74,7 @@ function Login() {
   const fazerLogin = async () => {
     try {
       const response = await axios.post(
-        "https://connect-health.up.railway.app/profissional/login",
+        "https://connecthealth-backend.onrender.com/profissional/login",
         {email, senha}
       )
       if (response.status === 200 && response.data.success === true) {

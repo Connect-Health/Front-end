@@ -1,8 +1,8 @@
+import { Alert, Snackbar } from "@mui/material";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { Alert, Snackbar } from "@mui/material";
 
 function Register() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -70,7 +70,7 @@ function Register() {
       };
 
       const response = await axios.post(
-        "https://connect-health.up.railway.app/profissional",
+        "https://connecthealth-backend.onrender.com/profissional",
         dados
       );
       setOpenSnackbar(true);
@@ -109,8 +109,8 @@ function Register() {
       try {
         const response = await axios.get(
           areaAtuacao === 1
-            ? "https://connect-health.up.railway.app/especialidade/psicologia"
-            : "https://connect-health.up.railway.app/especialidade/nutricao"
+            ? "https://connecthealth-backend.onrender.com/especialidade/psicologia"
+            : "https://connecthealth-backend.onrender.com/especialidade/nutricao"
         );
         setTodasEspecialidades(response.data);
       } catch (error) {

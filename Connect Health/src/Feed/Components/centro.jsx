@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import { AuthContext } from '../../AutoContext/AuthContext';
 import Post from './Post';
 import Postar from './Postar';
-import axios from 'axios';
-import CircularProgress from '@mui/material/CircularProgress';
-import { AuthContext } from '../../AutoContext/AuthContext';
 
 const Centro = () => {
   const [data, setData] = useState([]);
@@ -14,7 +14,7 @@ const Centro = () => {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await axios.get(`https://connect-health.up.railway.app/post`);
+        const response = await axios.get(`https://connecthealth-backend.onrender.com/post`);
         const reversedData = response.data.reverse();
         setData(reversedData);
       } catch (error) {

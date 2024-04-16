@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Configuration, OpenAIApi } from "openai";
 import axios from "axios";
+import { Configuration, OpenAIApi } from "openai";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
-import FormSection from "./FormSection";
-import AnswerSection from "./AnswerSection";
 import { FaMicrophone } from "react-icons/fa";
+import AnswerSection from "./AnswerSection";
+import FormSection from "./FormSection";
 
 
 const Chatbot = () => {
@@ -16,7 +16,7 @@ const Chatbot = () => {
 
   useEffect(() => {
     axios
-      .get("https://connect-health.up.railway.app/chat")
+      .get("https://connecthealth-backend.onrender.com/chat")
       .then(function (response) {
         const chave = response.data;
         const chaveBotSemUltimaLetra = chave.slice(0, -1);

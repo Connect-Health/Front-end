@@ -1,14 +1,13 @@
 import React from 'react'
-import Fundo from '../../../assets/fundo.png'
 
 import TituloFoto from './TituloFoto'
 
 
-import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import axios from 'axios'
-import Especialidades from './minComponents/Especialidades'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import Avaliacoes from './minComponents/Avaliacoes'
+import Especialidades from './minComponents/Especialidades'
 import Sobre from './minComponents/Sobre'
 
 
@@ -20,7 +19,7 @@ const Perfil = (props, {color}) => {
   useEffect(() => {
     async function fetchProfissionais() {
       try {
-        const response = await axios.get(`https://connect-health.up.railway.app/profissional/${props.areaUrl}`)
+        const response = await axios.get(`https://connecthealth-backend.onrender.com/profissional/${props.areaUrl}`)
         const profissionalEncontrado = response.data.find(profissional => profissional.profissionalId === parseInt(id))
         setProfissional(profissionalEncontrado)
       } catch (error) {

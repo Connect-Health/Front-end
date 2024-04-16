@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
 import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
   Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   Snackbar,
 } from "@mui/material";
-import { AuthContext } from "../../AutoContext/AuthContext";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { AuthContext } from "../../AutoContext/AuthContext";
 
 const Calendario = () => {
   const { id } = useParams();
@@ -30,7 +30,7 @@ const Calendario = () => {
     const fetchCalendario = async () => {
       try {
         const response = await axios.get(
-          `https://connect-health.up.railway.app/calendario/profissional/${id}`
+          `https://connecthealth-backend.onrender.com/calendario/profissional/${id}`
         );
 
         const calendario = response.data;
@@ -93,7 +93,7 @@ const Calendario = () => {
       };
 
       const response = await axios.post(
-        "https://connect-health.up.railway.app/calendario",
+        "https://connecthealth-backend.onrender.com/calendario",
         calendario
       );
     } catch (error) {
