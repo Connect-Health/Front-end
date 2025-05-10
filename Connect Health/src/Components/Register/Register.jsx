@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
@@ -71,6 +71,7 @@ function Register() {
         navigate("/login");
       }, 2000);
     } catch (error) {
+      alert(error.response.data.errors);
       console.log(error);
     }
   };
