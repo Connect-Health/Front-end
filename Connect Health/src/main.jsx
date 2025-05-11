@@ -9,6 +9,7 @@ import "@fontsource/montserrat";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import { AuthProvider } from "./AutoContext/AuthContext";
+import { ThemeProvider } from './AutoContext/ThemeContext';
 import Eventos from "./Complementares/Eventos/Eventos";
 import Pagamentos from "./Complementares/Pagamentos/Pagamentos";
 import Politica from "./Complementares/Politica/Politica";
@@ -117,8 +118,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider> 
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

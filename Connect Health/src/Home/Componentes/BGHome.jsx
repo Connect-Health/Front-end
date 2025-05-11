@@ -6,17 +6,19 @@ import estrela from '../../../assets/estrelas2.jpg'
 import Blocos from './Blocos'
 import Header from './Header'
 import Psico from './Psico'
+import fundo_claro from '../../../assets/fundo_home3.png'
+import fundo_escuro from '../../../assets/fundo_home2.png'
 
 import Psi from '../../../assets/psiSlide.jpg'
 
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
-import { useState, useEffect } from 'react'
-import Nutrim from './Nutrim'
+import { useState, useEffect, useContext } from 'react'
 import Carrossel from './Carrossel'
 import psiSlide from '../../../assets/psiSlide.jpg'
 import nutriSlide from '../../../assets/nutriSlide.jpg'
 import feedSlide from '../../../assets/feedSlide.jpg'
+import { ThemeContext } from '../../AutoContext/ThemeContext'
 
 
 function BGHome(){
@@ -26,6 +28,7 @@ function BGHome(){
         { image: feedSlide, text: "Esteja por dentro de todas as novidades. Notícias, dicas, receitas, entre outras! tudo no nosso Feed!", title: "Feed de Noticias" },
       ]
     const [offset, setOffset] = useState(0)
+    const [headerBg, setHeaderBg] = useState(false);
 
     useEffect( () => {
         function handleScroll(){
@@ -37,15 +40,22 @@ function BGHome(){
         }
     }, [])
 
+    const { theme } = useContext(ThemeContext);
+    useEffect(() => {
+              if (theme === "dark"){
+                  document.documentElement.classList.add("dark");
+                  
+              } else {
+                  document.documentElement.classList.remove("dark");
+              }
+          }, [theme]);
+
+    const fundoSelecionado = theme === 'dark' ? fundo_escuro : fundo_claro ;
+
     return(
         <div className='max-md:h-0 '>
+            <img className='w-full h-[100vh] relative' src={fundoSelecionado} alt="" />        
             <Header />
-            <div className={`relative `} style={{ height: window.innerHeight}}>
-                <img src={estrela} className='hidden absolute dark:block -top-14' alt="" />
-                <img className={`w-full absolute max-md:pt-10`} style={{ transform: `translateY(${offset * 0.35}px)`}} src={fundo_1} alt="" />
-                <img className='w-full absolute max-md:pt-10' style={{ transform: `translateY(${offset * 0.3}px)`}} src={cabeca_1} alt="" />
-                <img className='w-full absolute max-md:pt-10' style={{ transform: `translateY(${offset * 0.1}px)`}} src={mulher_1} alt="" />
-            </div>
 
             <div className='flex justify-between flex-row'>
                 <div className='w-[20%] h-auto p-5 bg-[#d3d3d3] backdrop-blur-xl rounded-2xl bg-opacity-50 absolute top-[44%] left-[2.7%] z-10
@@ -62,9 +72,7 @@ function BGHome(){
                 <div className="w-1/5 absolute right-10 bottom-16 max-md:hidden ">
                     <Carrossel slides={slides} />
                 </div>
-
             </div>
-
         </div>
     )
 }

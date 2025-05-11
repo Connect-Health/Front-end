@@ -14,7 +14,6 @@ function Home() {
     return(
         <div className="dark:bg-black dark:bg-opacity-90 dark:text-white max-md:overflow-x-hidden">
             <BGHome/>
-            {/* <Blocos /> */}
             <Psico />
             <Nutrim/>       
             <Feed/>
@@ -25,7 +24,7 @@ function Home() {
                 bgSec="[#457ff4]"
                 invert="invert"
             />
-            <Chatbot />
+            {/* <Chatbot /> */}
         </div>
         
     )

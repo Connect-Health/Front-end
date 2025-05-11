@@ -1,14 +1,16 @@
 import axios from "axios";
 import { Configuration, OpenAIApi } from "openai";
-import React, { useEffect, useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { FaMicrophone } from "react-icons/fa";
 import AnswerSection from "./AnswerSection";
 import FormSection from "./FormSection";
+import React, { useEffect, useState } from "react";
 
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  
   const [ChaveBot, setChaveBot] = useState("");
   const [speechResponse, setSpeechResponse] = useState("");
   const [isListening, setIsListening] = useState(false); // Add isListening state variable
@@ -261,8 +263,19 @@ const Chatbot = () => {
     );
   };
 
-  const toggleChatbot = () => {
-    setIsOpen(!isOpen);
+  
+
+
+    const toggleChatbot = () => {
+    if (!isOpen) {
+      // Abrindo o chatbot
+      setIsOpen(true);
+      setIsAnimating(true);
+    } else {
+      setIsAnimating(true);
+      setIsOpen(false);
+      setIsAnimating(true);
+    }
   };
 
   useEffect(() => {
@@ -278,14 +291,28 @@ const Chatbot = () => {
   }, [speechResponse]);
 
   return (
-    <div id="chatbot" className="chatbot  bg-[#ebeff3]/40 border border-white rounded backdrop-blur w-[25vw] max-md:w-auto  fixed z-50 right-1 bottom-1">
-      {isOpen ? (
-        <div className="max-md:w-screen h-[62vh] max-md:h-[90vh] w-[25vw]">
+    <div 
+      id="chatbot" 
+      className={`fixed z-50 right-1 bottom-1 transition-all duration-300 ease-in-out ${
+        isOpen || isAnimating
+          ? "translate-y-0 opacity-100" 
+          : "translate-y-[calc(100%-40px)] opacity-90"
+      }`}
+    >
+      {(isOpen || isAnimating) && (
+        <div 
+          className={`bg-[#ebeff3]/80 border-[0.1px] border-[#c5c5c570] rounded backdrop-blur w-[25vw] max-md:w-screen h-[62vh] max-md:h-[90vh] transition-all duration-300 ease-in-out ${
+            !isOpen && isAnimating ? "animate-slide-down" : "animate-slide-up"
+          }`}
+          onAnimationEnd={() => {
+            if (!isOpen) setIsAnimating(false);
+          }}
+        >
           <div
             onClick={toggleChatbot}
-            className=" max-md:w-[100%]   bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3"
+            className="max-md:w-[100%] bg-gradient-to-l from-[#877fc0] to-[#6ad3ab] border-[0.1px] border-[#c4c4c470] rounded flex justify-between items-center py-1 px-3"
           >
-            <p className="text-lg  text-white z-50">Débi</p>
+            <p className="text-lg text-white z-50">Débi</p>
             <AiOutlineArrowDown className="text-2xl text-white" />
           </div>
           <div
@@ -293,7 +320,7 @@ const Chatbot = () => {
             className=" mb-10  max-md:w-screen"
           >
             {storedValues.length === 0 && (
-              <p className="bg-white w-[95%] text-black m-auto rounded absolute bottom-12 p-1 pr-0 left-1/2 -translate-x-1/2">
+              <p className="bg-white w-[90%] text-black m-auto rounded absolute bottom-14 p-1 pr-0 left-1/2 -translate-x-1/2 text-sm">
                 Olá! Sou a Débi a assistente virtual da{" "}
                 <span className="font-semibold">Connect Health</span>. Estou
                 aqui para responder às suas perguntas sobre saúde e bem-estar.
@@ -307,26 +334,21 @@ const Chatbot = () => {
               />
             )}
           
-            <FormSection generateResponse={generateResponse} />
-
-            <div onClick={startListening} disabled={isListening} className={`fixed top-[91.5%] right-90`}>
-                <FaMicrophone className={`bg-[#13d6dd] z-30 w-12 p-2 rounded text-4xl text-white ${isListening ? 'bg-azulsite' : 'reconhecimento-ativado'}`} />
-              </div>
-
-
+            <FormSection 
+            generateResponse={generateResponse}
+            startListening={startListening} 
+            isListening={isListening}
+          />
 
           </div>
         </div>
-      ) : (
+      )} {!isOpen && !isAnimating && (
         <div
-        onClick={toggleChatbot}
-          className="w-full  bg-gradient-to-l from-[#1eec9a] to-[#13d6dd] border border-white rounded flex justify-between items-center py-1 px-3 "
+          onClick={toggleChatbot}
+          className="bg-gradient-to-l from-[#877fc0] to-[#6ad3ab] rounded flex justify-between items-center py-1 px-3 w-[25vw] max-md:w-[90vw]"
         >
-          <p className="text-lg  text-white">Débi</p>
-          <AiOutlineArrowUp
-           
-            className="text-2xl text-white"
-          />
+          <p className="text-xl text-white">Débi</p>
+          <AiOutlineArrowUp className="text-2xl font-extrabold text-white" />
         </div>
       )}
     </div>

@@ -1,18 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { useContext } from 'react'
 import { AuthContext } from '../../AutoContext/AuthContext'
-
-
+import { ThemeContext } from '../../AutoContext/ThemeContext';
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
 import { useState, useEffect } from "react"
 import Menu2 from '../../Components/Menu'
-
 import Perfil from '../../Components/Perfil'
 import Notificacao from '../../Components/Notificacao';
 import usePersistedState from '../../utils/usePersistedState';
@@ -66,38 +62,39 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 const Header = () => {
   const { user } = useContext(AuthContext)
-  const [theme, setTheme] = usePersistedState("theme", "light");
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        if (theme === "dark"){
-            document.documentElement.classList.add("dark");
-            
-        } else {
-            document.documentElement.classList.remove("dark");
-            
-        }
-    }, [theme]);
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
 
-    const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-        if (theme === "dark"){
-            document.documentElement.classList.remove("dark");
-        }
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > window.innerHeight;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
 
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
+
   return (
-    <div id='home' className='relative z-50 '>
-      <div className='flex justify-between items-center py-4 max-md:pb-8 px-10 bg-[#f5f5f5] dark:bg-white/0 max-md:justify-center'>
-        <div className='flex gap-10 z-10 
-        
-        '>
+    <div id='home' className={`z-50 w-full fixed top-0 transition-colors duration-300 ${scrolled ? 'bg-[#f5f3e0] dark:bg-[#0c0914fa]' : 'bg-[#ffffff00] dark:bg-white/0'}`}>
+      <div className='flex justify-between items-center py-4 max-md:pb-8 px-10 max-md:justify-center'>
+        <div className='flex gap-10 z-10'>
           <div className='absolute top-0 left-1'>
             <Menu2
               area4="Eventos Empresariais"
               area1="Area psicologia"
               area2="Area nutrição"
               area3="Feed de noticias"
-    
               home="psicologia"
               link2="nutricao"
               link3="feed"
@@ -105,67 +102,44 @@ const Header = () => {
             />
           </div>
           <Link to='/' className='hidden max-md:block max-md:m-auto max-md:text-xl max-md:font-semibold max-md:absolute left-1/2 -translate-x-1/2 top-2.5'>Connect<span className='text-[#5D59FF]'>Health</span></Link>
-          <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
-          max-md:hidden
-          '>Psicologia</Link>
-          <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
-          max-md:hidden
-          '>Nutrição</Link>
-          <Link to='/feed' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
-          max-md:hidden
-          '>Feed de Notícias</Link>
-          <Link to='/eventos' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white hover:border-b
-          max-md:hidden
-          '>Eventos</Link>
+          <Link to='/psicologia' className='text-black font-bold uppercase text-sm hover:scale-110 hover:text-[#beb139] dark:hover:text-[#ffef61] hover:font-semibold transition duration-300 dark:text-white hover:border-b max-md:hidden'>
+            Psicologia
+          </Link>
+          <Link to='/nutricao' className='text-black font-bold uppercase text-sm hover:scale-110 hover:text-[#beb139] dark:hover:text-[#ffef61] hover:font-semibold transition duration-300 dark:text-white hover:border-b max-md:hidden'>
+            Nutrição
+          </Link>
+          <Link to='/feed' className='text-black font-bold uppercase text-sm hover:scale-110 hover:text-[#beb139] dark:hover:text-[#ffef61] hover:font-semibold transition duration-300 dark:text-white hover:border-b max-md:hidden'>
+            Feed de Notícias
+          </Link>
+          <Link to='/eventos' className='text-black font-bold uppercase text-sm hover:scale-110 hover:text-[#beb139] dark:hover:text-[#ffef61] hover:font-semibold transition duration-300 dark:text-white hover:border-b max-md:hidden'>
+            Eventos
+          </Link>
         </div>
 
         <div className='gap-6 flex mr-20 items-center'>
-        {user ? (
-          <div className='max-md:hidden flex items-center gap-8'>
-            <Notificacao />
-            <Perfil />
-          </div>
+          {user ? (
+            <div className='max-md:hidden flex items-center gap-8'>
+              <Notificacao />
+              <Perfil />
+            </div>
           ) : (
             <div className='flex items-center gap-5'>
-              <Link to='/register' className='text-black font-bold uppercase text-sm hover:scale-110 hover:font-semibold transition duration-300 dark:text-white
-                max-md:hidden
-              '>Cadastro
+              <Link to='/register' className='text-black font-bold uppercase text-sm hover:scale-110 hover:text-[#beb139] dark:hover:text-[#ffef61] hover:font-semibold hover:border-b transition duration-300 dark:text-white max-md:hidden'>
+                Cadastro
               </Link>
-              <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-azulsite hover:text-white hover:font-semibold transition duration-150 bg-white py-2  px-3 rounded
-                max-md:hidden
-              '>Login
+              <Link to='/login' className='text-black font-bold uppercase text-sm hover:bg-[#beb139]  hover:text-white hover:font-semibold transition duration-300 bg-white py-2 px-3 rounded max-md:hidden'>
+                Login
               </Link>
             </div>
           )}
         </div>
-        {/* <div className='bg-[#0575E6] h-auto w-40 absolute z-50 top-0 right-36 items-center flex-col
-        max-md:hidden
-        '>
-          <img src={vetor} alt=""  className='absolute'/>
-          <div>
-            <h2 className='text-[#fff] text-center pt-20 pb-6
-            max-md:text-[10px] max-md:pt-10 max-md:pb-2
-            '>Tenha dicas dos melhores da área</h2>
-          </div>
-            
-          <div className='flex items-center justify-center gap-4 pb-4 hover:scale-110 hover:font-semibold transition duration-300'>
-              <Link to='/' className='text-[#fff] text-center font-bold text-sm 
-              max-md:text-[10px] max-md:mt-4
-              '>Nosso Feed</Link>
-              <BsArrowRight className='text-lg text-[#fff]
-              max-md:mt-4 max-md:-ml-3
-              '/>
-          </div>
-            
-        </div> */}
-        <FormGroup onClick={handleThemeSwitch} className='absolute right-0 max-md:-top-1'>
-            <FormControlLabel
-              control={<MaterialUISwitch sx={{ m: 1 }}  />}
-              checked={theme === "dark"}
-            />
-          </FormGroup>
+        <FormGroup onClick={toggleTheme} className='absolute right-0 max-md:-top-1'>
+          <FormControlLabel
+            control={<MaterialUISwitch sx={{ m: 1 }} />}
+            checked={theme === "dark"}
+          />
+        </FormGroup>
       </div>
-        
     </div>
   )
 }

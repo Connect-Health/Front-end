@@ -10,7 +10,7 @@ const AnswerSection = ({ storedValues }) => {
   const { user } = useContext(AuthContext)
   return (
     <div className="">
-      <div id="scroll-bot" className="answer-container h-[50vh] max-md:h-[80vh] bg-[#ffffff] bg-opacity-50 absolute mt-0 overflow-y-scroll snap-center snap-always m-auto p-1 text-white  rounded-2xl flex flex-col-reverse bottom-10 max-md:bottom-[4.5vh]">
+      <div id="scroll-bot" className="answer-container h-[50vh] max-md:h-[80vh] w-full mt-0 overflow-y-scroll snap-center snap-always m-auto p-1 text-white  rounded-2xl flex flex-col-reverse bottom-10 max-md:bottom-[4.5vh]">
         {storedValues.map((value, index) => {
           return (
             <div className=" pb-3 pt-3 mb-3 bg-white rounded" key={index}>
