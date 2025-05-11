@@ -88,6 +88,7 @@ function Register() {
         setUf(response.data.uf);
       } catch (error) {
         alert("CEP não encontrado");
+        console.error("Erro ao buscar o CEP:", error);
       }
     };
     if (cep.length === 9) {
