@@ -1,16 +1,7 @@
-import fundo_1 from '../../../assets/fundo_1.png'
-import cabeca_1 from '../../../assets/cabeça_1.png'
-import mulher_1 from '../../../assets/mulher_1.png'
 import Logo from '../../../assets/logo_preta.png'
-import estrela from '../../../assets/estrelas2.jpg'
-import Blocos from './Blocos'
 import Header from './Header'
-import Psico from './Psico'
 import fundo_claro from '../../../assets/fundo_home3.png'
 import fundo_escuro from '../../../assets/fundo_home2.png'
-
-import Psi from '../../../assets/psiSlide.jpg'
-
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 import { useState, useEffect, useContext } from 'react'

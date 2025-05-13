@@ -57,7 +57,7 @@ function Psico(){
             <div className='w-[85%] m-auto mt-20 flex  justify-between items-center  box-content
             max-md:gap-16 max-md:w-[80%]
             '>
-                <div className='text-xl  w-1/2 h-36 flex justify-center items-center flex-col  border-psi bg-psi/10 shadow-lg rounded shadow-psi/20
+                <div className='text-xl  w-1/2 h-36 flex justify-center items-center flex-col  border-psi bg-psi/10 dark:bg-psi/50 dark:shadow-white/10 shadow-lg rounded shadow-psi/20
                 max-md:text-[14px]
                 '>
                     <h3>Prevenção de transtornos mentais como: <br /> Ansiedade, depressão, estresse... </h3>
@@ -76,7 +76,7 @@ function Psico(){
                 </div>
                 
 
-                <div className='text-xl w-1/2 border-psi h-36 flex justify-center items-center flex-col bg-psi/10 shadow-lg rounded shadow-psi/20
+                <div className='text-xl w-1/2 border-psi h-36 flex justify-center items-center flex-col bg-psi/10 shadow-lg dark:bg-psi/50 dark:shadow-white/10 rounded shadow-psi/20
                 max-md:text-[14px] max-md:w-[50%] max-md:text-sm
                 '>
                     <h3>Melhora o desempenho no trabalho: <br/> Fortalecimento de habilidades interpessoais, entre outras.</h3>
@@ -87,7 +87,7 @@ function Psico(){
             <div className='w-[85%] m-auto mt-20 flex  justify-start items-center box-content
             max-md:w-[90%]
             '>
-                <div className='text-xl border-psi h-36 flex justify-center items-center flex-col bg-psi/10 shadow-lg rounded shadow-psi/20 w-[50%]
+                <div className='text-xl border-psi h-36 flex justify-center items-center flex-col bg-psi/10 shadow-lg rounded dark:bg-psi/50 dark:shadow-white/10 shadow-psi/20 w-[50%]
                 max-md:w-[54%] max-md:text-sm
                 '>
                     <h3>Melhora na qualidade de vida e relacionamentos; <br /> Aumento na autoestima e confiança </h3>
