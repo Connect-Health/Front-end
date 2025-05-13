@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Mulher from '../../../assets/mulher-nutri.png'
+import Mulher from '../../../assets/mulher_nutri2.png'
 import Planutri from '../../../assets/planutri.png'
 import PostNutri from '../../../assets/postnutri.svg'
 import Protein from '../../../assets/protein.png'
@@ -12,12 +12,12 @@ const Nutrim = () => {
       <div>
               <div id="nutricao" className='flex justify-evenly items-center
               max-md:mt-10 max-md:flex-col'>
-                <div className='w-[45%]'>
-                  <img className='w-[60%]
+                <div className='w-1/4'>
+                  <img className='bg-nutri rounded-full
                   max-md:hidden
                   ' src={Mulher} alt="" />
                 </div>
-                <div className='w-[28%] flex flex-col 
+                <div className='w-[35%] flex flex-col 
                 max-md:w-[70%]
                 '>
                   <h2 className=' text-4xl text-nutri font-bold text-right 
@@ -28,11 +28,7 @@ const Nutrim = () => {
                   '>A Connect Health oferece suporte nutricional personalizado por meio de profissionais da nutrição, ajudando as pessoas a adotarem hábitos alimentares saudáveis, prevenirem e gerenciarem condições de saúde relacionadas à nutrição, e alcançarem seus objetivos de saúde e bem-estar.</p>
                 </div>
 
-                  <div className='max-md:w-[85%]'>
-                    <img className='w-[75%] hidden
-                    max-md:block m-auto max-md:mt-6
-                    ' src={Mulher} alt="" />
-                  </div>
+                  
               </div>
 
               <div className=' flex items-center justify-center gap-96 w-full h-24 mt-16 
@@ -57,41 +53,38 @@ const Nutrim = () => {
                 '>Por que cuidar da sua alimentação?</h2>
             </div>
 
-            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
+            <div className='w-[85%] m-auto mt-20 flex  justify-between items-center   box-content
             max-md:gap-20 max-md:w-[90%]
             '>
-                <div className='text-xl border-r-2 border-b-2 p-3 w-[40%]
+                <div className='text-xl w-1/2 h-36 flex justify-center items-center flex-col  border-nutri bg-nutri/10 shadow-lg rounded shadow-nutri/20
                 max-md:text-[14px] max-md:w-[45%]
                 '>
-                    <h3>Prevenção de doenças como:  </h3>
-                    <h3>Cancer, depressão, diabetes, hipertensão, entre outras.</h3>
+                    <h3>Prevenção de doenças como: <br /> Cancer, depressão, diabetes, hipertensão, entre outras. </h3>
                 </div>
                 <img className='w-[12%] max-md:h-24 max-md:w-20' src={Protein} alt="" />
             </div>
 
-            <div className='w-[80%] m-auto mt-20 flex  justify-center items-center gap-96  box-content
+            <div className='w-[85%] m-auto mt-20 flex  justify-between items-center  box-content
             max-md:gap-20 max-md:w-[90%]
             '>
                 
                 <img className='w-[12%] max-md:h-20 max-md:w-20' src={Strong} alt="" />
 
-                <div className='text-xl border-l-2 border-b-2 p-3  w-[40%]
+                <div className='text-xl w-1/2 h-36 flex justify-center items-center flex-col  border-nutri bg-nutri/10 shadow-lg rounded shadow-nutri/20
                 max-md:text-[14px] max-md:w-[54%] max-md:text-sm
                 '>
-                    <h3>Melhora no desempenho no trabalho </h3>
-                    <h3>Fortalecimento de habilidades interpessoais, entre outras.</h3>
+                    <h3>Melhora no desempenho no trabalho <br /> Fortalecimento de habilidades interpessoais, entre outras.</h3>
                 </div>
                 
             </div>
 
-            <div className='w-[70%] m-auto mt-20 flex  justify-start items-center box-content
+            <div className='w-[85%] m-auto mt-20 flex  justify-start items-center box-content
             max-md:w-[90%]
             '>
-                <div className='text-xl border-r-2 border-b-2 p-3 w-[45%]
+                <div className='text-xl w-1/2 h-36 flex justify-center items-center flex-col  border-nutri bg-nutri/10 shadow-lg rounded shadow-nutri/20
                 max-md:w-[50%] max-md:text-sm
                 '>
-                    <h3>Melhora na qualidade de vida e relacionamentos; </h3>
-                    <h3> Aumento na autoestima e confiança</h3>
+                    <h3>Melhora na qualidade de vida e relacionamentos; <br />  Aumento na autoestima e confiança </h3>
                 </div>
                 
             </div>
