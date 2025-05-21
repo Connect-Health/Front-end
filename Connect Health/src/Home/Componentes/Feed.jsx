@@ -1,4 +1,4 @@
-import ModelFeed from '../../../assets/modelofeed.png'
+import ModelFeed from '../../../assets/modelo_feed1.png'
 import PostFeed from '../../../assets/postfeed.svg'
 import ArcoFeed from '../../../assets/arcofeed.svg'
 import WaveFeed from '../../../assets/wavefeed.svg'
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function Feed(){
     return(
         <div id="feed">
-            <div className='flex justify-evenly gap-36
+            <div className='flex justify-evenly gap-36 mt-16 items-center
             max-md:flex-col max-md:gap-6
             '>
                 <div className='w-[70%] mt-10 ml-36
@@ -21,9 +21,9 @@ function Feed(){
                         '>Fique em forma, cuide da sua mente e melhore sua qualidade de vida com nossas dicas exclusivas de nutrição e psicologia, oferecidas pelos melhores profissionais da área. Aprenda a escolher alimentos saudáveis e descubra técnicas eficazes para cuidar da sua saúde mental. Todo o nosso conteúdo é confiável e fácil de aplicar. Comece hoje mesmo a transformar sua vida!</p>
                 </div>
                     <div>
-                        <img className='w-[45%] m-auto
+                        <img className='w-3/5 m-auto bg-[#5D59FF] rounded-full
                         max-md:mt- max-md:w-[70%]
-                        ' src={ModelFeed} alt="" />
+                        ' src={ModelFeed} alt="Homem negro segurando um celular com a logo da Connect na camiseta" />
                     </div>
             </div>
 
@@ -37,11 +37,11 @@ function Feed(){
                 <img src={PostFeed} className='w-full' alt="" />
             </div>
 
-            <div className='flex justify-center w-full mr-16 mt-16  '>
+            {/* <div className='flex justify-center w-full mr-16 mt-16  '>
                 <img className='w-[45%] max-md:hidden hover:translate-y-1 transition-all duration-150 hover:animate-pulse '  src={ArcoFeed} alt="" />
-            </div>
+            </div> */}
 
-            <div className=''>
+            <div className='mt-20'>
                 <img className='w-[100%] max-md:mt-20' src={WaveFeed} alt="" />
             </div>
         </div>

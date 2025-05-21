@@ -25,7 +25,7 @@ function Psico(){
                         '>A psicologia estuda o comportamento humano e suas emoções. A Connect Health pode oferecer ajuda para questões emocionais e de saúde mental, como depressão, ansiedade, estresse, traumas e problemas de relacionamento. Com a ajuda da psicologia, as pessoas podem aprender a lidar com suas emoções, superar desafios pessoais e desenvolver uma mentalidade mais saudável e positiva.</p>
                 </div>
                     <div className=' w-1/4'>
-                        <img className=' border bg-psi rounded-full border-white m-auto
+                        <img className=' border bg-psi/70 rounded-full border-white m-auto
                         max-md:mt-10
                         ' src={Model} alt="" />
                     </div>

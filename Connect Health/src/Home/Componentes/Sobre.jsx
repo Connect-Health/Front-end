@@ -8,7 +8,7 @@ function Sobre() {
   return (
     <div>
       <div
-        className="w-full
+        className="w-full mt-10
             max-md:mt-20
             "
       >
@@ -22,24 +22,19 @@ function Sobre() {
       </div>
 
       <div
-        className="w-[75%] m-auto mt-8 flex items-center gap-20
-            max-md:w-[100%] max-md:flex-col max-md:gap-2
+        className="w-[80%] m-auto mt-14 flex items-center gap-[5%] justify-center
+            max-md:w-[100%] max-md:flex-col max-md:gap-2 bg-[#f5f8fccb] dark:bg-[#1e1e1e] rounded shadow-md 
             "
       >
         <p
-          className="w-[55%] p-10
-                max-md:w-[90%]  max-md:text-center             
+          className=" py-10 px-16 size text-lg bg-[#f8f8f8a3] dark:bg-[#222628] w-[45%] shadow-md rounded
+                max-md:w-[90%]  max-md:text-center          
                 "
         >
-          Nós somos a Connect Health - uma plataforma 100% digital que oferece
-          consultas psicologicas e nutricionais para todos que as necessitam.{" "}
-          <br /> <br /> Nosso objetivo como instituição é popularizar a
-          alimentação saúdavel e a saúde mental, visto que, muitas pessoas não
-          tem condições para usufruir destes serviços. <br /> <br /> Queremos
-          fazer o bem independente de quem seja. Não visando o lucro, e sim a
-          saúde e bem estar dos nossos clientes. Sinta-se à vontade para
-          explorar a nossa plataforma e explorar a si mesmo com a ajuda de
-          nossos profissionais.
+          Nós somos a <span className="font-semibold hover:text-xl transition-all duration-100">Connect Health</span> - uma plataforma 100% digital que oferece
+          consultas psicológicas e nutricionais para todos que as necessitam.{" "}
+          <br /> <br /> Nosso objetivo é popularizar a
+          alimentação saúdavel e a saúde mental, para que todos possam usufruir desta saúde.<br /> <br />Estamos aqui por você. <br /> Descubra como cuidar da sua mente e alimentação com apoio profissional e acolhedor.
         </p>
 
         <img
@@ -47,17 +42,17 @@ function Sobre() {
                 max-md:w-[100%]
                 "
           src={ModelSobre}
-          alt=""
+          alt=" família unida composta por um homem, uma nulher e uma criança no colo dos dois"
         />
       </div>
 
-      <div className="w-full justify-center flex">
+      <div className="w-full justify-center flex mt-32">
         <img
           className="w-[5%] dark:invert
                 max-md:mt-10 max-md:w-2/12
                 "
           src={Logo}
-          alt=""
+          alt="Logo da Connect"
         />
       </div>
 
