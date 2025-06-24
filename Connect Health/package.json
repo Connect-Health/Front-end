@@ -23,6 +23,7 @@
     "date-fns": "^2.30.0",
     "firebase": "^9.22.1",
     "gapi-script": "^1.2.0",
+    "lucide-react": "^0.522.0",
     "mdb-react-ui-kit": "^6.1.0",
     "openai": "^3.3.0",
     "openmobile": "^1.0.6",
