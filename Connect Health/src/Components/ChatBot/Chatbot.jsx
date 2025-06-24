@@ -10,6 +10,7 @@ import { useState } from "react";
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,11 +24,14 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
+      const response = await fetch(
+        "https://connecthealth-backend.onrender.com/chat",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMessage }),
+        }
+      );
       const data = await response.json();
 
       setMessages((prev) => [...prev, { from: "debi", text: data.response }]);
@@ -40,16 +44,21 @@ const Chatbot = () => {
       setIsLoading(false);
     }
   };
-
   const toggleChatbot = () => {
     if (!isOpen) {
       setIsOpen(true);
       setIsAnimating(true);
+      setIsClosing(false);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 300);
     } else {
       setIsAnimating(true);
+      setIsClosing(true);
       setTimeout(() => {
         setIsOpen(false);
         setIsAnimating(false);
+        setIsClosing(false);
       }, 300);
     }
   };
@@ -59,14 +68,14 @@ const Chatbot = () => {
       id="chatbot"
       className={`fixed z-50 right-6 bottom-6 transition-all duration-500 ease-in-out ${
         isOpen || isAnimating
-          ? "translate-y-0 opacity-100"
+          ? "max-md:left-4 max-md:right-4 translate-y-0 opacity-100"
           : "translate-y-[calc(100%-60px)] opacity-95"
       }`}
     >
       {(isOpen || isAnimating) && (
         <div
           className={`bg-white/95 backdrop-blur-xl border border-[#c5c5c570] rounded-2xl shadow-2xl w-96 max-md:w-[calc(100vw-2rem)] h-[32rem] max-md:h-[calc(100vh-4rem)] transition-all duration-300 ease-in-out transform ${
-            !isOpen && isAnimating
+            isClosing
               ? "scale-95 opacity-0 translate-y-4"
               : "scale-100 opacity-100 translate-y-0"
           } flex flex-col`}
@@ -122,9 +131,7 @@ const Chatbot = () => {
 
             {/* Loading indicator */}
             {isLoading && (
-              <div
-                className="flex justify-start"
-              >
+              <div className="flex justify-start">
                 <div className="bg-[#f3f4f6] text-[#374151] rounded-2xl rounded-bl-md p-3 shadow-sm">
                   <div className="flex items-center space-x-2">
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -163,8 +170,7 @@ const Chatbot = () => {
             </div>
           </div>
         </div>
-      )}
-
+      )}{" "}
       {/* Minimized State */}
       {!isOpen && !isAnimating && (
         <div
@@ -177,7 +183,6 @@ const Chatbot = () => {
             </div>
             <div>
               <p className="text-white font-semibold">Débi</p>
-              
             </div>
           </div>
           <ChevronUp className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-200" />
