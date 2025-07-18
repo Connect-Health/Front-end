@@ -28,8 +28,8 @@ const CustomButton = (props) => {
 
   return (
     <div>
-      <div className={`bg-${props.fundo} rounded-3xl w-fit fixed top-[92vh] left-1/2 -translate-x-1/2 max-md:top-[87vh]`}>
-        <button onClick={handleAgendarConsulta} className='text-white py-2 px-10 max-md:px-4 '>Agendar Consulta</button>
+      <div className={`bg-${props.fundo} rounded-lg w-fit fixed top-[92vh] left-1/2 -translate-x-1/2 max-md:top-[87vh]`}>
+        <button onClick={handleAgendarConsulta} className='text-white py-2 px-10 max-md:px-4  font-bold'>Agendar Consulta</button>
       </div>
 
       <Dialog open={showCalendar} onClose={handleCalendarClose} className=''>

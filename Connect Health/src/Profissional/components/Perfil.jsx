@@ -33,11 +33,11 @@ const Perfil = (props, {color}) => {
 
 
   return (
-    <div className=' w-4/5 m-auto rounded-3xl mt-10 border bg-[#fff]/70 backdrop-blur-md pb-4
+    <div className=' w-4/5 m-auto rounded mt-10 bg-[#fff]/70 backdrop-blur-md pb-4
         max-md:w-full max-md:mt-0 border-none max-md:rounded-none max-md:bg-white/80
     '>
-        <div className=' w-full'>
-            <img src={props.fundo} className='h-36 w-full object-cover rounded-tl-3xl rounded-tr-3xl border-b max-md:rounded-none' alt="" />
+        <div className=''>
+            <img src={props.fundo} className='h-36 w-[110%] object-cover rounded-tl  rounded-tr max-md:rounded-none' alt="" />
             <TituloFoto profissional={profissional} nota={profissional.avaliacao} color={color}
             />
             <div className='flex gap-[2%] mt-16 max-md:block max-md:mt-6'>

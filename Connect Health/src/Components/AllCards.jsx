@@ -67,9 +67,9 @@ const AllCards = () => {
                 .map((profissional) => (
                   <Card
                     border="[#94E127]"
-                    border2="nutri"
+                    border2="nutri/70"
                     border3="[#D7F2E0]"
-                    bg2="bg-[#D7F2E0]"
+                    bg2="bg-[#D7F2E055]"
                     texto="nutri"
                     key={profissional.id}
                     profissional={profissional}

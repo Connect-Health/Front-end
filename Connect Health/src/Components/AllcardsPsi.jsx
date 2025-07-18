@@ -65,11 +65,11 @@ const AllCards = () => {
             <div className='grid grid-cols-2 gap-x-[5%] mx-[2.5%] gap-y-9 max-md:grid-cols-1'>
               {data.slice((page - 1) * pageSize, page * pageSize).map((profissional) => (
                 <Card
-                  border='psi'
-                  border2='psi'
+                  border='psi/10'
+                  border2='psi/70'
                   bg="border-psi"
-                  bg2='bg-[#D8CAFF]'
-                  border3='[#D8CAFF]'
+                  bg2='bg-[#D8CAFF55]'
+                  border3='[#D8CAFF00]'
                   texto='psi'
                   key={profissional.id}
                   profissional={profissional}

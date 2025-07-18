@@ -10,12 +10,12 @@ const TituloFoto = ( { profissional }) => {
         setIsfav(!isFav);
     }
 
-const nota = profissional.avaliacao || 0
+const nota = profissional.avaliacao || 0.0
 
   return (
-    <div className='flex items-center w-full max-md:block'>
-        <div className='w-1/4 flex justify-center -mt-20 max-md:w-full max-md:justify-normal max-md:pl-[10%]'>
-            <img src={profissional.urlAvatar} className={`w-52 h-52 object-cover object-top rounded-full border-2 border-azulsite/30 relative z-10 max-md:w-28 max-md:h-28 `} alt="Imagem de perfil do Profissional" />
+    <div className='flex items-center w-full max-md:block pb-5 shadow'>
+        <div className='w-1/4 flex justify-center -mt-24 max-md:w-full max-md:justify-normal max-md:pl-[10%]'>
+            <img src={profissional.urlAvatar} className={`w-64 h-64 object-cover object-top rounded-full shadow-lg bg-azulsite/100 relative z-10 max-md:w-28 max-md:h-28 `} alt="Imagem de perfil do Profissional" />
         </div>
 
         <div className='w-3/4 max-md:w-full'>
@@ -28,11 +28,11 @@ const nota = profissional.avaliacao || 0
                 </p>
             </div>
 
-            <div className='flex gap-20 pl-14 items-center mt-2 max-md:gap-0 max-md:pl-0 max-md:justify-between max-md:mt-0'>
+            <div className='flex gap-20 pl-10 w-full justify-between items-center mt-2 max-md:gap-0 max-md:pl-0 max-md:justify-between max-md:mt-0'>
                 {profissional && profissional.areaAtuacao && profissional.areaAtuacao.nome && (
                     <p className='font-semibold text-lg max-md:text-sm max-md:pl-10'>{profissional.areaAtuacao.nome}</p>
                 )}
-                <div className='flex items-center gap-2 max-md:gap-0 max-md:pr-3'>
+                <div className='flex items-center gap-2 max-md:gap-0 max-md:pr-3 absolute right-20 shadow py-2 px-10'>
                     <Rating
                         name="text-feedback"
                         value={nota}
@@ -51,7 +51,7 @@ const nota = profissional.avaliacao || 0
                 </div>
                 <div>
                     <p className='text-center max-md:text-sm'>Consulta:</p>
-                    <p className='font-bold text-2xl text-center'>R${profissional.preco},00</p>
+                    <p className='font-extrabold italic text-3xl text-center'>R${profissional.preco},00</p>
                 </div>
 
                 <div>

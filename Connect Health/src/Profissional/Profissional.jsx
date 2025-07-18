@@ -8,7 +8,7 @@ import Icone4 from '../../assets/nutricon4.jpg'
 import Icone5 from '../../assets/nutricon5.jpg'
 import Button from './components/minComponents/Button'
 import { useEffect } from 'react';
-import Fundo from '../../assets/fundo.png'
+import Fundo from '../../assets/fruta.avif'
 
 const Profissional = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const Profissional = () => {
   }, []);
 
   return (
-    <div className='bg-[#4fec6f]/30'>
+    <div className='bg-[#57f777]/10'>
         <Header
           link="nutricao"
           text="nutri"

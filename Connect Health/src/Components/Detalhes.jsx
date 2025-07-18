@@ -4,7 +4,7 @@ import Vetor from '../../assets/Vector.svg'
 const Detalhes = (props) => {
   return (
     <div className={`flex justify-between gap-14 mb-12 max-md:hidden ${props.pai}`}>
-        <img src={props.imagem} alt="ondas de fundo" className='border-0 absolute' />
+        <img src={props.imagem} alt="ondas de fundo" className='border-0 absolute w-full' />
 
         <div className='text-center text-white mt-5 mb-5 w-1/3 ml-5 max-md:w-1/2 '>
             <h2 className='text-2xl font-semibold drop-shadow-xl mb-4 '>Nossos Planos</h2>

@@ -30,6 +30,26 @@ const CardAvaliacao = ({ profissional }) => {
 
   const avaliacoesToShow = avaliacoes.slice(startIndex, endIndex + 1);
 
+  function formatarDataHora(hora, data) {
+  try {
+    const dataCompleta = new Date(`${data}T${hora}`);
+    
+    const horaFormatada = dataCompleta.toLocaleTimeString('pt-BR', {
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    const dataFormatada = dataCompleta.toLocaleDateString('pt-BR', {
+      month: 'numeric',
+      year: 'numeric'
+    });
+
+    return `${dataFormatada} ${horaFormatada}`;
+  } catch {
+    return `${data} ${hora}`;
+  }
+}
+
   return (
     <div className='flex flex-col items-center'>
       {avaliacoesToShow.length > 0 ? (
@@ -39,7 +59,7 @@ const CardAvaliacao = ({ profissional }) => {
             className='drop-shadow-lg w-[90%] pb-6 rounded-2xl mt-10 mx-auto  bg-white max-md:pb-3 max-md:mb-0 max-md:mt-5'
           >
             <div className='ml-4 pt-4 flex gap-5 '>
-              <p className='text-white bg-azulsite/50 w-14 h-14 font-bold rounded-full flex items-center justify-center max-md:w-10 max-md:h-10'>
+              <p className='text-white bg-azulsite/40 w-14 h-14 font-bold rounded-full flex items-center justify-center max-md:w-10 max-md:h-10'>
                 {avaliacao.avaliacao}
               </p>
               <p className='w-4/5 mt-5 max-md:mt-1 max-md:text-sm '>{avaliacao.descricao}</p>
@@ -53,7 +73,7 @@ const CardAvaliacao = ({ profissional }) => {
 
             <div className='mt-6 ml-10 max-md:mt-3'>
               <p className='max-md:text-sm text-black/50 font-semibold'>{avaliacao.pacienteId.nome} {avaliacao.pacienteId.sobrenome}</p>
-              <p className='max-md:text-sm text-black/50 font-semibold'> {avaliacao.horaAvaliacao} {avaliacao.dataAvaliacao}</p>
+              <p className='max-md:text-sm text-black/50 font-semibold'> {formatarDataHora(avaliacao.horaAvaliacao, avaliacao.dataAvaliacao)}</p>
             </div>
           </div>
         ))
