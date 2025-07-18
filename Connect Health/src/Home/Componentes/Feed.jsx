@@ -12,17 +12,17 @@ function Feed(){
             max-md:flex-col max-md:gap-6
             '>
                 <div className='w-[70%] mt-10 ml-36
-                max-md:mt-10 max-md:m-auto max-md:w-[75%]'>
+                max-md:mt-5 max-md:m-auto max-md:w-[75%]'>
                         <h2 className='text-[#5D59FF] font-bold text-4xl
                         max-md:text-2xl max-md:text-center
                         '>Feed</h2>
                         <p className='pt-10
-                        max-md:w-[100%] max-md:text-[14px]
+                        max-md:w-[100%] max-md:text-[14px] max-md:text-center max-md:mb-10
                         '>Fique em forma, cuide da sua mente e melhore sua qualidade de vida com nossas dicas exclusivas de nutrição e psicologia, oferecidas pelos melhores profissionais da área. Aprenda a escolher alimentos saudáveis e descubra técnicas eficazes para cuidar da sua saúde mental. Todo o nosso conteúdo é confiável e fácil de aplicar. Comece hoje mesmo a transformar sua vida!</p>
                 </div>
                     <div>
                         <img className='w-3/5 m-auto bg-[#5D59FF] rounded-full
-                        max-md:mt- max-md:w-[70%]
+                        max-md:w-2/5
                         ' src={ModelFeed} alt="Homem negro segurando um celular com a logo da Connect na camiseta" />
                     </div>
             </div>

@@ -14,7 +14,7 @@ function Sobre() {
       >
         <h3
           className="text-center font-bold text-3xl
-                max-md:text-2xl
+                max-md:text-xl
                 "
         >
           Quem somos e por que existimos?
@@ -23,12 +23,12 @@ function Sobre() {
 
       <div
         className="w-[80%] m-auto mt-14 flex items-center gap-[5%] justify-center
-            max-md:w-[100%] max-md:flex-col max-md:gap-2 bg-[#f5f8fccb] dark:bg-[#1e1e1e] rounded shadow-md 
+            max-md:w-[100%] max-md:flex-col max-md:gap-2 bg-[#f5f8fccb] dark:bg-[#1e1e1e] max-md:mt-4 max-md:dark:bg-[#1e1e1e]/30 max-md:pt-16 rounded shadow-md 
             "
       >
         <p
           className=" py-10 px-16 size text-lg bg-[#f8f8f8a3] dark:bg-[#222628] w-[45%] shadow-md rounded
-                max-md:w-[90%]  max-md:text-center          
+                max-md:w-[90%]  max-md:text-center max-md:text-base
                 "
         >
           Nós somos a <span className="font-semibold hover:text-xl transition-all duration-100">Connect Health</span> - uma plataforma 100% digital que oferece
@@ -80,9 +80,9 @@ function Sobre() {
                 "
         >
           <div className="bg-[#EBF3FF] dark:bg-[#070a64] h-auto -mt-[35%]  items-center  flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md">
-            <h2 className="text-xl text-center font-bold pt-6">
+            <h2 className="text-xl text-center font-semibold pt-6 max-md:text-lg">
               Plano mensal Vitalidade
-              <br /> R$50,00
+              <br /> <span className="italic text-3xl max-md:text-2xl font-bold">R$89,90</span>
             </h2>
             <p>Você tem direito a:</p>
             <div className="pb-10">
@@ -98,7 +98,7 @@ function Sobre() {
 
               <div className="flex items-center gap-1 justify-center">
                 <FaHeartbeat className="text-[4px] " />
-                <p>Consultas de 30 minutos; </p>
+                <p>Consultas de até 40 minutos; </p>
               </div>
 
               <div className="flex items-center gap-1 justify-center">
@@ -114,8 +114,8 @@ function Sobre() {
           </div>
 
           <div className="bg-[#EBF3FF] dark:bg-[#070a64] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md">
-            <h2 className="text-xl text-center font-bold pt-6">
-              Plano mensal Equilíbrio <br /> R$100,00
+            <h2 className="text-xl text-center font-semibold pt-6 max-md:text-lg">
+              Plano mensal Equilíbrio <br /> <span className="italic text-3xl max-md:text-2xl font-bold">R$139,90</span>
             </h2>
             <p>Você tem direito a:</p>
             <div className="pb-10">
@@ -131,7 +131,7 @@ function Sobre() {
 
               <div className="flex items-center gap-1 justify-center">
                 <FaHeartbeat className="text-[4px] " />
-                <p>Consultas de 45 minutos; </p>
+                <p>Consultas de até 45 minutos; </p>
               </div>
 
               <div className="flex items-center gap-1 justify-center">
@@ -147,8 +147,8 @@ function Sobre() {
           </div>
 
           <div className="bg-[#EBF3FF] dark:bg-[#070a64] items-center h-auto -mt-[35%] flex flex-col rounded-2xl gap-8 pb-4 pt-4 drop-shadow-md">
-            <h2 className="text-xl text-center font-bold pt-6">
-              Plano mensal Excelência <br /> R$150,00
+            <h2 className="text-xl text-center font-semibold pt-6 max-md:text-lg">
+              Plano mensal Excelência <br /> <span className="italic text-3xl font-bold max-md:text-2xl">R$199,90</span>
             </h2>
             <p>Você tem direito a:</p>
             <div className="pb-10">
