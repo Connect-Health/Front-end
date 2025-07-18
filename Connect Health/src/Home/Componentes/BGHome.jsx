@@ -45,7 +45,7 @@ function BGHome(){
 
     return(
         <div className='max-md:h-0 '>
-            <img className='w-full h-[100vh] relative' src={fundoSelecionado} alt="" />        
+            <img className='w-full h-[100vh] relative max-md:h-[40vh] max-md:pt-12' src={fundoSelecionado} alt="Imagem de uma mulher sentada fazendo yoga com uma ilustração de uma cabeça florescendo atrás dela" />        
             <Header />
 
             <div className='flex justify-between flex-row'>
