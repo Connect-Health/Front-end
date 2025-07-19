@@ -4,20 +4,21 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo_preta.png';
 import { AuthContext } from '../AutoContext/AuthContext';
 import Dashboard from './Components/Dashboard';
+import Agenda from './Components/Agenda';
 import { Link } from 'react-router-dom';
 import Config from './Components/Config';
 
 function Perfil_Psi() {
     const { user, logout } = useContext(AuthContext)
     const navigate = useNavigate()
-
+    const [abaAtiva, setAbaAtiva] = React.useState('dashboard');
     if (!user) {
         return <div>carregando</div>
     } else {
         const fazerLogout = () => {
             logout()
         }
-
+ 
         return (
             <div className='bg-[#B275FF] w-[100%] h-[100vh] flex gap-20'>
 
@@ -31,11 +32,15 @@ function Perfil_Psi() {
 
                             <div className='flex gap-4'>
 
-                                <p className='cursor-pointer'>Painel de controle</p>
+                                <p className='cursor-pointer'
+                                onClick={() => setAbaAtiva('dashboard')}
+                                >Painel de controle</p>
                             </div>
                             <div className='flex gap-4'>
 
-                                <p className='cursor-pointer'>Meu calendario</p>
+                                <p className='cursor-pointer'
+                                 onClick={() => setAbaAtiva('agenda')}
+                                >Meu calendario</p>
                             </div>
                             <div className='flex gap-4'>
 
@@ -59,7 +64,8 @@ function Perfil_Psi() {
                 {console.log(user)}
 
                 <div className='flex w-[100%]'>
-                    <Dashboard />
+                    {abaAtiva === 'dashboard' ? <Dashboard /> : <Agenda />}
+
                     <div className="bg-[#E7A9FD] w-[26%] h-[94vh] rounded-lg mt-[2%] shadow-2xl flex justify-center float-left -ml-44">
                         <div className='flex flex-col items-center gap-5 w-[80%]'>
                             <img className='object-cover rounded-full w-[180px] h-[180px] mt-10 border-4 border-[#B275FF]' src={user.urlAvatar} alt="" />
