@@ -17,9 +17,10 @@ const Politica = () => {
         <Termos />
 
         <Footer
-            bg="[#5D59FF]"
+            bg="[#8c8ae5]"
             bgSec="[#457ff4]"
             invert="invert"
+            invertHome="invert-0"
         />
     </div> 
   )

@@ -1,5 +1,5 @@
 import ModelSobre from "../../../assets/modelsobre.svg";
-import Logo from "../../../assets/logo_preta.png";
+import Logo from "../../../assets/logo-CH2.png";
 import bgSobre from "../../../assets/bgsobre.svg";
 import { FaHeartbeat } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -48,7 +48,7 @@ function Sobre() {
 
       <div className="w-full justify-center flex mt-32">
         <img
-          className="w-[5%] dark:invert
+          className="w-[8%]
                 max-md:mt-10 max-md:w-2/12
                 "
           src={Logo}

@@ -2,7 +2,7 @@ import React from 'react'
 import Span from './Span'
 import Paragraph from './Paragraph'
 import List from './List'
-import Logo from '../../../../assets/logo_preta.png'
+import Logo from '../../../../assets/logo-CH2.png'
 
 const Termos = () => {
   return (
@@ -10,7 +10,7 @@ const Termos = () => {
         <h2 className='text-center text-2xl font-bold leading-none' >Termos e Política de Privacidade</h2>
         <h3 className='text-center text-xl font-semibold leading-snug text-azulsite'>Connect Health</h3>
 
-        <img src={Logo} alt="" className='self-center w-32 max-md:w-20 max-md:mt-4' />
+        <img src={Logo} alt="" className='self-center w-32 mt-4 mb-4 max-md:w-20 max-md:mt-4' />
 
         <p className='text-center mt-5'>Data de entrada em vigor: Maio/2023</p>
 

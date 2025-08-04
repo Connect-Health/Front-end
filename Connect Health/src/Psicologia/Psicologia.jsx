@@ -47,6 +47,7 @@ const Psicologia = () => {
            bg="psi"
            bgSec="[#9e20f1]"
            invert="invert"
+           invertHome="invert-0"
         />
     </div>
   )

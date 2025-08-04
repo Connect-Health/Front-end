@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo_preta.png"
+import logo from "../../../assets/logo-CH2.png"
 import ring from "../../../assets/bellimg.png"
 import userl from "../../../assets/userlog.png"
 import { Link } from "react-router-dom"
@@ -12,9 +12,9 @@ const header = () => {
   const { user } = useContext(AuthContext)
 
     return (
-<div className="bg-[#658FF9] w-full flex h-20 fixed z-0">
+<div className="bg-[#658FF9] w-full flex h-20 fixed z-0 items-center justify-center ">
   <Link to='/' className="w-16 pt-2 ml-5">
-    <img className="invert " src={logo} alt="" />
+    <img className=" " src={logo} alt="" />
   </Link>
 
   <div className="flex flex-grow justify-end items-center">

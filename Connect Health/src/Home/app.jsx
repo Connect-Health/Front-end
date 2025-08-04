@@ -18,9 +18,10 @@ function Home() {
       <Contato />
       <Footer
         className="max-md:mt-20"
-        bg="[#5D59FF]"
+        bg="[#8c8ae5]"
         bgSec="[#457ff4]"
         invert="invert"
+        invertHome="invert-0"
       />
       <Chatbot />
     </div>

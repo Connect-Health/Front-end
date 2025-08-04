@@ -1,4 +1,4 @@
-import Logo from '../../../assets/logo_preta.png'
+import Logo from '../../../assets/logo-CH2.png'
 import Header from './Header'
 import fundo_claro from '../../../assets/fundo_home3.png'
 import fundo_escuro from '../../../assets/fundo_home2.png'
@@ -58,7 +58,7 @@ function BGHome(){
                     <p className='text-sm text-center pt-3
                     max-md:text-[12px]
                     '>A saúde é um bem precioso que merece ser valorizado e cuidado com atenção. Aqui acreditamos que a saúde é a base para alcançar nossos objetivos e desfrutar de uma vida plena.</p>
-                    <img className='w-[30%] pt-5  m-auto' src={Logo} alt="" />
+                    <img className='w-[40%] pt-5  m-auto' src={Logo} alt="" />
                 </div>
                 <div className="w-1/5 absolute right-10 bottom-16 max-md:hidden ">
                     <Carrossel slides={slides} />

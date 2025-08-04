@@ -97,7 +97,7 @@ const ProteinImg = theme === 'dark' ? Protein_dark : Protein ;
             </div>
 
             <div className=' mt-20 h-2/3 '>
-              <img src={WaveFeed} className='w-full' alt="Onda verde simbolizando quebra de págin" />
+              <img src={WaveFeed} className='w-full' alt="Onda verde simbolizando quebra de página" />
             </div>
       </div>
       
